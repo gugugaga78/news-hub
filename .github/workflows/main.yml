@@ -1,0 +1,63 @@
+name: 新闻聚合 - 每日自动更新
+
+on:
+  # 每天北京时间 08:00 (UTC 00:00) 自动运行
+  schedule:
+    - cron: "0 0 * * *"
+
+  # 允许手动触发
+  workflow_dispatch:
+
+  # 推送到 main 分支时也触发（用于测试）
+  push:
+    branches: [main, master]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  update-news:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 设置 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 安装依赖
+        run: pip install feedparser deep-translator
+
+      - name: 运行新闻抓取脚本
+        run: python news_fetcher.py
+
+      - name: 验证生成文件
+        run: |
+          echo "--- news_data.json 统计 ---"
+          python -c "
+          import json
+          with open('news_data.json','r',encoding='utf-8') as f:
+              data = json.load(f)
+          print(f\"更新时间: {data.get('last_updated','?')}\")
+          print(f\"总文章数: {data.get('total',0)}\")
+          from collections import Counter
+          cats = Counter(a['category'] for a in data.get('articles',[]))
+          for c,n in cats.items():
+              print(f'  {c}: {n}')
+          "
+
+      - name: 部署到 gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .
+          publish_branch: gh-pages
+          # 只保留以下文件，排除 .github/ 等
+          keep_files: false
+          force_orphan: true
+          commit_message: "auto: 每日新闻更新 — ${{ github.event.repository.updated_at }}"
