@@ -197,6 +197,7 @@
         .card-dot.mil  { background: var(--accent-mil); box-shadow: 0 0 8px var(--accent-mil); }
         .card-dot.fin  { background: var(--accent-fin); box-shadow: 0 0 8px var(--accent-fin); }
         .card-dot.pol  { background: var(--accent-pol); box-shadow: 0 0 8px var(--accent-pol); }
+        .card-dot.learn{ background: #b388ff; box-shadow: 0 0 8px #b388ff; }
 
         /* ── Card title ── */
         .card-title {
@@ -325,6 +326,7 @@
         <button class="tab-btn" data-cat="军事">&#x1f6e1; 军事 <span class="count-badge" id="cntMil">--</span></button>
         <button class="tab-btn" data-cat="金融">&#x1f4b0; 金融 <span class="count-badge" id="cntFin">--</span></button>
         <button class="tab-btn" data-cat="时政">&#x1f30d; 时政 <span class="count-badge" id="cntPol">--</span></button>
+        <button class="tab-btn" data-cat="learn">&#x1f4da; AI学习 <span class="count-badge" id="cntLearn">--</span></button>
     </nav>
 
     <!-- ========== Card Grid ========== -->
@@ -352,6 +354,7 @@ const GRID = document.getElementById("cardGrid");
 const UPDATE_TIME = document.getElementById("updateTime");
 
 let allArticles = [];
+let aiResources = [];
 let activeCategory = "all";
 
 // ── Category helpers ──
@@ -360,6 +363,7 @@ const CAT_MAP = {
     "军事": { cls: "mil", label: "军事" },
     "金融": { cls: "fin", label: "金融" },
     "时政": { cls: "pol", label: "时政" },
+    "learn":{ cls: "learn", label: "AI学习" },
 };
 
 function getCatClass(cat) {
@@ -375,17 +379,29 @@ async function loadData() {
 
         allArticles = data.articles || [];
         UPDATE_TIME.textContent = data.last_updated || "--";
-
-        updateCounts();
-        renderArticles();
     } catch (err) {
-        console.error("加载数据失败:", err);
+        console.error("加载新闻数据失败:", err);
         GRID.innerHTML = `<div class="empty-state">
             <div class="icon">&#x1f6a7;</div>
             <p>数据加载失败，请稍后刷新页面。</p>
             <p style="font-size:0.8rem;margin-top:6px;">${err.message}</p>
         </div>`;
+        return;
     }
+
+    // 加载 AI 学习资源（可选，失败不阻塞新闻展示）
+    try {
+        const res2 = await fetch("ai_resources.json");
+        if (res2.ok) {
+            const data2 = await res2.json();
+            aiResources = data2.resources || [];
+        }
+    } catch (err2) {
+        console.error("加载 AI 学习资源失败:", err2);
+    }
+
+    updateCounts();
+    renderArticles();
 }
 
 // ── Update tab counts ──
@@ -399,6 +415,7 @@ function updateCounts() {
     document.getElementById("cntMil").textContent = counts["军事"];
     document.getElementById("cntFin").textContent = counts["金融"];
     document.getElementById("cntPol").textContent = counts["时政"];
+    document.getElementById("cntLearn").textContent = aiResources.length;
 }
 
 // ── Format date ──
@@ -415,6 +432,11 @@ function formatDate(iso) {
 
 // ── Render cards ──
 function renderArticles() {
+    if (activeCategory === "learn") {
+        renderLearnCards();
+        return;
+    }
+
     let articles = allArticles;
     if (activeCategory !== "all") {
         articles = articles.filter(a => a.category === activeCategory);
@@ -453,6 +475,34 @@ function renderArticles() {
     }).join("");
 }
 
+// ── Render AI learning resource cards ──
+function renderLearnCards() {
+    if (aiResources.length === 0) {
+        GRID.innerHTML = `<div class="empty-state">
+            <div class="icon">&#x1f4da;</div>
+            <p>AI 学习资源暂无数据，等待自动采集～</p>
+        </div>`;
+        return;
+    }
+    GRID.innerHTML = aiResources.map(r => {
+        const stars = r.stars ? `<span>&#x2b50; ${r.stars}</span>` : "";
+        const linkAttr = r.link ? `onclick="window.open('${escapeHtml(r.link)}','_blank','noopener')"` : "";
+        return `
+        <div class="card" ${linkAttr}>
+            <div class="card-tooltip">${escapeHtml(r.summary || "")}</div>
+            <div class="card-title">
+                <span class="card-dot learn"></span>
+                ${escapeHtml(r.title)}
+            </div>
+            <div class="card-meta">
+                <span class="card-source">${escapeHtml(r.source || "")}</span>
+                <span>${escapeHtml(r.type || "")}</span>
+                ${stars}
+            </div>
+        </div>`;
+    }).join("");
+}
+
 function escapeHtml(str) {
     const div = document.createElement("div");
     div.textContent = str || "";
@@ -473,7 +523,7 @@ document.getElementById("tabBar").addEventListener("click", e => {
 
 // ── Keyboard navigation ──
 document.addEventListener("keydown", e => {
-    const cats = ["all", "AI", "军事", "金融", "时政"];
+    const cats = ["all", "AI", "军事", "金融", "时政", "learn"];
     const idx = cats.indexOf(activeCategory);
     if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
         e.preventDefault();

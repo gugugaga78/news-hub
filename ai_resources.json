@@ -1,0 +1,850 @@
+{
+  "last_updated": "2026-08-15 20:37",
+  "total": 115,
+  "resources": [
+    {
+      "title": "fighting41love/funNLP",
+      "link": "https://github.com/fighting41love/funNLP",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 82471,
+      "summary": "中英文敏感词、语言检测、中外手机/电话归属地/运营商查询、名字推断性别、手机号抽取、身份证抽取、邮箱抽取、中日文人名库、中文缩写库、拆字词典、词汇情感值、停用词、反动词表、暴恐词表、繁简体转换、英文模拟中文发音、汪峰歌词生成器、职业名称词库、同义词库、反义词库、否定词库、汽车品牌词库、汽车零件词库、"
+    },
+    {
+      "title": "patchy631/ai-engineering-hub",
+      "link": "https://github.com/patchy631/ai-engineering-hub",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 37002,
+      "summary": "In-depth tutorials on LLMs, RAGs and real-world AI agent applications."
+    },
+    {
+      "title": "e2b-dev/awesome-ai-agents",
+      "link": "https://github.com/e2b-dev/awesome-ai-agents",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 29427,
+      "summary": "A list of AI autonomous agents"
+    },
+    {
+      "title": "Dujltqzv/Some-Many-Books",
+      "link": "https://github.com/Dujltqzv/Some-Many-Books",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 22335,
+      "summary": "个人收藏书籍列表　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　"
+    },
+    {
+      "title": "datawhalechina/llm-universe",
+      "link": "https://github.com/datawhalechina/llm-universe",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 13783,
+      "summary": "本项目是一个面向小白开发者的大模型应用开发教程，在线阅读地址：https://datawhalechina.github.io/llm-universe/"
+    },
+    {
+      "title": "awesome-opencode/awesome-opencode",
+      "link": "https://github.com/awesome-opencode/awesome-opencode",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 9585,
+      "summary": "A curated list of awesome plugins, themes, agents, projects, and resources for https://opencode.ai"
+    },
+    {
+      "title": "liyupi/codefather",
+      "link": "https://github.com/liyupi/codefather",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 8242,
+      "summary": "程序员鱼皮的编程宝典 ⭐️ 2026年最全编程学习路线图！包含Java学习路线、前端学习路线、Python学习路线、C++学习路线、算法学习路线、计算机基础学习路线、AI应用开发学习路线、AI Agent开发学习路线等。提供编程入门教程、AI大模型应用开发教程、RAG开发实战、MCP开发教程、Pro"
+    },
+    {
+      "title": "nibzard/awesome-agentic-patterns",
+      "link": "https://github.com/nibzard/awesome-agentic-patterns",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 4881,
+      "summary": "A curated catalogue of awesome agentic AI patterns"
+    },
+    {
+      "title": "didilili/ai-agents-from-zero",
+      "link": "https://github.com/didilili/ai-agents-from-zero",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 3770,
+      "summary": " 🚀 2026 最系统的 AI Agent 速成指南｜智能体实战教程 · 完整学习路径  + 实战项目 + 面试题库 · 对标大模型应用开发工程师岗位 · 覆盖LangChain / LangGraph / Coze / Dify / MCP / skills / LLM / RAG / 提示词 ·"
+    },
+    {
+      "title": "ai-boost/awesome-harness-engineering",
+      "link": "https://github.com/ai-boost/awesome-harness-engineering",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 3577,
+      "summary": "Awesome list for AI agent harness engineering: tools, patterns, evals, memory, MCP, permissions, observability, and orchestration."
+    },
+    {
+      "title": "cirosantilli/china-dictatorship",
+      "link": "https://github.com/cirosantilli/china-dictatorship",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 3142,
+      "summary": "反中共政治宣传库。Anti Chinese government propaganda. 住在中国真名用户的网友请别给星星，不然你要被警察请喝茶。常见问答集，新闻集和饭店和音乐建议。卐习万岁卐。冠状病毒审查郝海东新疆改造中心六四事件法轮功 996.ICU709大抓捕巴拿马文件邓家贵低端人口西藏骚乱。"
+    },
+    {
+      "title": "kyrolabs/awesome-agents",
+      "link": "https://github.com/kyrolabs/awesome-agents",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 2745,
+      "summary": "🤖 Awesome list of AI Agents"
+    },
+    {
+      "title": "bergside/awesome-design-skills",
+      "link": "https://github.com/bergside/awesome-design-skills",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 2357,
+      "summary": "List of 67 awesome DESIGN.md and SKILL.md design skill files for agentic tools like Claude Design, Google Stitch, Codex, Cursor, and other AI tools"
+    },
+    {
+      "title": "slavakurilyak/awesome-ai-agents",
+      "link": "https://github.com/slavakurilyak/awesome-ai-agents",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 2173,
+      "summary": "Awesome list of 300+ agentic AI resources"
+    },
+    {
+      "title": "gege-circle/.github",
+      "link": "https://github.com/gege-circle/.github",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 1978,
+      "summary": "这里是GitHub的草场，也是戈戈圈爱好者的交流地，主要讨论动漫、游戏、科技、人文、生活等所有话题，欢迎各位小伙伴们在此讨论趣事。This is GitHub grassland, and the community place for Gege circle lovers, mainly disc"
+    },
+    {
+      "title": "phodal/aigc",
+      "link": "https://github.com/phodal/aigc",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 1649,
+      "summary": "《构筑大语言模型应用：应用开发与架构设计》一本关于 LLM 在真实世界应用的开源电子书，介绍了大语言模型的基础知识和应用，以及如何构建自己的模型。其中包括Prompt的编写、开发和管理，探索最好的大语言模型能带来什么，以及LLM应用开发的模式和架构设计。"
+    },
+    {
+      "title": "ModelEngine-Group/app-platform",
+      "link": "https://github.com/ModelEngine-Group/app-platform",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 1455,
+      "summary": "AppPlatform 是一个前沿的大模型应用工程，旨在通过集成的声明式编程和低代码配置工具，简化和优化大模型的训练与推理应用的开发过程。本工程为软件工程师和产品经理提供一个强大的、可扩展的环境，以支持从概念到部署的全流程 AI 应用开发。"
+    },
+    {
+      "title": "Snailclimb/AIGuide",
+      "link": "https://github.com/Snailclimb/AIGuide",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 527,
+      "summary": "AI 应用开发、AI 编程实战与面试指南，涵盖 LLM、Agent、RAG、MCP、Claude Code、Codex 等核心技术与工程实践。"
+    },
+    {
+      "title": "huangjia2019/ai-agents",
+      "link": "https://github.com/huangjia2019/ai-agents",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 511,
+      "summary": "Introductory examples for building LLM-based AI agents. 异步图书：《大模型应用开发 动手做AI Agent》 - 这是一些非常简单的入门示例，重在引导新手入门，目前LLM开发领域发展很快，本书只是一个提纲挈领。更多的示例和代码大家可以去Open"
+    },
+    {
+      "title": "peterfei/ai-agent-team",
+      "link": "https://github.com/peterfei/ai-agent-team",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 424,
+      "summary": "AI Agent Team-拥有24/7专业AI开发团队：产品经理、前端开发、后端开发、测试工程师、DevOps工程师、技术负责人。一键安装，支持中英文命令，大幅提升开发效率！"
+    },
+    {
+      "title": "cirosantilli/china-dictatroship-7",
+      "link": "https://github.com/cirosantilli/china-dictatroship-7",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 361,
+      "summary": "反中共政治宣传库。Anti Chinese government propaganda. https://github.com/cirosantilli/china-dictatorship 的备份backup. 住在中国真名用户的网友请别给星星，不然你要被警察请喝茶。常见问答集，新闻集和饭店和音乐"
+    },
+    {
+      "title": "vigorX777/product-design-system",
+      "link": "https://github.com/vigorX777/product-design-system",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 358,
+      "summary": "面向产品经理的 AI 辅助产品设计工作框架，可 fork 定制的通用产品设计系统"
+    },
+    {
+      "title": "cssmagic/Awesome-AI",
+      "link": "https://github.com/cssmagic/Awesome-AI",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 293,
+      "summary": "收集分享 AI 大型语言模型 (LLM)、AI 辅助编程、AI 绘画等领域的常用资料，探索生成式人工智能的应用与开发。"
+    },
+    {
+      "title": "unit-mesh/choco-builder",
+      "link": "https://github.com/unit-mesh/choco-builder",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 222,
+      "summary": "ChocoBuilder (Chocolate Factory) is a cutting-edge LLM toolkit designed to empower you in creating your very own AI assistant.Chocolate Factory 是一款开源的"
+    },
+    {
+      "title": "yunwei37/Awesome-Prompt-Engineering-ZH-CN",
+      "link": "https://github.com/yunwei37/Awesome-Prompt-Engineering-ZH-CN",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 163,
+      "summary": "这个资源库包含了为 Prompt 工程手工整理的资源中文清单，重点是GPT、ChatGPT、PaLM 等（自动持续更新）"
+    },
+    {
+      "title": "ConnectAI-E/Prompt-Engineering-Tutior",
+      "link": "https://github.com/ConnectAI-E/Prompt-Engineering-Tutior",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 104,
+      "summary": "🎡 Pompt 提示词工程师入门指南 ~视频字幕+代码资料 [( Python、Golang、NodeJs ) x ( 中文、英文 )]"
+    },
+    {
+      "title": "logan-zou/prompt-engineering-for-developers",
+      "link": "https://github.com/logan-zou/prompt-engineering-for-developers",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 87,
+      "summary": "吴恩达《ChatGPT Prompt Engineering for Developers》课程中文版"
+    },
+    {
+      "title": "Onenightcarnival/agent-engineering-philosophy",
+      "link": "https://github.com/Onenightcarnival/agent-engineering-philosophy",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 83,
+      "summary": "An engineering philosophy that treats the agent as a worker: the system prompt is a JD, skills are certifications, model tiers are degrees, memory is "
+    },
+    {
+      "title": "pen9un/art-prompt-system",
+      "link": "https://github.com/pen9un/art-prompt-system",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 65,
+      "summary": "AI绘画提示词生成器，AI绘画咒语生成，中文提示词工具，AI绘画助手，设计师AI工具，提示词优化器，AI作画提示词，智能提示词生成，提示词模板库，AI绘画教程，设计师工具，创作助手，提示词转换，AI艺术创作，新媒体配图工具，电商主图生成，商业设计工具，插画生成器，概念设计工具，人物肖像生成，AI P"
+    },
+    {
+      "title": "mo2g/DevLab",
+      "link": "https://github.com/mo2g/DevLab",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 56,
+      "summary": "Documentation-first hub for AI developer tools, workflow experiments, and practical engineering notes."
+    },
+    {
+      "title": "08820048/-LLM-Prompt-Engineering-Google",
+      "link": "https://github.com/08820048/-LLM-Prompt-Engineering-Google",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 30,
+      "summary": "最近很火的谷歌官方大语言模型提示工程白皮书,中文翻译版"
+    },
+    {
+      "title": "veritas501/ida-hub-agent-skills",
+      "link": "https://github.com/veritas501/ida-hub-agent-skills",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 25,
+      "summary": "Orchestrate multiple IDA Pro instances through a central Hub, enabling AI agents to perform complex cross-instance reverse engineering tasks"
+    },
+    {
+      "title": "wukaipeng-dev/prompt-engineering-guide",
+      "link": "https://github.com/wukaipeng-dev/prompt-engineering-guide",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 17,
+      "summary": "专门面向中文的提示词工程指南"
+    },
+    {
+      "title": "The-Swarm-Corporation/awesome-automated-prompt-engineering",
+      "link": "https://github.com/The-Swarm-Corporation/awesome-automated-prompt-engineering",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 16,
+      "summary": "This repository serves as a central hub for discovering tools and services focused on automated prompt engineering. Whether you're looking to optimize"
+    },
+    {
+      "title": "dcoderlab/ai-engineering-hub",
+      "link": "https://github.com/dcoderlab/ai-engineering-hub",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 10,
+      "summary": "In-depth tutorials on LLMs, RAGs and real-world AI agent applications."
+    },
+    {
+      "title": "hepapi/knowledge-hub",
+      "link": "https://github.com/hepapi/knowledge-hub",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 10,
+      "summary": "Hepapi Knowledge Hub: practical notes and patterns for building reliable systems on AWS. DevOps/Platform Engineering, QA, modernization, and Enterpris"
+    },
+    {
+      "title": "ali-faraz-py/Portfolio-Hub",
+      "link": "https://github.com/ali-faraz-py/Portfolio-Hub",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 9,
+      "summary": "A centralized deployment hub for my Machine Learning and Python engineering portfolio. Features custom-built AI solutions, financial analytics, and me"
+    },
+    {
+      "title": "KMnO4-zx/gpt-learning",
+      "link": "https://github.com/KMnO4-zx/gpt-learning",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 9,
+      "summary": "使用chatglm-6b的模型api完成吴恩达prompt课程，在学习笔记中有与chatgpt的回答做一些比较。课程内容采用的是DataWhale的中文翻译教程。课程地址：https://github.com/datawhalechina/prompt-engineering-for-develop"
+    },
+    {
+      "title": "SlickbitTechnologies/ai-engineering-hub",
+      "link": "https://github.com/SlickbitTechnologies/ai-engineering-hub",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 7,
+      "summary": ""
+    },
+    {
+      "title": "一次讲清怎么写出稳定好用的skill",
+      "link": "https://www.xiaohongshu.com/explore/6a6b1e220000000008010c93?xsec_token=ABvemOmlxxjicRSdz3Km316C4g7zH34wlNSbu4_3mQ8IM=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "一次讲清怎么写出稳定好用的skill"
+    },
+    {
+      "title": "转行AI产品经理真正要学的，就这7件事（上）",
+      "link": "https://www.xiaohongshu.com/explore/69735250000000001a0261d2?xsec_token=ABlXmW_5LCd1swtfTbGSiV64gtuccWVuY-ok15jSkJMYQ=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "转行AI产品经理真正要学的，就这7件事（上）"
+    },
+    {
+      "title": "逼自己练完这48页你的Agent就很牛了",
+      "link": "https://www.xiaohongshu.com/explore/68299c5a000000001101d7b7?xsec_token=ABw3wL5gXDP-zR2Jt82AitMYSSGc4vqGXL3rPWvkCShtI=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "逼自己练完这48页你的Agent就很牛了"
+    },
+    {
+      "title": "入行AI产品经理掌握这些技术知识就够了",
+      "link": "https://www.xiaohongshu.com/explore/678d1180000000000a004a18?xsec_token=ABcfwI-c464ewfhWmZy5TwwSqIY845Yg-l0AG69-HYXQ0=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "入行AI产品经理掌握这些技术知识就够了"
+    },
+    {
+      "title": "AI产品面试：你工作中常会用到哪些Skill",
+      "link": "https://www.xiaohongshu.com/explore/6a2e81f5000000002202b04b?xsec_token=ABam9VawXaEZ13ckp3uLRMJQiVNv2twMOr-pRf8ZGsq3w=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "AI产品面试：你工作中常会用到哪些Skill"
+    },
+    {
+      "title": "个人认为bilibili最顶的AI产品经理博主",
+      "link": "https://www.xiaohongshu.com/explore/69c3b03300000000230062f0?xsec_token=ABIA_XURH3EsdV32em7fK0Yv1bNwZTB87Os4VO01ZG4VE=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "个人认为bilibili最顶的AI产品经理博主"
+    },
+    {
+      "title": "吴恩达的Agent skills教程真的太🐮了",
+      "link": "https://www.xiaohongshu.com/explore/69cc92720000000028008fcd?xsec_token=ABXntxuZMUc4o0ZpoXi70tZyVfU3l4TStWoncaOFq561M=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "吴恩达的Agent skills教程真的太🐮了"
+    },
+    {
+      "title": "谁是产品界刘晓燕啊啊啊啊啊",
+      "link": "https://www.xiaohongshu.com/explore/690eeb450000000004000e42?xsec_token=ABW_pPZsyhTok6TRpL57VMulCol09slrVkoIOMQc268p0=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "谁是产品界刘晓燕啊啊啊啊啊"
+    },
+    {
+      "title": "零基础入门AI产品经理学习路线分享（上）",
+      "link": "https://www.xiaohongshu.com/explore/683e57e6000000002203714e?xsec_token=ABhqa4nTvCnAzVtT4Nx7hU0f4TgQHez7MNl3aVm18fpao=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "零基础入门AI产品经理学习路线分享（上）"
+    },
+    {
+      "title": "一篇看完AI产品经理面经（全整理汇总版",
+      "link": "https://www.xiaohongshu.com/explore/691d69f4000000001902523f?xsec_token=ABZb5OqrlY1-Tw4UbbKL60lr_rqeT3836ZbTjuAkoraHk=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "一篇看完AI产品经理面经（全整理汇总版"
+    },
+    {
+      "title": "今天讲一讲AI产品经理的工作流程是什么",
+      "link": "https://www.xiaohongshu.com/explore/689b0d10000000001c0371f6?xsec_token=AB3WESJegkvsUT2Gwaia73ys7TafJlbEt05243HHXm4Hk=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "今天讲一讲AI产品经理的工作流程是什么"
+    },
+    {
+      "title": "AI产品面试：你如何从0-1写一个Skill❓",
+      "link": "https://www.xiaohongshu.com/explore/6a677347000000001f01fdfd?xsec_token=ABKsTgsTEOZrA_wea1MZSMtIbosGsBGuq1ZPcmvSbtDuo=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "AI产品面试：你如何从0-1写一个Skill❓"
+    },
+    {
+      "title": "建议都去飞书上学vibe coding",
+      "link": "https://www.xiaohongshu.com/explore/6a66d09b000000001c01171c?xsec_token=ABmL6o-bMO_1-yCL9HTgZcsFNoE00qZ0Ltp_aZp_ScRaE=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "建议都去飞书上学vibe coding"
+    },
+    {
+      "title": "逼自己练完这15个项目，你的codex就很牛了",
+      "link": "https://www.xiaohongshu.com/explore/6a7964be0000000025009327?xsec_token=ABF_DO4M6KXSVV2HyYTUwOaRysGJEQlZBAB62hEkx4n1A=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "逼自己练完这15个项目，你的codex就很牛了"
+    },
+    {
+      "title": "AI产品经理",
+      "link": "https://www.xiaohongshu.com/explore/6a4221ef000000000f01e8d5?xsec_token=ABfl3ut0rqSuJrMlkGdFa6pYAq4P5yyWBOQVAO3CWyJ0g=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "AI产品经理"
+    },
+    {
+      "title": "练完这10个Agent实战项目，面试你就牛",
+      "link": "https://www.xiaohongshu.com/explore/67f923470000000007036242?xsec_token=ABgSCjkWvjIFDcG_XDsNfPA7YvRpWUBqYJWdlgY7aYo4w=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "练完这10个Agent实战项目，面试你就牛"
+    },
+    {
+      "title": "保姆级入门AI产品经理学习路线分享（下）",
+      "link": "https://www.xiaohongshu.com/explore/685929060000000012014c70?xsec_token=ABazp6vDPJc3FBg0gZaP4YMCAizmGpOnIFAMWiRpzZcrg=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "保姆级入门AI产品经理学习路线分享（下）"
+    },
+    {
+      "title": "实习反思|AI 产品会是一个暂时性的岗位吗？",
+      "link": "https://www.xiaohongshu.com/explore/67e6ae59000000001a0079c4?xsec_token=AB1hdwUvhEX_M7dGemiEODzTyOmcZwipCsm_b66l5msqI=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "实习反思|AI 产品会是一个暂时性的岗位吗？"
+    },
+    {
+      "title": "蹲几个AI产品经理徒弟，不能半途而废！",
+      "link": "https://www.xiaohongshu.com/explore/69af80dc00000000220331eb?xsec_token=AB0dMdcFEBBscDyeG1ugEcRwA6FYl_KTwI7HnKKcjXnIo=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "蹲几个AI产品经理徒弟，不能半途而废！"
+    },
+    {
+      "title": "📊30天AI产品经理速成班 Day1｜文科生转型版",
+      "link": "https://www.xiaohongshu.com/explore/69b916120000000023026b04?xsec_token=ABupO9Xqsekxvh4bxiEchKvUnZieFLyggm-m91nRgaa3A=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "📊30天AI产品经理速成班 Day1｜文科生转型版"
+    },
+    {
+      "title": "费曼学习法，5分钟搞懂Agent",
+      "link": "https://www.xiaohongshu.com/explore/6a140aa200000000370343b7?xsec_token=ABFmdvkdEwSnWELc4C8gBPF2tC86zz1QR73buzQXcvupU=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "费曼学习法，5分钟搞懂Agent"
+    },
+    {
+      "title": "从0到1搭建AI Agent｜不会代码也能做",
+      "link": "https://www.xiaohongshu.com/explore/6a48e816000000001702a292?xsec_token=ABFMADNwEOsZKdHHM5JV_2R-LbIKw16xRT7NqQj27-ZIw=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "从0到1搭建AI Agent｜不会代码也能做"
+    },
+    {
+      "title": "分享一下我的Agent 学习路线。",
+      "link": "https://www.xiaohongshu.com/explore/69a6a314000000000e03c957?xsec_token=AB2Vqx9NnM4EjW5rY6JvOuj1CM_9003BCMeZiamciKJnk=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "分享一下我的Agent 学习路线。"
+    },
+    {
+      "title": "建议大家都去学AI Agent！",
+      "link": "https://www.xiaohongshu.com/explore/69e09a99000000002301f460?xsec_token=AB-M_pfuLllUuDVuR5Z6bYM32MHpuYsOIo9Dp--rnxfdE=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "建议大家都去学AI Agent！"
+    },
+    {
+      "title": "很多人都知道，AI 是机会，Agent 很火。学会了肯定是就业市场的香饽饽。\n\t\n但让人难受的是，不是不想学，而是学了一圈之后，还不知道自己是啥水平。\n\t\n有人说Agent先学框架，有人让先补算法，有人说先做项目，也有人说先练 prompt",
+      "link": "https://www.xiaohongshu.com/explore/69be8d73000000001a021546?xsec_token=ABMhJMey0DNICJfUDqIxwUXsHZQXPopsSx_OEQxa8A9N0=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "很多人都知道，AI 是机会，Agent 很火。学会了肯定是就业市场的香饽饽。\n\t\n但让人难受的是，不是不想学，而是学了一圈之后，还不知道自己是啥水平。\n\t\n有人说Agent先学框架，有人让先补算法，有人说先做项目，也有人说先练 prompt。如果真听了，那结果就是：东西学了不少，但越学越乱，连自己能"
+    },
+    {
+      "title": "建议都去飞书上学AI Agent",
+      "link": "https://www.xiaohongshu.com/explore/6a2a813500000000060223d0?xsec_token=ABVDIOVMaq67e5poBkYChe_p1bxpkEqHDbMjVelqtA3io=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "建议都去飞书上学AI Agent"
+    },
+    {
+      "title": "一个月速成实习经验贴",
+      "link": "https://www.xiaohongshu.com/explore/6a6322690000000009037b6f?xsec_token=ABlwzLWO9cqTEd_QQwSe6FGSrEAZsikj9GqehBr017phU=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "一个月速成实习经验贴"
+    },
+    {
+      "title": "AI应用开发/agent开发 学习路线分享（上）",
+      "link": "https://www.xiaohongshu.com/explore/69e491fc000000001b023c19?xsec_token=AB11_hBJ1vXIxwZ6X0fVmGcFf8Fe03P_MQOlxVvne-AIA=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "AI应用开发/agent开发 学习路线分享（上）"
+    },
+    {
+      "title": "学AI Agent的顺序一定要对，存一下吧",
+      "link": "https://www.xiaohongshu.com/explore/6a462ab00000000021018613?xsec_token=ABFBWRl6fcN1BM_EsEVKmaEQUzBHM3eh8shnp1B-bhsjU=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "学AI Agent的顺序一定要对，存一下吧"
+    },
+    {
+      "title": "28天agent开发学习计划",
+      "link": "https://www.xiaohongshu.com/explore/6a0a7a6f000000003503af71?xsec_token=AB9A6doJ3fTw1P_RYA4QKuPVZcLzplgpigLAwS_s8c7bU=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "28天agent开发学习计划"
+    },
+    {
+      "title": "他真的把Agent搭建讲的好清晰呀",
+      "link": "https://www.xiaohongshu.com/explore/6969e645000000000e00ef53?xsec_token=ABbxwqBcS780XRHVZQd9Z0h-YYyvepdk2LEk1EAqv7Sz8=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "他真的把Agent搭建讲的好清晰呀"
+    },
+    {
+      "title": "2026大模型应用开发入门路线（全网最详细）",
+      "link": "https://www.xiaohongshu.com/explore/69ca6f95000000001a02217e?xsec_token=ABmYFudcueQPuQq78EZ1Dyy8pxlrpxxG55is2d9tGWphU=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "2026大模型应用开发入门路线（全网最详细）"
+    },
+    {
+      "title": "建议大家都去学AI Agent!",
+      "link": "https://www.xiaohongshu.com/explore/69eecc53000000002301f1fa?xsec_token=ABhdKdYW65ZPaXkCfXkRivNsZuuasGdxbnE0cWLbwq2lw=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "建议大家都去学AI Agent!"
+    },
+    {
+      "title": "强烈建议大家都去油管学AI agent！",
+      "link": "https://www.xiaohongshu.com/explore/6965e692000000001a034354?xsec_token=ABlgg6kA8jnfXgkilgW2O4L2_XRuhERahWlDupJkFsOTc=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "强烈建议大家都去油管学AI agent！"
+    },
+    {
+      "title": "2026.5最新Agent学习路线",
+      "link": "https://www.xiaohongshu.com/explore/6a09a61b0000000006031629?xsec_token=ABSFAKECEij9h68G_wN4lQDK7TK4pK6Y39BS-X4jVtN-k=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "2026.5最新Agent学习路线"
+    },
+    {
+      "title": "AI应用开发/agent开发 学习路线分享（下）",
+      "link": "https://www.xiaohongshu.com/explore/69e49a9c000000001f004360?xsec_token=AB11_hBJ1vXIxwZ6X0fVmGcN7YCqxvQmqypCy69Isk7Ok=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "AI应用开发/agent开发 学习路线分享（下）"
+    },
+    {
+      "title": "产品经理一定要把Agent搭建全流程跑通～",
+      "link": "https://www.xiaohongshu.com/explore/69ca46cc000000001a036c54?xsec_token=ABmYFudcueQPuQq78EZ1Dyy-QNOKfBvZNX5zUqu5W3qfs=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "产品经理一定要把Agent搭建全流程跑通～"
+    },
+    {
+      "title": "智能体自我进化框架Self-Evolving Agent",
+      "link": "https://www.xiaohongshu.com/explore/6996c042000000000e03d8ba?xsec_token=ABBWd-zJuLSKqTc1ekjuHwVMsRpr_VXt2oc_zBE4-11Gg=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "智能体自我进化框架Self-Evolving Agent"
+    },
+    {
+      "title": "B站强推！这才是2026年最全最细的AI产品经理教程，从零到精通，字节大佬整理的内部版，通俗易懂，学完即就业！！！ 大模型 | LLM",
+      "link": "https://www.bilibili.com/video/av116361804185826",
+      "source": "B站",
+      "type": "视频",
+      "summary": "B站强推！这才是2026年最全最细的AI产品经理教程，从零到精通，字节大佬整理的内部版，通俗易懂，学完即就业！！！ 大模型 | LLM"
+    },
+    {
+      "title": "我如何从 0 到 1 成为 AI 产品经理？",
+      "link": "https://www.bilibili.com/video/av116943721926857",
+      "source": "B站",
+      "type": "视频",
+      "summary": "我如何从 0 到 1 成为 AI 产品经理？"
+    },
+    {
+      "title": "【2026最新版】30天学会AI产品经理从入门到进阶 （附学习路线），全程通俗易懂！存下吧，让你少走99%弯路！",
+      "link": "https://www.bilibili.com/video/av117092552679395",
+      "source": "B站",
+      "type": "视频",
+      "summary": "【2026最新版】30天学会AI产品经理从入门到进阶 （附学习路线），全程通俗易懂！存下吧，让你少走99%弯路！"
+    },
+    {
+      "title": "【全593集】目前B站最全最细的AI产品经理入门到精通程，从零基础小白到30k，包含所有干货！七天从小白到大神！少走99%弯路！学完即可就业，带你轻松玩转AI！",
+      "link": "https://www.bilibili.com/video/av116679799474278",
+      "source": "B站",
+      "type": "视频",
+      "summary": "【全593集】目前B站最全最细的AI产品经理入门到精通程，从零基础小白到30k，包含所有干货！七天从小白到大神！少走99%弯路！学完即可就业，带你轻松玩转AI！"
+    },
+    {
+      "title": "【2026年AI产品经理】10小时学：Agent、RAG、需求调研、从架构设计到开发验收全流程（完整版）学会可拿offer！",
+      "link": "https://www.bilibili.com/video/av117053579266636",
+      "source": "B站",
+      "type": "视频",
+      "summary": "【2026年AI产品经理】10小时学：Agent、RAG、需求调研、从架构设计到开发验收全流程（完整版）学会可拿offer！"
+    },
+    {
+      "title": "从入门到进阶 | 30天学会AI产品经理【附学习路线】全程通俗易懂！存下吧，让你少走99%弯路！",
+      "link": "https://www.bilibili.com/video/av117040811608056",
+      "source": "B站",
+      "type": "视频",
+      "summary": "从入门到进阶 | 30天学会AI产品经理【附学习路线】全程通俗易懂！存下吧，让你少走99%弯路！"
+    },
+    {
+      "title": "产品经理入门——产品经理必备知识体系拆解",
+      "link": "https://www.bilibili.com/video/av819959096",
+      "source": "B站",
+      "type": "视频",
+      "summary": "产品经理入门——产品经理必备知识体系拆解"
+    },
+    {
+      "title": "想转行当AI产品经理，我改怎么办？（1）",
+      "link": "https://www.bilibili.com/video/av116341453423247",
+      "source": "B站",
+      "type": "视频",
+      "summary": "想转行当AI产品经理，我改怎么办？（1）"
+    },
+    {
+      "title": "赠独家满分简历项目源码+简历模板+30天速成学习规划！冲刺AI岗位学习辅导，Agent开发、AI产品经理、FDE转行与求职指南，岗位薪资、技能体系与学习路径规划",
+      "link": "https://www.bilibili.com/video/av117071362920458",
+      "source": "B站",
+      "type": "视频",
+      "summary": "赠独家满分简历项目源码+简历模板+30天速成学习规划！冲刺AI岗位学习辅导，Agent开发、AI产品经理、FDE转行与求职指南，岗位薪资、技能体系与学习路径规划"
+    },
+    {
+      "title": "成为AI产品经理只需三步",
+      "link": "https://www.bilibili.com/video/av115060965905560",
+      "source": "B站",
+      "type": "视频",
+      "summary": "成为AI产品经理只需三步"
+    },
+    {
+      "title": "【B站精选】这绝对是2026讲的最好的AI产品经理零基础入门教程，七天就能从小白到大神！全程干货无废话！让你少走 99% 的弯路！AI教程|PM",
+      "link": "https://www.bilibili.com/video/av116882753457656",
+      "source": "B站",
+      "type": "视频",
+      "summary": "【B站精选】这绝对是2026讲的最好的AI产品经理零基础入门教程，七天就能从小白到大神！全程干货无废话！让你少走 99% 的弯路！AI教程|PM"
+    },
+    {
+      "title": "【全100集】(允许白嫖) 2026最全最细AI产品经理入门到精通全套教程，一周带你小白变大神！从入门到精通，全程干货无废话！存下吧，少走99%的弯路！",
+      "link": "https://www.bilibili.com/video/av117081295095250",
+      "source": "B站",
+      "type": "视频",
+      "summary": "【全100集】(允许白嫖) 2026最全最细AI产品经理入门到精通全套教程，一周带你小白变大神！从入门到精通，全程干货无废话！存下吧，少走99%的弯路！"
+    },
+    {
+      "title": "【全748集】目前B站最全最细的AI产品经理零基础全套教程，2026最新版，包含所有干货！七天就能从小白到大神！少走99%的弯路！学完即就业，带你玩转AI！",
+      "link": "https://www.bilibili.com/video/av117070456948968",
+      "source": "B站",
+      "type": "视频",
+      "summary": "【全748集】目前B站最全最细的AI产品经理零基础全套教程，2026最新版，包含所有干货！七天就能从小白到大神！少走99%的弯路！学完即就业，带你玩转AI！"
+    },
+    {
+      "title": "【2025最新版】翻遍整个B站，这绝对是讲的最好的AI产品经理大模型教程，AI产品经理入门到实战，通俗易懂，学完就能就业，少走99%弯路！",
+      "link": "https://www.bilibili.com/video/av114947853911479",
+      "source": "B站",
+      "type": "视频",
+      "summary": "【2025最新版】翻遍整个B站，这绝对是讲的最好的AI产品经理大模型教程，AI产品经理入门到实战，通俗易懂，学完就能就业，少走99%弯路！"
+    },
+    {
+      "title": "AI产品经理正在进入Harness Engineering时代,别再只学Prompt了！",
+      "link": "https://www.bilibili.com/video/av116935937231369",
+      "source": "B站",
+      "type": "视频",
+      "summary": "AI产品经理正在进入Harness Engineering时代,别再只学Prompt了！"
+    },
+    {
+      "title": "产品经理用AI绘制原型3步走，3分钟搞定20个页面",
+      "link": "https://www.bilibili.com/video/av117070272397559",
+      "source": "B站",
+      "type": "视频",
+      "summary": "产品经理用AI绘制原型3步走，3分钟搞定20个页面"
+    },
+    {
+      "title": "【AI产品经理】全74集（完整版）耗时一个月整理的大厂内部课程，从入门到实战，详细讲解，通俗易懂，适合所有零基础小白学习，学完即可就业！！！",
+      "link": "https://www.bilibili.com/video/av117087334827917",
+      "source": "B站",
+      "type": "视频",
+      "summary": "【AI产品经理】全74集（完整版）耗时一个月整理的大厂内部课程，从入门到实战，详细讲解，通俗易懂，适合所有零基础小白学习，学完即可就业！！！"
+    },
+    {
+      "title": "手把手带教6周成为AI产品经理",
+      "link": "https://www.bilibili.com/video/av114482839817965",
+      "source": "B站",
+      "type": "视频",
+      "summary": "手把手带教6周成为AI产品经理"
+    },
+    {
+      "title": "【产品经理ai提效】10分钟速通AI生成PRD+流程图！协作迭代管理，对接研发零返工，新手直接复用",
+      "link": "https://www.bilibili.com/video/av117076245155862",
+      "source": "B站",
+      "type": "视频",
+      "summary": "【产品经理ai提效】10分钟速通AI生成PRD+流程图！协作迭代管理，对接研发零返工，新手直接复用"
+    },
+    {
+      "title": "【全748集】目前B站最全最细的AI Agent开发零基础教程，2026最新版，包含所有干货！七天就能从小白到大神！少走99%的弯路！学完即就业，带你玩转AI！",
+      "link": "https://www.bilibili.com/video/av116680671890321",
+      "source": "B站",
+      "type": "视频",
+      "summary": "【全748集】目前B站最全最细的AI Agent开发零基础教程，2026最新版，包含所有干货！七天就能从小白到大神！少走99%的弯路！学完即就业，带你玩转AI！"
+    },
+    {
+      "title": "从 LLM 到 Agent Skill，一期视频带你打通底层逻辑！",
+      "link": "https://www.bilibili.com/video/av116227955497963",
+      "source": "B站",
+      "type": "视频",
+      "summary": "从 LLM 到 Agent Skill，一期视频带你打通底层逻辑！"
+    },
+    {
+      "title": "【全748集】目前B站最全最细的AI Agent智能体教程，2026最新版，包含所有干货！七天就能从小白到大神！少走99%的弯路！学完即就业，带你玩转AI！",
+      "link": "https://www.bilibili.com/video/av117087284495477",
+      "source": "B站",
+      "type": "视频",
+      "summary": "【全748集】目前B站最全最细的AI Agent智能体教程，2026最新版，包含所有干货！七天就能从小白到大神！少走99%的弯路！学完即就业，带你玩转AI！"
+    },
+    {
+      "title": "【吴恩达】2026年公认最好的【Agent智能体】教程！大模型入门到进阶，一套全解决！Agentic AI—附带课件代码",
+      "link": "https://www.bilibili.com/video/av115897075242856",
+      "source": "B站",
+      "type": "视频",
+      "summary": "【吴恩达】2026年公认最好的【Agent智能体】教程！大模型入门到进阶，一套全解决！Agentic AI—附带课件代码"
+    },
+    {
+      "title": "【2026最新】B站最全最细的AI Agent智能体搭建教程，从入门到实战！手把手教你快速打造自己的专属智能体，一次性搞懂AI大模型智能体开发，学完薪资翻倍！",
+      "link": "https://www.bilibili.com/video/av116187623069851",
+      "source": "B站",
+      "type": "视频",
+      "summary": "【2026最新】B站最全最细的AI Agent智能体搭建教程，从入门到实战！手把手教你快速打造自己的专属智能体，一次性搞懂AI大模型智能体开发，学完薪资翻倍！"
+    },
+    {
+      "title": "从0开始“做”一个Agent！【n8n草履虫教程】",
+      "link": "https://www.bilibili.com/video/av114714935886954",
+      "source": "B站",
+      "type": "视频",
+      "summary": "从0开始“做”一个Agent！【n8n草履虫教程】"
+    },
+    {
+      "title": "【Codex实战】手摸手教你多Agent协同开发",
+      "link": "https://www.bilibili.com/video/av116839870891259",
+      "source": "B站",
+      "type": "视频",
+      "summary": "【Codex实战】手摸手教你多Agent协同开发"
+    },
+    {
+      "title": "_蕾伊娜Reyna_ 视频补档",
+      "link": "https://www.bilibili.com/video/av868527554",
+      "source": "B站",
+      "type": "视频",
+      "summary": "_蕾伊娜Reyna_ 视频补档"
+    },
+    {
+      "title": "Codex开发大型网站的零基础终极教学！vue+django+mysql前后端分离架构",
+      "link": "https://www.bilibili.com/video/av116700016021422",
+      "source": "B站",
+      "type": "视频",
+      "summary": "Codex开发大型网站的零基础终极教学！vue+django+mysql前后端分离架构"
+    },
+    {
+      "title": "从零实现自己的agent第二期: 百行代码从零手搓agent",
+      "link": "https://www.bilibili.com/video/av116418997719482",
+      "source": "B站",
+      "type": "视频",
+      "summary": "从零实现自己的agent第二期: 百行代码从零手搓agent"
+    },
+    {
+      "title": "Agent 的概念、原理与构建模式 —— 从零打造一个简化版的 Claude Code",
+      "link": "https://www.bilibili.com/video/av114894200380730",
+      "source": "B站",
+      "type": "视频",
+      "summary": "Agent 的概念、原理与构建模式 —— 从零打造一个简化版的 Claude Code"
+    },
+    {
+      "title": "【2026最新Codex】Codex保姆级完整教程-Codex新手保姆级教程-最强AI助手！从入门到进阶，22分钟速通Codex！【附教程文档安装包】",
+      "link": "https://www.bilibili.com/video/av116707129561197",
+      "source": "B站",
+      "type": "视频",
+      "summary": "【2026最新Codex】Codex保姆级完整教程-Codex新手保姆级教程-最强AI助手！从入门到进阶，22分钟速通Codex！【附教程文档安装包】"
+    },
+    {
+      "title": "【全60集】吊打付费！目前B站最全最细的Agent智能体开发全套教程！手把手教你打造专属智能体，七天就能从小白到大神！带你从零基础入门到精通实现商业变现！",
+      "link": "https://www.bilibili.com/video/av116815090947614",
+      "source": "B站",
+      "type": "视频",
+      "summary": "【全60集】吊打付费！目前B站最全最细的Agent智能体开发全套教程！手把手教你打造专属智能体，七天就能从小白到大神！带你从零基础入门到精通实现商业变现！"
+    },
+    {
+      "title": "第55弹:【DANCEROID】 FirstKiss!【こずえ】【いとくとら】",
+      "link": "https://www.bilibili.com/video/av11176",
+      "source": "B站",
+      "type": "视频",
+      "summary": "第55弹:【DANCEROID】 FirstKiss!【こずえ】【いとくとら】"
+    },
+    {
+      "title": "AI 为什么每次都从零开始？如何让AI帮你完成一个完整项目【ChatGPT、Claude code等Agent通用】",
+      "link": "https://www.bilibili.com/video/av116957697279352",
+      "source": "B站",
+      "type": "视频",
+      "summary": "AI 为什么每次都从零开始？如何让AI帮你完成一个完整项目【ChatGPT、Claude code等Agent通用】"
+    },
+    {
+      "title": "手把手彻底学会 Agent Skills！【小白教程】",
+      "link": "https://www.bilibili.com/video/av116000439664997",
+      "source": "B站",
+      "type": "视频",
+      "summary": "手把手彻底学会 Agent Skills！【小白教程】"
+    },
+    {
+      "title": "从零开始，学会让桌面Agent帮你干活！【小白教程】",
+      "link": "https://www.bilibili.com/video/av116861865887789",
+      "source": "B站",
+      "type": "视频",
+      "summary": "从零开始，学会让桌面Agent帮你干活！【小白教程】"
+    },
+    {
+      "title": "Agent Skill 从使用到原理，一次讲清",
+      "link": "https://www.bilibili.com/video/av115814279681221",
+      "source": "B站",
+      "type": "视频",
+      "summary": "Agent Skill 从使用到原理，一次讲清"
+    },
+    {
+      "title": "全网最全！40分钟全面掌握Codex～【附完整文档】",
+      "link": "https://www.bilibili.com/video/av116572056191242",
+      "source": "B站",
+      "type": "视频",
+      "summary": "全网最全！40分钟全面掌握Codex～【附完整文档】"
+    }
+  ]
+}
