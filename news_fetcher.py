@@ -29,7 +29,9 @@ MAX_PER_SOURCE = 20
 REQUEST_UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
               "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36")
 
-# RSS 源（按分类）—— 国内权威源 + 国外源
+# RSS 源（按分类）—— 国内源（仅保留实时更新）+ 国外源
+# 注：人民网/新华网的 RSS 已停更（分别冻结于 2025-06 / 2022 年底），已移除；
+# 国内军事媒体暂无可用实时 RSS，军事暂用国外国防源。
 RSS_SOURCES = {
     "AI": [
         # ── 国内 ──
@@ -37,26 +39,20 @@ RSS_SOURCES = {
         {"name": "InfoQ中文",    "url": "https://www.infoq.cn/feed"},
         {"name": "雷锋网",       "url": "https://www.leiphone.com/feed"},
         {"name": "IT之家",       "url": "https://www.ithome.com/rss/"},
-        {"name": "人民网·科技",   "url": "http://www.people.com.cn/rss/scitech.xml"},
         # ── 国外 ──
         {"name": "MIT Technology Review", "url": "https://www.technologyreview.com/feed/"},
         {"name": "OpenAI Blog",           "url": "https://openai.com/blog/rss.xml"},
         {"name": "TechCrunch AI",         "url": "https://techcrunch.com/category/artificial-intelligence/feed/"},
     ],
     "军事": [
-        # ── 国内 ──
-        {"name": "人民网·军事",   "url": "http://www.people.com.cn/rss/military.xml"},
-        {"name": "新华网·军事",   "url": "https://www.xinhuanet.com/mil/news_mil.xml"},
-        # ── 国外 ──
+        # 国内军事媒体无可用实时 RSS，暂用国外国防源（均为实时更新）
         {"name": "Defense News",     "url": "https://www.defensenews.com/arc/outboundfeeds/rss/category/air/?outputType=xml"},
         {"name": "Breaking Defense", "url": "https://breakingdefense.com/feed/"},
-        # Military.com RSS 格式不规范，已替换为 Defense One
         {"name": "Defense One",      "url": "https://www.defenseone.com/rss/all/"},
     ],
     "金融": [
         # ── 国内 ──
-        {"name": "人民网·财经",   "url": "http://www.people.com.cn/rss/finance.xml"},
-        {"name": "新华网·财经",   "url": "https://www.xinhuanet.com/fortune/news_fortune.xml"},
+        {"name": "中国新闻网·财经", "url": "https://www.chinanews.com.cn/rss/finance.xml"},
         # ── 国外 ──
         {"name": "CNBC Markets",     "url": "https://www.cnbc.com/id/10001147/device/rss/rss.html"},
         {"name": "MarketWatch",      "url": "https://feeds.marketwatch.com/marketwatch/topstories"},
@@ -64,10 +60,8 @@ RSS_SOURCES = {
     ],
     "时政": [
         # ── 国内 ──
-        {"name": "新华网·要闻",   "url": "https://www.xinhuanet.com/politics/news_politics.xml"},
-        {"name": "人民网·时政",   "url": "http://www.people.com.cn/rss/politics.xml"},
-        {"name": "人民网·国际",   "url": "http://www.people.com.cn/rss/world.xml"},
-        {"name": "中国新闻网",    "url": "https://www.chinanews.com.cn/rss/scroll-news.xml"},
+        {"name": "中国新闻网",      "url": "https://www.chinanews.com.cn/rss/scroll-news.xml"},
+        {"name": "中国新闻网·国际", "url": "https://www.chinanews.com.cn/rss/world.xml"},
         # ── 国外 ──
         {"name": "BBC News",     "url": "https://feeds.bbci.co.uk/news/rss.xml"},
         {"name": "Reuters World","url": "https://feeds.reuters.com/reuters/worldNews"},
@@ -204,7 +198,7 @@ def parse_date(entry) -> str:
             except Exception:
                 pass
 
-    return datetime.now(timezone.utc).isoformat()
+    return None  # 无有效日期：返回 None，由调用方跳过，避免把停更/过期内容当成"今日新闻"
 
 
 def extract_source_name(source_url: str, source_name: str) -> str:
@@ -253,11 +247,15 @@ def fetch_category(category: str, sources: list) -> list:
 
                 link = getattr(entry, "link", "")
 
+                published = parse_date(entry)
+                if not published:
+                    continue  # 跳过无日期条目，防止停更源/过期内容冒充今日新闻
+
                 articles.append({
                     "title": title,
                     "link": link,
                     "summary": summary,
-                    "published": parse_date(entry),
+                    "published": published,
                     "source": extract_source_name(link, name),
                     "category": category,
                 })
