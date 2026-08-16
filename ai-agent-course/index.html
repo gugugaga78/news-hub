@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Agent 设计基础 · 交互式课程</title>
+<style>
+  :root {
+    --bg: #0d1117; --bg2: #161b22; --card: rgba(255,255,255,0.05);
+    --border: rgba(255,255,255,0.12); --text: #e8eaed; --muted: #9aa0a6; --dim: #5f6368;
+    --cyan: #00e5ff; --purple: #b388ff; --green: #76ff03; --red: #ff6e40; --gold: #ffd740;
+    --radius: 14px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: linear-gradient(135deg, #0d1117 0%, #161b22 40%, #0d1117 70%, #1a1f35 100%);
+    background-attachment: fixed; color: var(--text); line-height: 1.7; min-height: 100vh;
+  }
+  .container { max-width: 860px; margin: 0 auto; padding: 24px 18px 80px; }
+  header { text-align: center; padding: 40px 0 20px; }
+  header h1 {
+    font-size: 2rem; font-weight: 800; letter-spacing: -0.5px;
+    background: linear-gradient(135deg, #e8eaed, #bdc1c6);
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  header .sub { margin-top: 6px; color: var(--muted); font-size: 0.9rem; }
+
+  /* 进度条 */
+  .progress-wrap { margin: 20px 0 24px; }
+  .progress-label { display: flex; justify-content: space-between; font-size: 0.82rem; color: var(--muted); margin-bottom: 6px; }
+  .progress-bar { height: 6px; background: rgba(255,255,255,0.08); border-radius: 3px; overflow: hidden; }
+  .progress-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--cyan), var(--purple)); transition: width .4s; border-radius: 3px; }
+
+  /* 课程导航 */
+  .lesson-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 28px; justify-content: center; }
+  .lesson-btn {
+    padding: 10px 22px; border-radius: 30px; border: 1px solid var(--border);
+    background: var(--card); color: var(--muted); font-size: 0.9rem; font-weight: 500;
+    cursor: pointer; transition: .25s; backdrop-filter: blur(10px); user-select: none;
+  }
+  .lesson-btn:hover { border-color: rgba(255,255,255,.3); color: #fff; }
+  .lesson-btn.active { border-color: rgba(255,255,255,.35); background: rgba(255,255,255,.14); color: #fff; font-weight: 600; }
+  .lesson-btn.done::after { content: " ✓"; color: var(--green); }
+
+  /* 卡片 */
+  .card {
+    background: var(--card); backdrop-filter: blur(18px); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 22px 24px; margin-bottom: 16px;
+  }
+  .card h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 12px; color: #fff; }
+  .card h3 { font-size: 1.02rem; font-weight: 650; margin: 18px 0 8px; color: var(--cyan); }
+  .card p { margin-bottom: 10px; }
+  .card ul, .card ol { margin: 8px 0 10px 22px; }
+  .card li { margin-bottom: 6px; }
+  .card table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 0.88rem; }
+  .card th, .card td { border: 1px solid var(--border); padding: 8px 10px; text-align: left; }
+  .card th { background: rgba(255,255,255,0.06); color: #fff; }
+  .card code { background: rgba(0,229,255,0.1); color: var(--cyan); padding: 1px 6px; border-radius: 4px; font-size: 0.85em; font-family: Consolas, monospace; }
+  .keybox {
+    background: rgba(0,229,255,0.07); border: 1px solid rgba(0,229,255,0.2);
+    border-radius: 10px; padding: 12px 16px; margin: 12px 0; font-size: 0.95rem;
+  }
+  .keybox b { color: var(--cyan); }
+  .warnbox {
+    background: rgba(255,110,64,0.07); border: 1px solid rgba(255,110,64,0.25);
+    border-radius: 10px; padding: 12px 16px; margin: 12px 0; font-size: 0.93rem;
+  }
+  .warnbox b { color: var(--red); }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 6px; font-size: 0.72rem; font-weight: 600; color: var(--purple); background: rgba(179,136,255,0.12); border: 1px solid rgba(179,136,255,0.25); margin-right: 6px; }
+  .cite { font-size: 0.78rem; color: var(--dim); margin-top: 8px; }
+
+  /* 测验 */
+  .quiz-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+  .quiz-score { font-size: 0.9rem; color: var(--gold); font-weight: 600; }
+  .question { margin-bottom: 20px; }
+  .question .q { font-weight: 600; margin-bottom: 10px; color: #fff; }
+  .option {
+    display: block; width: 100%; text-align: left; padding: 12px 16px; margin-bottom: 8px;
+    border-radius: 10px; border: 1px solid var(--border); background: rgba(255,255,255,0.03);
+    color: var(--text); cursor: pointer; transition: .2s; font-size: 0.92rem; line-height: 1.5;
+  }
+  .option:hover:not(.disabled) { border-color: rgba(255,255,255,0.4); background: rgba(255,255,255,0.08); }
+  .option.correct { border-color: var(--green); background: rgba(118,255,3,0.12); color: #d8ff9e; }
+  .option.wrong { border-color: var(--red); background: rgba(255,110,64,0.12); color: #ffb59a; }
+  .option.disabled { cursor: default; }
+  .explain {
+    display: none; margin-top: 8px; padding: 12px 16px; border-radius: 10px;
+    background: rgba(255,215,64,0.07); border: 1px solid rgba(255,215,64,0.25); font-size: 0.88rem;
+  }
+  .explain.show { display: block; }
+  .quiz-reset { margin-top: 6px; padding: 8px 16px; border-radius: 8px; border: 1px solid var(--border); background: transparent; color: var(--muted); cursor: pointer; font-size: 0.82rem; }
+  .quiz-reset:hover { color: #fff; border-color: rgba(255,255,255,.4); }
+
+  /* 速查卡 */
+  .cheat-grid { display: grid; gap: 10px; grid-template-columns: 1fr; }
+  @media (min-width: 640px) { .cheat-grid { grid-template-columns: 1fr 1fr; } }
+  .cheat-item { background: rgba(255,255,255,0.04); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; }
+  .cheat-item .t { font-weight: 700; color: var(--cyan); font-size: 0.9rem; margin-bottom: 4px; }
+  .cheat-item .d { font-size: 0.84rem; color: var(--muted); }
+
+  footer { text-align: center; margin-top: 40px; color: var(--dim); font-size: 0.78rem; }
+  .hidden { display: none; }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>AI Agent 设计基础</h1>
+    <p class="sub">交互式课程 · 教材：李博杰《深入理解 AI Agent》 · 进度自动保存</p>
+  </header>
+
+  <div class="progress-wrap">
+    <div class="progress-label"><span id="progText">已完成 0/2 课</span><span id="progPct">0%</span></div>
+    <div class="progress-bar"><div class="progress-fill" id="progFill"></div></div>
+  </div>
+
+  <nav class="lesson-nav" id="lessonNav"></nav>
+
+  <div id="lessonBody"></div>
+
+  <footer>教材 · 李博杰《深入理解 AI Agent：设计原理与工程实践》｜ 方法 · Matt Pocock <code>teach</code></footer>
+</div>
+
+<script>
+const LESSONS = [
+{
+  id: "01", title: "核心公式与 ReAct 循环", section: "第 1 章",
+  sections: [
+    { h: "核心公式：Agent = LLM + 上下文 + 工具", html: `
+      <p>这是全书的灵魂公式（§1.1），<b>三者缺一不可</b>。</p>
+      <table>
+        <tr><th>直观</th><th>组件</th><th>作用</th><th>学术（RL，可选）</th></tr>
+        <tr><td>🧠 大脑</td><td><b>LLM</b></td><td>思考、规划、决策"下一步做什么"</td><td>策略（Policy）</td></tr>
+        <tr><td>👁️ 眼睛</td><td><b>上下文</b></td><td>每个决策点能看到的全部信息</td><td>观察空间</td></tr>
+        <tr><td>🦾 手脚</td><td><b>工具</b></td><td>能做的所有事情（改世界的通道）</td><td>动作空间</td></tr>
+      </table>
+      <div class="keybox"><b>一句话记法</b>：大脑决定做什么，眼睛决定它知道什么，手脚决定它能做到什么。</div>` },
+    { h: "上下文：五个组件 + 静态前缀 + 轨迹", html: `
+      <p>每次调 LLM，上下文由<b>五部分</b>构成（§1.1.3）：</p>
+      <table>
+        <tr><th>#</th><th>组件</th><th>性质</th></tr>
+        <tr><td>1</td><td>系统提示词（岗位说明书）</td><td>静态前缀</td></tr>
+        <tr><td>2</td><td>工具定义</td><td>静态前缀</td></tr>
+        <tr><td>3</td><td>用户消息</td><td>动态（轨迹）</td></tr>
+        <tr><td>4</td><td>模型回复（思考+内容+工具调用）</td><td>动态（轨迹）</td></tr>
+        <tr><td>5</td><td>工具执行结果</td><td>动态（轨迹）</td></tr>
+      </table>
+      <div class="keybox"><b>关键公式</b>：上下文 = 静态前缀 + 轨迹</div>
+      <p><b>消融实验 1-1 结论</b>：去工具定义→丧失行动能力；去工具结果→<b>无限循环</b>；去思考过程→决策矛盾；去历史消息→"失忆"重复劳动。</p>` },
+    { h: "ReAct 循环：想 → 做 → 看", html: `
+      <p>三大组件靠 <b>ReAct（Reasoning + Acting）</b> 协同（§1.1.4）。名字只有"思考+行动"，实际是<b>三环节</b>：</p>
+      <div class="keybox"><b>想</b>（思考下一步）→ <b>做</b>（调工具）→ <b>看</b>（读结果）→ 循环直到完成</div>
+      <p>例（多币种汇总）：用户问年度收入 → 模型想「先换算汇率」 → 调 <code>convert_currency</code> → 拿到汇率 → 再想「调解释器求和」 → 给最终答案。</p>` },
+    { h: "Harness 工程（一句话）", html: `
+      <p>§1.2：从「提示工程」演进到「<b>Loop 工程</b>」——管好「思考→行动→观察」整个循环：上下文管理、工具接口、安全约束、验证纠正。</p>
+      <div class="warnbox"><b>模型做不稳的，Harness 先补上；模型内化一层，Harness 卸下一层。</b></div>` },
+  ],
+  quiz: [
+    { q: "Agent 的三个核心组件是？", opts: ["LLM + 上下文 + 工具", "模型 + 数据 + 算力", "提示词 + 参数 + 函数", "训练 + 推理 + 部署"], ans: 0, exp: "Agent = LLM（大脑）+ 上下文（眼睛）+ 工具（手脚），三者缺一不可。" },
+    { q: "上下文五组件里，属于「静态前缀」的是？", opts: ["系统提示词 + 工具定义", "用户消息 + 模型回复", "工具结果 + 用户消息", "思考过程 + 工具调用"], ans: 0, exp: "静态前缀 = 系统提示词 + 工具定义；轨迹 = 用户消息 + 模型回复 + 工具执行结果。" },
+    { q: "消融实验里，去掉哪个组件会让 Agent 陷入「盲目循环」？", opts: ["工具执行结果", "工具定义", "历史消息", "思考过程"], ans: 0, exp: "去掉工具结果，Agent 看不到上一步反馈，会反复调用同一工具陷入死循环。" },
+    { q: "ReAct 实际有哪三个环节？", opts: ["想 → 做 → 看", "读 → 写 → 存", "搜 → 猜 → 答", "训练 → 测试 → 部署"], ans: 0, exp: "想（思考）、做（行动）、看（观察）三个环节，循环到任务完成。" },
+    { q: "哪种学习范式「合上就忘」？", opts: ["上下文学习", "后训练", "外部化学习", "强化学习"], ans: 0, exp: "上下文学习是临场翻资料——快但临时，会话结束就消失；后训练=教科书（永久）；外部化=笔记本（持久）。" },
+  ],
+  cheat: [
+    { t: "Agent = ", d: "LLM + 上下文 + 工具 = 大脑 + 眼睛 + 手脚" },
+    { t: "上下文 = ", d: "静态前缀（系统提示词+工具定义）+ 轨迹（用户消息+模型回复+工具结果）" },
+    { t: "ReAct = ", d: "想 → 做 → 看（循环到任务完成）" },
+    { t: "三种学习", d: "后训练=教科书 / 上下文学习=参考资料 / 外部化=笔记本" },
+    { t: "Harness", d: "管住整个 Loop 的工程外壳（模型做不稳的它兜底）" },
+  ]
+},
+{
+  id: "02", title: "Agent 状态栏", section: "第 2 章 §2.6",
+  sections: [
+    { h: "一句话：状态栏是什么", html: `
+      <p><b>Agent 状态栏 = Harness 在上下文末尾持续注入的结构化元信息</b>（任务进度、时间、工具调用次数、环境状态），让模型每次生成时"瞥一眼"就知道当前状态。</p>
+      <ul>
+        <li>像<b>手机顶部状态栏</b>：时间/电量/信号——不是主界面内容，但随时能瞥一眼掌握状态</li>
+        <li>与系统提示词的区别：提示词 = 入职员工手册（不变）；状态栏 = 实时仪表盘（随任务更新）</li>
+      </ul>` },
+    { h: "为什么有效：检索 ≠ 推理", html: `
+      <p>核心洞察（§2.6.1）：上下文学习更像<b>检索</b>而非<b>推理</b>——模型擅长从已有内容里「找」，但不擅长主动「归纳总结」。</p>
+      <div class="keybox"><b>上下文窗口是「一台只有一半的检索引擎」</b>：检索很强，但缺「提炼层」——从不会自动数一遍、建索引、就地总结。</div>
+      <p>后果：任何「结论」（打了几次电话、有没有超限）模型都要从原始记录<b>现算一遍</b>，代价随上下文长度 N 一起涨，还容易数错。</p>
+      <p>经典翻车：约束「每商家最多打 3 次电话」，Agent 数不清，打到第 4 次甚至死循环。</p>` },
+    { h: "三条实操铁律（企业级必背）", html: `
+      <p>来自论文级实验（上下文蒸馏，2.4 万次评测）：<b>弱模型补准确率，强模型省效率</b>——最弱模型准确率涨 40–54 个点，2B 小模型追平不带状态栏的前沿大模型；强模型思考 token 砍八九成。</p>
+      <ol>
+        <li><b>状态栏用代码维护，别用大模型维护</b> —— 20 行正则就能满分；让 LLM 读整段历史吐统计反而出错（等于把"扫描"难题原样搬家）。</li>
+        <li><b>删原文前，先确认状态栏覆盖所有会被问的维度</b> —— 否则答非所问的状态栏变"假权威"，准确率 100%→7.6%。</li>
+        <li><b>把状态栏准确率当生产指标盯</b> —— 模型几乎无条件相信状态栏，写错就原样带进答案；信息必须来自真实观测，绝不能被污染。</li>
+      </ol>` },
+    { h: "插在哪 + 两种更新方式", html: `
+      <p>状态栏在 API 层面 = 一条 <b>user 角色的消息，插入上下文末尾</b>（不改 system，避免破坏前缀缓存），紧邻生成位置获得最高注意力权重。</p>
+      <table>
+        <tr><th></th><th>实现一：每轮替换</th><th>实现二：持久追加</th></tr>
+        <tr><td>做法</td><td>删旧状态、末尾追加最新</td><td>状态永久留轨迹，每轮只追加</td></tr>
+        <tr><td>代表</td><td>—</td><td>Claude Code 的 <code>&lt;system-reminder&gt;</code></td></tr>
+        <tr><td>优点</td><td>永远一份最新状态</td><td>缓存完全友好</td></tr>
+        <tr><td>缺点</td><td>删旧状态使其后缓存失效</td><td>陈旧状态累积</td></tr>
+        <tr><td>选它当</td><td>轨迹短 / 单条状态大</td><td>更新频繁且轨迹长</td></tr>
+      </table>` },
+  ],
+  quiz: [
+    { q: "Agent 状态栏是什么？", opts: ["上下文末尾注入的结构化元信息", "系统提示词的一种", "一种新的模型参数", "用户输入的一部分"], ans: 0, exp: "状态栏是 Harness 在上下文末尾注入的元信息（进度/时间/计数），区别于固定不变的系统提示词。" },
+    { q: "为什么模型会「数不清打了几次电话」？", opts: ["上下文学习是检索不是推理，不会自动提炼结论", "模型算力不够", "工具接口设计错误", "KV Cache 溢出"], ans: 0, exp: "模型只会从原文里「找」，不会自动「提炼」——「打了几次」这个结论散在原始记录里，它得现算一遍，容易数错。" },
+    { q: "状态栏该用什么来维护？", opts: ["代码（正则/计数函数）", "另一个大模型批量统计", "人工手动更新", "系统提示词"], ans: 0, exp: "20 行正则就能满分；让 LLM 批量统计 = 把「扫描整段上下文」的难题原样搬家，反而出错。" },
+    { q: "「100%→7.6%」的教训是什么？", opts: ["删原文前要确认状态栏覆盖所有会被问的维度", "状态栏必须放开头", "状态栏越长越好", "必须用最强模型"], ans: 0, exp: "状态栏只存「两两组合」计数却问「三者交叉」，答非所问的状态栏变「假权威」，连 Claude 都从 100% 崩到 7.6%。" },
+    { q: "状态栏在 API 里以什么 role 插入、插在哪？", opts: ["user 角色，上下文末尾", "system 角色，开头", "tool 角色，中间", "assistant 角色，末尾"], ans: 0, exp: "以 user 角色消息插入末尾（借用消息槽位，内容实为框架生成），不改 system 以免破坏前缀缓存。" },
+  ],
+  cheat: [
+    { t: "状态栏 = ", d: "上下文末尾注入的结构化元信息（「瞥一眼」知道状态）" },
+    { t: "根因", d: "上下文学习 = 检索 ≠ 推理（缺「提炼层」）" },
+    { t: "三条铁律", d: "①代码维护不靠 LLM ②删原文前确认覆盖维度 ③准确率当生产指标" },
+    { t: "位置", d: "user 角色消息插末尾；更新=每轮替换 vs 持久追加" },
+    { t: "硬数据", d: "2B 小模型+状态栏 ≈ 前沿大模型；强模型思考 token 降八九成" },
+  ]
+}
+];
+
+const STORE_KEY = "ai-agent-course-progress";
+let progress = JSON.parse(localStorage.getItem(STORE_KEY) || "{}");
+let current = 0, answered = {};
+
+function save() { localStorage.setItem(STORE_KEY, JSON.stringify(progress)); }
+
+function renderNav() {
+  const nav = document.getElementById("lessonNav");
+  nav.innerHTML = LESSONS.map((l, i) =>
+    `<button class="lesson-btn${i===current?' active':''}${progress[l.id]?' done':''}" data-i="${i}">${l.id} · ${l.title}</button>`
+  ).join("");
+  nav.querySelectorAll(".lesson-btn").forEach(b => b.onclick = () => { current = +b.dataset.i; answered = {}; render(); });
+  document.querySelectorAll(".lesson-btn").forEach(b => b.classList.toggle("active", +b.dataset.i === current));
+}
+
+function renderProgress() {
+  const done = LESSONS.filter(l => progress[l.id]).length;
+  const pct = Math.round(done / LESSONS.length * 100);
+  document.getElementById("progText").textContent = `已完成 ${done}/${LESSONS.length} 课`;
+  document.getElementById("progPct").textContent = pct + "%";
+  document.getElementById("progFill").style.width = pct + "%";
+}
+
+function renderQuiz(quiz) {
+  const score = Object.values(answered).filter(v => v === true).length;
+  let html = `<div class="card"><div class="quiz-head"><h2 style="margin:0">📝 随堂测验</h2><span class="quiz-score" id="quizScore">得分 ${score}/${quiz.length}</span></div>`;
+  quiz.forEach((q, qi) => {
+    const state = answered[qi];
+    html += `<div class="question"><div class="q">${qi+1}. ${q.q}</div>`;
+    q.opts.forEach((o, oi) => {
+      let cls = "option";
+      if (state !== undefined) {
+        cls += " disabled";
+        if (oi === q.ans) cls += " correct";
+        else if (oi === state) cls += " wrong";
+      }
+      html += `<button class="${cls}" data-qi="${qi}" data-oi="${oi}">${"ABCD"[oi]}. ${o}</button>`;
+    });
+    html += `<div class="explain${state!==undefined?' show':''}">💡 ${q.exp}</div></div>`;
+  });
+  html += `<button class="quiz-reset" id="quizReset">重置本课测验</button></div>`;
+  return html;
+}
+
+function render() {
+  renderNav(); renderProgress();
+  const l = LESSONS[current];
+  let html = `<div class="card"><span class="tag">${l.section}</span><h2 style="display:inline;margin-left:4px">${l.title}</h2></div>`;
+  l.sections.forEach(s => {
+    html += `<div class="card"><h2>${s.h}</h2>${s.html}</div>`;
+  });
+  html += renderQuiz(l.quiz);
+  html += `<div class="card"><h2>🗂 速查卡</h2><div class="cheat-grid">` +
+    l.cheat.map(c => `<div class="cheat-item"><div class="t">${c.t}</div><div class="d">${c.d}</div></div>`).join("") +
+    `</div><p class="cite">教材：李博杰《深入理解 AI Agent》${l.section}</p></div>`;
+  document.getElementById("lessonBody").innerHTML = html;
+
+  document.querySelectorAll(".option").forEach(btn => {
+    btn.onclick = () => {
+      const qi = +btn.dataset.qi, oi = +btn.dataset.oi;
+      if (answered[qi] !== undefined) return;
+      answered[qi] = oi === LESSONS[current].quiz[qi].ans;
+      // 标记课程完成：全部答对才 done
+      if (Object.keys(answered).length === LESSONS[current].quiz.length) {
+        const allRight = Object.values(answered).every(v => v === true);
+        if (allRight) { progress[l.id] = true; save(); }
+      }
+      render();
+    };
+  });
+  const reset = document.getElementById("quizReset");
+  if (reset) reset.onclick = () => { answered = {}; render(); };
+}
+
+render();
+</script>
+</body>
+</html>
