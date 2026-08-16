@@ -25,38 +25,66 @@ ENABLE_TRANSLATION = True
 # 每个源最多抓取篇数
 MAX_PER_SOURCE = 20
 
-# RSS 源（按分类）
+# 请求 User-Agent（部分国内站点会拦截默认爬虫 UA，模拟浏览器更稳）
+REQUEST_UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+              "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36")
+
+# RSS 源（按分类）—— 国内权威源 + 国外源
 RSS_SOURCES = {
     "AI": [
+        # ── 国内 ──
+        {"name": "量子位",       "url": "https://www.qbitai.com/feed"},
+        {"name": "InfoQ中文",    "url": "https://www.infoq.cn/feed"},
+        {"name": "雷锋网",       "url": "https://www.leiphone.com/feed"},
+        {"name": "IT之家",       "url": "https://www.ithome.com/rss/"},
+        {"name": "人民网·科技",   "url": "http://www.people.com.cn/rss/scitech.xml"},
+        # ── 国外 ──
         {"name": "MIT Technology Review", "url": "https://www.technologyreview.com/feed/"},
-        {"name": "OpenAI Blog",         "url": "https://openai.com/blog/rss.xml"},
-        {"name": "TechCrunch AI",       "url": "https://techcrunch.com/category/artificial-intelligence/feed/"},
+        {"name": "OpenAI Blog",           "url": "https://openai.com/blog/rss.xml"},
+        {"name": "TechCrunch AI",         "url": "https://techcrunch.com/category/artificial-intelligence/feed/"},
     ],
     "军事": [
-        {"name": "Defense News",        "url": "https://www.defensenews.com/arc/outboundfeeds/rss/category/air/?outputType=xml"},
-        {"name": "Breaking Defense",    "url": "https://breakingdefense.com/feed/"},
+        # ── 国内 ──
+        {"name": "人民网·军事",   "url": "http://www.people.com.cn/rss/military.xml"},
+        {"name": "新华网·军事",   "url": "https://www.xinhuanet.com/mil/news_mil.xml"},
+        # ── 国外 ──
+        {"name": "Defense News",     "url": "https://www.defensenews.com/arc/outboundfeeds/rss/category/air/?outputType=xml"},
+        {"name": "Breaking Defense", "url": "https://breakingdefense.com/feed/"},
         # Military.com RSS 格式不规范，已替换为 Defense One
-        {"name": "Defense One",         "url": "https://www.defenseone.com/rss/all/"},
+        {"name": "Defense One",      "url": "https://www.defenseone.com/rss/all/"},
     ],
     "金融": [
-        {"name": "CNBC Markets",        "url": "https://www.cnbc.com/id/10001147/device/rss/rss.html"},
-        {"name": "MarketWatch",         "url": "https://feeds.marketwatch.com/marketwatch/topstories"},
-        {"name": "Reuters Business",    "url": "https://feeds.reuters.com/reuters/businessNews"},
+        # ── 国内 ──
+        {"name": "人民网·财经",   "url": "http://www.people.com.cn/rss/finance.xml"},
+        {"name": "新华网·财经",   "url": "https://www.xinhuanet.com/fortune/news_fortune.xml"},
+        # ── 国外 ──
+        {"name": "CNBC Markets",     "url": "https://www.cnbc.com/id/10001147/device/rss/rss.html"},
+        {"name": "MarketWatch",      "url": "https://feeds.marketwatch.com/marketwatch/topstories"},
+        {"name": "Reuters Business", "url": "https://feeds.reuters.com/reuters/businessNews"},
     ],
     "时政": [
-        {"name": "BBC News",            "url": "https://feeds.bbci.co.uk/news/rss.xml"},
-        {"name": "Reuters World",       "url": "https://feeds.reuters.com/reuters/worldNews"},
-        {"name": "NPR News",            "url": "https://feeds.npr.org/1001/rss.xml"},
+        # ── 国内 ──
+        {"name": "新华网·要闻",   "url": "https://www.xinhuanet.com/politics/news_politics.xml"},
+        {"name": "人民网·时政",   "url": "http://www.people.com.cn/rss/politics.xml"},
+        {"name": "人民网·国际",   "url": "http://www.people.com.cn/rss/world.xml"},
+        {"name": "中国新闻网",    "url": "https://www.chinanews.com.cn/rss/scroll-news.xml"},
+        # ── 国外 ──
+        {"name": "BBC News",     "url": "https://feeds.bbci.co.uk/news/rss.xml"},
+        {"name": "Reuters World","url": "https://feeds.reuters.com/reuters/worldNews"},
+        {"name": "NPR News",     "url": "https://feeds.npr.org/1001/rss.xml"},
     ],
 }
 
 # 广告/垃圾关键词过滤列表（不区分大小写）
 AD_KEYWORDS = [
+    # 英文
     "sponsored", "advertisement", "promoted", "buy now", "limited offer",
     "discount", "sale", "% off", "click here", "subscribe now",
     "paid post", "partner content", "affiliate", "free trial",
     "act now", "don't miss", "exclusive deal", "best price",
     "shopping", "coupon", "deal of the day", "clearance",
+    # 中文
+    "广告", "推广", "赞助", "招商", "优惠券", "限时抢购", "秒杀",
 ]
 
 # ──────────────────────────────────────────────────────────────────────
@@ -103,8 +131,13 @@ def translate_text(text: str) -> str:
         return text
 
 
+def contains_cjk(text: str) -> bool:
+    """判断文本是否包含中文字符（用于跳过已是中文的内容，避免被误翻译）"""
+    return any('\u4e00' <= c <= '\u9fff' for c in (text or ""))
+
+
 def translate_articles(articles: list) -> list:
-    """批量翻译文章标题和摘要"""
+    """批量翻译文章标题和摘要（只翻译纯英文内容，中文源直接跳过）"""
     translator = _get_translator()
     if translator is None:
         return articles
@@ -113,16 +146,17 @@ def translate_articles(articles: list) -> list:
     print(f"\n[翻译] 开始翻译 {total} 篇文章...")
 
     for i, a in enumerate(articles):
-        # 只翻译英文内容（简单判断：包含 ASCII 为主的文本）
         title = a.get("title", "")
         summary = a.get("summary", "")
 
-        if title and any(ord(c) < 128 for c in title):
+        # 仅当标题不含中文时才翻译。中文源标题常混有英文词（如 "AI"、"GPT-5"），
+        # 用「是否含中文」判断比「是否含 ASCII」更可靠，避免把中文句子误送英译中。
+        if title and not contains_cjk(title):
             zh_title = translate_text(title)
             if zh_title and zh_title != title:
                 a["title_cn"] = zh_title
 
-        if summary and any(ord(c) < 128 for c in summary):
+        if summary and not contains_cjk(summary):
             zh_summary = translate_text(summary)
             if zh_summary and zh_summary != summary:
                 a["summary_cn"] = zh_summary
@@ -201,7 +235,7 @@ def fetch_category(category: str, sources: list) -> list:
         name = src["name"]
         url = src["url"]
         try:
-            feed = feedparser.parse(url)
+            feed = feedparser.parse(url, request_headers={"User-Agent": REQUEST_UA})
             if feed.bozo and not feed.entries:
                 print(f"  [WARN] {name}: parse error, skipping")
                 continue

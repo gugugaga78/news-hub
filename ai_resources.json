@@ -1,6 +1,6 @@
 {
   "last_updated": "2026-08-15 20:37",
-  "total": 115,
+  "total": 105,
   "resources": [
     {
       "title": "fighting41love/funNLP",
@@ -8,7 +8,14 @@
       "source": "GitHub",
       "type": "仓库",
       "stars": 82471,
-      "summary": "中英文敏感词、语言检测、中外手机/电话归属地/运营商查询、名字推断性别、手机号抽取、身份证抽取、邮箱抽取、中日文人名库、中文缩写库、拆字词典、词汇情感值、停用词、反动词表、暴恐词表、繁简体转换、英文模拟中文发音、汪峰歌词生成器、职业名称词库、同义词库、反义词库、否定词库、汽车品牌词库、汽车零件词库、"
+      "summary": "中英文敏感词、语言检测、中外手机/电话归属地/运营商查询、名字推断性别、手机号抽取、身份证抽取、邮箱抽取、中日文人名库、中文缩写库、拆字词典、词汇情感值、停用词、反动词表、暴恐词表、繁简体转换、英文模拟中文发音、汪峰歌词生成器、职业名称词库、同义词库、反义词库、否定词库、汽车品牌词库、汽车零件词库、",
+      "title_cn": "funNLP · 中文NLP资源集",
+      "desc_cn": "中文自然语言处理最全的工具与词典合集：敏感词检测、语言识别、身份证/手机号/邮箱抽取、各类中文词库，做中文 NLP 的必备弹药库。",
+      "tags": [
+        "NLP",
+        "中文",
+        "工具集"
+      ]
     },
     {
       "title": "patchy631/ai-engineering-hub",
@@ -16,7 +23,15 @@
       "source": "GitHub",
       "type": "仓库",
       "stars": 37002,
-      "summary": "In-depth tutorials on LLMs, RAGs and real-world AI agent applications."
+      "summary": "In-depth tutorials on LLMs, RAGs and real-world AI agent applications.",
+      "title_cn": "AI 工程实战教程合集",
+      "desc_cn": "LLM、RAG、AI Agent 的深度实战教程，从原理到真实应用，适合想动手做 AI 应用的工程师。",
+      "tags": [
+        "LLM",
+        "RAG",
+        "Agent",
+        "教程"
+      ]
     },
     {
       "title": "e2b-dev/awesome-ai-agents",
@@ -24,15 +39,13 @@
       "source": "GitHub",
       "type": "仓库",
       "stars": 29427,
-      "summary": "A list of AI autonomous agents"
-    },
-    {
-      "title": "Dujltqzv/Some-Many-Books",
-      "link": "https://github.com/Dujltqzv/Some-Many-Books",
-      "source": "GitHub",
-      "type": "仓库",
-      "stars": 22335,
-      "summary": "个人收藏书籍列表　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　"
+      "summary": "A list of AI autonomous agents",
+      "title_cn": "Awesome AI Agents 清单",
+      "desc_cn": "汇集各类 AI 自主智能体的精选清单，找项目、找工具、找灵感都用得上。",
+      "tags": [
+        "Agent",
+        "清单"
+      ]
     },
     {
       "title": "datawhalechina/llm-universe",
@@ -40,7 +53,14 @@
       "source": "GitHub",
       "type": "仓库",
       "stars": 13783,
-      "summary": "本项目是一个面向小白开发者的大模型应用开发教程，在线阅读地址：https://datawhalechina.github.io/llm-universe/"
+      "summary": "本项目是一个面向小白开发者的大模型应用开发教程，在线阅读地址：https://datawhalechina.github.io/llm-universe/",
+      "title_cn": "动手学大模型应用开发（Datawhale）",
+      "desc_cn": "面向小白的大模型应用开发开源教程，配合在线文档，零基础入门 LLM 开发的首选。",
+      "tags": [
+        "LLM",
+        "入门",
+        "教程"
+      ]
     },
     {
       "title": "awesome-opencode/awesome-opencode",
@@ -48,7 +68,13 @@
       "source": "GitHub",
       "type": "仓库",
       "stars": 9585,
-      "summary": "A curated list of awesome plugins, themes, agents, projects, and resources for https://opencode.ai"
+      "summary": "A curated list of awesome plugins, themes, agents, projects, and resources for https://opencode.ai",
+      "title_cn": "Awesome OpenCode 清单",
+      "desc_cn": "OpenCode 的插件、主题、Agent、项目精选清单。",
+      "tags": [
+        "OpenCode",
+        "清单"
+      ]
     },
     {
       "title": "liyupi/codefather",
@@ -56,7 +82,14 @@
       "source": "GitHub",
       "type": "仓库",
       "stars": 8242,
-      "summary": "程序员鱼皮的编程宝典 ⭐️ 2026年最全编程学习路线图！包含Java学习路线、前端学习路线、Python学习路线、C++学习路线、算法学习路线、计算机基础学习路线、AI应用开发学习路线、AI Agent开发学习路线等。提供编程入门教程、AI大模型应用开发教程、RAG开发实战、MCP开发教程、Pro"
+      "summary": "程序员鱼皮的编程宝典 ⭐️ 2026年最全编程学习路线图！包含Java学习路线、前端学习路线、Python学习路线、C++学习路线、算法学习路线、计算机基础学习路线、AI应用开发学习路线、AI Agent开发学习路线等。提供编程入门教程、AI大模型应用开发教程、RAG开发实战、MCP开发教程、Pro",
+      "title_cn": "编程学习路线图大全（程序员鱼皮）",
+      "desc_cn": "Java/前端/Python/C++/算法/AI 应用的完整学习路线图，转行或进阶编程的导航地图。",
+      "tags": [
+        "编程",
+        "路线图",
+        "求职"
+      ]
     },
     {
       "title": "nibzard/awesome-agentic-patterns",
@@ -64,7 +97,14 @@
       "source": "GitHub",
       "type": "仓库",
       "stars": 4881,
-      "summary": "A curated catalogue of awesome agentic AI patterns"
+      "summary": "A curated catalogue of awesome agentic AI patterns",
+      "title_cn": "Agentic AI 设计模式清单",
+      "desc_cn": "智能体 AI 设计模式的精选目录，学 Agent 架构模式的速查表。",
+      "tags": [
+        "Agent",
+        "模式",
+        "清单"
+      ]
     },
     {
       "title": "didilili/ai-agents-from-zero",
@@ -72,7 +112,14 @@
       "source": "GitHub",
       "type": "仓库",
       "stars": 3770,
-      "summary": " 🚀 2026 最系统的 AI Agent 速成指南｜智能体实战教程 · 完整学习路径  + 实战项目 + 面试题库 · 对标大模型应用开发工程师岗位 · 覆盖LangChain / LangGraph / Coze / Dify / MCP / skills / LLM / RAG / 提示词 ·"
+      "summary": " 🚀 2026 最系统的 AI Agent 速成指南｜智能体实战教程 · 完整学习路径  + 实战项目 + 面试题库 · 对标大模型应用开发工程师岗位 · 覆盖LangChain / LangGraph / Coze / Dify / MCP / skills / LLM / RAG / 提示词 ·",
+      "title_cn": "AI Agent 从零到就业速成指南",
+      "desc_cn": "系统化 AI Agent 实战教程：完整学习路径 + 实战项目 + 面试题库，对标大模型应用开发工程师。",
+      "tags": [
+        "Agent",
+        "实战",
+        "求职"
+      ]
     },
     {
       "title": "ai-boost/awesome-harness-engineering",
@@ -80,15 +127,14 @@
       "source": "GitHub",
       "type": "仓库",
       "stars": 3577,
-      "summary": "Awesome list for AI agent harness engineering: tools, patterns, evals, memory, MCP, permissions, observability, and orchestration."
-    },
-    {
-      "title": "cirosantilli/china-dictatorship",
-      "link": "https://github.com/cirosantilli/china-dictatorship",
-      "source": "GitHub",
-      "type": "仓库",
-      "stars": 3142,
-      "summary": "反中共政治宣传库。Anti Chinese government propaganda. 住在中国真名用户的网友请别给星星，不然你要被警察请喝茶。常见问答集，新闻集和饭店和音乐建议。卐习万岁卐。冠状病毒审查郝海东新疆改造中心六四事件法轮功 996.ICU709大抓捕巴拿马文件邓家贵低端人口西藏骚乱。"
+      "summary": "Awesome list for AI agent harness engineering: tools, patterns, evals, memory, MCP, permissions, observability, and orchestration.",
+      "title_cn": "Agent 脚手架（Harness）工程清单",
+      "desc_cn": "AI Agent 脚手架的工程清单：工具、模式、评估、记忆、MCP、权限管理。",
+      "tags": [
+        "Agent",
+        "工程",
+        "清单"
+      ]
     },
     {
       "title": "kyrolabs/awesome-agents",
@@ -96,7 +142,13 @@
       "source": "GitHub",
       "type": "仓库",
       "stars": 2745,
-      "summary": "🤖 Awesome list of AI Agents"
+      "summary": "🤖 Awesome list of AI Agents",
+      "title_cn": "Awesome AI Agents 清单",
+      "desc_cn": "AI 智能体精选列表。",
+      "tags": [
+        "Agent",
+        "清单"
+      ]
     },
     {
       "title": "bergside/awesome-design-skills",
@@ -104,7 +156,14 @@
       "source": "GitHub",
       "type": "仓库",
       "stars": 2357,
-      "summary": "List of 67 awesome DESIGN.md and SKILL.md design skill files for agentic tools like Claude Design, Google Stitch, Codex, Cursor, and other AI tools"
+      "summary": "List of 67 awesome DESIGN.md and SKILL.md design skill files for agentic tools like Claude Design, Google Stitch, Codex, Cursor, and other AI tools",
+      "title_cn": "Agent 设计技能（SKILL.md）清单",
+      "desc_cn": "67 个 DESIGN.md / SKILL.md 设计技能文件，给 Claude Code 等智能体工具用的设计规范。",
+      "tags": [
+        "Skill",
+        "设计",
+        "清单"
+      ]
     },
     {
       "title": "slavakurilyak/awesome-ai-agents",
@@ -112,15 +171,13 @@
       "source": "GitHub",
       "type": "仓库",
       "stars": 2173,
-      "summary": "Awesome list of 300+ agentic AI resources"
-    },
-    {
-      "title": "gege-circle/.github",
-      "link": "https://github.com/gege-circle/.github",
-      "source": "GitHub",
-      "type": "仓库",
-      "stars": 1978,
-      "summary": "这里是GitHub的草场，也是戈戈圈爱好者的交流地，主要讨论动漫、游戏、科技、人文、生活等所有话题，欢迎各位小伙伴们在此讨论趣事。This is GitHub grassland, and the community place for Gege circle lovers, mainly disc"
+      "summary": "Awesome list of 300+ agentic AI resources",
+      "title_cn": "Awesome AI Agents（300+）",
+      "desc_cn": "300+ 智能体 AI 资源精选清单。",
+      "tags": [
+        "Agent",
+        "清单"
+      ]
     },
     {
       "title": "phodal/aigc",
@@ -128,7 +185,14 @@
       "source": "GitHub",
       "type": "仓库",
       "stars": 1649,
-      "summary": "《构筑大语言模型应用：应用开发与架构设计》一本关于 LLM 在真实世界应用的开源电子书，介绍了大语言模型的基础知识和应用，以及如何构建自己的模型。其中包括Prompt的编写、开发和管理，探索最好的大语言模型能带来什么，以及LLM应用开发的模式和架构设计。"
+      "summary": "《构筑大语言模型应用：应用开发与架构设计》一本关于 LLM 在真实世界应用的开源电子书，介绍了大语言模型的基础知识和应用，以及如何构建自己的模型。其中包括Prompt的编写、开发和管理，探索最好的大语言模型能带来什么，以及LLM应用开发的模式和架构设计。",
+      "title_cn": "《构筑大语言模型应用》开源电子书",
+      "desc_cn": "LLM 真实世界应用的开源书：Prompt 编写、架构设计、模型构建。",
+      "tags": [
+        "LLM",
+        "电子书",
+        "架构"
+      ]
     },
     {
       "title": "ModelEngine-Group/app-platform",
@@ -136,7 +200,14 @@
       "source": "GitHub",
       "type": "仓库",
       "stars": 1455,
-      "summary": "AppPlatform 是一个前沿的大模型应用工程，旨在通过集成的声明式编程和低代码配置工具，简化和优化大模型的训练与推理应用的开发过程。本工程为软件工程师和产品经理提供一个强大的、可扩展的环境，以支持从概念到部署的全流程 AI 应用开发。"
+      "summary": "AppPlatform 是一个前沿的大模型应用工程，旨在通过集成的声明式编程和低代码配置工具，简化和优化大模型的训练与推理应用的开发过程。本工程为软件工程师和产品经理提供一个强大的、可扩展的环境，以支持从概念到部署的全流程 AI 应用开发。",
+      "title_cn": "AppPlatform 大模型应用工程",
+      "desc_cn": "通过声明式编程 + 低代码配置，简化大模型训练与推理应用开发的工程框架。",
+      "tags": [
+        "LLM",
+        "低代码",
+        "工程"
+      ]
     },
     {
       "title": "Snailclimb/AIGuide",
@@ -144,7 +215,14 @@
       "source": "GitHub",
       "type": "仓库",
       "stars": 527,
-      "summary": "AI 应用开发、AI 编程实战与面试指南，涵盖 LLM、Agent、RAG、MCP、Claude Code、Codex 等核心技术与工程实践。"
+      "summary": "AI 应用开发、AI 编程实战与面试指南，涵盖 LLM、Agent、RAG、MCP、Claude Code、Codex 等核心技术与工程实践。",
+      "title_cn": "AIGuide · AI 应用开发与面试指南",
+      "desc_cn": "LLM、Agent、RAG、MCP、Claude Code、Codex 的核心技术与工程实践 + 面试指南。",
+      "tags": [
+        "LLM",
+        "Agent",
+        "面试"
+      ]
     },
     {
       "title": "huangjia2019/ai-agents",
@@ -152,7 +230,14 @@
       "source": "GitHub",
       "type": "仓库",
       "stars": 511,
-      "summary": "Introductory examples for building LLM-based AI agents. 异步图书：《大模型应用开发 动手做AI Agent》 - 这是一些非常简单的入门示例，重在引导新手入门，目前LLM开发领域发展很快，本书只是一个提纲挈领。更多的示例和代码大家可以去Open"
+      "summary": "Introductory examples for building LLM-based AI agents. 异步图书：《大模型应用开发 动手做AI Agent》 - 这是一些非常简单的入门示例，重在引导新手入门，目前LLM开发领域发展很快，本书只是一个提纲挈领。更多的示例和代码大家可以去Open",
+      "title_cn": "动手做 AI Agent（异步图书配套）",
+      "desc_cn": "《大模型应用开发 动手做 AI Agent》一书的入门示例代码。",
+      "tags": [
+        "Agent",
+        "入门",
+        "书籍"
+      ]
     },
     {
       "title": "peterfei/ai-agent-team",
@@ -160,15 +245,14 @@
       "source": "GitHub",
       "type": "仓库",
       "stars": 424,
-      "summary": "AI Agent Team-拥有24/7专业AI开发团队：产品经理、前端开发、后端开发、测试工程师、DevOps工程师、技术负责人。一键安装，支持中英文命令，大幅提升开发效率！"
-    },
-    {
-      "title": "cirosantilli/china-dictatroship-7",
-      "link": "https://github.com/cirosantilli/china-dictatroship-7",
-      "source": "GitHub",
-      "type": "仓库",
-      "stars": 361,
-      "summary": "反中共政治宣传库。Anti Chinese government propaganda. https://github.com/cirosantilli/china-dictatorship 的备份backup. 住在中国真名用户的网友请别给星星，不然你要被警察请喝茶。常见问答集，新闻集和饭店和音乐"
+      "summary": "AI Agent Team-拥有24/7专业AI开发团队：产品经理、前端开发、后端开发、测试工程师、DevOps工程师、技术负责人。一键安装，支持中英文命令，大幅提升开发效率！",
+      "title_cn": "AI Agent Team · 24/7 虚拟开发团队",
+      "desc_cn": "一键部署产品/前端/后端/测试/DevOps 等 AI 开发团队，支持中英文命令。",
+      "tags": [
+        "Agent",
+        "团队协作",
+        "工程"
+      ]
     },
     {
       "title": "vigorX777/product-design-system",
@@ -176,7 +260,14 @@
       "source": "GitHub",
       "type": "仓库",
       "stars": 358,
-      "summary": "面向产品经理的 AI 辅助产品设计工作框架，可 fork 定制的通用产品设计系统"
+      "summary": "面向产品经理的 AI 辅助产品设计工作框架，可 fork 定制的通用产品设计系统",
+      "title_cn": "AI 辅助产品设计系统",
+      "desc_cn": "面向产品经理的 AI 辅助产品设计工作框架，可 fork 定制。",
+      "tags": [
+        "产品",
+        "设计",
+        "框架"
+      ]
     },
     {
       "title": "cssmagic/Awesome-AI",
@@ -184,7 +275,13 @@
       "source": "GitHub",
       "type": "仓库",
       "stars": 293,
-      "summary": "收集分享 AI 大型语言模型 (LLM)、AI 辅助编程、AI 绘画等领域的常用资料，探索生成式人工智能的应用与开发。"
+      "summary": "收集分享 AI 大型语言模型 (LLM)、AI 辅助编程、AI 绘画等领域的常用资料，探索生成式人工智能的应用与开发。",
+      "title_cn": "Awesome AI 资料清单",
+      "desc_cn": "LLM、AI 辅助编程、AI 绘画等常用资料合集。",
+      "tags": [
+        "AI",
+        "清单"
+      ]
     },
     {
       "title": "unit-mesh/choco-builder",
@@ -192,7 +289,13 @@
       "source": "GitHub",
       "type": "仓库",
       "stars": 222,
-      "summary": "ChocoBuilder (Chocolate Factory) is a cutting-edge LLM toolkit designed to empower you in creating your very own AI assistant.Chocolate Factory 是一款开源的"
+      "summary": "ChocoBuilder (Chocolate Factory) is a cutting-edge LLM toolkit designed to empower you in creating your very own AI assistant.Chocolate Factory 是一款开源的",
+      "title_cn": "ChocoBuilder · LLM 工具包",
+      "desc_cn": "前沿 LLM 工具包，帮助快速构建大模型应用。",
+      "tags": [
+        "LLM",
+        "工具包"
+      ]
     },
     {
       "title": "yunwei37/Awesome-Prompt-Engineering-ZH-CN",
@@ -200,7 +303,14 @@
       "source": "GitHub",
       "type": "仓库",
       "stars": 163,
-      "summary": "这个资源库包含了为 Prompt 工程手工整理的资源中文清单，重点是GPT、ChatGPT、PaLM 等（自动持续更新）"
+      "summary": "这个资源库包含了为 Prompt 工程手工整理的资源中文清单，重点是GPT、ChatGPT、PaLM 等（自动持续更新）",
+      "title_cn": "提示工程中文资源清单",
+      "desc_cn": "Prompt 工程的中文资源清单，重点 GPT / ChatGPT / PaLM。",
+      "tags": [
+        "提示工程",
+        "清单",
+        "中文"
+      ]
     },
     {
       "title": "ConnectAI-E/Prompt-Engineering-Tutior",
@@ -208,7 +318,13 @@
       "source": "GitHub",
       "type": "仓库",
       "stars": 104,
-      "summary": "🎡 Pompt 提示词工程师入门指南 ~视频字幕+代码资料 [( Python、Golang、NodeJs ) x ( 中文、英文 )]"
+      "summary": "🎡 Pompt 提示词工程师入门指南 ~视频字幕+代码资料 [( Python、Golang、NodeJs ) x ( 中文、英文 )]",
+      "title_cn": "提示词工程师入门指南",
+      "desc_cn": "视频字幕 + 代码资料，Python/Golang/NodeJS 双语。",
+      "tags": [
+        "提示工程",
+        "入门"
+      ]
     },
     {
       "title": "logan-zou/prompt-engineering-for-developers",
@@ -216,7 +332,14 @@
       "source": "GitHub",
       "type": "仓库",
       "stars": 87,
-      "summary": "吴恩达《ChatGPT Prompt Engineering for Developers》课程中文版"
+      "summary": "吴恩达《ChatGPT Prompt Engineering for Developers》课程中文版",
+      "title_cn": "吴恩达提示工程课（中文版）",
+      "desc_cn": "吴恩达《ChatGPT Prompt Engineering for Developers》课程中文版。",
+      "tags": [
+        "提示工程",
+        "吴恩达",
+        "课程"
+      ]
     },
     {
       "title": "Onenightcarnival/agent-engineering-philosophy",
@@ -224,7 +347,13 @@
       "source": "GitHub",
       "type": "仓库",
       "stars": 83,
-      "summary": "An engineering philosophy that treats the agent as a worker: the system prompt is a JD, skills are certifications, model tiers are degrees, memory is "
+      "summary": "An engineering philosophy that treats the agent as a worker: the system prompt is a JD, skills are certifications, model tiers are degrees, memory is ",
+      "title_cn": "Agent 工程哲学",
+      "desc_cn": "把 Agent 当员工：系统提示是岗位 JD、技能是可复用能力的工程理念。",
+      "tags": [
+        "Agent",
+        "工程哲学"
+      ]
     },
     {
       "title": "pen9un/art-prompt-system",
@@ -232,7 +361,14 @@
       "source": "GitHub",
       "type": "仓库",
       "stars": 65,
-      "summary": "AI绘画提示词生成器，AI绘画咒语生成，中文提示词工具，AI绘画助手，设计师AI工具，提示词优化器，AI作画提示词，智能提示词生成，提示词模板库，AI绘画教程，设计师工具，创作助手，提示词转换，AI艺术创作，新媒体配图工具，电商主图生成，商业设计工具，插画生成器，概念设计工具，人物肖像生成，AI P"
+      "summary": "AI绘画提示词生成器，AI绘画咒语生成，中文提示词工具，AI绘画助手，设计师AI工具，提示词优化器，AI作画提示词，智能提示词生成，提示词模板库，AI绘画教程，设计师工具，创作助手，提示词转换，AI艺术创作，新媒体配图工具，电商主图生成，商业设计工具，插画生成器，概念设计工具，人物肖像生成，AI P",
+      "title_cn": "AI 绘画提示词生成器",
+      "desc_cn": "AI 绘画提示词生成、优化、模板库，设计师的 AI 作画助手。",
+      "tags": [
+        "AI绘画",
+        "提示词",
+        "工具"
+      ]
     },
     {
       "title": "mo2g/DevLab",
@@ -240,7 +376,13 @@
       "source": "GitHub",
       "type": "仓库",
       "stars": 56,
-      "summary": "Documentation-first hub for AI developer tools, workflow experiments, and practical engineering notes."
+      "summary": "Documentation-first hub for AI developer tools, workflow experiments, and practical engineering notes.",
+      "title_cn": "DevLab · AI 开发工具中心",
+      "desc_cn": "文档优先的 AI 开发者工具与工作流实验中心。",
+      "tags": [
+        "工具",
+        "工作流"
+      ]
     },
     {
       "title": "08820048/-LLM-Prompt-Engineering-Google",
@@ -248,7 +390,14 @@
       "source": "GitHub",
       "type": "仓库",
       "stars": 30,
-      "summary": "最近很火的谷歌官方大语言模型提示工程白皮书,中文翻译版"
+      "summary": "最近很火的谷歌官方大语言模型提示工程白皮书,中文翻译版",
+      "title_cn": "谷歌 LLM 提示工程白皮书（中文版）",
+      "desc_cn": "谷歌官方大语言模型提示工程白皮书的中文翻译。",
+      "tags": [
+        "提示工程",
+        "谷歌",
+        "白皮书"
+      ]
     },
     {
       "title": "veritas501/ida-hub-agent-skills",
@@ -256,7 +405,14 @@
       "source": "GitHub",
       "type": "仓库",
       "stars": 25,
-      "summary": "Orchestrate multiple IDA Pro instances through a central Hub, enabling AI agents to perform complex cross-instance reverse engineering tasks"
+      "summary": "Orchestrate multiple IDA Pro instances through a central Hub, enabling AI agents to perform complex cross-instance reverse engineering tasks",
+      "title_cn": "IDA Pro 多实例编排（AI Agent）",
+      "desc_cn": "通过中心 Hub 编排多个 IDA Pro 实例，让 AI 智能体做逆向分析。",
+      "tags": [
+        "Agent",
+        "逆向",
+        "工具"
+      ]
     },
     {
       "title": "wukaipeng-dev/prompt-engineering-guide",
@@ -264,7 +420,13 @@
       "source": "GitHub",
       "type": "仓库",
       "stars": 17,
-      "summary": "专门面向中文的提示词工程指南"
+      "summary": "专门面向中文的提示词工程指南",
+      "title_cn": "中文提示词工程指南",
+      "desc_cn": "专门面向中文的提示词工程指南。",
+      "tags": [
+        "提示工程",
+        "中文"
+      ]
     },
     {
       "title": "The-Swarm-Corporation/awesome-automated-prompt-engineering",
@@ -272,31 +434,14 @@
       "source": "GitHub",
       "type": "仓库",
       "stars": 16,
-      "summary": "This repository serves as a central hub for discovering tools and services focused on automated prompt engineering. Whether you're looking to optimize"
-    },
-    {
-      "title": "dcoderlab/ai-engineering-hub",
-      "link": "https://github.com/dcoderlab/ai-engineering-hub",
-      "source": "GitHub",
-      "type": "仓库",
-      "stars": 10,
-      "summary": "In-depth tutorials on LLMs, RAGs and real-world AI agent applications."
-    },
-    {
-      "title": "hepapi/knowledge-hub",
-      "link": "https://github.com/hepapi/knowledge-hub",
-      "source": "GitHub",
-      "type": "仓库",
-      "stars": 10,
-      "summary": "Hepapi Knowledge Hub: practical notes and patterns for building reliable systems on AWS. DevOps/Platform Engineering, QA, modernization, and Enterpris"
-    },
-    {
-      "title": "ali-faraz-py/Portfolio-Hub",
-      "link": "https://github.com/ali-faraz-py/Portfolio-Hub",
-      "source": "GitHub",
-      "type": "仓库",
-      "stars": 9,
-      "summary": "A centralized deployment hub for my Machine Learning and Python engineering portfolio. Features custom-built AI solutions, financial analytics, and me"
+      "summary": "This repository serves as a central hub for discovering tools and services focused on automated prompt engineering. Whether you're looking to optimize",
+      "title_cn": "自动提示工程工具清单",
+      "desc_cn": "自动提示工程工具与服务的中心清单。",
+      "tags": [
+        "提示工程",
+        "自动化",
+        "清单"
+      ]
     },
     {
       "title": "KMnO4-zx/gpt-learning",
@@ -304,15 +449,14 @@
       "source": "GitHub",
       "type": "仓库",
       "stars": 9,
-      "summary": "使用chatglm-6b的模型api完成吴恩达prompt课程，在学习笔记中有与chatgpt的回答做一些比较。课程内容采用的是DataWhale的中文翻译教程。课程地址：https://github.com/datawhalechina/prompt-engineering-for-develop"
-    },
-    {
-      "title": "SlickbitTechnologies/ai-engineering-hub",
-      "link": "https://github.com/SlickbitTechnologies/ai-engineering-hub",
-      "source": "GitHub",
-      "type": "仓库",
-      "stars": 7,
-      "summary": ""
+      "summary": "使用chatglm-6b的模型api完成吴恩达prompt课程，在学习笔记中有与chatgpt的回答做一些比较。课程内容采用的是DataWhale的中文翻译教程。课程地址：https://github.com/datawhalechina/prompt-engineering-for-develop",
+      "title_cn": "吴恩达 Prompt 课程实践（chatglm）",
+      "desc_cn": "用 chatglm-6b API 完成吴恩达 prompt 课程，附与 ChatGPT 的回答对比。",
+      "tags": [
+        "提示工程",
+        "chatglm",
+        "课程"
+      ]
     },
     {
       "title": "一次讲清怎么写出稳定好用的skill",
@@ -763,13 +907,6 @@
       "summary": "【Codex实战】手摸手教你多Agent协同开发"
     },
     {
-      "title": "_蕾伊娜Reyna_ 视频补档",
-      "link": "https://www.bilibili.com/video/av868527554",
-      "source": "B站",
-      "type": "视频",
-      "summary": "_蕾伊娜Reyna_ 视频补档"
-    },
-    {
       "title": "Codex开发大型网站的零基础终极教学！vue+django+mysql前后端分离架构",
       "link": "https://www.bilibili.com/video/av116700016021422",
       "source": "B站",
@@ -803,13 +940,6 @@
       "source": "B站",
       "type": "视频",
       "summary": "【全60集】吊打付费！目前B站最全最细的Agent智能体开发全套教程！手把手教你打造专属智能体，七天就能从小白到大神！带你从零基础入门到精通实现商业变现！"
-    },
-    {
-      "title": "第55弹:【DANCEROID】 FirstKiss!【こずえ】【いとくとら】",
-      "link": "https://www.bilibili.com/video/av11176",
-      "source": "B站",
-      "type": "视频",
-      "summary": "第55弹:【DANCEROID】 FirstKiss!【こずえ】【いとくとら】"
     },
     {
       "title": "AI 为什么每次都从零开始？如何让AI帮你完成一个完整项目【ChatGPT、Claude code等Agent通用】",

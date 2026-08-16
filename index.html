@@ -231,6 +231,30 @@
             font-weight: 500;
         }
 
+        /* ── Learn card：中文副标题 + 标签 ── */
+        .card-subtitle {
+            margin-top: 4px;
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+            word-break: break-all;
+        }
+        .card-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 10px;
+        }
+        .card-tag {
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-size: 0.72rem;
+            font-weight: 500;
+            color: #b388ff;
+            background: rgba(179, 136, 255, 0.12);
+            border: 1px solid rgba(179, 136, 255, 0.25);
+        }
+
         /* ── Tooltip (summary popup on hover) ── */
         .card-tooltip {
             position: absolute;
@@ -487,18 +511,27 @@ function renderLearnCards() {
     GRID.innerHTML = aiResources.map(r => {
         const stars = r.stars ? `<span>&#x2b50; ${r.stars}</span>` : "";
         const linkAttr = r.link ? `onclick="window.open('${escapeHtml(r.link)}','_blank','noopener')"` : "";
+        // 优先显示中文名；提供了中文名时把原始 owner/repo 作为小字副标题
+        const title = r.title_cn || r.title;
+        const subTitle = r.title_cn ? `<div class="card-subtitle">${escapeHtml(r.title)}</div>` : "";
+        const desc = r.desc_cn || r.summary || "";
+        const tags = (r.tags && r.tags.length)
+            ? `<div class="card-tags">${r.tags.map(t => `<span class="card-tag">${escapeHtml(t)}</span>`).join("")}</div>`
+            : "";
         return `
         <div class="card" ${linkAttr}>
-            <div class="card-tooltip">${escapeHtml(r.summary || "")}</div>
+            <div class="card-tooltip">${escapeHtml(desc)}</div>
             <div class="card-title">
                 <span class="card-dot learn"></span>
-                ${escapeHtml(r.title)}
+                <span>${escapeHtml(title)}</span>
             </div>
+            ${subTitle}
             <div class="card-meta">
                 <span class="card-source">${escapeHtml(r.source || "")}</span>
                 <span>${escapeHtml(r.type || "")}</span>
                 ${stars}
             </div>
+            ${tags}
         </div>`;
     }).join("");
 }
