@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-08-15 20:37",
-  "total": 105,
+  "last_updated": "2026-08-16 09:11",
+  "total": 166,
   "resources": [
     {
       "title": "fighting41love/funNLP",
@@ -46,6 +46,14 @@
         "Agent",
         "清单"
       ]
+    },
+    {
+      "title": "Dujltqzv/Some-Many-Books",
+      "link": "https://github.com/Dujltqzv/Some-Many-Books",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 22354,
+      "summary": "个人收藏书籍列表　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　"
     },
     {
       "title": "datawhalechina/llm-universe",
@@ -137,6 +145,14 @@
       ]
     },
     {
+      "title": "cirosantilli/china-dictatorship",
+      "link": "https://github.com/cirosantilli/china-dictatorship",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 3144,
+      "summary": "反中共政治宣传库。Anti Chinese government propaganda. 住在中国真名用户的网友请别给星星，不然你要被警察请喝茶。常见问答集，新闻集和饭店和音乐建议。卐习万岁卐。冠状病毒审查郝海东新疆改造中心六四事件法轮功 996.ICU709大抓捕巴拿马文件邓家贵低端人口西藏骚乱。"
+    },
+    {
       "title": "kyrolabs/awesome-agents",
       "link": "https://github.com/kyrolabs/awesome-agents",
       "source": "GitHub",
@@ -178,6 +194,14 @@
         "Agent",
         "清单"
       ]
+    },
+    {
+      "title": "gege-circle/.github",
+      "link": "https://github.com/gege-circle/.github",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 1979,
+      "summary": "这里是GitHub的草场，也是戈戈圈爱好者的交流地，主要讨论动漫、游戏、科技、人文、生活等所有话题，欢迎各位小伙伴们在此讨论趣事。This is GitHub grassland, and the community place for Gege circle lovers, mainly disc"
     },
     {
       "title": "phodal/aigc",
@@ -253,6 +277,14 @@
         "团队协作",
         "工程"
       ]
+    },
+    {
+      "title": "cirosantilli/china-dictatroship-7",
+      "link": "https://github.com/cirosantilli/china-dictatroship-7",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 361,
+      "summary": "反中共政治宣传库。Anti Chinese government propaganda. https://github.com/cirosantilli/china-dictatorship 的备份backup. 住在中国真名用户的网友请别给星星，不然你要被警察请喝茶。常见问答集，新闻集和饭店和音乐"
     },
     {
       "title": "vigorX777/product-design-system",
@@ -444,6 +476,22 @@
       ]
     },
     {
+      "title": "dcoderlab/ai-engineering-hub",
+      "link": "https://github.com/dcoderlab/ai-engineering-hub",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 10,
+      "summary": "In-depth tutorials on LLMs, RAGs and real-world AI agent applications."
+    },
+    {
+      "title": "hepapi/knowledge-hub",
+      "link": "https://github.com/hepapi/knowledge-hub",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 10,
+      "summary": "Hepapi Knowledge Hub: practical notes and patterns for building reliable systems on AWS. DevOps/Platform Engineering, QA, modernization, and Enterpris"
+    },
+    {
       "title": "KMnO4-zx/gpt-learning",
       "link": "https://github.com/KMnO4-zx/gpt-learning",
       "source": "GitHub",
@@ -457,6 +505,22 @@
         "chatglm",
         "课程"
       ]
+    },
+    {
+      "title": "ali-faraz-py/Portfolio-Hub",
+      "link": "https://github.com/ali-faraz-py/Portfolio-Hub",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 9,
+      "summary": "A centralized deployment hub for my Machine Learning and Python engineering portfolio. Features custom-built AI solutions, financial analytics, and me"
+    },
+    {
+      "title": "SlickbitTechnologies/ai-engineering-hub",
+      "link": "https://github.com/SlickbitTechnologies/ai-engineering-hub",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 7,
+      "summary": ""
     },
     {
       "title": "一次讲清怎么写出稳定好用的skill",
@@ -975,6 +1039,377 @@
       "source": "B站",
       "type": "视频",
       "summary": "全网最全！40分钟全面掌握Codex～【附完整文档】"
+    },
+    {
+      "title": "重庆理工大学两江校区宿舍",
+      "link": "https://www.bilibili.com/video/av634013587",
+      "source": "B站",
+      "type": "视频",
+      "summary": "重庆理工大学两江校区宿舍"
+    },
+    {
+      "title": "重理工 | 宿舍大揭秘",
+      "link": "https://www.bilibili.com/video/av78348317",
+      "source": "B站",
+      "type": "视频",
+      "summary": "重理工 | 宿舍大揭秘"
+    },
+    {
+      "title": "重庆理工大学两江校区高层宿舍公寓",
+      "link": "https://www.bilibili.com/video/av410125990",
+      "source": "B站",
+      "type": "视频",
+      "summary": "重庆理工大学两江校区高层宿舍公寓"
+    },
+    {
+      "title": "我最讨厌的学校就是重庆理工大学",
+      "link": "https://www.bilibili.com/video/av114766978752088",
+      "source": "B站",
+      "type": "视频",
+      "summary": "我最讨厌的学校就是重庆理工大学"
+    },
+    {
+      "title": "重庆理工大学多名男留学生混住在国内女生宿舍楼？校方致歉：男留学生公寓部分家具未到位，遂安排男留学生暂住女生所在宿舍楼",
+      "link": "https://www.bilibili.com/video/av115217430224655",
+      "source": "B站",
+      "type": "视频",
+      "summary": "重庆理工大学多名男留学生混住在国内女生宿舍楼？校方致歉：男留学生公寓部分家具未到位，遂安排男留学生暂住女生所在宿舍楼"
+    },
+    {
+      "title": "【重庆理工大学】 这不比招生简章好使？",
+      "link": "https://www.bilibili.com/video/av982593217",
+      "source": "B站",
+      "type": "视频",
+      "summary": "【重庆理工大学】 这不比招生简章好使？"
+    },
+    {
+      "title": "重庆理工大学把黑人男留学生安排进女生宿舍混住，这是正常人能想出来的操作吗",
+      "link": "https://www.bilibili.com/video/av115215215628879",
+      "source": "B站",
+      "type": "视频",
+      "summary": "重庆理工大学把黑人男留学生安排进女生宿舍混住，这是正常人能想出来的操作吗"
+    },
+    {
+      "title": "让黑人和女大学生混住，重庆理工大学道歉了！膝盖软是种病，得治",
+      "link": "https://www.bilibili.com/video/av115223151320403",
+      "source": "B站",
+      "type": "视频",
+      "summary": "让黑人和女大学生混住，重庆理工大学道歉了！膝盖软是种病，得治"
+    },
+    {
+      "title": "重庆理工大学花溪校区",
+      "link": "https://www.bilibili.com/video/av257417713",
+      "source": "B站",
+      "type": "视频",
+      "summary": "重庆理工大学花溪校区"
+    },
+    {
+      "title": "从夯到拉！锐评重庆市各大高校宿舍环境",
+      "link": "https://www.bilibili.com/video/av116622991886410",
+      "source": "B站",
+      "type": "视频",
+      "summary": "从夯到拉！锐评重庆市各大高校宿舍环境"
+    },
+    {
+      "title": "PROART校园行第一期 重庆理工大学",
+      "link": "https://www.bilibili.com/video/av113633459704717",
+      "source": "B站",
+      "type": "视频",
+      "summary": "PROART校园行第一期 重庆理工大学"
+    },
+    {
+      "title": "前有个武大，现又出现个重庆理工大学…",
+      "link": "https://www.bilibili.com/video/av115216239040527",
+      "source": "B站",
+      "type": "视频",
+      "summary": "前有个武大，现又出现个重庆理工大学…"
+    },
+    {
+      "title": "一个视频让你搞懂“宿舍限电”",
+      "link": "https://www.bilibili.com/video/av114007239302504",
+      "source": "B站",
+      "type": "视频",
+      "summary": "一个视频让你搞懂“宿舍限电”"
+    },
+    {
+      "title": "重庆理工大学副校长遭同校一副教授刺死！",
+      "link": "https://www.bilibili.com/video/av116709495152331",
+      "source": "B站",
+      "type": "视频",
+      "summary": "重庆理工大学副校长遭同校一副教授刺死！"
+    },
+    {
+      "title": "重庆理工大学女生宿舍入住黑哥们，语言是不通的，枪炮是不长眼的",
+      "link": "https://www.bilibili.com/video/av115213235982014",
+      "source": "B站",
+      "type": "视频",
+      "summary": "重庆理工大学女生宿舍入住黑哥们，语言是不通的，枪炮是不长眼的"
+    },
+    {
+      "title": "我在西唯兵重庆理工大学读研的一天vlog",
+      "link": "https://www.bilibili.com/video/av1151183823",
+      "source": "B站",
+      "type": "视频",
+      "summary": "我在西唯兵重庆理工大学读研的一天vlog"
+    },
+    {
+      "title": "重庆大学宿舍",
+      "link": "https://www.bilibili.com/video/av116839250264908",
+      "source": "B站",
+      "type": "视频",
+      "summary": "重庆大学宿舍"
+    },
+    {
+      "title": "辣椒素带你参观她的寝室",
+      "link": "https://www.bilibili.com/video/av114259954501788",
+      "source": "B站",
+      "type": "视频",
+      "summary": "辣椒素带你参观她的寝室"
+    },
+    {
+      "title": "黑人混住女寝事件是什么梗？重庆一所大学爆出惊天大瓜【网梗指南】",
+      "link": "https://www.bilibili.com/video/av115235734163538",
+      "source": "B站",
+      "type": "视频",
+      "summary": "黑人混住女寝事件是什么梗？重庆一所大学爆出惊天大瓜【网梗指南】"
+    },
+    {
+      "title": "名气不大的重庆理工大学，作为兵工七子之一，为何退步了？",
+      "link": "https://www.bilibili.com/video/av599500752",
+      "source": "B站",
+      "type": "视频",
+      "summary": "名气不大的重庆理工大学，作为兵工七子之一，为何退步了？"
+    },
+    {
+      "title": "Team Fortress 2_replay_2023.02.22-21.13",
+      "link": "https://www.bilibili.com/video/av695417163",
+      "source": "B站",
+      "type": "视频",
+      "summary": "Team Fortress 2_replay_2023.02.22-21.13"
+    },
+    {
+      "title": "B站最接地气的互联网行业入行指南【产品经理篇】",
+      "link": "https://www.bilibili.com/video/av1151020463",
+      "source": "B站",
+      "type": "视频",
+      "summary": "B站最接地气的互联网行业入行指南【产品经理篇】"
+    },
+    {
+      "title": "【吴恩达】给所有人的AI入门课（超爽中英字幕！）入门进阶一站式搞定，零基础也能轻松学！存下吧！比刷剧爽！",
+      "link": "https://www.bilibili.com/video/av116672786597490",
+      "source": "B站",
+      "type": "视频",
+      "summary": "【吴恩达】给所有人的AI入门课（超爽中英字幕！）入门进阶一站式搞定，零基础也能轻松学！存下吧！比刷剧爽！"
+    },
+    {
+      "title": "一条视频25分钟跑通github完整流程 #GItHub #AI搞学习howto #个人开发者 #github工具 #姜学长",
+      "link": "https://www.bilibili.com/video/av117094884577698",
+      "source": "B站",
+      "type": "视频",
+      "summary": "一条视频25分钟跑通github完整流程 #GItHub #AI搞学习howto #个人开发者 #github工具 #姜学长"
+    },
+    {
+      "title": "hzhhdhd。",
+      "link": "https://www.bilibili.com/video/av866832075",
+      "source": "B站",
+      "type": "视频",
+      "summary": "hzhhdhd。"
+    },
+    {
+      "title": "【全748集】目前B站最细最全的AI产品经理全套教程，2026最新版，包含所有干货！手把手带你从入门到精通！少走99%的弯路！存下吧！真的很难找全的！",
+      "link": "https://www.bilibili.com/video/av117086579854263",
+      "source": "B站",
+      "type": "视频",
+      "summary": "【全748集】目前B站最细最全的AI产品经理全套教程，2026最新版，包含所有干货！手把手带你从入门到精通！少走99%的弯路！存下吧！真的很难找全的！"
+    },
+    {
+      "title": "假如你从8月13号开始学习AI产品经理，多久能学会？",
+      "link": "https://www.bilibili.com/video/av117087334829181",
+      "source": "B站",
+      "type": "视频",
+      "summary": "假如你从8月13号开始学习AI产品经理，多久能学会？"
+    },
+    {
+      "title": "_蕾伊娜Reyna_ 视频补档",
+      "link": "https://www.bilibili.com/video/av868527554",
+      "source": "B站",
+      "type": "视频",
+      "summary": "_蕾伊娜Reyna_ 视频补档"
+    },
+    {
+      "title": "Vibe Coding纯小白教程：对AI说话就做出软件。手把手带你做出1个软件！",
+      "link": "https://www.bilibili.com/video/av116521405780262",
+      "source": "B站",
+      "type": "视频",
+      "summary": "Vibe Coding纯小白教程：对AI说话就做出软件。手把手带你做出1个软件！"
+    },
+    {
+      "title": "2026版LangChain教程，langchain快速入门， Agent智能体rag项目实战",
+      "link": "https://www.bilibili.com/video/av116792827579053",
+      "source": "B站",
+      "type": "视频",
+      "summary": "2026版LangChain教程，langchain快速入门， Agent智能体rag项目实战"
+    },
+    {
+      "title": "Windows跑AI Agent，WSL才是终极答案，别羡慕Mac了，  WSL保姆级全攻略，海量实战教程，一期视频精通",
+      "link": "https://www.bilibili.com/video/av116912482749717",
+      "source": "B站",
+      "type": "视频",
+      "summary": "Windows跑AI Agent，WSL才是终极答案，别羡慕Mac了，  WSL保姆级全攻略，海量实战教程，一期视频精通"
+    },
+    {
+      "title": "Hermes Agent零基础、保姆级教程，小白也能轻松玩转",
+      "link": "https://www.bilibili.com/video/av116503638706867",
+      "source": "B站",
+      "type": "视频",
+      "summary": "Hermes Agent零基础、保姆级教程，小白也能轻松玩转"
+    },
+    {
+      "title": "靠AI自动做视频月入6万美金？Claude Code实操全流程 | Danny Why",
+      "link": "https://www.bilibili.com/video/av116699110049334",
+      "source": "B站",
+      "type": "视频",
+      "summary": "靠AI自动做视频月入6万美金？Claude Code实操全流程 | Danny Why"
+    },
+    {
+      "title": "【最新版】小白速通 Codex 教程（含 DeepSeek 接入，无需 ChatGPT 订阅）",
+      "link": "https://www.bilibili.com/video/av117070826047031",
+      "source": "B站",
+      "type": "视频",
+      "summary": "【最新版】小白速通 Codex 教程（含 DeepSeek 接入，无需 ChatGPT 订阅）"
+    },
+    {
+      "title": "多名男性留学生混住在女生宿舍楼？",
+      "link": "https://www.xiaohongshu.com/explore/68c942970000000007029ba0?xsec_token=ABWhSvUtTyBW5gKYNah6O1tyoXnnWn8Z7yHsO_OYYcwNs=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "多名男性留学生混住在女生宿舍楼？"
+    },
+    {
+      "title": "重庆理工大学宿舍篇",
+      "link": "https://www.xiaohongshu.com/explore/6879af66000000001203e9c6?xsec_token=ABCf_UnMTwBUmeqGOBabNg6JjnA6vBBV1yrNX2TWvWubs=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "重庆理工大学宿舍篇"
+    },
+    {
+      "title": "宿舍区野生生存指南",
+      "link": "https://www.xiaohongshu.com/explore/6a678f0b000000000a03872d?xsec_token=ABKsTgsTEOZrA_wea1MZSMtLKew6VbMRV4fqoamKr-azk=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "宿舍区野生生存指南"
+    },
+    {
+      "title": "男留学生混住女生宿舍楼，重庆理工大学致歉",
+      "link": "https://www.xiaohongshu.com/explore/68ca3b1f000000001300a11c?xsec_token=AB1uGb4e0ZR9AiLhcLwDOUrvNgm2h0K9L5Yfu1FA_s644=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "男留学生混住女生宿舍楼，重庆理工大学致歉"
+    },
+    {
+      "title": "重庆理工大学宿舍看这一篇就够了",
+      "link": "https://www.xiaohongshu.com/explore/6a36391900000000210160c6?xsec_token=ABw-RxD8keXEN627p1Ru2bUJIkftRj1Z3vzaRQ_WrJZHw=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "重庆理工大学宿舍看这一篇就够了"
+    },
+    {
+      "title": "留学男生住女生宿舍楼，这是什么操作？\n#重庆理工大学[话题]# #男留学生住女生宿舍楼[话题]#",
+      "link": "https://www.xiaohongshu.com/explore/68ca43760000000013028177?xsec_token=AB1uGb4e0ZR9AiLhcLwDOUrsybWcLVUy8xg9qLQxIrBuQ=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "留学男生住女生宿舍楼，这是什么操作？\n#重庆理工大学[话题]# #男留学生住女生宿舍楼[话题]#"
+    },
+    {
+      "title": "你想在重庆理工大学生活吗…?",
+      "link": "https://www.xiaohongshu.com/explore/687deed200000000110006ae?xsec_token=ABFnWx5VGxTEo394t6mCZ4NYkDswW8tcMidwCg6IvRcvE=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "你想在重庆理工大学生活吗…?"
+    },
+    {
+      "title": "重庆理工大学花溪宿舍怎么样",
+      "link": "https://www.xiaohongshu.com/explore/688b779d00000000230250fb?xsec_token=ABJzwINFVxqyx3GJK7SrZCGu7WG5EQ5qgyL8yA-1UvrOk=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "重庆理工大学花溪宿舍怎么样"
+    },
+    {
+      "title": "重庆理工大学多名男留学生混住在女生宿舍楼",
+      "link": "https://www.xiaohongshu.com/explore/68c91c25000000000e00ebbc?xsec_token=ABWhSvUtTyBW5gKYNah6O1t7MipLzRnphUjfKcKyfDoaw=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "重庆理工大学多名男留学生混住在女生宿舍楼"
+    },
+    {
+      "title": "重庆理工大学宿舍环境",
+      "link": "https://www.xiaohongshu.com/explore/6a3ce1f9000000002201bb8a?xsec_token=ABG2gSdXZxz58bpEOtY2g4FKY4mRnDrnyTr9qCnHnbhDo=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "重庆理工大学宿舍环境"
+    },
+    {
+      "title": "重庆理工大学宿舍两江/花溪篇",
+      "link": "https://www.xiaohongshu.com/explore/6a6065f7000000000f03f2a7?xsec_token=ABLpo_af0U2VBiXioliUh1Fb77SZ2ihF3zuj0eVnQDc0U=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "重庆理工大学宿舍两江/花溪篇"
+    },
+    {
+      "title": "#重庆理工大学[话题]# #宿舍[话题]# #新生入学[话题]# 请问一下各位校友，花溪宿舍床位尺寸好难搞啊，大家决定怎么买床帘和床垫?可不可以给点建议。",
+      "link": "https://www.xiaohongshu.com/explore/68aea02e000000001d004582?xsec_token=ABJcrLBaxhtaO8SQDDWVFc7b0nrfsHGrygqGyqfnJswjU=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "#重庆理工大学[话题]# #宿舍[话题]# #新生入学[话题]# 请问一下各位校友，花溪宿舍床位尺寸好难搞啊，大家决定怎么买床帘和床垫?可不可以给点建议。"
+    },
+    {
+      "title": "你以为重庆理工大学宿舍环境，这也太....",
+      "link": "https://www.xiaohongshu.com/explore/6a2fe61200000000060213b6?xsec_token=ABwxVY0CeoMqKLJ-3fwtSwedV5wyj6vVOYva5LyC-Eovs=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "你以为重庆理工大学宿舍环境，这也太...."
+    },
+    {
+      "title": "你想要的，重理宿舍全都有",
+      "link": "https://www.xiaohongshu.com/explore/6a4669270000000006036268?xsec_token=ABFBWRl6fcN1BM_EsEVKmaEWUN0PDR8nLbdee5TIUkoT8=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "你想要的，重理宿舍全都有"
+    },
+    {
+      "title": "重庆理工大学花溪校区宿舍一镜到底",
+      "link": "https://www.xiaohongshu.com/explore/6a5f1d88000000000401ff2e?xsec_token=ABjmvK9SZ1-dWWnSqT2dqumnK9IUJ2ep_crHWwal-74ug=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "重庆理工大学花溪校区宿舍一镜到底"
+    },
+    {
+      "title": "准大一来看！开学照着准备就够！\n拖延症晚期是不是你[向右R]\n没关系，已经给大家准备好了，快🐎住！\n#宿舍必备[话题]# #开学必备的清单[话题]# #大学宿舍好物[话题]# #开学带这些[话题]# #大学生好物[话题]# #学姐分享[话题",
+      "link": "https://www.xiaohongshu.com/explore/6a5af0000000000011018d38?xsec_token=ABhP6mUgbtk20059anImyN6oS8-TKc_fIUqXCeX2qAVAk=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "准大一来看！开学照着准备就够！\n拖延症晚期是不是你[向右R]\n没关系，已经给大家准备好了，快🐎住！\n#宿舍必备[话题]# #开学必备的清单[话题]# #大学宿舍好物[话题]# #开学带这些[话题]# #大学生好物[话题]# #学姐分享[话题]# #新生开学[话题]# #宿舍收纳好物[话题]# #大学"
+    },
+    {
+      "title": "那很无助了…",
+      "link": "https://www.xiaohongshu.com/explore/686d1acf0000000013013e1f?xsec_token=AB2msyXCkcnC78BcWZO7MzLvRSoNS_-L69dLTYQ1GWDjY=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "那很无助了…"
+    },
+    {
+      "title": "重庆理工大学两江宿舍",
+      "link": "https://www.xiaohongshu.com/explore/6a7b2a61000000002402da2e?xsec_token=ABL_5hk6MkDIZHWYIHl-vQXIVoS8N4UVBY_uC6K8Xt0KU=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "重庆理工大学两江宿舍"
+    },
+    {
+      "title": "重庆理工大学新生必看",
+      "link": "https://www.xiaohongshu.com/explore/6a5eff5e000000000a03bc52?xsec_token=ABWvhK0rEmlhmuHGxyiygktoR7Gx8Yfl3dFETZqP2Nhng=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "重庆理工大学新生必看"
     }
   ]
 }
