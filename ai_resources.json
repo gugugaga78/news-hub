@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-08-16 09:11",
-  "total": 166,
+  "last_updated": "2026-08-17 07:19",
+  "total": 174,
   "resources": [
     {
       "title": "fighting41love/funNLP",
@@ -1410,6 +1410,62 @@
       "source": "小红书",
       "type": "笔记",
       "summary": "重庆理工大学新生必看"
+    },
+    {
+      "title": "啥也不会还挣大几十万？产品经理真这么好当吗？",
+      "link": "https://www.bilibili.com/video/av114702134809563",
+      "source": "B站",
+      "type": "视频",
+      "summary": "啥也不会还挣大几十万？产品经理真这么好当吗？"
+    },
+    {
+      "title": "5分钟讲清楚 大模型学习路线 #大模型 #AIGC #深度学习 #智能体 #算法",
+      "link": "https://www.bilibili.com/video/av114823400594366",
+      "source": "B站",
+      "type": "视频",
+      "summary": "5分钟讲清楚 大模型学习路线 #大模型 #AIGC #深度学习 #智能体 #算法"
+    },
+    {
+      "title": "照着 JD 学 AI 产品经理，你可能从第一步就错了",
+      "link": "https://www.bilibili.com/video/av117074835867758",
+      "source": "B站",
+      "type": "视频",
+      "summary": "照着 JD 学 AI 产品经理，你可能从第一步就错了"
+    },
+    {
+      "title": "如何转行AI产品经理？怎么规划学习路径能花最少时间上岸？AI产品经理|Prompt工程|产品流程|AI工具实战落地|Dify|Hermes Agent",
+      "link": "https://www.bilibili.com/video/av117029067557298",
+      "source": "B站",
+      "type": "视频",
+      "summary": "如何转行AI产品经理？怎么规划学习路径能花最少时间上岸？AI产品经理|Prompt工程|产品流程|AI工具实战落地|Dify|Hermes Agent"
+    },
+    {
+      "title": "【Agent教程】这绝对是26年B站最全最细的AI Agent开发全套教程，全程干货精讲，从入门到精通！带你一周从小白到大神！少走99%弯路！学完即就业！",
+      "link": "https://www.bilibili.com/video/av117092267332960",
+      "source": "B站",
+      "type": "视频",
+      "summary": "【Agent教程】这绝对是26年B站最全最细的AI Agent开发全套教程，全程干货精讲，从入门到精通！带你一周从小白到大神！少走99%弯路！学完即就业！"
+    },
+    {
+      "title": "Harness 实践：让 Agent 全自动制作知识讲解视频",
+      "link": "https://www.bilibili.com/video/av116538065684466",
+      "source": "B站",
+      "type": "视频",
+      "summary": "Harness 实践：让 Agent 全自动制作知识讲解视频"
+    },
+    {
+      "title": "Pi 大道至简，超越Codex和Claude Code的极简Agent，保姆级全攻略， 一期视频精通",
+      "link": "https://www.bilibili.com/video/av117104095268420",
+      "source": "B站",
+      "type": "视频",
+      "summary": "Pi 大道至简，超越Codex和Claude Code的极简Agent，保姆级全攻略， 一期视频精通"
+    },
+    {
+      "title": "DeepSeek Harness + ComfyUI：Agent开始自己跑AI工作流了！",
+      "link": "https://www.bilibili.com/video/av117093508910174",
+      "source": "B站",
+      "type": "视频",
+      "summary": "DeepSeek Harness + ComfyUI：Agent开始自己跑AI工作流了！"
     }
   ]
 }
