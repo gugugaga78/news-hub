@@ -255,6 +255,29 @@
             border: 1px solid rgba(179, 136, 255, 0.25);
         }
 
+        /* ── 每日头条：排名徽章 + 热度 ── */
+        .headline-rank {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-right: 8px;
+            flex-shrink: 0;
+            background: rgba(255, 110, 64, 0.15);
+            color: #ff8a5c;
+        }
+        .headline-rank.top1 { background: rgba(255, 110, 64, 0.32); color: #ffd740; }
+        .headline-rank.top2 { background: rgba(255, 110, 64, 0.24); color: #ffb58a; }
+        .headline-rank.top3 { background: rgba(255, 110, 64, 0.18); color: #ffb58a; }
+        .headline-heat {
+            color: #ff8a5c;
+            font-weight: 600;
+        }
+
         /* ── Tooltip (summary popup on hover) ── */
         .card-tooltip {
             position: absolute;
@@ -345,7 +368,8 @@
 
     <!-- ========== Tab Bar ========== -->
     <nav class="tab-bar" id="tabBar">
-        <button class="tab-btn active" data-cat="all">全部 <span class="count-badge" id="cntAll">--</span></button>
+        <button class="tab-btn active" data-cat="headlines">&#x1f525; 每日头条 <span class="count-badge" id="cntHead">--</span></button>
+        <button class="tab-btn" data-cat="all">全部 <span class="count-badge" id="cntAll">--</span></button>
         <button class="tab-btn" data-cat="AI">&#x1f916; AI <span class="count-badge" id="cntAI">--</span></button>
         <button class="tab-btn" data-cat="军事">&#x1f6e1; 军事 <span class="count-badge" id="cntMil">--</span></button>
         <button class="tab-btn" data-cat="金融">&#x1f4b0; 金融 <span class="count-badge" id="cntFin">--</span></button>
@@ -379,7 +403,8 @@ const UPDATE_TIME = document.getElementById("updateTime");
 
 let allArticles = [];
 let aiResources = [];
-let activeCategory = "all";
+let headlines = [];
+let activeCategory = "headlines";
 
 // ── Category helpers ──
 const CAT_MAP = {
@@ -424,6 +449,17 @@ async function loadData() {
         console.error("加载 AI 学习资源失败:", err2);
     }
 
+    // 加载每日头条（可选，失败不阻塞）
+    try {
+        const res3 = await fetch("headlines.json");
+        if (res3.ok) {
+            const data3 = await res3.json();
+            headlines = data3.headlines || [];
+        }
+    } catch (err3) {
+        console.error("加载每日头条失败:", err3);
+    }
+
     updateCounts();
     renderArticles();
 }
@@ -440,6 +476,7 @@ function updateCounts() {
     document.getElementById("cntFin").textContent = counts["金融"];
     document.getElementById("cntPol").textContent = counts["时政"];
     document.getElementById("cntLearn").textContent = aiResources.length;
+    document.getElementById("cntHead").textContent = headlines.length;
 }
 
 // ── Format date ──
@@ -456,6 +493,10 @@ function formatDate(iso) {
 
 // ── Render cards ──
 function renderArticles() {
+    if (activeCategory === "headlines") {
+        renderHeadlines();
+        return;
+    }
     if (activeCategory === "learn") {
         renderLearnCards();
         return;
@@ -536,6 +577,35 @@ function renderLearnCards() {
     }).join("");
 }
 
+// ── Render 每日头条 cards ──
+function renderHeadlines() {
+    if (headlines.length === 0) {
+        GRID.innerHTML = `<div class="empty-state">
+            <div class="icon">&#x1f525;</div>
+            <p>每日头条暂无数据，等待自动采集～</p>
+        </div>`;
+        return;
+    }
+    GRID.innerHTML = headlines.map(h => {
+        const rankCls = h.rank <= 3 ? ` top${h.rank}` : "";
+        const linkAttr = h.url ? `onclick="window.open('${escapeHtml(h.url)}','_blank','noopener')"` : "";
+        const heat = h.heat ? `<span class="headline-heat">&#x1f525; ${escapeHtml(h.heat)}</span>` : "";
+        const tooltip = h.summary ? `<div class="card-tooltip">${escapeHtml(h.summary)}</div>` : "";
+        return `
+        <div class="card" ${linkAttr}>
+            ${tooltip}
+            <div class="card-title">
+                <span class="headline-rank${rankCls}">${h.rank}</span>
+                <span>${escapeHtml(h.title)}</span>
+            </div>
+            <div class="card-meta">
+                <span class="card-source">${escapeHtml(h.source || "")}</span>
+                ${heat}
+            </div>
+        </div>`;
+    }).join("");
+}
+
 function escapeHtml(str) {
     const div = document.createElement("div");
     div.textContent = str || "";
@@ -556,7 +626,7 @@ document.getElementById("tabBar").addEventListener("click", e => {
 
 // ── Keyboard navigation ──
 document.addEventListener("keydown", e => {
-    const cats = ["all", "AI", "军事", "金融", "时政", "learn"];
+    const cats = ["headlines", "all", "AI", "军事", "金融", "时政", "learn"];
     const idx = cats.indexOf(activeCategory);
     if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
         e.preventDefault();

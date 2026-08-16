@@ -36,6 +36,9 @@ jobs:
       - name: 运行新闻抓取脚本
         run: python news_fetcher.py
 
+      - name: 运行每日头条抓取脚本
+        run: python headlines_fetcher.py
+
       - name: 验证生成文件
         run: |
           echo "--- news_data.json 统计 ---"
