@@ -391,6 +391,81 @@ const LESSONS = [
     { t: "五层压缩", d: "预算→删噪→微压缩→归档摘要→全量（+熔断）" },
     { t: "金句", d: "隔离优于压缩（子 Agent 让噪声不进主上下文）" },
   ]
+},
+{
+  id: "06", title: "用户记忆系统", section: "第 3 章 §3.1",
+  sections: [
+    { h: "用户记忆是什么：持久 vs 临时", html: `
+      <p><b>用户记忆 = 主动持续的学习过程，构建「关于用户的简洁有效的预测模型」</b>——像朋友相处，不记原文，只形成关于对方的「生动模型」。</p>
+      <table>
+        <tr><th></th><th>用户记忆</th><th>上下文学习</th></tr>
+        <tr><td>性质</td><td><b>持久、可审查</b></td><td>临时、会话结束消失</td></tr>
+        <tr><td>代价</td><td>额外 LLM 调用</td><td>无</td></tr>
+      </table>
+      <p>提取三特征：<b>选择性</b>（不记临时信息）、<b>抽象化</b>（「靠窗座位」→通用偏好）、<b>结构化</b>（标记类型）。</p>` },
+    { h: "三层次评估（衡量标尺）", html: `
+      <table>
+        <tr><th>层级</th><th>能力</th><th>例子</th></tr>
+        <tr><td>① 基础回忆</td><td>精确存取无歧义信息</td><td>「会员号 12345」</td></tr>
+        <tr><td>② 多会话检索</td><td>跨会话/跨对象推理</td><td>「两辆车，为哪辆预约」</td></tr>
+        <tr><td>③ 主动服务</td><td>无指令主动预判</td><td>订国际航班→发现护照快过期</td></tr>
+      </table>
+      <div class="keybox">第三层是「助理」级试金石——没有明确指令也要主动规避问题。</div>` },
+    { h: "轨迹 vs 长期记忆（放哪里）", html: `
+      <table>
+        <tr><th></th><th>轨迹</th><th>长期记忆</th></tr>
+        <tr><td>定位</td><td>单次运行完整历史</td><td>跨会话持久存储</td></tr>
+        <tr><td>特点</td><td><b>append-only</b> 只增不改</td><td>反复改写/合并/淘汰</td></tr>
+        <tr><td>比喻</td><td><b>流水账</b></td><td><b>档案</b></td></tr>
+      </table>
+      <div class="keybox"><b>三套正交分类</b>：层次（放哪）× 格式（怎么存）× 类型（存什么）。</div>` },
+    { h: "四种存储格式（怎么存）", html: `
+      <table>
+        <tr><th>格式</th><th>形态</th><th>优点</th><th>缺点</th></tr>
+        <tr><td>Simple Notes</td><td>原子事实</td><td>O(1) 开销低</td><td>关联性丢失</td></tr>
+        <tr><td>Enhanced Notes</td><td>整段叙事</td><td>语义完整</td><td>冗余、难更新</td></tr>
+        <tr><td>JSON Cards</td><td>三层嵌套</td><td>结构化、部分更新</td><td>刚性分类</td></tr>
+        <tr><td>Advanced JSON</td><td>+backstory/person</td><td>消歧</td><td>成本高</td></tr>
+      </table>
+      <div class="warnbox"><b>Advanced JSON Cards 才能消歧</b>：「张医生」是「你的牙医」还是「你父亲的心脏科医生」？靠 backstory+person+relationship 区分。</div>` },
+    { h: "认知三类型（存什么）", html: `
+      <table>
+        <tr><th>类型</th><th>人类</th><th>Agent</th></tr>
+        <tr><td>情景记忆</td><td>「上周和同事吃饭」</td><td>「订了下周五东京航班」</td></tr>
+        <tr><td>语义记忆</td><td>「罗马是意大利首都」</td><td>「用户是素食者」</td></tr>
+        <tr><td>程序记忆</td><td>骑自行车</td><td>「先搜直飞→确认座位→订餐」</td></tr>
+      </table>` },
+    { h: "Mem0：提取—对比—决策", html: `
+      <p>两阶段流水线，把「选择性提取」和「冲突解决」统一起来：</p>
+      <div class="keybox">新对话 → LLM 提取候选记忆（「搬到上海」）→ 向量检索旧记忆（「住在北京」）→ LLM 对比决策：<b>ADD / UPDATE / DELETE / NOOP</b></div>
+      <p>例：「搬到上海」检索到「住在北京」→ 判 <b>UPDATE</b>，更新为「住在上海」，不保留两条矛盾记录。</p>` },
+    { h: "⭐ 联系 Hermes：你的工具就是记忆系统", html: `
+      <p>这一节跟 Hermes 的记忆设计<b>几乎一一对应</b>：</p>
+      <table>
+        <tr><th>书里概念</th><th>Hermes 对应</th></tr>
+        <tr><td>用户长期记忆（跨会话）</td><td><code>MEMORY</code> + <code>USER PROFILE</code>，每轮注入、跨会话持久</td></tr>
+        <tr><td>用户画像（Memobase）</td><td><code>USER PROFILE</code>：你的身份/GitHub/偏好</td></tr>
+        <tr><td>轨迹（append-only）</td><td>我们<b>当前这段对话</b>（流水账）</td></tr>
+        <tr><td>Mem0 的 ADD/UPDATE/DELETE</td><td><code>memory</code> 工具的 <b>add / replace / remove</b></td></tr>
+        <tr><td>重要性评分 + 压缩</td><td>记忆的<b>字符预算</b>（满了要精简淘汰）</td></tr>
+      </table>
+      <div class="keybox"><b>最妙的对应</b>：书里说「记忆持久、上下文临时、会话结束消失」——正是 Hermes：这段对话结束，<b>当前上下文消失</b>；写进 MEMORY/USER PROFILE 的（你的身份、偏好），<b>下次会话我依然记得</b>。</div>` },
+  ],
+  quiz: [
+    { q: "用户记忆的本质？与上下文学习的核心区别？", opts: ["关于用户的预测模型；持久 vs 临时", "记录每句话；更快", "压缩上下文；省钱", "存聊天记录；可搜索"], ans: 0, exp: "用户记忆=主动构建「关于用户的简洁预测模型」，持久可审查；上下文学习临时、会话结束消失。" },
+    { q: "「订国际航班时主动发现护照快过期」属于哪一层？", opts: ["第三层·主动服务", "第一层·基础回忆", "第二层·多会话检索", "不属于任何层"], ans: 0, exp: "主动服务=无明确指令综合久远信息预判帮助，是「助理」级试金石。" },
+    { q: "哪种格式能区分「张医生是你的牙医还是父亲的心脏科医生」？", opts: ["Advanced JSON Cards", "Simple Notes", "Enhanced Notes", "JSON Cards"], ans: 0, exp: "Advanced JSON Cards 通过 backstory/person/relationship 建立实体模型，才能消歧。" },
+    { q: "Mem0 里「用户说搬到上海、旧记忆是住在北京」触发什么？", opts: ["UPDATE", "ADD", "DELETE", "NOOP"], ans: 0, exp: "UPDATE：新信息修正旧记忆（北京→上海），不保留两条矛盾记录。" },
+    { q: "Hermes 的 memory 工具 replace 操作对应书里哪个概念？", opts: ["Mem0 的 UPDATE", "Mem0 的 NOOP", "Mem0 的 ADD", "Mem0 的 DELETE"], ans: 0, exp: "replace ≈ UPDATE：更新旧条目而非新增矛盾记录，避免记忆冲突。" },
+  ],
+  cheat: [
+    { t: "用户记忆 = ", d: "关于用户的「简洁有效的预测模型」" },
+    { t: "三层次", d: "基础回忆 → 多会话检索 → 主动服务" },
+    { t: "三套正交", d: "层次（放哪）× 格式（怎么存）× 类型（存什么）" },
+    { t: "四种格式", d: "Simple/Enhanced Notes、JSON/Advanced JSON Cards" },
+    { t: "Mem0", d: "提取→对比→决策（ADD/UPDATE/DELETE/NOOP）" },
+    { t: "⭐ Hermes", d: "MEMORY/USER PROFILE=长期记忆；memory 工具=Mem0 流水线" },
+  ]
 }
 ];
 
