@@ -466,6 +466,78 @@ const LESSONS = [
     { t: "Mem0", d: "提取→对比→决策（ADD/UPDATE/DELETE/NOOP）" },
     { t: "⭐ Hermes", d: "MEMORY/USER PROFILE=长期记忆；memory 工具=Mem0 流水线" },
   ]
+},
+{
+  id: "07", title: "RAG 基础（检索增强生成）", section: "第 3 章",
+  sections: [
+    { h: "RAG 是什么（一句话 + 两例）", html: `
+      <p>RAG = <b>Retrieval-Augmented Generation</b>（检索增强生成）：把 LLM 的生成能力 + 外部知识库的<b>广度和时效性</b>结合。</p>
+      <table>
+        <tr><th></th><th>职责</th></tr>
+        <tr><td>检索器</td><td>从知识库找出相关片段</td></tr>
+        <tr><td>生成器</td><td>LLM 拿片段当上下文生成答案</td></tr>
+      </table>
+      <div class="keybox">固定模式：<b>检索片段 → 注入上下文 → LLM 生成</b>。核心价值：用训练时没见过的知识，<b>不用重训模型</b>。</div>
+      <div class="warnbox"><b>检索器质量决定 RAG 效果</b>——检索不到，LLM 再强也「无米之炊」。</div>` },
+    { h: "文档分块（Chunking）", html: `
+      <p>长文档不能整篇塞，必须先<b>分块（chunk）</b>，两个原因：</p>
+      <ul>
+        <li>整篇压成一个向量 → 多主题混杂，无法精确表达任何一个主题</li>
+        <li>检索只想注入相关部分，块太大带进无关内容、浪费窗口</li>
+      </ul>
+      <table>
+        <tr><th>策略</th><th>做法</th><th>特点</th></tr>
+        <tr><td>固定大小</td><td>按 token 数切 + 重叠</td><td>简单，但无视结构</td></tr>
+        <tr><td>递归/结构感知</td><td>按标题/段落递归切</td><td>生产默认，Markdown 适合</td></tr>
+        <tr><td>语义切分</td><td>相似度「断崖」处下刀</td><td>质量高，代价高</td></tr>
+      </table>
+      <div class="warnbox"><b>块太小</b>→脱离上下文语义模糊；<b>块太大</b>→多主题稀释。常见起点 256-1024 token，重叠 10%-20%。</div>` },
+    { h: "稠密 vs 稀疏嵌入", html: `
+      <table>
+        <tr><th></th><th>稠密嵌入</th><th>稀疏嵌入</th></tr>
+        <tr><td>原理</td><td>语义相似 → 向量近</td><td>精确关键词匹配</td></tr>
+        <tr><td>代表</td><td>BERT / BGE-M3</td><td>TF-IDF / BM25</td></tr>
+        <tr><td>盲区</td><td>漏关键词（HTTP-403）</td><td>不懂同义词（kitty≠cat）</td></tr>
+      </table>
+      <div class="keybox"><b>稠密</b>：国王−男+女≈女王，余弦相似度衡量「近」。<b>稀疏</b>：BM25 用 IDF 给稀有词加权（「蒸馏」比「模型」更稀有→贡献更大）。</div>` },
+    { h: "混合检索三阶段", html: `
+      <div class="keybox">三阶段流水线：<b>① 并行检索</b>（稠密+稀疏各召回）→ <b>② 结果融合</b>（RRF：得分=Σ 1/(k+rank)）→ <b>③ 神经重排序</b>（跨编码器精排）。</div>
+      <p><b>双编码器 vs 跨编码器</b>：猎头快速筛选 vs 面试官逐字深谈。重排序模型如 bge-reranker-v2-m3。</p>
+      <div class="warnbox"><b>没有单一检索策略全场景可靠</b>——稠密+稀疏+重排序组合才是生产级正确做法。</div>` },
+    { h: "检索质量三指标", html: `
+      <table>
+        <tr><th>指标</th><th>回答的问题</th></tr>
+        <tr><td>recall@k</td><td>该找的找到了吗（相关文档进前 k 比例）</td></tr>
+        <tr><td>MRR</td><td>找到得够不够靠前</td></tr>
+        <tr><td>nDCG</td><td>整个排序质量如何</td></tr>
+      </table>
+      <p>工业界「检索失败率」≈ 1 − recall@20。</p>` },
+    { h: "⭐ 联系 Hermes：skills 就是 RAG", html: `
+      <p>RAG 的灵魂 = <b>不把所有知识常驻上下文，按需检索相关片段注入</b>——Hermes 的 skills 正是这个思想：</p>
+      <table>
+        <tr><th>书里</th><th>Hermes</th></tr>
+        <tr><td>分块 + 按需检索</td><td>系统提示词只放 skill 的 description（索引），skill_view 加载全文</td></tr>
+        <tr><td>稀疏检索（倒排索引）</td><td>session_search 用 FTS5 全文检索</td></tr>
+        <tr><td>检索器质量决定效果</td><td>description 写不清 → 不知何时加载 → 检索不到</td></tr>
+        <tr><td>稠密嵌入（语义）</td><td>竞赛项目 search_cases / search_policy 向量检索</td></tr>
+      </table>
+      <div class="keybox">你昨天设计的 search_cases / search_policy，本质就是<b>给预警 Agent 装了 RAG</b>：案例/政策分块存向量库，问「以前怎么处置」时检索注入，而不是让 LLM 凭空回忆。</div>` },
+  ],
+  quiz: [
+    { q: "RAG 的固定工作模式是？", opts: ["检索片段→注入上下文→生成", "重训模型→生成", "关键词→直接返回", "拼接全文→生成"], ans: 0, exp: "检索相关片段 → 注入 LLM 上下文 → 生成答案，不用重训模型。" },
+    { q: "为什么必须给文档「分块」？", opts: ["多主题混杂无法精确表达 + 块太大浪费窗口", "为了压缩文件", "为了加密", "模型不能读长文"], ans: 0, exp: "整篇压成一个向量→多主题混杂；块太大带进无关内容浪费窗口稀释注意力。" },
+    { q: "稠密嵌入 vs 稀疏嵌入的根本区别？", opts: ["语义相似 vs 关键词精确匹配", "快 vs 慢", "新 vs 旧", "英文 vs 中文"], ans: 0, exp: "稠密=语义（BERT/BGE-M3），稀疏=关键词（TF-IDF/BM25）。" },
+    { q: "混合检索三阶段流水线是？", opts: ["并行检索→融合→重排序", "分块→嵌入→检索", "训练→测试→部署", "召回→过滤→输出"], ans: 0, exp: "① 并行检索（稠密+稀疏）→ ② 结果融合（RRF）→ ③ 神经重排序（跨编码器）。" },
+    { q: "「猎头初筛 vs 面试官深谈」分别比喻什么？", opts: ["双编码器 vs 跨编码器", "稀疏 vs 稠密", "BM25 vs TF-IDF", "分块 vs 嵌入"], ans: 0, exp: "双编码器=预抽特征大规模初筛；跨编码器=查询+文档逐字比对精排。" },
+  ],
+  cheat: [
+    { t: "RAG = ", d: "检索 + 增强 + 生成（检索片段→注入→生成）" },
+    { t: "分块三策略", d: "固定 / 递归结构感知 / 语义切分" },
+    { t: "稠密 vs 稀疏", d: "语义（BERT/BGE-M3） vs 关键词（TF-IDF/BM25）" },
+    { t: "混合三阶段", d: "并行检索 → 融合(RRF) → 重排序(跨编码器)" },
+    { t: "三指标", d: "recall@k（找到吗）/ MRR（靠前吗）/ nDCG（排序质量）" },
+    { t: "⭐ Hermes", d: "skills 描述=索引，skill_view=按需检索（RAG 思想）" },
+  ]
 }
 ];
 
