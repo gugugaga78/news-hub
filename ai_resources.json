@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-08-21 17:41",
-  "total": 148,
+  "last_updated": "2026-08-22 14:24",
+  "total": 154,
   "resources": [
     {
       "title": "fighting41love/funNLP",
@@ -1279,6 +1279,48 @@
       "source": "B站",
       "type": "视频",
       "summary": "【前端必看】B站最细最全的前端转AI Agent开发教程，7天带你从入门到精通，2026最新版，包含所有干货！比付费强10倍，学完既可就业！"
+    },
+    {
+      "title": "背下来你就是产品经理顶级天花板！！！",
+      "link": "https://www.xiaohongshu.com/explore/67cea2680000000029027bb8?xsec_token=AByhtdd-gXT4tYzqcqnpb9PeKZwW0KyvLvQ1EDbjLtJ00=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "背下来你就是产品经理顶级天花板！！！"
+    },
+    {
+      "title": "AI 产品经理学习路线：从零到一的完整成长",
+      "link": "https://www.xiaohongshu.com/explore/6960a6a1000000000a02b952?xsec_token=ABT2yY4YKqQhKrjwipNv6SHWvi7Fd7uHj0YUv0cZ49w3Q=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "AI 产品经理学习路线：从零到一的完整成长"
+    },
+    {
+      "title": "AI产品经理真实的一天｜转行经验分享",
+      "link": "https://www.xiaohongshu.com/explore/67e4de1f0000000009039edc?xsec_token=ABJClTy5qRayjiC5YL-Un24vHGzhaFfgUo6dHibicdAXc=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "AI产品经理真实的一天｜转行经验分享"
+    },
+    {
+      "title": "个人认为b站很牛的AI产品经理博主…",
+      "link": "https://www.xiaohongshu.com/explore/6a098c3500000000070240d4?xsec_token=ABSFAKECEij9h68G_wN4lQDOrkcQjZ0n7FhbH8gXqg8fM=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "个人认为b站很牛的AI产品经理博主…"
+    },
+    {
+      "title": "32岁了，做了四年产品，建议大家不要想太多",
+      "link": "https://www.xiaohongshu.com/explore/69ae2b85000000001a033155?xsec_token=ABk89IAYi5oSdtsIWdUXNESc8MEZsFEp3Kb9-Dgtb9LOg=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "32岁了，做了四年产品，建议大家不要想太多"
+    },
+    {
+      "title": "产品经理如何打造属于自己的AI工作流？",
+      "link": "https://www.xiaohongshu.com/explore/68f1e0e4000000000501024b?xsec_token=ABEKIuT5ymW4w0wi_pg--7yeiQMiYUfRR7KYNlBnz-0E8=&xsec_source=pc_search",
+      "source": "小红书",
+      "type": "笔记",
+      "summary": "产品经理如何打造属于自己的AI工作流？"
     }
   ]
 }
