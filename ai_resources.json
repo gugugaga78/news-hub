@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-08-22 14:24",
-  "total": 154,
+  "last_updated": "2026-08-23 10:35",
+  "total": 165,
   "resources": [
     {
       "title": "fighting41love/funNLP",
@@ -1321,6 +1321,83 @@
       "source": "小红书",
       "type": "笔记",
       "summary": "产品经理如何打造属于自己的AI工作流？"
+    },
+    {
+      "title": "【全748集】B站最全最细的AI Agent零基础入门教程，2026最新版，教学通俗易懂，小白适用！普通人也能抓住的AI风口！手把手教会你agent智能体搭建~",
+      "link": "https://www.bilibili.com/video/av117115201789701",
+      "source": "B站",
+      "type": "视频",
+      "summary": "【全748集】B站最全最细的AI Agent零基础入门教程，2026最新版，教学通俗易懂，小白适用！普通人也能抓住的AI风口！手把手教会你agent智能体搭建~"
+    },
+    {
+      "title": "90分钟！清华博士带你一口气搞懂人工智能和神经网络",
+      "link": "https://www.bilibili.com/video/av113332711333508",
+      "source": "B站",
+      "type": "视频",
+      "summary": "90分钟！清华博士带你一口气搞懂人工智能和神经网络"
+    },
+    {
+      "title": "（B站首推）2026李宏毅智能体【AI Agent】系列课程全集，公认体验感最好的入门课程！--人工智能/机器学习/深度学习/大模型/LLM",
+      "link": "https://www.bilibili.com/video/av116249128340244",
+      "source": "B站",
+      "type": "视频",
+      "summary": "（B站首推）2026李宏毅智能体【AI Agent】系列课程全集，公认体验感最好的入门课程！--人工智能/机器学习/深度学习/大模型/LLM"
+    },
+    {
+      "title": "【保姆级教程】解密DeepSeek&Agent开发从0-1教你如何学习AI  Agent",
+      "link": "https://www.bilibili.com/video/av114057520614647",
+      "source": "B站",
+      "type": "视频",
+      "summary": "【保姆级教程】解密DeepSeek&Agent开发从0-1教你如何学习AI  Agent"
+    },
+    {
+      "title": "慕课网体系课-AI Agent全栈开发工程师02",
+      "link": "https://www.bilibili.com/video/av117139964958057",
+      "source": "B站",
+      "type": "视频",
+      "summary": "慕课网体系课-AI Agent全栈开发工程师02"
+    },
+    {
+      "title": "90分钟带你从0到1手搓一个AI Agent智能体,涵盖agent原理、Agent智能体搭建、agent工作流,全程干货无废话！让你少走99%的弯路！",
+      "link": "https://www.bilibili.com/video/av114393081779298",
+      "source": "B站",
+      "type": "视频",
+      "summary": "90分钟带你从0到1手搓一个AI Agent智能体,涵盖agent原理、Agent智能体搭建、agent工作流,全程干货无废话！让你少走99%的弯路！"
+    },
+    {
+      "title": "【全网首发大模型AI Agent智能体教程】B站首推！手把手带你从零开始开发一款自己的AI Agent智能体,打造企业级AI数字员工！Al Agent批量抓取/",
+      "link": "https://www.bilibili.com/video/av114251515567888",
+      "source": "B站",
+      "type": "视频",
+      "summary": "【全网首发大模型AI Agent智能体教程】B站首推！手把手带你从零开始开发一款自己的AI Agent智能体,打造企业级AI数字员工！Al Agent批量抓取/"
+    },
+    {
+      "title": "B站讲的最好的AI Agent智能体教程（2026最新版）手把手教你从原理到实战打造企业级Agent智能体，一次性搞懂AI大模型智能体开发！",
+      "link": "https://www.bilibili.com/video/av116684966860196",
+      "source": "B站",
+      "type": "视频",
+      "summary": "B站讲的最好的AI Agent智能体教程（2026最新版）手把手教你从原理到实战打造企业级Agent智能体，一次性搞懂AI大模型智能体开发！"
+    },
+    {
+      "title": "前Meta员工大爆料：训练人工智能是为了让自己被替代吗？",
+      "link": "https://www.bilibili.com/video/av117114379834601",
+      "source": "B站",
+      "type": "视频",
+      "summary": "前Meta员工大爆料：训练人工智能是为了让自己被替代吗？"
+    },
+    {
+      "title": "【硬核AI Agent实战】Agent智能体搭建 到多智能体框架实战：agent开发 LangManus  A2A MCP等代码实战！大模型应用开发 ai智能体",
+      "link": "https://www.bilibili.com/video/av115279338151855",
+      "source": "B站",
+      "type": "视频",
+      "summary": "【硬核AI Agent实战】Agent智能体搭建 到多智能体框架实战：agent开发 LangManus  A2A MCP等代码实战！大模型应用开发 ai智能体"
+    },
+    {
+      "title": "AI全栈+Java项目+Springboot+Vue3项目实战，非常适合前后端转AI全栈，零基础快速入门项目，AI旅游智能推荐助手项目（已完结）",
+      "link": "https://www.bilibili.com/video/av116962529124218",
+      "source": "B站",
+      "type": "视频",
+      "summary": "AI全栈+Java项目+Springboot+Vue3项目实战，非常适合前后端转AI全栈，零基础快速入门项目，AI旅游智能推荐助手项目（已完结）"
     }
   ]
 }
