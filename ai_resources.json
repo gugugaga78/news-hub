@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-08-23 10:35",
-  "total": 165,
+  "last_updated": "2026-08-26 00:04",
+  "total": 166,
   "resources": [
     {
       "title": "fighting41love/funNLP",
@@ -442,6 +442,14 @@
         "自动化",
         "清单"
       ]
+    },
+    {
+      "title": "psssnikhil/ai-engineering-hub",
+      "link": "https://github.com/psssnikhil/ai-engineering-hub",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 15,
+      "summary": "Open-source AI Engineering Handbook — lessons, exercises, and resources"
     },
     {
       "title": "dcoderlab/ai-engineering-hub",
