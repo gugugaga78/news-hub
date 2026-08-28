@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-08-26 00:04",
-  "total": 166,
+  "last_updated": "2026-08-28 23:16",
+  "total": 185,
   "resources": [
     {
       "title": "fighting41love/funNLP",
@@ -255,6 +255,14 @@
       ]
     },
     {
+      "title": "itshen/learn-ai",
+      "link": "https://github.com/itshen/learn-ai",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 368,
+      "summary": "AI 产品从入门到精通 —— 面向 AI 产品经理的完整培训课程，涵盖大模型底层原理到 AI 工程化落地"
+    },
+    {
       "title": "vigorX777/product-design-system",
       "link": "https://github.com/vigorX777/product-design-system",
       "source": "GitHub",
@@ -413,6 +421,14 @@
         "逆向",
         "工具"
       ]
+    },
+    {
+      "title": "SagarBiswas-MultiHAT/researchVault",
+      "link": "https://github.com/SagarBiswas-MultiHAT/researchVault",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 21,
+      "summary": "Open-source research hub featuring data-backed social timing analytics (BST), a 5-phase SWE & cybersecurity career roadmap (2026–2030), and the PRISM "
     },
     {
       "title": "wukaipeng-dev/prompt-engineering-guide",
@@ -1406,6 +1422,125 @@
       "source": "B站",
       "type": "视频",
       "summary": "AI全栈+Java项目+Springboot+Vue3项目实战，非常适合前后端转AI全栈，零基础快速入门项目，AI旅游智能推荐助手项目（已完结）"
+    },
+    {
+      "title": "酥埋隐瞒",
+      "link": "https://www.bilibili.com/video/av405731572",
+      "source": "B站",
+      "type": "视频",
+      "summary": "酥埋隐瞒"
+    },
+    {
+      "title": "AI产品经理高薪学习路线拆解：前置知识→技术理解→完整 MVP 实战！拒绝样样通样样松，3个月拿到 Agent产品 30K offer！",
+      "link": "https://www.bilibili.com/video/av117149142095717",
+      "source": "B站",
+      "type": "视频",
+      "summary": "AI产品经理高薪学习路线拆解：前置知识→技术理解→完整 MVP 实战！拒绝样样通样样松，3个月拿到 Agent产品 30K offer！"
+    },
+    {
+      "title": "3个月成功转型AI，年薪40W+，迪哥带你一口气解析四大AI就业方向以及AI各学科自学路线图，千万别选错方向了！",
+      "link": "https://www.bilibili.com/video/av114998353331837",
+      "source": "B站",
+      "type": "视频",
+      "summary": "3个月成功转型AI，年薪40W+，迪哥带你一口气解析四大AI就业方向以及AI各学科自学路线图，千万别选错方向了！"
+    },
+    {
+      "title": "AI 产品经理，这个岗位，很快会消失吧？",
+      "link": "https://www.bilibili.com/video/av116205138545844",
+      "source": "B站",
+      "type": "视频",
+      "summary": "AI 产品经理，这个岗位，很快会消失吧？"
+    },
+    {
+      "title": "尝试AI产品经理岗，建议冷静下",
+      "link": "https://www.bilibili.com/video/av116244799817332",
+      "source": "B站",
+      "type": "视频",
+      "summary": "尝试AI产品经理岗，建议冷静下"
+    },
+    {
+      "title": "【Agent面经】目前B站最细的（AI Agent）高频面试八股文，吊打付费，帮你避开99%面试坑！存下吧，很难找全的！",
+      "link": "https://www.bilibili.com/video/av117030678239428",
+      "source": "B站",
+      "type": "视频",
+      "summary": "【Agent面经】目前B站最细的（AI Agent）高频面试八股文，吊打付费，帮你避开99%面试坑！存下吧，很难找全的！"
+    },
+    {
+      "title": "【2026版】这应该是B站讲的最好的【AI产品经理】实战教程， 全程通俗易懂，学完即就业！转行必看！",
+      "link": "https://www.bilibili.com/video/av116696744726490",
+      "source": "B站",
+      "type": "视频",
+      "summary": "【2026版】这应该是B站讲的最好的【AI产品经理】实战教程， 全程通俗易懂，学完即就业！转行必看！"
+    },
+    {
+      "title": "【保姆级教程】WorkBuddy彻底玩明白！只看这一期就够了！10节付费课内容全公开，完整工作流+实战技巧全揭秘，零基础一小时从入门到精通【附完整资料】",
+      "link": "https://www.bilibili.com/video/av117069685262348",
+      "source": "B站",
+      "type": "视频",
+      "summary": "【保姆级教程】WorkBuddy彻底玩明白！只看这一期就够了！10节付费课内容全公开，完整工作流+实战技巧全揭秘，零基础一小时从入门到精通【附完整资料】"
+    },
+    {
+      "title": "【吴恩达】2026年公认最好的【Vibe Coding】教程！从环境搭建到工作流完整闭环，一套全解决！DeepLearning.AI—附带课件代码",
+      "link": "https://www.bilibili.com/video/av117137096185556",
+      "source": "B站",
+      "type": "视频",
+      "summary": "【吴恩达】2026年公认最好的【Vibe Coding】教程！从环境搭建到工作流完整闭环，一套全解决！DeepLearning.AI—附带课件代码"
+    },
+    {
+      "title": "黑马程序员2026最新版LangChain+LangGraph开发实战全套视频课程，从Agent开发，到LangSmith的监控、调试、评估一套搞定",
+      "link": "https://www.bilibili.com/video/av116255252089867",
+      "source": "B站",
+      "type": "视频",
+      "summary": "黑马程序员2026最新版LangChain+LangGraph开发实战全套视频课程，从Agent开发，到LangSmith的监控、调试、评估一套搞定"
+    },
+    {
+      "title": "【全网首发】DeepSeek Harness全套部署应用教程|全80集 新手小白2026必学deepseekharness部署Agent/PPT生成插件安装教程",
+      "link": "https://www.bilibili.com/video/av117131274356738",
+      "source": "B站",
+      "type": "视频",
+      "summary": "【全网首发】DeepSeek Harness全套部署应用教程|全80集 新手小白2026必学deepseekharness部署Agent/PPT生成插件安装教程"
+    },
+    {
+      "title": "【全128集】2026吃透Java AI Agent+SpringAI Alibaba Agent Framwork实战全套教程！从0到1掌握智能体开发！",
+      "link": "https://www.bilibili.com/video/av117159544035245",
+      "source": "B站",
+      "type": "视频",
+      "summary": "【全128集】2026吃透Java AI Agent+SpringAI Alibaba Agent Framwork实战全套教程！从0到1掌握智能体开发！"
+    },
+    {
+      "title": "从零手搓工业级知识库！DeepSeek Harness智能体开发实战！Skills+插件+Agent预设全栈精讲，Agent设计、开发、部署、优化全流程实操！",
+      "link": "https://www.bilibili.com/video/av117128170575002",
+      "source": "B站",
+      "type": "视频",
+      "summary": "从零手搓工业级知识库！DeepSeek Harness智能体开发实战！Skills+插件+Agent预设全栈精讲，Agent设计、开发、部署、优化全流程实操！"
+    },
+    {
+      "title": "【全500集】全B站最详细AI Agent开发全套教程，手把手教你搭建企业级Agent智能体！从入门到实战，学完即就业，带你玩转AI Agent！存下吧！",
+      "link": "https://www.bilibili.com/video/av117161959956207",
+      "source": "B站",
+      "type": "视频",
+      "summary": "【全500集】全B站最详细AI Agent开发全套教程，手把手教你搭建企业级Agent智能体！从入门到实战，学完即就业，带你玩转AI Agent！存下吧！"
+    },
+    {
+      "title": "【GitHub 8万Star】开源神器Hermes Agent保姆级教程来了！从零搭建自进化AI智能体，接入微信/QQ/飞书，学完即就业！赶紧存下吧！",
+      "link": "https://www.bilibili.com/video/av117091764143293",
+      "source": "B站",
+      "type": "视频",
+      "summary": "【GitHub 8万Star】开源神器Hermes Agent保姆级教程来了！从零搭建自进化AI智能体，接入微信/QQ/飞书，学完即就业！赶紧存下吧！"
+    },
+    {
+      "title": "【全86集】AI Agent入门实战教程（LLM+MCP+从0到1打造商业级编程智能体）纯干货进阶Agent教程！",
+      "link": "https://www.bilibili.com/video/av116038456839198",
+      "source": "B站",
+      "type": "视频",
+      "summary": "【全86集】AI Agent入门实战教程（LLM+MCP+从0到1打造商业级编程智能体）纯干货进阶Agent教程！"
+    },
+    {
+      "title": "【Java+大模型】Java AI Agent✚Spring AI✚Spring AI Alibaba Agent Framework整体结构✚Skill！",
+      "link": "https://www.bilibili.com/video/av116339758860081",
+      "source": "B站",
+      "type": "视频",
+      "summary": "【Java+大模型】Java AI Agent✚Spring AI✚Spring AI Alibaba Agent Framework整体结构✚Skill！"
     }
   ]
 }
