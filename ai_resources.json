@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-08-28 23:16",
-  "total": 185,
+  "last_updated": "2026-08-31 22:18",
+  "total": 187,
   "resources": [
     {
       "title": "fighting41love/funNLP",
@@ -292,6 +292,21 @@
       ]
     },
     {
+      "title": "yixiangshijie/ai-agents-in-action-2nd-edition-cn",
+      "link": "https://github.com/yixiangshijie/ai-agents-in-action-2nd-edition-cn",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 225,
+      "summary": "本项目是《AI Agents in Action》第二版的中文译本，是一本智能体系统构建与应用的实战指南——目标不止于打造自主实体，更在于开发能够切实应对并解决现实问题的智能体。  全书从大语言模型（LLM）的基础应用出发，逐步深入到智能助手、多智能体系统与自主智能体的构建，系统讲解智能体系统的关键",
+      "title_cn": "《AI Agents in Action》第2版 · 中文译本",
+      "desc_cn": "智能体系统构建与应用的实战指南：从 LLM 基础应用到智能助手、多智能体系统与自主智能体，系统讲解智能体系统的关键技能。",
+      "tags": [
+        "AI Agent",
+        "实战",
+        "中文译本"
+      ]
+    },
+    {
       "title": "unit-mesh/choco-builder",
       "link": "https://github.com/unit-mesh/choco-builder",
       "source": "GitHub",
@@ -496,6 +511,20 @@
         "提示工程",
         "chatglm",
         "课程"
+      ]
+    },
+    {
+      "title": "Sheltercosmop/Prompt-Engineering-Guide-zh",
+      "link": "https://github.com/Sheltercosmop/Prompt-Engineering-Guide-zh",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 8,
+      "summary": "Prompt工程指南中文版",
+      "title_cn": "Prompt 工程指南 · 中文版",
+      "desc_cn": "Prompt 工程指南的中文翻译版，系统讲解提示词工程的核心方法与最佳实践。",
+      "tags": [
+        "Prompt",
+        "中文"
       ]
     },
     {
