@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Agent 设计基础 · 交互式课程</title>
+<style>
+  :root {
+    --bg: #0d1117; --bg2: #161b22; --card: rgba(255,255,255,0.05);
+    --border: rgba(255,255,255,0.12); --text: #e8eaed; --muted: #9aa0a6; --dim: #5f6368;
+    --cyan: #00e5ff; --purple: #b388ff; --green: #76ff03; --red: #ff6e40; --gold: #ffd740;
+    --radius: 14px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: linear-gradient(135deg, #0d1117 0%, #161b22 40%, #0d1117 70%, #1a1f35 100%);
+    background-attachment: fixed; color: var(--text); line-height: 1.7; min-height: 100vh;
+  }
+  .container { max-width: 860px; margin: 0 auto; padding: 24px 18px 80px; }
+  header { text-align: center; padding: 40px 0 20px; }
+  header h1 {
+    font-size: 2rem; font-weight: 800; letter-spacing: -0.5px;
+    background: linear-gradient(135deg, #e8eaed, #bdc1c6);
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  header .sub { margin-top: 6px; color: var(--muted); font-size: 0.9rem; }
+
+  /* 进度条 */
+  .progress-wrap { margin: 20px 0 24px; }
+  .progress-label { display: flex; justify-content: space-between; font-size: 0.82rem; color: var(--muted); margin-bottom: 6px; }
+  .progress-bar { height: 6px; background: rgba(255,255,255,0.08); border-radius: 3px; overflow: hidden; }
+  .progress-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--cyan), var(--purple)); transition: width .4s; border-radius: 3px; }
+
+  /* 课程导航 */
+  .lesson-nav { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 28px; justify-content: center; }
+  .lesson-btn {
+    padding: 10px 22px; border-radius: 30px; border: 1px solid var(--border);
+    background: var(--card); color: var(--muted); font-size: 0.9rem; font-weight: 500;
+    cursor: pointer; transition: .25s; backdrop-filter: blur(10px); user-select: none;
+  }
+  .lesson-btn:hover { border-color: rgba(255,255,255,.3); color: #fff; }
+  .lesson-btn.active { border-color: rgba(255,255,255,.35); background: rgba(255,255,255,.14); color: #fff; font-weight: 600; }
+  .lesson-btn.done::after { content: " ✓"; color: var(--green); }
+
+  /* 卡片 */
+  .card {
+    background: var(--card); backdrop-filter: blur(18px); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 22px 24px; margin-bottom: 16px;
+  }
+  .card h2 { font-size: 1.25rem; font-weight: 700; margin-bottom: 12px; color: #fff; }
+  .card h3 { font-size: 1.02rem; font-weight: 650; margin: 18px 0 8px; color: var(--cyan); }
+  .card p { margin-bottom: 10px; }
+  .card ul, .card ol { margin: 8px 0 10px 22px; }
+  .card li { margin-bottom: 6px; }
+  .card table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 0.88rem; }
+  .card th, .card td { border: 1px solid var(--border); padding: 8px 10px; text-align: left; }
+  .card th { background: rgba(255,255,255,0.06); color: #fff; }
+  .card code { background: rgba(0,229,255,0.1); color: var(--cyan); padding: 1px 6px; border-radius: 4px; font-size: 0.85em; font-family: Consolas, monospace; }
+  .keybox {
+    background: rgba(0,229,255,0.07); border: 1px solid rgba(0,229,255,0.2);
+    border-radius: 10px; padding: 12px 16px; margin: 12px 0; font-size: 0.95rem;
+  }
+  .keybox b { color: var(--cyan); }
+  .warnbox {
+    background: rgba(255,110,64,0.07); border: 1px solid rgba(255,110,64,0.25);
+    border-radius: 10px; padding: 12px 16px; margin: 12px 0; font-size: 0.93rem;
+  }
+  .warnbox b { color: var(--red); }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 6px; font-size: 0.72rem; font-weight: 600; color: var(--purple); background: rgba(179,136,255,0.12); border: 1px solid rgba(179,136,255,0.25); margin-right: 6px; }
+  .cite { font-size: 0.78rem; color: var(--dim); margin-top: 8px; }
+
+  /* 测验 */
+  .quiz-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+  .quiz-score { font-size: 0.9rem; color: var(--gold); font-weight: 600; }
+  .question { margin-bottom: 20px; }
+  .question .q { font-weight: 600; margin-bottom: 10px; color: #fff; }
+  .option {
+    display: block; width: 100%; text-align: left; padding: 12px 16px; margin-bottom: 8px;
+    border-radius: 10px; border: 1px solid var(--border); background: rgba(255,255,255,0.03);
+    color: var(--text); cursor: pointer; transition: .2s; font-size: 0.92rem; line-height: 1.5;
+  }
+  .option:hover:not(.disabled) { border-color: rgba(255,255,255,0.4); background: rgba(255,255,255,0.08); }
+  .option.correct { border-color: var(--green); background: rgba(118,255,3,0.12); color: #d8ff9e; }
+  .option.wrong { border-color: var(--red); background: rgba(255,110,64,0.12); color: #ffb59a; }
+  .option.disabled { cursor: default; }
+  .explain {
+    display: none; margin-top: 8px; padding: 12px 16px; border-radius: 10px;
+    background: rgba(255,215,64,0.07); border: 1px solid rgba(255,215,64,0.25); font-size: 0.88rem;
+  }
+  .explain.show { display: block; }
+  .quiz-reset { margin-top: 6px; padding: 8px 16px; border-radius: 8px; border: 1px solid var(--border); background: transparent; color: var(--muted); cursor: pointer; font-size: 0.82rem; }
+  .quiz-reset:hover { color: #fff; border-color: rgba(255,255,255,.4); }
+
+  /* 速查卡 */
+  .cheat-grid { display: grid; gap: 10px; grid-template-columns: 1fr; }
+  @media (min-width: 640px) { .cheat-grid { grid-template-columns: 1fr 1fr; } }
+  .cheat-item { background: rgba(255,255,255,0.04); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; }
+  .cheat-item .t { font-weight: 700; color: var(--cyan); font-size: 0.9rem; margin-bottom: 4px; }
+  .cheat-item .d { font-size: 0.84rem; color: var(--muted); }
+
+  footer { text-align: center; margin-top: 40px; color: var(--dim); font-size: 0.78rem; }
+  .hidden { display: none; }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>AI Agent 设计基础</h1>
+    <p class="sub">交互式课程 · 教材：李博杰《深入理解 AI Agent》 · 进度自动保存</p>
+  </header>
+
+  <div class="progress-wrap">
+    <div class="progress-label"><span id="progText">已完成 0/2 课</span><span id="progPct">0%</span></div>
+    <div class="progress-bar"><div class="progress-fill" id="progFill"></div></div>
+  </div>
+
+  <nav class="lesson-nav" id="lessonNav"></nav>
+
+  <div id="lessonBody"></div>
+
+  <footer>教材 · 李博杰《深入理解 AI Agent：设计原理与工程实践》｜ 方法 · Matt Pocock <code>teach</code></footer>
+</div>
+
+<script>
+const LESSONS = [
+{
+  id: "01", title: "核心公式与 ReAct 循环", section: "第 1 章",
+  sections: [
+    { h: "核心公式：Agent = LLM + 上下文 + 工具", html: `
+      <p>这是全书的灵魂公式（§1.1），<b>三者缺一不可</b>。</p>
+      <table>
+        <tr><th>直观</th><th>组件</th><th>作用</th><th>学术（RL，可选）</th></tr>
+        <tr><td>🧠 大脑</td><td><b>LLM</b></td><td>思考、规划、决策「下一步做什么」</td><td>策略（Policy）</td></tr>
+        <tr><td>👁️ 眼睛</td><td><b>上下文</b></td><td>每个决策点能看到的全部信息</td><td>观察空间</td></tr>
+        <tr><td>🦾 手脚</td><td><b>工具</b></td><td>能做的所有事情（改世界的通道）</td><td>动作空间</td></tr>
+      </table>
+      <div class="keybox"><b>一句话记法</b>：大脑决定做什么，眼睛决定它知道什么，手脚决定它能做到什么。</div>` },
+    { h: "上下文：五个组件 + 静态前缀 + 轨迹", html: `
+      <p>每次调 LLM，上下文由<b>五部分</b>构成（§1.1.3）：</p>
+      <table>
+        <tr><th>#</th><th>组件</th><th>性质</th></tr>
+        <tr><td>1</td><td>系统提示词（岗位说明书）</td><td>静态前缀</td></tr>
+        <tr><td>2</td><td>工具定义</td><td>静态前缀</td></tr>
+        <tr><td>3</td><td>用户消息</td><td>动态（轨迹）</td></tr>
+        <tr><td>4</td><td>模型回复（思考+内容+工具调用）</td><td>动态（轨迹）</td></tr>
+        <tr><td>5</td><td>工具执行结果</td><td>动态（轨迹）</td></tr>
+      </table>
+      <div class="keybox"><b>关键公式</b>：上下文 = 静态前缀 + 轨迹</div>
+      <p><b>消融实验 1-1 结论</b>：去工具定义→丧失行动能力；去工具结果→<b>无限循环</b>；去思考过程→决策矛盾；去历史消息→「失忆」重复劳动。</p>` },
+    { h: "ReAct 循环：想 → 做 → 看", html: `
+      <p>三大组件靠 <b>ReAct（Reasoning + Acting）</b> 协同（§1.1.4）。名字只有「思考+行动」，实际是<b>三环节</b>：</p>
+      <div class="keybox"><b>想</b>（思考下一步）→ <b>做</b>（调工具）→ <b>看</b>（读结果）→ 循环直到完成</div>
+      <p>例（多币种汇总）：用户问年度收入 → 模型想「先换算汇率」 → 调 <code>convert_currency</code> → 拿到汇率 → 再想「调解释器求和」 → 给最终答案。</p>` },
+    { h: "Harness 工程（一句话）", html: `
+      <p>§1.2：从「提示工程」演进到「<b>Loop 工程</b>」——管好「思考→行动→观察」整个循环：上下文管理、工具接口、安全约束、验证纠正。</p>
+      <div class="warnbox"><b>模型做不稳的，Harness 先补上；模型内化一层，Harness 卸下一层。</b></div>` },
+  ],
+  quiz: [
+    { q: "Agent 的三个核心组件是？", opts: ["LLM + 上下文 + 工具", "模型 + 数据 + 算力", "提示词 + 参数 + 函数", "训练 + 推理 + 部署"], ans: 0, exp: "Agent = LLM（大脑）+ 上下文（眼睛）+ 工具（手脚），三者缺一不可。" },
+    { q: "上下文五组件里，属于「静态前缀」的是？", opts: ["系统提示词 + 工具定义", "用户消息 + 模型回复", "工具结果 + 用户消息", "思考过程 + 工具调用"], ans: 0, exp: "静态前缀 = 系统提示词 + 工具定义；轨迹 = 用户消息 + 模型回复 + 工具执行结果。" },
+    { q: "消融实验里，去掉哪个组件会让 Agent 陷入「盲目循环」？", opts: ["工具执行结果", "工具定义", "历史消息", "思考过程"], ans: 0, exp: "去掉工具结果，Agent 看不到上一步反馈，会反复调用同一工具陷入死循环。" },
+    { q: "ReAct 实际有哪三个环节？", opts: ["想 → 做 → 看", "读 → 写 → 存", "搜 → 猜 → 答", "训练 → 测试 → 部署"], ans: 0, exp: "想（思考）、做（行动）、看（观察）三个环节，循环到任务完成。" },
+    { q: "哪种学习范式「合上就忘」？", opts: ["上下文学习", "后训练", "外部化学习", "强化学习"], ans: 0, exp: "上下文学习是临场翻资料——快但临时，会话结束就消失；后训练=教科书（永久）；外部化=笔记本（持久）。" },
+  ],
+  cheat: [
+    { t: "Agent = ", d: "LLM + 上下文 + 工具 = 大脑 + 眼睛 + 手脚" },
+    { t: "上下文 = ", d: "静态前缀（系统提示词+工具定义）+ 轨迹（用户消息+模型回复+工具结果）" },
+    { t: "ReAct = ", d: "想 → 做 → 看（循环到任务完成）" },
+    { t: "三种学习", d: "后训练=教科书 / 上下文学习=参考资料 / 外部化=笔记本" },
+    { t: "Harness", d: "管住整个 Loop 的工程外壳（模型做不稳的它兜底）" },
+  ]
+},
+{
+  id: "02", title: "提示工程", section: "第 2 章 §2.4",
+  sections: [
+    { h: "对象 + 检验标准", html: `
+      <p>提示工程的核心对象 = <b>系统提示词</b>（API 消息列表里 <code>role: system</code> 那条消息）——Agent 的「员工手册」。</p>
+      <div class="keybox"><b>检验标准</b>：LLM 是「聪明的新员工」——能力出众，但对你工作流程一无所知。一个聪明的新员工读完提示词还不会做，Agent 也一样。</div>` },
+    { h: "五个维度速览", html: `
+      <table>
+        <tr><th>维度</th><th>核心原则</th></tr>
+        <tr><td>① 语气与风格</td><td>关键约束用大写（<code>NEVER do X</code>），过度使用会稀释</td></tr>
+        <tr><td>② 结构化提示</td><td>XML（精确语义）+ Markdown（人机共读）双层结构</td></tr>
+        <tr><td>③ 流程驱动</td><td>写清晰 SOP 而非堆砌规则</td></tr>
+        <tr><td>④ 业务规则</td><td>明确到可执行，别给模型自由裁量权</td></tr>
+        <tr><td>⑤ Few-shot</td><td>难描述的给 2-3 个示例，胜过等量抽象规则</td></tr>
+      </table>` },
+    { h: "业务规则细化（企业级重点）", html: `
+      <p>模糊规则（「根据任务情况选择计费类型」）→ 行为不稳定。例：打电话砍价 Agent——「退衣服」是省钱还是退款？「取消 Netflix」算省钱吗？</p>
+      <p>必须明确到可执行程度：</p>
+      <ul>
+        <li><code>NEVER use percentage_based_one_time for refunds and service cancellations</code></li>
+        <li>成功率映射：>60% 用可退款模式、<30% 直接拒绝</li>
+        <li>金额写死：每分钟 $0.05、「节省」只基于现有账单</li>
+      </ul>
+      <div class="keybox"><b>设计哲学</b>：LLM 优势在遵循复杂指令 + 提取信息，不应在业务规则上给过多自由裁量权。好的培训是「详细 SOP」，不是「你很聪明自己看着办」。</div>` },
+    { h: "消融实验 + 提示注入", html: `
+      <p><b>消融实验（实验 2-4）</b>两个硬数据：</p>
+      <ul>
+        <li>打乱<b>信息组织</b>（拆散流程）→ 成功率<b>下降 >30%</b>，常违反关键规则</li>
+        <li>移除<b>工具描述</b> → 工具调用错误率<b>增加 45%</b></li>
+      </ul>
+      <p>语气风格（专业/Trump/Casual）对完成率影响有限。方法论：表现不佳时先做消融实验，别全面重写。</p>
+      <div class="warnbox"><b>提示注入</b>：攻击者通过外部内容（网页/邮件/文档）把伪装成系统指令的文本混入上下文。Agent 有工具调用能力 → 文件删除/发邮件/泄露隐私等<b>不可逆操作</b>。防御核心：分清「指令」与「数据」——①来源标记 ②结构化角色 ③输入清洗。</div>
+      <p>⚠️ <b>Skill 本身是新的注入面</b>：第三方 Skill 内容以高执行倾向进入上下文，安装前必须审查。</p>` },
+  ],
+  quiz: [
+    { q: "系统提示词的检验标准是？", opts: ["「聪明的新员工」读完还不会做 = 写得不行", "字数越多越好", "必须用英文", "越短越好"], ans: 0, exp: "LLM 是聪明的新员工，能力出众但对工作流程一无所知——读完提示词还不会做，Agent 也一样。" },
+    { q: "消融实验打乱「信息组织」导致？", opts: ["成功率下降 5%", "工具错误率增加 45%", "成功率下降 >30%", "无影响"], ans: 2, exp: "信息组织混乱 → 成功率下降 >30%（如跳过身份验证直接退款）；移除工具描述 → 错误率增加 45%。" },
+    { q: "业务规则设计的哲学？", opts: ["让模型自由裁量", "明确到可执行，不给过多自由裁量权", "尽量模糊", "全部用 Few-shot 表达"], ans: 1, exp: "LLM 优势在遵循复杂指令和提取信息，不应在业务规则上给过多自由裁量权。" },
+    { q: "Few-shot 示例与 KV Cache 的关系？", opts: ["放靠前区域，要字节级稳定，动态检索会使缓存失效", "放哪都行，不影响", "越多越好", "必须每轮重写"], ans: 0, exp: "示例处于上下文靠前区域，一旦确定要字节级稳定；按请求动态检索「最相关」示例 = 每次改写前缀 = 缓存持续失效。" },
+    { q: "提示注入的上下文层防御核心？", opts: ["输入清洗就够了", "禁用所有工具", "加长系统提示词", "分清「指令」与「数据」（来源标记+结构化角色+清洗）"], ans: 3, exp: "核心是帮模型分清指令与数据：来源标记 + 结构化角色 + 输入清洗。" },
+  ],
+  cheat: [
+    { t: "检验标准", d: "聪明的新员工读完还不会做 = 不行" },
+    { t: "双层结构", d: "XML（语义）+ Markdown（可读）" },
+    { t: "组织方式", d: "流程驱动 > 规则堆砌（写 SOP）" },
+    { t: "消融数据", d: "信息组织 >30% · 工具描述 45%" },
+    { t: "注入防御", d: "来源标记 + 结构化角色 + 输入清洗" },
+  ]
+},
+{
+  id: "03", title: "动态提示词与 Skills", section: "第 2 章 §2.5",
+  sections: [
+    { h: "为什么需要 Skills", html: `
+      <p>系统提示词不断膨胀（退款规则、代码规范、格式要求全塞进去），带来两个问题：</p>
+      <ul>
+        <li><b>浪费 token</b>：大部分内容与当前任务无关</li>
+        <li><b>注意力被稀释</b>：无关信息过多 → 「上下文腐化」</li>
+      </ul>
+      <p>解法：静态提示工程 → <b>动态提示词</b>（按需加载）。Skills 就是这个理念的工程化实现。</p>` },
+    { h: "Skills + 渐进式披露", html: `
+      <p><b>Skills = 把 Agent 能力模块化成独立的、可按需加载的知识包</b>（像新员工某个专项任务的操作手册）。</p>
+      <p>设计哲学 = <b>渐进式披露</b>：先给目录摘要，需要时再加载完整内容。</p>
+      <table>
+        <tr><th>层</th><th>内容</th><th>token</th><th>时机</th></tr>
+        <tr><td>① 元数据</td><td>name + description</td><td>~300</td><td>启动时加载</td></tr>
+        <tr><td>② 核心流程</td><td>SKILL.md 全文</td><td>~2K</td><td>按需加载</td></tr>
+        <tr><td>③ 子文档</td><td>详细工作流 / 规范 / 脚本</td><td>按需</td><td>选择性深入</td></tr>
+      </table>
+      <p>Skill 不只含文档，还捆绑<b>可执行代码工具和模板</b>——从「知识传递」升级为「能力赋予」（像 pip/npm 包管理）。</p>` },
+    { h: "路由关键：description 怎么写", html: `
+      <p>description 是<b>路由决策的关键</b>：要短 + 写成<b>路由条件</b>而非功能介绍——「Use when / Don't use when」+ <b>反例</b>。</p>
+      <div class="warnbox"><b>反例不是可选项，是路由准确触发的关键</b>：宽泛描述（如 help with backend）会频繁误触发；补上反例后路由准确率显著回升。「何时该用我」比「我能做什么」重要得多。</div>` },
+    { h: "三种实现方式与权衡", html: `
+      <p>Skill 内容放上下文<b>什么位置</b>？这是根本性设计决策，直接关系到 KV Cache 效率和指令遵循。</p>
+      <table>
+        <tr><th>方式</th><th>做法</th><th>优点</th><th>缺点</th></tr>
+        <tr><td>① 注入 system</td><td>追加到 system prompt</td><td>指令遵循最强</td><td>改 system → 前缀失效</td></tr>
+        <tr><td>② 普通文件读取</td><td>tool result 出现在中间</td><td>不影响缓存</td><td>中间位置指令遵循弱</td></tr>
+        <tr><td>③ 生产实现</td><td>元数据注入末尾 + 专用工具加载</td><td>兼顾两者</td><td>—</td></tr>
+      </table>
+      <p><b>方式三（Claude Code）</b>：把「路由」和「执行」分离——元数据（~数百 token）以 user 角色 meta 消息注入<b>上下文末尾</b>（<code>&lt;system-reminder&gt;</code> 包裹），不改 system + 注意力最优；<b>增量发送</b>（稳态零增量）；完整内容用 <code>Skill(skill="pdf")</code> 工具按需加载。</p>
+      <div class="keybox"><b>KV Cache 澄清</b>：「友好」≠ 零成本，而是「一次性写入、永久受益」（emit-once）。塞进 system 会让下游整条 trajectory 每次失效（数万 token）。</div>` },
+  ],
+  quiz: [
+    { q: "Skills 解决的核心问题是什么？", opts: ["提示词膨胀导致的 token 浪费 + 注意力稀释", "模型速度太慢", "工具数量太多", "上下文窗口太小"], ans: 0, exp: "系统提示词不断膨胀，带来「浪费 token」和「注意力稀释（上下文腐化）」两个问题。" },
+    { q: "「渐进式披露」的三层从粗到细是？", opts: ["元数据 → 核心流程 → 子文档", "子文档 → 核心流程 → 元数据", "核心流程 → 元数据 → 子文档", "元数据 → 子文档 → 核心流程"], ans: 0, exp: "①元数据（~300 token）→ ②核心流程（SKILL.md，~2K）→ ③子文档，按需逐层深入。" },
+    { q: "description 里「反例」的作用是？", opts: ["防止宽泛描述误触发、提升路由准确率", "让 Skill 更短", "提升模型生成速度", "标记危险操作"], ans: 0, exp: "宽泛描述会频繁误触发导致路由失准；反例明确「不该触发」的场景，是路由准确触发的关键。" },
+    { q: "生产实现（Claude Code）选哪种方式？", opts: ["全部注入 system prompt", "元数据注入末尾 + 专用工具按需加载", "作为普通文件读取放中间", "全部塞进用户消息"], ans: 1, exp: "方式三：元数据注入末尾（不改 system + 注意力最优）+ 完整内容用专用 Skill 工具按需加载，兼顾缓存和指令遵循。" },
+    { q: "「对 KV Cache 友好」的准确含义是？", opts: ["一次性写入、永久受益", "完全零成本", "不需要缓存", "每次都要重新计算"], ans: 0, exp: "emit-once：首次付一次写入代价，之后每轮免费命中；不是零成本。" },
+  ],
+  cheat: [
+    { t: "Skills = ", d: "模块化、按需加载的知识包" },
+    { t: "渐进式披露", d: "元数据 → 核心流程 → 子文档" },
+    { t: "路由关键", d: "Use when / Don't use when + 反例" },
+    { t: "生产实现", d: "元数据注入末尾 + 专用工具按需加载" },
+    { t: "KV Cache", d: "emit-once，一次性写入永久受益" },
+  ]
+},
+{
+  id: "04", title: "Agent 状态栏", section: "第 2 章 §2.6",
+  sections: [
+    { h: "一句话：状态栏是什么", html: `
+      <p><b>Agent 状态栏 = Harness 在上下文末尾持续注入的结构化元信息</b>（任务进度、时间、工具调用次数、环境状态），让模型每次生成时「瞥一眼」就知道当前状态。</p>
+      <ul>
+        <li>像<b>手机顶部状态栏</b>：时间/电量/信号——不是主界面内容，但随时能瞥一眼掌握状态</li>
+        <li>与系统提示词的区别：提示词 = 入职员工手册（不变）；状态栏 = 实时仪表盘（随任务更新）</li>
+      </ul>` },
+    { h: "为什么有效：检索 ≠ 推理", html: `
+      <p>核心洞察（§2.6.1）：上下文学习更像<b>检索</b>而非<b>推理</b>——模型擅长从已有内容里「找」，但不擅长主动「归纳总结」。</p>
+      <div class="keybox"><b>上下文窗口是「一台只有一半的检索引擎」</b>：检索很强，但缺「提炼层」——从不会自动数一遍、建索引、就地总结。</div>
+      <p>后果：任何「结论」（打了几次电话、有没有超限）模型都要从原始记录<b>现算一遍</b>，代价随上下文长度 N 一起涨，还容易数错。</p>
+      <p>经典翻车：约束「每商家最多打 3 次电话」，Agent 数不清，打到第 4 次甚至死循环。</p>` },
+    { h: "三条实操铁律（企业级必背）", html: `
+      <p>来自论文级实验（上下文蒸馏，2.4 万次评测）：<b>弱模型补准确率，强模型省效率</b>——最弱模型准确率涨 40–54 个点，2B 小模型追平不带状态栏的前沿大模型；强模型思考 token 砍八九成。</p>
+      <ol>
+        <li><b>状态栏用代码维护，别用大模型维护</b> —— 20 行正则就能满分；让 LLM 读整段历史吐统计反而出错（等于把「扫描」难题原样搬家）。</li>
+        <li><b>删原文前，先确认状态栏覆盖所有会被问的维度</b> —— 否则答非所问的状态栏变「假权威」，准确率 100%→7.6%。</li>
+        <li><b>把状态栏准确率当生产指标盯</b> —— 模型几乎无条件相信状态栏，写错就原样带进答案；信息必须来自真实观测，绝不能被污染。</li>
+      </ol>` },
+    { h: "插在哪 + 两种更新方式", html: `
+      <p>状态栏在 API 层面 = 一条 <b>user 角色的消息，插入上下文末尾</b>（不改 system，避免破坏前缀缓存），紧邻生成位置获得最高注意力权重。</p>
+      <table>
+        <tr><th></th><th>实现一：每轮替换</th><th>实现二：持久追加</th></tr>
+        <tr><td>做法</td><td>删旧状态、末尾追加最新</td><td>状态永久留轨迹，每轮只追加</td></tr>
+        <tr><td>代表</td><td>—</td><td>Claude Code 的 <code>&lt;system-reminder&gt;</code></td></tr>
+        <tr><td>优点</td><td>永远一份最新状态</td><td>缓存完全友好</td></tr>
+        <tr><td>缺点</td><td>删旧状态使其后缓存失效</td><td>陈旧状态累积</td></tr>
+        <tr><td>选它当</td><td>轨迹短 / 单条状态大</td><td>更新频繁且轨迹长</td></tr>
+      </table>` },
+  ],
+  quiz: [
+    { q: "Agent 状态栏是什么？", opts: ["上下文末尾注入的结构化元信息", "系统提示词的一种", "一种新的模型参数", "用户输入的一部分"], ans: 0, exp: "状态栏是 Harness 在上下文末尾注入的元信息（进度/时间/计数），区别于固定不变的系统提示词。" },
+    { q: "为什么模型会「数不清打了几次电话」？", opts: ["上下文学习是检索不是推理，不会自动提炼结论", "模型算力不够", "工具接口设计错误", "KV Cache 溢出"], ans: 0, exp: "模型只会从原文里「找」，不会自动「提炼」——「打了几次」这个结论散在原始记录里，它得现算一遍，容易数错。" },
+    { q: "状态栏该用什么来维护？", opts: ["代码（正则/计数函数）", "另一个大模型批量统计", "人工手动更新", "系统提示词"], ans: 0, exp: "20 行正则就能满分；让 LLM 批量统计 = 把「扫描整段上下文」的难题原样搬家，反而出错。" },
+    { q: "「100%→7.6%」的教训是什么？", opts: ["删原文前要确认状态栏覆盖所有会被问的维度", "状态栏必须放开头", "状态栏越长越好", "必须用最强模型"], ans: 0, exp: "状态栏只存「两两组合」计数却问「三者交叉」，答非所问的状态栏变「假权威」，连 Claude 都从 100% 崩到 7.6%。" },
+    { q: "状态栏在 API 里以什么 role 插入、插在哪？", opts: ["user 角色，上下文末尾", "system 角色，开头", "tool 角色，中间", "assistant 角色，末尾"], ans: 0, exp: "以 user 角色消息插入末尾（借用消息槽位，内容实为框架生成），不改 system 以免破坏前缀缓存。" },
+  ],
+  cheat: [
+    { t: "状态栏 = ", d: "上下文末尾注入的结构化元信息（「瞥一眼」知道状态）" },
+    { t: "根因", d: "上下文学习 = 检索 ≠ 推理（缺「提炼层」）" },
+    { t: "三条铁律", d: "①代码维护不靠 LLM ②删原文前确认覆盖维度 ③准确率当生产指标" },
+    { t: "位置", d: "user 角色消息插末尾；更新=每轮替换 vs 持久追加" },
+    { t: "硬数据", d: "2B 小模型+状态栏 ≈ 前沿大模型；强模型思考 token 降八九成" },
+  ]
+},
+{
+  id: "05", title: "上下文压缩策略", section: "第 2 章 §2.7",
+  sections: [
+    { h: "为什么需要压缩：两个动机", html: `
+      <p>压缩上下文有两个<b>截然不同</b>的动机（§2.7.1）：</p>
+      <ol>
+        <li><b>长度 + 成本约束</b>（直观）：窗口有限，工具结果动辄数万字符，几轮就撑满、任务中断；token 越多越贵、越慢</li>
+        <li><b>提升思考质量</b>（更深层、易忽视）：即使窗口够大，把所有原始信息堆着也不是最优——模型要在数万 token 里反复「检索」散落的片段，注意力分散、关键信息遗漏</li>
+      </ol>
+      <div class="keybox"><b>例</b>：10 次搜索积累信息，第 10 次后做一次结构化总结（「已知 A…、还缺 C」），模型后续直接用精炼知识，不用从原文重提取。</div>` },
+    { h: "检索 ≠ 推理 + 上下文腐化", html: `
+      <p>核心机制（§2.7.2）：注意力擅长「查找」，不擅长「归纳统计」。<b>状态栏 = 把结论加进上下文；压缩 = 把臃肿原文换成结论</b>——同一枚硬币两面。</p>
+      <p><b>宠物店例子</b>：100 笼（90 黑 10 白），问「各多少」——不启用思维链难答；启用则每次都要重新数一遍（疯狂烧思考 token）；提前写「黑 90 白 10」→ 立即检索到结论。</p>
+      <div class="warnbox"><b>上下文腐化（Context Rot）</b>：上下文<b>没满</b>但找不到了，比「溢出」更隐蔽——表面正常，决策质量悄悄下滑。根因是<b>信息密度不对</b>。</div>
+      <div class="keybox"><b>Karpathy</b>：模型「记忆差」是特性不是缺陷——窗口有限迫使它从细节抽象出模式。→ 主动显式提炼，别让模型被动检索。</div>` },
+    { h: "压缩与 KV Cache（看似矛盾实则互补）", html: `
+      <p>压缩发生在<b>两次 API 调用之间</b>，由框架预处理：</p>
+      <ul>
+        <li><b>System Prompt 和 Tool Definitions 永远不动</b>（静态前缀，持续缓存）</li>
+        <li>压缩对象 = 对话历史里的 <b>tool results</b>；替换点之后的缓存失效，之前的仍有效</li>
+        <li>频繁压缩破坏缓存 → <b>接近阈值时批量压，别每轮压</b></li>
+      </ul>` },
+    { h: "实验 2-9：六种压缩策略 ★★★", html: `
+      <table>
+        <tr><th>策略</th><th>Token</th><th>压缩率</th><th>迭代</th><th>结果</th></tr>
+        <tr><td>① 无压缩</td><td>&gt;110K</td><td>100%</td><td>5</td><td>✗ 溢出</td></tr>
+        <tr><td>② 个体摘要</td><td>123K</td><td>6.8%</td><td>24</td><td>✓ 碎片化重复</td></tr>
+        <tr><td>③ 组合摘要</td><td>55K</td><td>2.1%</td><td>21</td><td>✓ 超长截断丢信息</td></tr>
+        <tr><td>④ 上下文感知</td><td><b>25K</b></td><td><b>0.9%</b></td><td><b>15</b></td><td>✓ <b>最优</b></td></tr>
+        <tr><td>⑤ 感知+引用</td><td>45K</td><td>1.4%</td><td>17</td><td>✓ 加 URL 溯源</td></tr>
+        <tr><td>⑥ 自适应窗口</td><td>181K</td><td>—</td><td>8</td><td>✓ 最大保真</td></tr>
+      </table>
+      <div class="keybox"><b>最优 = ④ 上下文感知</b>：把「查询意图 + 已积累信息」纳入压缩决策，token <b>减少 77%</b>、迭代最少。②③ 的缺陷是<b>缺乏语义理解</b>。⑥ 到窗口 80% 才触发批量压缩。</div>` },
+    { h: "生产级：五层分层压缩", html: `
+      <table>
+        <tr><th>层</th><th>做法</th><th>成本</th></tr>
+        <tr><td>① 工具结果预算控制</td><td>大输出存磁盘，看摘要预览</td><td>低</td></tr>
+        <tr><td>② 噪声直接删除</td><td>低价值内容直接删（对噪声摘要 = 浪费 token）</td><td>低</td></tr>
+        <tr><td>③ API 层微压缩</td><td>服务端移除指定工具结果</td><td>低</td></tr>
+        <tr><td>④ 归档式摘要</td><td>逐轮结构化（像 git log，非 git squash）</td><td>中</td></tr>
+        <tr><td>⑤ 全量压缩</td><td>LLM 驱动，最后手段 + 熔断器</td><td>高</td></tr>
+      </table>
+      <div class="keybox">前三层成本低、对缓存扰动可控，<b>优先用</b>；后两层强但贵，<b>兜底用</b>。熔断器防止「反复压缩失败」死循环烧钱。</div>` },
+    { h: "四条原则 + 保留优先级清单", html: `
+      <p><b>四条原则</b>：① 信息价值非均匀分布（决策点 &gt; 证据 &gt; 噪声）② 语义完整性（「Sutskever 于 2024 年 5 月离开 OpenAI」≠「Sutskever 离开」）③ 任务相关性 ④ 压缩即理解。</p>
+      <table>
+        <tr><th>优先级</th><th>内容</th><th>处理</th></tr>
+        <tr><td>1</td><td>架构决策 + 关键约束</td><td><b>不得摘要</b></td></tr>
+        <tr><td>2</td><td>已修改文件列表 + 变更记录</td><td>完整保留</td></tr>
+        <tr><td>3</td><td>验证状态（pass/fail）</td><td>必须保留</td></tr>
+        <tr><td>4</td><td>未解决 TODO + 回滚笔记</td><td>必须保留</td></tr>
+        <tr><td>5</td><td>工具输出</td><td>可删，仅留 pass/fail</td></tr>
+      </table>
+      <div class="warnbox">⚠️ <b>标识符必须原样保留</b>：UUID / hash / IP / 端口 / URL / 文件名——改错一位，后续工具调用直接失效。</div>` },
+    { h: "隔离优于压缩：子 Agent", html: `
+      <p>压缩是<b>事后减法</b>（有损 + 额外 LLM 调用）；更彻底的是<b>让大体积中间信息根本不进主上下文</b>。</p>
+      <p><b>子 Agent 上下文隔离</b>：把「读大量文件 / 大范围搜索」委派给独立子 Agent，它在自己上下文探索，<b>只回传几百 token 结论摘要</b>。</p>
+      <div class="keybox"><b>例</b>：找「处理支付回调的函数」——主 Agent 亲自搜 → 数万 token 代码进主上下文沦为噪声；委派子 Agent → 主上下文只加两条消息（任务 + 结论），中间过程随子 Agent 丢弃，主 KV Cache 前缀<b>完全不受影响</b>。</div>
+      <div class="warnbox"><b>代价</b>：子 Agent 看不到主上下文 → 任务描述必须<b>自包含、目标明确</b>。生产实现：Claude Code Task 工具、Deep Research 检索子 Agent。</div>` },
+  ],
+  quiz: [
+    { q: "压缩的两个动机，哪个更深层、更易被忽视？", opts: ["提升思考质量", "长度约束", "成本约束", "缓存优化"], ans: 0, exp: "「提升思考质量」更深层——即使窗口够大，把原始信息堆着也不是最优。长度和成本只是直观的表面原因。" },
+    { q: "为什么「上下文没满也该压缩」？", opts: ["上下文腐化：没满但找不到了", "为了省钱", "模型会死循环", "窗口一定会满"], ans: 0, exp: "注意力擅长检索不擅长归纳；信息密度不对会导致上下文腐化——表面正常，决策质量悄悄下滑。" },
+    { q: "实验 2-9 的最优策略及其 token 降幅？", opts: ["上下文感知，减少 77%", "组合摘要，减少 50%", "个体摘要，减少 90%", "自适应窗口，减少 77%"], ans: 0, exp: "④ 上下文感知压缩最优：把查询意图+已有信息纳入压缩决策，token 减少 77%、迭代最少。" },
+    { q: "保留优先级里「架构决策」怎么处理？标识符为什么原样保留？", opts: ["不得摘要；改错一位工具调用就失效", "可删；无影响", "摘要即可；无所谓", "只留结论；方便检索"], ans: 0, exp: "架构决策/关键约束「不得摘要」；UUID/hash/IP/URL 等标识符改错一位，后续工具调用直接失效。" },
+    { q: "「隔离优于压缩」的代价是什么？", opts: ["子 Agent 看不到主上下文，任务描述要自包含", "主 KV Cache 会失效", "需要更多 token", "无法回传结论"], ans: 0, exp: "隔离让噪声不进主上下文、主 KV Cache 完全不受影响，但子 Agent 看不到主上下文，任务描述必须自包含、目标明确。" },
+  ],
+  cheat: [
+    { t: "两个动机", d: "长度成本 + 提升思考质量（后者更深层）" },
+    { t: "根因", d: "检索 ≠ 推理；上下文腐化 = 没满但找不到" },
+    { t: "状态栏 vs 压缩", d: "同一硬币两面：加结论 vs 换原文" },
+    { t: "最优策略", d: "上下文感知压缩，token -77%" },
+    { t: "五层压缩", d: "预算→删噪→微压缩→归档摘要→全量（+熔断）" },
+    { t: "金句", d: "隔离优于压缩（子 Agent 让噪声不进主上下文）" },
+  ]
+},
+{
+  id: "06", title: "用户记忆系统", section: "第 3 章 §3.1",
+  sections: [
+    { h: "用户记忆是什么：持久 vs 临时", html: `
+      <p><b>用户记忆 = 主动持续的学习过程，构建「关于用户的简洁有效的预测模型」</b>——像朋友相处，不记原文，只形成关于对方的「生动模型」。</p>
+      <table>
+        <tr><th></th><th>用户记忆</th><th>上下文学习</th></tr>
+        <tr><td>性质</td><td><b>持久、可审查</b></td><td>临时、会话结束消失</td></tr>
+        <tr><td>代价</td><td>额外 LLM 调用</td><td>无</td></tr>
+      </table>
+      <p>提取三特征：<b>选择性</b>（不记临时信息）、<b>抽象化</b>（「靠窗座位」→通用偏好）、<b>结构化</b>（标记类型）。</p>` },
+    { h: "三层次评估（衡量标尺）", html: `
+      <table>
+        <tr><th>层级</th><th>能力</th><th>例子</th></tr>
+        <tr><td>① 基础回忆</td><td>精确存取无歧义信息</td><td>「会员号 12345」</td></tr>
+        <tr><td>② 多会话检索</td><td>跨会话/跨对象推理</td><td>「两辆车，为哪辆预约」</td></tr>
+        <tr><td>③ 主动服务</td><td>无指令主动预判</td><td>订国际航班→发现护照快过期</td></tr>
+      </table>
+      <div class="keybox">第三层是「助理」级试金石——没有明确指令也要主动规避问题。</div>` },
+    { h: "轨迹 vs 长期记忆（放哪里）", html: `
+      <table>
+        <tr><th></th><th>轨迹</th><th>长期记忆</th></tr>
+        <tr><td>定位</td><td>单次运行完整历史</td><td>跨会话持久存储</td></tr>
+        <tr><td>特点</td><td><b>append-only</b> 只增不改</td><td>反复改写/合并/淘汰</td></tr>
+        <tr><td>比喻</td><td><b>流水账</b></td><td><b>档案</b></td></tr>
+      </table>
+      <div class="keybox"><b>三套正交分类</b>：层次（放哪）× 格式（怎么存）× 类型（存什么）。</div>` },
+    { h: "四种存储格式（怎么存）", html: `
+      <table>
+        <tr><th>格式</th><th>形态</th><th>优点</th><th>缺点</th></tr>
+        <tr><td>Simple Notes</td><td>原子事实</td><td>O(1) 开销低</td><td>关联性丢失</td></tr>
+        <tr><td>Enhanced Notes</td><td>整段叙事</td><td>语义完整</td><td>冗余、难更新</td></tr>
+        <tr><td>JSON Cards</td><td>三层嵌套</td><td>结构化、部分更新</td><td>刚性分类</td></tr>
+        <tr><td>Advanced JSON</td><td>+backstory/person</td><td>消歧</td><td>成本高</td></tr>
+      </table>
+      <div class="warnbox"><b>Advanced JSON Cards 才能消歧</b>：「张医生」是「你的牙医」还是「你父亲的心脏科医生」？靠 backstory+person+relationship 区分。</div>` },
+    { h: "认知三类型（存什么）", html: `
+      <table>
+        <tr><th>类型</th><th>人类</th><th>Agent</th></tr>
+        <tr><td>情景记忆</td><td>「上周和同事吃饭」</td><td>「订了下周五东京航班」</td></tr>
+        <tr><td>语义记忆</td><td>「罗马是意大利首都」</td><td>「用户是素食者」</td></tr>
+        <tr><td>程序记忆</td><td>骑自行车</td><td>「先搜直飞→确认座位→订餐」</td></tr>
+      </table>` },
+    { h: "Mem0：提取—对比—决策", html: `
+      <p>两阶段流水线，把「选择性提取」和「冲突解决」统一起来：</p>
+      <div class="keybox">新对话 → LLM 提取候选记忆（「搬到上海」）→ 向量检索旧记忆（「住在北京」）→ LLM 对比决策：<b>ADD / UPDATE / DELETE / NOOP</b></div>
+      <p>例：「搬到上海」检索到「住在北京」→ 判 <b>UPDATE</b>，更新为「住在上海」，不保留两条矛盾记录。</p>` },
+    { h: "⭐ 联系 Hermes：你的工具就是记忆系统", html: `
+      <p>这一节跟 Hermes 的记忆设计<b>几乎一一对应</b>：</p>
+      <table>
+        <tr><th>书里概念</th><th>Hermes 对应</th></tr>
+        <tr><td>用户长期记忆（跨会话）</td><td><code>MEMORY</code> + <code>USER PROFILE</code>，每轮注入、跨会话持久</td></tr>
+        <tr><td>用户画像（Memobase）</td><td><code>USER PROFILE</code>：你的身份/GitHub/偏好</td></tr>
+        <tr><td>轨迹（append-only）</td><td>我们<b>当前这段对话</b>（流水账）</td></tr>
+        <tr><td>Mem0 的 ADD/UPDATE/DELETE</td><td><code>memory</code> 工具的 <b>add / replace / remove</b></td></tr>
+        <tr><td>重要性评分 + 压缩</td><td>记忆的<b>字符预算</b>（满了要精简淘汰）</td></tr>
+      </table>
+      <div class="keybox"><b>最妙的对应</b>：书里说「记忆持久、上下文临时、会话结束消失」——正是 Hermes：这段对话结束，<b>当前上下文消失</b>；写进 MEMORY/USER PROFILE 的（你的身份、偏好），<b>下次会话我依然记得</b>。</div>` },
+  ],
+  quiz: [
+    { q: "用户记忆的本质？与上下文学习的核心区别？", opts: ["关于用户的预测模型；持久 vs 临时", "记录每句话；更快", "压缩上下文；省钱", "存聊天记录；可搜索"], ans: 0, exp: "用户记忆=主动构建「关于用户的简洁预测模型」，持久可审查；上下文学习临时、会话结束消失。" },
+    { q: "「订国际航班时主动发现护照快过期」属于哪一层？", opts: ["第三层·主动服务", "第一层·基础回忆", "第二层·多会话检索", "不属于任何层"], ans: 0, exp: "主动服务=无明确指令综合久远信息预判帮助，是「助理」级试金石。" },
+    { q: "哪种格式能区分「张医生是你的牙医还是父亲的心脏科医生」？", opts: ["Advanced JSON Cards", "Simple Notes", "Enhanced Notes", "JSON Cards"], ans: 0, exp: "Advanced JSON Cards 通过 backstory/person/relationship 建立实体模型，才能消歧。" },
+    { q: "Mem0 里「用户说搬到上海、旧记忆是住在北京」触发什么？", opts: ["UPDATE", "ADD", "DELETE", "NOOP"], ans: 0, exp: "UPDATE：新信息修正旧记忆（北京→上海），不保留两条矛盾记录。" },
+    { q: "Hermes 的 memory 工具 replace 操作对应书里哪个概念？", opts: ["Mem0 的 UPDATE", "Mem0 的 NOOP", "Mem0 的 ADD", "Mem0 的 DELETE"], ans: 0, exp: "replace ≈ UPDATE：更新旧条目而非新增矛盾记录，避免记忆冲突。" },
+  ],
+  cheat: [
+    { t: "用户记忆 = ", d: "关于用户的「简洁有效的预测模型」" },
+    { t: "三层次", d: "基础回忆 → 多会话检索 → 主动服务" },
+    { t: "三套正交", d: "层次（放哪）× 格式（怎么存）× 类型（存什么）" },
+    { t: "四种格式", d: "Simple/Enhanced Notes、JSON/Advanced JSON Cards" },
+    { t: "Mem0", d: "提取→对比→决策（ADD/UPDATE/DELETE/NOOP）" },
+    { t: "⭐ Hermes", d: "MEMORY/USER PROFILE=长期记忆；memory 工具=Mem0 流水线" },
+  ]
+},
+{
+  id: "07", title: "RAG 基础（检索增强生成）", section: "第 3 章",
+  sections: [
+    { h: "RAG 是什么（一句话 + 两例）", html: `
+      <p>RAG = <b>Retrieval-Augmented Generation</b>（检索增强生成）：把 LLM 的生成能力 + 外部知识库的<b>广度和时效性</b>结合。</p>
+      <table>
+        <tr><th></th><th>职责</th></tr>
+        <tr><td>检索器</td><td>从知识库找出相关片段</td></tr>
+        <tr><td>生成器</td><td>LLM 拿片段当上下文生成答案</td></tr>
+      </table>
+      <div class="keybox">固定模式：<b>检索片段 → 注入上下文 → LLM 生成</b>。核心价值：用训练时没见过的知识，<b>不用重训模型</b>。</div>
+      <div class="warnbox"><b>检索器质量决定 RAG 效果</b>——检索不到，LLM 再强也「无米之炊」。</div>` },
+    { h: "文档分块（Chunking）", html: `
+      <p>长文档不能整篇塞，必须先<b>分块（chunk）</b>，两个原因：</p>
+      <ul>
+        <li>整篇压成一个向量 → 多主题混杂，无法精确表达任何一个主题</li>
+        <li>检索只想注入相关部分，块太大带进无关内容、浪费窗口</li>
+      </ul>
+      <table>
+        <tr><th>策略</th><th>做法</th><th>特点</th></tr>
+        <tr><td>固定大小</td><td>按 token 数切 + 重叠</td><td>简单，但无视结构</td></tr>
+        <tr><td>递归/结构感知</td><td>按标题/段落递归切</td><td>生产默认，Markdown 适合</td></tr>
+        <tr><td>语义切分</td><td>相似度「断崖」处下刀</td><td>质量高，代价高</td></tr>
+      </table>
+      <div class="warnbox"><b>块太小</b>→脱离上下文语义模糊；<b>块太大</b>→多主题稀释。常见起点 256-1024 token，重叠 10%-20%。</div>` },
+    { h: "稠密 vs 稀疏嵌入", html: `
+      <table>
+        <tr><th></th><th>稠密嵌入</th><th>稀疏嵌入</th></tr>
+        <tr><td>原理</td><td>语义相似 → 向量近</td><td>精确关键词匹配</td></tr>
+        <tr><td>代表</td><td>BERT / BGE-M3</td><td>TF-IDF / BM25</td></tr>
+        <tr><td>盲区</td><td>漏关键词（HTTP-403）</td><td>不懂同义词（kitty≠cat）</td></tr>
+      </table>
+      <div class="keybox"><b>稠密</b>：国王−男+女≈女王，余弦相似度衡量「近」。<b>稀疏</b>：BM25 用 IDF 给稀有词加权（「蒸馏」比「模型」更稀有→贡献更大）。</div>` },
+    { h: "混合检索三阶段", html: `
+      <div class="keybox">三阶段流水线：<b>① 并行检索</b>（稠密+稀疏各召回）→ <b>② 结果融合</b>（RRF：得分=Σ 1/(k+rank)）→ <b>③ 神经重排序</b>（跨编码器精排）。</div>
+      <p><b>双编码器 vs 跨编码器</b>：猎头快速筛选 vs 面试官逐字深谈。重排序模型如 bge-reranker-v2-m3。</p>
+      <div class="warnbox"><b>没有单一检索策略全场景可靠</b>——稠密+稀疏+重排序组合才是生产级正确做法。</div>` },
+    { h: "检索质量三指标", html: `
+      <table>
+        <tr><th>指标</th><th>回答的问题</th></tr>
+        <tr><td>recall@k</td><td>该找的找到了吗（相关文档进前 k 比例）</td></tr>
+        <tr><td>MRR</td><td>找到得够不够靠前</td></tr>
+        <tr><td>nDCG</td><td>整个排序质量如何</td></tr>
+      </table>
+      <p>工业界「检索失败率」≈ 1 − recall@20。</p>` },
+    { h: "⭐ 联系 Hermes：skills 就是 RAG", html: `
+      <p>RAG 的灵魂 = <b>不把所有知识常驻上下文，按需检索相关片段注入</b>——Hermes 的 skills 正是这个思想：</p>
+      <table>
+        <tr><th>书里</th><th>Hermes</th></tr>
+        <tr><td>分块 + 按需检索</td><td>系统提示词只放 skill 的 description（索引），skill_view 加载全文</td></tr>
+        <tr><td>稀疏检索（倒排索引）</td><td>session_search 用 FTS5 全文检索</td></tr>
+        <tr><td>检索器质量决定效果</td><td>description 写不清 → 不知何时加载 → 检索不到</td></tr>
+        <tr><td>稠密嵌入（语义）</td><td>竞赛项目 search_cases / search_policy 向量检索</td></tr>
+      </table>
+      <div class="keybox">你昨天设计的 search_cases / search_policy，本质就是<b>给预警 Agent 装了 RAG</b>：案例/政策分块存向量库，问「以前怎么处置」时检索注入，而不是让 LLM 凭空回忆。</div>` },
+  ],
+  quiz: [
+    { q: "RAG 的固定工作模式是？", opts: ["检索片段→注入上下文→生成", "重训模型→生成", "关键词→直接返回", "拼接全文→生成"], ans: 0, exp: "检索相关片段 → 注入 LLM 上下文 → 生成答案，不用重训模型。" },
+    { q: "为什么必须给文档「分块」？", opts: ["多主题混杂无法精确表达 + 块太大浪费窗口", "为了压缩文件", "为了加密", "模型不能读长文"], ans: 0, exp: "整篇压成一个向量→多主题混杂；块太大带进无关内容浪费窗口稀释注意力。" },
+    { q: "稠密嵌入 vs 稀疏嵌入的根本区别？", opts: ["语义相似 vs 关键词精确匹配", "快 vs 慢", "新 vs 旧", "英文 vs 中文"], ans: 0, exp: "稠密=语义（BERT/BGE-M3），稀疏=关键词（TF-IDF/BM25）。" },
+    { q: "混合检索三阶段流水线是？", opts: ["并行检索→融合→重排序", "分块→嵌入→检索", "训练→测试→部署", "召回→过滤→输出"], ans: 0, exp: "① 并行检索（稠密+稀疏）→ ② 结果融合（RRF）→ ③ 神经重排序（跨编码器）。" },
+    { q: "「猎头初筛 vs 面试官深谈」分别比喻什么？", opts: ["双编码器 vs 跨编码器", "稀疏 vs 稠密", "BM25 vs TF-IDF", "分块 vs 嵌入"], ans: 0, exp: "双编码器=预抽特征大规模初筛；跨编码器=查询+文档逐字比对精排。" },
+  ],
+  cheat: [
+    { t: "RAG = ", d: "检索 + 增强 + 生成（检索片段→注入→生成）" },
+    { t: "分块三策略", d: "固定 / 递归结构感知 / 语义切分" },
+    { t: "稠密 vs 稀疏", d: "语义（BERT/BGE-M3） vs 关键词（TF-IDF/BM25）" },
+    { t: "混合三阶段", d: "并行检索 → 融合(RRF) → 重排序(跨编码器)" },
+    { t: "三指标", d: "recall@k（找到吗）/ MRR（靠前吗）/ nDCG（排序质量）" },
+    { t: "⭐ Hermes", d: "skills 描述=索引，skill_view=按需检索（RAG 思想）" },
+  ]
+}
+];
+
+const STORE_KEY = "ai-agent-course-progress";
+let progress = JSON.parse(localStorage.getItem(STORE_KEY) || "{}");
+let current = 0, answered = {};
+
+function save() { localStorage.setItem(STORE_KEY, JSON.stringify(progress)); }
+
+function renderNav() {
+  const nav = document.getElementById("lessonNav");
+  nav.innerHTML = LESSONS.map((l, i) =>
+    `<button class="lesson-btn${i===current?' active':''}${progress[l.id]?' done':''}" data-i="${i}">${l.id} · ${l.title}</button>`
+  ).join("");
+  nav.querySelectorAll(".lesson-btn").forEach(b => b.onclick = () => { current = +b.dataset.i; answered = {}; render(); });
+  document.querySelectorAll(".lesson-btn").forEach(b => b.classList.toggle("active", +b.dataset.i === current));
+}
+
+function renderProgress() {
+  const done = LESSONS.filter(l => progress[l.id]).length;
+  const pct = Math.round(done / LESSONS.length * 100);
+  document.getElementById("progText").textContent = `已完成 ${done}/${LESSONS.length} 课`;
+  document.getElementById("progPct").textContent = pct + "%";
+  document.getElementById("progFill").style.width = pct + "%";
+}
+
+function renderQuiz(quiz) {
+  const score = Object.values(answered).filter(v => v === true).length;
+  let html = `<div class="card"><div class="quiz-head"><h2 style="margin:0">📝 随堂测验</h2><span class="quiz-score" id="quizScore">得分 ${score}/${quiz.length}</span></div>`;
+  quiz.forEach((q, qi) => {
+    const state = answered[qi];
+    html += `<div class="question"><div class="q">${qi+1}. ${q.q}</div>`;
+    q.opts.forEach((o, oi) => {
+      let cls = "option";
+      if (state !== undefined) {
+        cls += " disabled";
+        if (oi === q.ans) cls += " correct";
+        else if (oi === state) cls += " wrong";
+      }
+      html += `<button class="${cls}" data-qi="${qi}" data-oi="${oi}">${"ABCD"[oi]}. ${o}</button>`;
+    });
+    html += `<div class="explain${state!==undefined?' show':''}">💡 ${q.exp}</div></div>`;
+  });
+  html += `<button class="quiz-reset" id="quizReset">重置本课测验</button></div>`;
+  return html;
+}
+
+function render() {
+  renderNav(); renderProgress();
+  const l = LESSONS[current];
+  let html = `<div class="card"><span class="tag">${l.section}</span><h2 style="display:inline;margin-left:4px">${l.title}</h2></div>`;
+  l.sections.forEach(s => {
+    html += `<div class="card"><h2>${s.h}</h2>${s.html}</div>`;
+  });
+  html += renderQuiz(l.quiz);
+  html += `<div class="card"><h2>🗂 速查卡</h2><div class="cheat-grid">` +
+    l.cheat.map(c => `<div class="cheat-item"><div class="t">${c.t}</div><div class="d">${c.d}</div></div>`).join("") +
+    `</div><p class="cite">教材：李博杰《深入理解 AI Agent》${l.section}</p></div>`;
+  document.getElementById("lessonBody").innerHTML = html;
+
+  document.querySelectorAll(".option").forEach(btn => {
+    btn.onclick = () => {
+      const qi = +btn.dataset.qi, oi = +btn.dataset.oi;
+      if (answered[qi] !== undefined) return;
+      answered[qi] = oi === LESSONS[current].quiz[qi].ans;
+      // 标记课程完成：全部答对才 done
+      if (Object.keys(answered).length === LESSONS[current].quiz.length) {
+        const allRight = Object.values(answered).every(v => v === true);
+        if (allRight) { progress[l.id] = true; save(); }
+      }
+      render();
+    };
+  });
+  const reset = document.getElementById("quizReset");
+  if (reset) reset.onclick = () => { answered = {}; render(); };
+}
+
+render();
+</script>
+</body>
+</html>
