@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>英语课 · 每日一课</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:linear-gradient(160deg,#0f172a 0%,#1e293b 55%,#0f172a 100%);
+  color:#e2e8f0;line-height:1.65;padding:26px 16px 70px;min-height:100vh}
+.wrap{max-width:980px;margin:0 auto}
+header{text-align:center;margin-bottom:22px;padding:22px 16px;
+  background:rgba(30,41,59,.72);border:1px solid rgba(148,163,184,.22);border-radius:16px}
+h1{font-size:25px;color:#f8fafc;letter-spacing:.5px;margin-bottom:8px}
+.sub{color:#94a3b8;font-size:13.5px}
+.nav{display:flex;gap:9px;justify-content:center;margin-top:15px;flex-wrap:wrap}
+.nav a{color:#a5b4fc;text-decoration:none;font-size:13px;padding:5px 13px;
+  border:1px solid rgba(129,140,248,.35);border-radius:999px;
+  background:rgba(129,140,248,.09);transition:.2s}
+.nav a:hover{background:rgba(129,140,248,.2)}
+.nav a.on{background:rgba(56,189,248,.18);border-color:rgba(56,189,248,.5);color:#7dd3fc}
+.tabs{display:flex;gap:9px;justify-content:center;flex-wrap:wrap;margin:20px 0 6px}
+.tab{cursor:pointer;padding:8px 17px;border-radius:11px;font-size:14px;
+  background:rgba(30,41,59,.7);border:1px solid rgba(148,163,184,.24);
+  color:#cbd5e1;transition:.2s;user-select:none}
+.tab:hover{border-color:rgba(56,189,248,.5)}
+.tab.on{background:linear-gradient(135deg,rgba(56,189,248,.24),rgba(129,140,248,.18));
+  border-color:rgba(56,189,248,.6);color:#f0f9ff;font-weight:600}
+.daymeta{text-align:center;color:#94a3b8;font-size:13px;margin:10px 0 22px}
+.daymeta b{color:#e2e8f0}
+h2{font-size:18px;color:#f1f5f9;margin:32px 0 13px;padding-left:12px;
+  border-left:4px solid #38bdf8;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+h2 .cnt{font-size:12px;font-weight:400;color:#64748b}
+.hint{background:rgba(250,204,21,.07);border-left:3px solid #facc15;padding:11px 14px;
+  border-radius:8px;font-size:13.5px;color:#fde68a;margin-bottom:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px}
+.card{perspective:900px;height:160px;cursor:pointer}
+.inner{position:relative;width:100%;height:100%;transition:transform .55s cubic-bezier(.4,.2,.2,1);
+  transform-style:preserve-3d}
+.card.flip .inner{transform:rotateY(180deg)}
+.face{position:absolute;width:100%;height:100%;backface-visibility:hidden;
+  border-radius:12px;padding:13px 12px;display:flex;flex-direction:column;
+  justify-content:center;border:1px solid rgba(148,163,184,.24)}
+.front{background:linear-gradient(150deg,#1e3a5f,#152744);align-items:center;text-align:center}
+.word{font-size:17px;font-weight:700;color:#f8fafc;word-break:break-word}
+.ipa{font-size:12px;color:#7dd3fc;margin-top:5px;font-family:monospace}
+.tag{position:absolute;top:9px;right:10px;font-size:10px;padding:2px 7px;border-radius:6px}
+.tag.ai{background:rgba(56,189,248,.18);color:#7dd3fc}
+.tag.ielts{background:rgba(168,85,247,.18);color:#c4b5fd}
+.tip{font-size:10.5px;color:#475569;position:absolute;bottom:8px;left:0;right:0;text-align:center}
+.back{background:linear-gradient(150deg,#14342a,#0f2a22);transform:rotateY(180deg);
+  border-color:rgba(52,211,153,.3)}
+.pos{font-size:11px;color:#6ee7b7;margin-bottom:4px}
+.def{font-size:13.5px;color:#f0fdf4;font-weight:600;line-height:1.45}
+.ex{font-size:11.5px;color:#94a3b8;margin-top:7px;font-style:italic;line-height:1.4}
+.box{background:rgba(30,41,59,.62);border:1px solid rgba(148,163,184,.2);
+  border-radius:13px;padding:17px 18px;margin-bottom:15px}
+.box h3{font-size:15px;color:#7dd3fc;margin-bottom:10px}
+.passage{font-size:14.5px;color:#e2e8f0;line-height:1.95;text-align:justify}
+.passage b{color:#fde68a;font-weight:600}
+.steps{counter-reset:s;list-style:none}
+.steps li{counter-increment:s;position:relative;padding:7px 0 7px 34px;font-size:13.5px;color:#cbd5e1}
+.steps li::before{content:counter(s);position:absolute;left:0;top:6px;width:22px;height:22px;
+  background:rgba(56,189,248,.15);border:1px solid rgba(56,189,248,.4);border-radius:50%;
+  color:#7dd3fc;font-size:12px;text-align:center;line-height:20px}
+.qs{list-style:none}
+.qs li{padding:8px 0;border-bottom:1px dashed rgba(148,163,184,.16);font-size:13.5px;color:#cbd5e1}
+.qs li:last-child{border-bottom:none}
+.qs li b{color:#f8fafc}
+ul.plain{list-style:none;padding-left:2px}
+ul.plain li{font-size:13.5px;color:#cbd5e1;padding:5px 0 5px 18px;position:relative}
+ul.plain li::before{content:"▸";position:absolute;left:0;color:#38bdf8}
+.words-in{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.words-in span{background:rgba(56,189,248,.12);border:1px solid rgba(56,189,248,.3);
+  color:#7dd3fc;padding:4px 11px;border-radius:8px;font-size:13px;font-family:monospace}
+.chk{display:flex;align-items:center;gap:10px;padding:9px 0;font-size:13.5px;color:#cbd5e1;cursor:pointer}
+.chk input{width:17px;height:17px;accent-color:#38bdf8;cursor:pointer}
+.chk.done{color:#6ee7b7;text-decoration:line-through;opacity:.75}
+.prog{height:7px;background:rgba(148,163,184,.16);border-radius:99px;overflow:hidden;margin:14px 0 6px}
+.prog>div{height:100%;width:0;background:linear-gradient(90deg,#38bdf8,#818cf8);transition:width .35s}
+.progtxt{font-size:12px;color:#94a3b8;text-align:right}
+footer{text-align:center;color:#475569;font-size:12px;margin-top:34px;
+  padding-top:18px;border-top:1px solid rgba(148,163,184,.14)}
+@media(max-width:520px){.grid{grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:9px}
+  .card{height:152px}h1{font-size:20px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>📘 英语课 · 每日一课</h1>
+  <div class="sub">词汇 25 词 + 口语 20min + 词串小作文 + 打卡 · 词汇联动当日 AI 课主题</div>
+  <div class="nav">
+    <a href="../ai-agent-course/">🤖 AI Agent 课程</a>
+    <a class="on" href="#">📘 英语课</a>
+  </div>
+</header>
+<div class="tabs"><div class="tab" data-id="2026-09-09">09-09 周三</div><div class="tab" data-id="2026-09-10">09-10 周四</div></div>
+<div id="day"></div>
+<footer>英语课 · 每日一课 · 词卡点击翻面 · 打卡进度自动保存在本机浏览器</footer>
+</div>
+<script>
+const DAYS = [
+ {
+  "id": "2026-09-09",
+  "label": "09-09 周三",
+  "title": "影子跟读 · RAG 与知识的组织",
+  "sub": "AI 短文 139 词 · 词汇 25（12 专业 + 13 雅思）",
+  "chips": [
+   "词汇 20min",
+   "影子跟读 20min",
+   "词串 5min"
+  ],
+  "words": [
+   {
+    "word": "retrieval",
+    "ipa": "/rɪˈtriːvl/",
+    "pos": "n.",
+    "def": "检索；取回",
+    "ex": "The quality of the retriever determines the quality of RAG.",
+    "tag": "AI"
+   },
+   {
+    "word": "index",
+    "ipa": "/ˈɪndeks/",
+    "pos": "n./v.",
+    "def": "索引；为…编制索引",
+    "ex": "Books and databases are both useless without an index.",
+    "tag": "AI"
+   },
+   {
+    "word": "hierarchy",
+    "ipa": "/ˈhaɪərɑːrki/",
+    "pos": "n.",
+    "def": "层级；等级体系",
+    "ex": "RAPTOR builds a hierarchy from leaves to root.",
+    "tag": "AI"
+   },
+   {
+    "word": "entity",
+    "ipa": "/ˈentəti/",
+    "pos": "n.",
+    "def": "实体（独立存在的事物）",
+    "ex": "GraphRAG links each entity to the others.",
+    "tag": "AI"
+   },
+   {
+    "word": "clustering",
+    "ipa": "/ˈklʌstərɪŋ/",
+    "pos": "n.",
+    "def": "聚类；分组",
+    "ex": "Clustering groups semantically similar chunks together.",
+    "tag": "AI"
+   },
+   {
+    "word": "embedding",
+    "ipa": "/ɪmˈbedɪŋ/",
+    "pos": "n.",
+    "def": "嵌入（把文本转成向量）",
+    "ex": "An embedding maps meaning onto a numeric space.",
+    "tag": "AI"
+   },
+   {
+    "word": "granularity",
+    "ipa": "/ˌɡrænjuˈlærəti/",
+    "pos": "n.",
+    "def": "粒度；细致程度",
+    "ex": "You can retrieve at different levels of granularity.",
+    "tag": "AI"
+   },
+   {
+    "word": "taxonomy",
+    "ipa": "/tækˈsɒnəmi/",
+    "pos": "n.",
+    "def": "分类体系；分类法",
+    "ex": "A good taxonomy makes knowledge navigable.",
+    "tag": "AI"
+   },
+   {
+    "word": "repository",
+    "ipa": "/rɪˈpɒzətri/",
+    "pos": "n.",
+    "def": "存储库；仓库",
+    "ex": "The knowledge base is a repository of reviewed facts.",
+    "tag": "AI"
+   },
+   {
+    "word": "pipeline",
+    "ipa": "/ˈpaɪplaɪn/",
+    "pos": "n.",
+    "def": "流水线；处理管道",
+    "ex": "The RAG pipeline runs from chunking to generation.",
+    "tag": "AI"
+   },
+   {
+    "word": "provenance",
+    "ipa": "/ˈprɒvənəns/",
+    "pos": "n.",
+    "def": "来源；溯源",
+    "ex": "Every claim should carry its provenance.",
+    "tag": "AI"
+   },
+   {
+    "word": "upsert",
+    "ipa": "/ˈʌpsɜːt/",
+    "pos": "v.",
+    "def": "更新或插入（update + insert）",
+    "ex": "The agent upserts the revised entry into the store.",
+    "tag": "AI"
+   },
+   {
+    "word": "salient",
+    "ipa": "/ˈseɪliənt/",
+    "pos": "adj.",
+    "def": "显著的；最突出的",
+    "ex": "Only the salient features survive summarisation.",
+    "tag": "IELTS"
+   },
+   {
+    "word": "subtle",
+    "ipa": "/ˈsʌtl/",
+    "pos": "adj.",
+    "def": "微妙的；不易察觉的",
+    "ex": "The difference between the two answers is subtle.",
+    "tag": "IELTS"
+   },
+   {
+    "word": "inherently",
+    "ipa": "/ɪnˈhɪərəntli/",
+    "pos": "adv.",
+    "def": "固有地；本质上",
+    "ex": "Chunking is inherently lossy.",
+    "tag": "IELTS"
+   },
+   {
+    "word": "degrade",
+    "ipa": "/dɪˈɡreɪd/",
+    "pos": "v.",
+    "def": "降低；退化",
+    "ex": "Converting prose into triples degrades meaning.",
+    "tag": "IELTS"
+   },
+   {
+    "word": "perpetuate",
+    "ipa": "/pəˈpetʃueɪt/",
+    "pos": "v.",
+    "def": "使持续；使（错误）延续",
+    "ex": "Rewriting summaries only perpetuates early misreadings.",
+    "tag": "IELTS"
+   },
+   {
+    "word": "mitigate",
+    "ipa": "/ˈmɪtɪɡeɪt/",
+    "pos": "v.",
+    "def": "缓解；减轻",
+    "ex": "Contextual prefixes mitigate the loss of context.",
+    "tag": "IELTS"
+   },
+   {
+    "word": "redundant",
+    "ipa": "/rɪˈdʌndənt/",
+    "pos": "adj.",
+    "def": "冗余的；多余的",
+    "ex": "The cleaner removed redundant entries.",
+    "tag": "IELTS"
+   },
+   {
+    "word": "discrepancy",
+    "ipa": "/dɪsˈkrepənsi/",
+    "pos": "n.",
+    "def": "不一致；差异",
+    "ex": "A discrepancy between two records signals a conflict.",
+    "tag": "IELTS"
+   },
+   {
+    "word": "reconcile",
+    "ipa": "/ˈrekənsaɪl/",
+    "pos": "v.",
+    "def": "调和；使一致",
+    "ex": "The reviewer tried to reconcile the conflicting rules.",
+    "tag": "IELTS"
+   },
+   {
+    "word": "exhaustive",
+    "ipa": "/ɪɡˈzɔːstɪv/",
+    "pos": "adj.",
+    "def": "详尽无遗的；彻底的",
+    "ex": "The audit was exhaustive but slow.",
+    "tag": "IELTS"
+   },
+   {
+    "word": "ambiguous",
+    "ipa": "/æmˈbɪɡjuəs/",
+    "pos": "adj.",
+    "def": "模棱两可的；含糊的",
+    "ex": "Out of context, the sentence is ambiguous.",
+    "tag": "IELTS"
+   },
+   {
+    "word": "obsolete",
+    "ipa": "/ˈɒbsəliːt/",
+    "pos": "adj.",
+    "def": "过时的；废弃的",
+    "ex": "Filter out obsolete policies before retrieval.",
+    "tag": "IELTS"
+   },
+   {
+    "word": "adhere to",
+    "ipa": "/ədˈhɪə tuː/",
+    "pos": "phr.",
+    "def": "遵循；坚持",
+    "ex": "Both agents must adhere to the same review rule.",
+    "tag": "IELTS"
+   }
+  ],
+  "oralTitle": "口语 20min · 影子跟读（周一三五模式）",
+  "oral": "\n<div class=\"box\">\n  <h3>影子跟读（Shadowing）· 3 轮法</h3>\n  <p style=\"font-size:13.5px;color:#94a3b8;margin-bottom:10px\">材料：下面 139 词的 AI 短文（RAG / 知识组织主题，与今日 AI 课联动）</p>\n  <div class=\"passage\">Retrieval-Augmented Generation, or <b>RAG</b>, has become the default way for AI agents to reach beyond their training data. But simply chunking documents and storing them in a vector store is rarely enough. When knowledge is scattered across hundreds of isolated fragments, a model may retrieve only part of the picture — and then answer confidently from an incomplete sample. The fix is to invest computation at indexing time: summarise clusters of related passages, extract explicit rules from case histories, and attach a short contextual prefix to every chunk so that it can stand on its own. In practice, the teams that get the most out of RAG are not the ones with the largest repositories, but the ones that treat knowledge as something to be curated — deduplicated, versioned, and reviewed — rather than merely stored.</div>\n</div>\n<div class=\"box\">\n  <h3>跟读步骤（约 20 min）</h3>\n  <ol class=\"steps\">\n    <li><b>盲听 2 遍</b>：不看书，只抓大意和重音落点（不用全懂）。</li>\n    <li><b>逐句跟读 5 遍</b>：音频/自己朗读一句 → 立刻模仿跟一遍，重点模仿<b>句子重音</b>和<b>停顿位置</b>（破折号 and then 处要断）。</li>\n    <li><b>同步跟读 3 遍</b>：与音频同步出声，允许跟丢，跟丢就等下一句重新进。</li>\n    <li><b>脱稿复述 1 遍</b>：只允许说这一句框架 —— \"RAG is useful but not enough… at indexing time… teams that curate beat teams that store.\" 能用这句撑住就算过。</li>\n  </ol>\n</div>\n<div class=\"box\">\n  <h3>发音重点（今日 3 个坑）</h3>\n  <ul class=\"plain\">\n    <li><b>retrieval</b> /rɪˈtriːvl/ — 重音在 <b>TRI</b>，不是 retrieval 尾部的 val；/v/ 要咬唇。</li>\n    <li><b>subtle</b> /ˈsʌtl/ — <b>b 不发音</b>（= suttle），常读错。</li>\n    <li><b>chunking / curated</b> — 连读处 /tʃʌŋkɪŋ/、/kjʊˈreɪtɪd/ 注意重音在第二音节。</li>\n  </ul>\n</div>\n",
+  "writing": {
+   "words": [
+    "retrieval",
+    "hierarchy",
+    "salient",
+    "inherently"
+   ],
+   "task": "写一段 3–5 句的小段落，说明「为什么把原始文档直接切块存起来不够用，应该怎么改进」——用上「检索 retrieval」「层级 hierarchy」「显著的 salient」「固有地 inherently」这四个词。"
+  },
+  "note": "这一课按你学习工具箱的固定结构生成（词卡翻面 → 口语模块 → 词串小作文 → 打卡）。",
+  "tasks": [
+   "词汇 25 词过完两遍（含 5 个词拼写自测）",
+   "影子跟读完整跑完 3 轮",
+   "词串小作文写完",
+   "录音/复述已做"
+  ]
+ },
+ {
+  "id": "2026-09-10",
+  "label": "09-10 周四",
+  "title": "主题聊天 · AI 产品里的记忆与知识",
+  "sub": "6 个话题 + 3 个复用表达 + 录音任务 · 词汇 25（12 专业 + 13 雅思）",
+  "chips": [
+   "词汇 20min（含滚动复习）",
+   "主题聊天 20min",
+   "词串 5min"
+  ],
+  "words": [
+   {
+    "word": "retrieve",
+    "ipa": "/rɪˈtriːv/",
+    "pos": "v.",
+    "def": "检索到；取回",
+    "ex": "The agent retrieves the relevant clause before answering.",
+    "tag": "AI"
+   },
+   {
+    "word": "contextual",
+    "ipa": "/kənˈtekstʃuəl/",
+    "pos": "adj.",
+    "def": "上下文的；语境的",
+    "ex": "Contextual retrieval cuts failure rates sharply.",
+    "tag": "AI"
+   },
+   {
+    "word": "annotation",
+    "ipa": "/ˌænəˈteɪʃn/",
+    "pos": "n.",
+    "def": "标注；注释",
+    "ex": "Metadata annotation makes filtering possible.",
+    "tag": "AI"
+   },
+   {
+    "word": "filter",
+    "ipa": "/ˈfɪltə(r)/",
+    "pos": "v./n.",
+    "def": "过滤；筛选",
+    "ex": "Filter by permission before the model sees the text.",
+    "tag": "AI"
+   },
+   {
+    "word": "workflow",
+    "ipa": "/ˈwɜːkfləʊ/",
+    "pos": "n.",
+    "def": "工作流；处理流程",
+    "ex": "The review workflow has four stages.",
+    "tag": "AI"
+   },
+   {
+    "word": "iteration",
+    "ipa": "/ˌɪtəˈreɪʃn/",
+    "pos": "n.",
+    "def": "迭代；重复的一轮",
+    "ex": "It converged after three iterations.",
+    "tag": "AI"
+   },
+   {
+    "word": "traceability",
+    "ipa": "/ˌtreɪsəˈbɪləti/",
+    "pos": "n.",
+    "def": "可追溯性",
+    "ex": "Traceability is what makes an audit possible.",
+    "tag": "AI"
+   },
+   {
+    "word": "tenant",
+    "ipa": "/ˈtenənt/",
+    "pos": "n.",
+    "def": "租户；多租户体系中的隔离单元",
+    "ex": "Each tenant's index stays isolated.",
+    "tag": "AI"
+   },
+   {
+    "word": "rollback",
+    "ipa": "/ˈrəʊlbæk/",
+    "pos": "n.",
+    "def": "回滚；撤销变更",
+    "ex": "Git gives you a one-click rollback.",
+    "tag": "AI"
+   },
+   {
+    "word": "deploy",
+    "ipa": "/dɪˈplɔɪ/",
+    "pos": "v.",
+    "def": "部署；上线",
+    "ex": "We deploy the index after review.",
+    "tag": "AI"
+   },
+   {
+    "word": "latency",
+    "ipa": "/ˈleɪtənsi/",
+    "pos": "n.",
+    "def": "延迟；响应耗时",
+    "ex": "Agentic RAG trades latency for robustness.",
+    "tag": "AI"
+   },
+   {
+    "word": "trade-off",
+    "ipa": "/ˈtreɪd ɒf/",
+    "pos": "n.",
+    "def": "权衡；取舍",
+    "ex": "Speed versus accuracy is a classic trade-off.",
+    "tag": "AI"
+   },
+   {
+    "word": "plausible",
+    "ipa": "/ˈplɔːzəbl/",
+    "pos": "adj.",
+    "def": "看似合理的；貌似可信的",
+    "ex": "A plausible answer can still be wrong.",
+    "tag": "IELTS"
+   },
+   {
+    "word": "coherent",
+    "ipa": "/kəʊˈhɪərənt/",
+    "pos": "adj.",
+    "def": "连贯的；条理清晰的",
+    "ex": "She gave a coherent account of the trade-off.",
+    "tag": "IELTS"
+   },
+   {
+    "word": "nuance",
+    "ipa": "/ˈnjuːɑːns/",
+    "pos": "n.",
+    "def": "细微差别；微妙之处",
+    "ex": "The nuance is lost once you summarise too early.",
+    "tag": "IELTS"
+   },
+   {
+    "word": "vigilant",
+    "ipa": "/ˈvɪdʒɪlənt/",
+    "pos": "adj.",
+    "def": "警惕的；警觉的",
+    "ex": "Stay vigilant about prompt injection.",
+    "tag": "IELTS"
+   },
+   {
+    "word": "unsubstantiated",
+    "ipa": "/ˌʌnsəbˈstænʃieɪtɪd/",
+    "pos": "adj.",
+    "def": "无证据支持的",
+    "ex": "The reviewer rejected the unsubstantiated claim.",
+    "tag": "IELTS"
+   },
+   {
+    "word": "overlook",
+    "ipa": "/ˌəʊvəˈlʊk/",
+    "pos": "v.",
+    "def": "忽视；忽略",
+    "ex": "It is easy to overlook a time condition.",
+    "tag": "IELTS"
+   },
+   {
+    "word": "scrutiny",
+    "ipa": "/ˈskruːtəni/",
+    "pos": "n.",
+    "def": "仔细审查；细查",
+    "ex": "The diff held up under scrutiny.",
+    "tag": "IELTS"
+   },
+   {
+    "word": "tentative",
+    "ipa": "/ˈtentətɪv/",
+    "pos": "adj.",
+    "def": "暂定的；试探性的",
+    "ex": "Keep the conflict tentative until evidence arrives.",
+    "tag": "IELTS"
+   },
+   {
+    "word": "concise",
+    "ipa": "/kənˈsaɪs/",
+    "pos": "adj.",
+    "def": "简明的；简洁的",
+    "ex": "Keep the summary concise but precise.",
+    "tag": "IELTS"
+   },
+   {
+    "word": "prerequisite",
+    "ipa": "/ˌpriːˈrekwəzɪt/",
+    "pos": "n.",
+    "def": "前提条件",
+    "ex": "Cross-linking is a prerequisite for navigation.",
+    "tag": "IELTS"
+   },
+   {
+    "word": "deteriorate",
+    "ipa": "/dɪˈtɪəriəreɪt/",
+    "pos": "v.",
+    "def": "恶化；变差",
+    "ex": "Quality deteriorates if nothing is ever pruned.",
+    "tag": "IELTS"
+   },
+   {
+    "word": "disparate",
+    "ipa": "/ˈdɪspərət/",
+    "pos": "adj.",
+    "def": "迥然不同的",
+    "ex": "Merge the disparate records into one rule card.",
+    "tag": "IELTS"
+   },
+   {
+    "word": "criterion",
+    "ipa": "/kraɪˈtɪəriən/",
+    "pos": "n.",
+    "def": "标准（复数 criteria）",
+    "ex": "What criterion decides which version wins?",
+    "tag": "IELTS"
+   }
+  ],
+  "oralTitle": "口语 20min · 主题聊天（周二四模式）",
+  "oral": "\n<div class=\"box\">\n  <h3>主题聊天 · Memory & Knowledge in AI Products</h3>\n  <p style=\"font-size:13.5px;color:#94a3b8;margin-bottom:12px\">今天用英语聊——别写稿，直接说。每题先给 3 句答案（观点 + 理由 + 例子），卡住就换词继续说，卡壳也是训练。</p>\n  <ul class=\"qs\">\n    <li><b>1.</b> If an AI assistant remembered everything about you, what would you want it to remember — and what would you want it to forget?</li>\n    <li><b>2.</b> Two conversations give contradictory information about the same person. How should the system handle that conflict? Should it ask the user?</li>\n    <li><b>3.</b> Which is more valuable for a product: a very fast answer that is sometimes wrong, or a slower answer that is more reliable? Give a concrete example.</li>\n    <li><b>4.</b> What kinds of knowledge actually matter enough to be written down in a repository — and what only feels important in the moment?</li>\n    <li><b>5.</b> Imagine you are pitching a risk-warning agent to a city government. Which three factors would you promise it can catch, and why those three?</li>\n    <li><b>6.</b> How would you decide whether to trust a recommendation produced by an AI system? What would you ask it to show you?</li>\n  </ul>\n</div>\n<div class=\"box\">\n  <h3>可复用的三个表达（今天至少用上一次）</h3>\n  <ul class=\"plain\">\n    <li><b>That's a trade-off between X and Y.</b> — 用来回答取舍类问题，立刻显得有分析力。</li>\n    <li><b>It depends on the context / the use case.</b> — 万能开场，避免绝对化。</li>\n    <li><b>The key prerequisite is …</b> — 引出前提条件，非常适合讲技术方案。</li>\n  </ul>\n</div>\n<div class=\"box\">\n  <h3>录音任务</h3>\n  <p style=\"font-size:13.5px;color:#cbd5e1\">选 <b>1 题</b> 录 60–90 秒音频（手机自带录音即可），要求：<b>用上 2 个当天的词卡词汇</b> + 至少 1 个上面的复用表达。录完发我，我帮你标出发音和用词问题。</p>\n</div>\n",
+  "writing": {
+   "words": [
+    "contextual",
+    "trade-off",
+    "scrutiny",
+    "prerequisite"
+   ],
+   "task": "写一段 3–5 句的小段落，向一位非技术背景的朋友解释「AI 系统为什么要认真管理它的知识库」——用上「上下文的 contextual」「取舍 trade-off」「仔细审查 scrutiny」「前提条件 prerequisite」这四个词。"
+  },
+  "note": "📌 今天记得先滚动复习昨天那 25 个词（retrieval / hierarchy / salient / inherently / subtle 等）。",
+  "tasks": [
+   "词汇 25 词过完两遍（含 5 个词拼写自测）",
+   "主题聊天 6 题都开口答过",
+   "60–90 秒录音完成",
+   "词串小作文写完"
+  ]
+ }
+];
+const SKEY = "english-course-progress-v1";
+let prog = JSON.parse(localStorage.getItem(SKEY) || "{}");
+let cur = DAYS[DAYS.length - 1].id;
+
+function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+
+function cardHtml(w, di, wi){
+  const cls = w.tag === "AI" ? "ai" : "ielts";
+  const checked = (prog[di] && prog[di]["w" + wi]) ? " done" : "";
+  return `<div class="card" onclick="flip(this)">
+    <div class="inner">
+      <div class="face front">
+        <span class="tag ${cls}">${esc(w.tag)}</span>
+        <div class="word">${esc(w.word)}</div>
+        <div class="ipa">${esc(w.ipa)}</div>
+        <div class="tip">点击翻面</div>
+      </div>
+      <div class="face back">
+        <div class="pos">${esc(w.pos)}</div>
+        <div class="def">${esc(w.def)}</div>
+        <div class="ex">${esc(w.ex)}</div>
+      </div>
+    </div>
+  </div>`;
+}
+
+function flip(el){el.classList.toggle("flip");}
+
+function toggleTask(di, ti){
+  prog[di] = prog[di] || {};
+  prog[di]["t" + ti] = !prog[di]["t" + ti];
+  localStorage.setItem(SKEY, JSON.stringify(prog));
+  render();
+}
+
+function taskHtml(d, di){
+  let done = 0;
+  const items = d.tasks.map(function(t, ti){
+    const on = prog[di] && prog[di]["t" + ti];
+    if (on) done++;
+    return `<label class="chk${on ? " done" : ""}">
+      <input type="checkbox" ${on ? "checked" : ""} onchange="toggleTask('${di}',${ti})">
+      <span>${esc(t)}</span></label>`;
+  }).join("");
+  const pct = Math.round(done / d.tasks.length * 100);
+  return items + `<div class="prog"><div style="width:${pct}%"></div></div>
+    <div class="progtxt">今日完成度 ${done}/${d.tasks.length}（${pct}%）</div>`;
+}
+
+function render(){
+  const d = DAYS.filter(function(x){return x.id === cur;})[0];
+  document.querySelectorAll(".tab").forEach(function(t){
+    t.classList.toggle("on", t.dataset.id === cur);
+  });
+  const el = document.getElementById("day");
+  el.innerHTML = `
+    <div class="daymeta"><b>${esc(d.title)}</b><br>${esc(d.sub)}</div>
+    <h2>① 词汇 25 词 <span class="cnt">20 min · 12 专业词 + 13 雅思高阶词</span></h2>
+    <div class="hint">读法：先只看正面回忆意思 → 点击翻面核对。第二遍遮住英文、看中文回忆拼写。</div>
+    <div class="grid">${d.words.map(function(w,i){return cardHtml(w,d.id,i);}).join("")}</div>
+    <h2>② ${esc(d.oralTitle)}</h2>
+    ${d.oral}
+    <h2>③ 词串小作文 <span class="cnt">5 min</span></h2>
+    <div class="box">
+      <h3>用下面的词串，写 3–5 句连贯的英文</h3>
+      <div class="words-in">${d.writing.words.map(function(w){return "<span>" + esc(w) + "</span>";}).join("")}</div>
+      <p style="font-size:13.5px;color:#cbd5e1">${esc(d.writing.task)}</p>
+    </div>
+    <h2>④ 今日打卡</h2>
+    <div class="box">${taskHtml(d, d.id)}</div>
+    <div class="box"><h3>💡 提示</h3>
+      <p style="font-size:13.5px;color:#cbd5e1">${esc(d.note)}</p></div>`;
+}
+
+document.querySelectorAll(".tab").forEach(function(t){
+  t.addEventListener("click", function(){ cur = this.dataset.id; render(); });
+});
+render();
+</script>
+</body>
+</html>

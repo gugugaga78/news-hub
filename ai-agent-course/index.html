@@ -25,6 +25,10 @@
     -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
   }
   header .sub { margin-top: 6px; color: var(--muted); font-size: 0.9rem; }
+  .site-nav { display: flex; gap: 9px; justify-content: center; margin-top: 15px; flex-wrap: wrap; }
+  .site-nav a { color: #a5b4fc; text-decoration: none; font-size: 13px; padding: 5px 13px;
+    border: 1px solid rgba(129,140,248,.35); border-radius: 999px; background: rgba(129,140,248,.09); }
+  .site-nav a.on { background: rgba(56,189,248,.18); border-color: rgba(56,189,248,.5); color: #7dd3fc; }
 
   /* 进度条 */
   .progress-wrap { margin: 20px 0 24px; }
@@ -108,6 +112,10 @@
   <header>
     <h1>AI Agent 设计基础</h1>
     <p class="sub">交互式课程 · 教材：李博杰《深入理解 AI Agent》 · 进度自动保存</p>
+    <div class="site-nav">
+      <a class="on" href="#">🤖 AI Agent 课程</a>
+      <a href="../english-course/">📘 英语课</a>
+    </div>
   </header>
 
   <div class="progress-wrap">
