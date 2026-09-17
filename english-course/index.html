@@ -96,7 +96,7 @@ footer{text-align:center;color:#475569;font-size:12px;margin-top:34px;
     <a class="on" href="#">📘 英语课</a>
   </div>
 </header>
-<div class="tabs"><div class="tab" data-id="2026-09-09">09-09 周三</div><div class="tab" data-id="2026-09-10">09-10 周四</div></div>
+<div class="tabs"><div class="tab" data-id="2026-09-09">09-09 周三</div><div class="tab" data-id="2026-09-10">09-10 周四</div><div class="tab" data-id="2026-09-17">09-17 周四</div></div>
 <div id="day"></div>
 <footer>英语课 · 每日一课 · 词卡点击翻面 · 打卡进度自动保存在本机浏览器</footer>
 </div>
@@ -557,6 +557,237 @@ const DAYS = [
    "task": "写一段 3–5 句的小段落，向一位非技术背景的朋友解释「AI 系统为什么要认真管理它的知识库」——用上「上下文的 contextual」「取舍 trade-off」「仔细审查 scrutiny」「前提条件 prerequisite」这四个词。"
   },
   "note": "📌 今天记得先滚动复习昨天那 25 个词（retrieval / hierarchy / salient / inherently / subtle 等）。",
+  "tasks": [
+   "词汇 25 词过完两遍（含 5 个词拼写自测）",
+   "主题聊天 6 题都开口答过",
+   "60–90 秒录音完成",
+   "词串小作文写完"
+  ]
+ },
+ {
+  "id": "2026-09-17",
+  "label": "09-17 周四",
+  "title": "主题聊天 · 怎么为 AI 组织知识",
+  "sub": "6 个话题 + 3 个复用表达 + 录音任务 · 词汇 25（12 专业 + 13 雅思）",
+  "chips": [
+   "词汇 20min（含滚动复习）",
+   "主题聊天 20min",
+   "词串 5min"
+  ],
+  "words": [
+   {
+    "word": "traverse",
+    "ipa": "/trəˈvɜːs/",
+    "pos": "v.",
+    "def": "遍历；横穿",
+    "ex": "The agent traverses the knowledge tree from root to leaf.",
+    "tag": "AI"
+   },
+   {
+    "word": "recursive",
+    "ipa": "/rɪˈkɜːsɪv/",
+    "pos": "adj.",
+    "def": "递归的；自我调用的",
+    "ex": "RAPTOR summarises clusters recursively until one root remains.",
+    "tag": "AI"
+   },
+   {
+    "word": "aggregate",
+    "ipa": "/ˈæɡrɪɡeɪt/",
+    "pos": "v./n.",
+    "def": "聚合；汇总（结果）",
+    "ex": "Parent nodes aggregate the content of their children.",
+    "tag": "AI"
+   },
+   {
+    "word": "navigate",
+    "ipa": "/ˈnævɪɡeɪt/",
+    "pos": "v.",
+    "def": "导航；有方向地查找",
+    "ex": "A good index lets the model navigate instead of guessing.",
+    "tag": "AI"
+   },
+   {
+    "word": "prefix",
+    "ipa": "/ˈpriːfɪks/",
+    "pos": "n./v.",
+    "def": "前缀；加前缀",
+    "ex": "A contextual prefix restores what the chunk lost.",
+    "tag": "AI"
+   },
+   {
+    "word": "metadata",
+    "ipa": "/ˈmetədeɪtə/",
+    "pos": "n.",
+    "def": "元数据（描述数据的数据）",
+    "ex": "Metadata makes filtering possible before retrieval.",
+    "tag": "AI"
+   },
+   {
+    "word": "schema",
+    "ipa": "/ˈskiːmə/",
+    "pos": "n.",
+    "def": "模式；结构定义",
+    "ex": "The schema defines what each field is supposed to mean.",
+    "tag": "AI"
+   },
+   {
+    "word": "convention",
+    "ipa": "/kənˈvenʃn/",
+    "pos": "n.",
+    "def": "约定；惯例",
+    "ex": "File naming follows a strict convention so links never break.",
+    "tag": "AI"
+   },
+   {
+    "word": "atomic",
+    "ipa": "/əˈtɒmɪk/",
+    "pos": "adj.",
+    "def": "原子的；不可再分的",
+    "ex": "Split the document into atomic units, one idea each.",
+    "tag": "AI"
+   },
+   {
+    "word": "adjacent",
+    "ipa": "/əˈdʒeɪsnt/",
+    "pos": "adj.",
+    "def": "相邻的；毗连的",
+    "ex": "Link each note to its adjacent topics, not to everything.",
+    "tag": "AI"
+   },
+   {
+    "word": "stale",
+    "ipa": "/steɪl/",
+    "pos": "adj.",
+    "def": "陈旧的；失效的",
+    "ex": "Stale entries must be pruned, or they poison retrieval.",
+    "tag": "AI"
+   },
+   {
+    "word": "on-demand",
+    "ipa": "/ˌɒn dɪˈmɑːnd/",
+    "pos": "adj./adv.",
+    "def": "按需的；随需加载",
+    "ex": "On-demand loading keeps the working context small.",
+    "tag": "AI"
+   },
+   {
+    "word": "intricate",
+    "ipa": "/ˈɪntrɪkət/",
+    "pos": "adj.",
+    "def": "错综复杂的；精细的",
+    "ex": "The intricate link structure is what makes navigation possible.",
+    "tag": "IELTS"
+   },
+   {
+    "word": "indispensable",
+    "ipa": "/ˌɪndɪˈspensəbl/",
+    "pos": "adj.",
+    "def": "不可或缺的",
+    "ex": "An index is indispensable once the corpus grows past a few files.",
+    "tag": "IELTS"
+   },
+   {
+    "word": "coherence",
+    "ipa": "/kəʊˈhɪərəns/",
+    "pos": "n.",
+    "def": "连贯性；一致性",
+    "ex": "Pruning maintains coherence between the map and the territory.",
+    "tag": "IELTS"
+   },
+   {
+    "word": "prevalent",
+    "ipa": "/ˈprevələnt/",
+    "pos": "adj.",
+    "def": "普遍存在的；流行的",
+    "ex": "Flat storage is still the prevalent design, and still the weakest.",
+    "tag": "IELTS"
+   },
+   {
+    "word": "counterintuitive",
+    "ipa": "/ˌkaʊntərɪnˈtjuːɪtɪv/",
+    "pos": "adj.",
+    "def": "反直觉的",
+    "ex": "It is counterintuitive, but spending more at indexing saves work later.",
+    "tag": "IELTS"
+   },
+   {
+    "word": "concede",
+    "ipa": "/kənˈsiːd/",
+    "pos": "v.",
+    "def": "承认（某点为真）；让步",
+    "ex": "I concede that graphs are powerful, but they are costly to maintain.",
+    "tag": "IELTS"
+   },
+   {
+    "word": "synthesise",
+    "ipa": "/ˈsɪnθəsaɪz/",
+    "pos": "v.",
+    "def": "综合；整合成整体",
+    "ex": "The model synthesises a dozen fragments into one answer.",
+    "tag": "IELTS"
+   },
+   {
+    "word": "rigorous",
+    "ipa": "/ˈrɪɡərəs/",
+    "pos": "adj.",
+    "def": "严谨的；严格的",
+    "ex": "A rigorous review process is what separates a library from a dump.",
+    "tag": "IELTS"
+   },
+   {
+    "word": "delineate",
+    "ipa": "/dɪˈlɪnieɪt/",
+    "pos": "v.",
+    "def": "描绘；界定（边界）",
+    "ex": "Clearly delineate which file answers which question.",
+    "tag": "IELTS"
+   },
+   {
+    "word": "ubiquitous",
+    "ipa": "/juːˈbɪkwɪtəs/",
+    "pos": "adj.",
+    "def": "无处不在的",
+    "ex": "Vector search is now ubiquitous, but it solves only half the problem.",
+    "tag": "IELTS"
+   },
+   {
+    "word": "paradigm",
+    "ipa": "/ˈpærədaɪm/",
+    "pos": "n.",
+    "def": "范式；思维框架",
+    "ex": "The file-system paradigm treats knowledge as a navigable place.",
+    "tag": "IELTS"
+   },
+   {
+    "word": "exacerbate",
+    "ipa": "/ɪɡˈzæsəbeɪt/",
+    "pos": "v.",
+    "def": "使恶化；加剧",
+    "ex": "Duplicated facts exacerbate every future inconsistency.",
+    "tag": "IELTS"
+   },
+   {
+    "word": "pragmatic",
+    "ipa": "/præɡˈmætɪk/",
+    "pos": "adj.",
+    "def": "务实的；讲实效的",
+    "ex": "Be pragmatic: start with folders and links, add graphs only when needed.",
+    "tag": "IELTS"
+   }
+  ],
+  "oralTitle": "口语 20min · 主题聊天（周二四模式）",
+  "oral": "\n<div class=\"box\">\n  <h3>主题聊天 · Organising Knowledge for an AI Agent（6 个话题）</h3>\n  <p style=\"font-size:13.5px;color:#94a3b8;margin-bottom:12px\">周四模式：用英语聊，不写稿。每题先给 3 句（观点 → 理由 → 例子），卡住就换词继续说。<b>建议录音回听一遍。</b></p>\n  <ul class=\"qs\">\n    <li><b>1.</b> You have ten thousand documents and one question. Would you rather have a better search algorithm, or a better-organised library? Defend your choice.</li>\n    <li><b>2.</b> RAPTOR builds a tree of summaries; GraphRAG builds a graph of entities. Which one would you pick for a customer-service agent, and what would you give up?</li>\n    <li><b>3.</b> \"An agent should load only what it needs, when it needs it.\" Explain that idea to someone who has never used an AI system.</li>\n    <li><b>4.</b> If you were designing the folder structure for a company's knowledge base, what three rules would you enforce — and why those three?</li>\n    <li><b>5.</b> Information that nobody links to is effectively invisible. How does that apply to how your team shares what it learns?</li>\n    <li><b>6.</b> What would make you distrust an AI answer even when it sounds confident and well-written?</li>\n  </ul>\n</div>\n<div class=\"box\">\n  <h3>可复用的三个表达（今天至少用上一次）</h3>\n  <ul class=\"plain\">\n    <li><b>It's counterintuitive, but …</b> — 引出反直觉观点，口语里非常好用。</li>\n    <li><b>I'd concede that …, but the real issue is …</b> — 先让步再反驳，比直接\"but\"更有层次。</li>\n    <li><b>To put it pragmatically, …</b> — 把抽象讨论拉回可执行层面，适合收尾。</li>\n  </ul>\n</div>\n<div class=\"box\">\n  <h3>今日发音/流利度重点</h3>\n  <ul class=\"plain\">\n    <li><b>paradigm</b> /ˈpærədaɪm/ — 结尾 <b>-gm 读 /m/</b>，几乎没有元音（不是 para-dig-em）。</li>\n    <li><b>ubiquitous</b> /juːˈbɪkwɪtəs/ — 重音在 <b>BI</b>，别读成 u-biqui-tous。</li>\n    <li><b>counterintuitive</b> — 长词别赶，按 <b>counter·in·tu·i·tive</b> 五拍走，重音在 <b>TUI</b>。</li>\n  </ul>\n</div>\n",
+  "writing": {
+   "words": [
+    "traverse",
+    "indispensable",
+    "counterintuitive",
+    "pragmatic"
+   ],
+   "task": "写一段 3–5 句的小段落，向一位非技术背景的朋友解释「为什么知识该被组织成可以导航的结构，而不是一堆平铺的文件」——用上「遍历 traverse」「不可或缺的 indispensable」「反直觉的 counterintuitive」「务实的 pragmatic」这四个词。"
+  },
+  "note": "今天的词全部联动 AI 课 §3.3（结构化索引与文件系统）——索引 / 递归 / 按需加载 / 链接这几个概念，英语和中文课里说的是同一件事。📌 先滚动复习 09-10 那批词（retrieve / contextual / scrutiny / prerequisite 等）。",
   "tasks": [
    "词汇 25 词过完两遍（含 5 个词拼写自测）",
    "主题聊天 6 题都开口答过",
