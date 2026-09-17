@@ -551,6 +551,7 @@ const LESSONS = [
   id: "08", title: "结构化索引与文件系统", section: "第 3 章 §3.3 上",
   sections: [
     { h: "为什么「平铺入库」不够：两个反例", html: `
+      <p><a href="lessons/0008.html" target="_blank" style="display:inline-block;padding:8px 15px;border-radius:9px;background:rgba(56,189,248,.16);border:1px solid rgba(56,189,248,.45);color:#7dd3fc;text-decoration:none;font-size:13.5px;margin:2px 0 8px">📖 打开完整讲义（6 道检索练习 + 速查卡 + 必读原文）</a></p>
       <p>把原始文档切成互不关联的扁平文本块，会丢掉知识固有的层次与跨文档关联。</p>
       <p><b>反例一（黑猫白猫）</b>：知识库 100 个独立案例（90 黑猫、10 白猫），用户问「比例是多少」——受限于 top-k（如 20），大部分案例检索不到，模型只能基于不完整样本（如 15 黑 3 白）<b>得出错误结论</b>。<br>✅ 解法：预先提炼摘要「共 100 只猫：90 只黑猫（90%）、10 只白猫（10%）」并索引，一次检索就准确。</p>
       <p><b>反例二（Xfinity 优惠资格）</b>：几百条客服工单各记一个个案结论，<b>没有任何一条写着资格范围本身</b>。护士来问「我能不能享受优惠」，三重障碍：</p>
@@ -611,6 +612,7 @@ const LESSONS = [
   id: "09", title: "知识更新与 Agentic RAG", section: "第 3 章 §3.3 下",
   sections: [
     { h: "知识更新：把知识库当代码库", html: `
+      <p><a href="lessons/0009.html" target="_blank" style="display:inline-block;padding:8px 15px;border-radius:9px;background:rgba(56,189,248,.16);border:1px solid rgba(56,189,248,.45);color:#7dd3fc;text-decoration:none;font-size:13.5px;margin:2px 0 8px">📖 打开完整讲义（7 道检索练习 + 速查卡 + 必读原文）</a></p>
       <p>只更新不整理 → 内容越积越乱；只做定期重写 → 新信息无法及时生效。完整机制必须两条腿：<b>事件触发的增量更新</b> + <b>周期触发的全量整理</b>。</p>
       <p><b>增量更新 = 每次知识变更当成一个 Pull Request</b>（提议者—审核者模式）：</p>
       <table>
