@@ -90,13 +90,13 @@ footer{text-align:center;color:#475569;font-size:12px;margin-top:34px;
 <div class="wrap">
 <header>
   <h1>📘 英语课 · 每日一课</h1>
-  <div class="sub">词汇 25 词 + 口语 20min + 词串小作文 + 打卡 · 词汇联动当日 AI 课主题</div>
+  <div class="sub">词汇 16 词（10 专业 + 6 游戏混搭）+ 口语 15–20min + 词串小作文 + 打卡 · 词汇联动当日 AI 课主题</div>
   <div class="nav">
     <a href="../ai-agent-course/">🤖 AI Agent 课程</a>
     <a class="on" href="#">📘 英语课</a>
   </div>
 </header>
-<div class="tabs"><div class="tab" data-id="2026-09-09">09-09 周三</div><div class="tab" data-id="2026-09-10">09-10 周四</div><div class="tab" data-id="2026-09-17">09-17 周四</div></div>
+<div class="tabs"><div class="tab" data-id="2026-09-09">09-09 周三</div><div class="tab" data-id="2026-09-10">09-10 周四</div><div class="tab" data-id="2026-09-17">09-17 周四</div><div class="tab" data-id="2026-09-26">09-26 周六</div></div>
 <div id="day"></div>
 <footer>英语课 · 每日一课 · 词卡点击翻面 · 打卡进度自动保存在本机浏览器</footer>
 </div>
@@ -792,6 +792,165 @@ const DAYS = [
    "词汇 25 词过完两遍（含 5 个词拼写自测）",
    "主题聊天 6 题都开口答过",
    "60–90 秒录音完成",
+   "词串小作文写完"
+  ]
+ },
+ {
+  "id": "2026-09-26",
+  "label": "09-26 周六",
+  "title": "低强度日 · 朗读与复述（Why an Agent Needs a Map）",
+  "sub": "词汇 16（10 专业 + 6 游戏）· 朗读短文 98 词 · 3 句复述",
+  "chips": [
+   "词汇 20min（16 词混搭）",
+   "朗读+复述 15min",
+   "词串 5min"
+  ],
+  "words": [
+   {
+    "word": "index",
+    "ipa": "/ˈɪndeks/",
+    "pos": "n./v.",
+    "def": "索引；为…编索引",
+    "ex": "An index lets the agent look things up instead of reading everything.",
+    "tag": "AI"
+   },
+   {
+    "word": "chunk",
+    "ipa": "/tʃʌŋk/",
+    "pos": "n./v.",
+    "def": "分块；切块",
+    "ex": "How you chunk a document decides what the agent can ever find.",
+    "tag": "AI"
+   },
+   {
+    "word": "embed",
+    "ipa": "/ɪmˈbed/",
+    "pos": "v.",
+    "def": "嵌入；向量化",
+    "ex": "Embed each chunk so similarity search becomes possible.",
+    "tag": "AI"
+   },
+   {
+    "word": "query",
+    "ipa": "/ˈkwɪəri/",
+    "pos": "n./v.",
+    "def": "查询；提问",
+    "ex": "A vague query returns vague chunks.",
+    "tag": "AI"
+   },
+   {
+    "word": "granularity",
+    "ipa": "/ˌɡrænjuˈlærəti/",
+    "pos": "n.",
+    "def": "粒度；颗粒度",
+    "ex": "Granularity is a trade-off between precision and context.",
+    "tag": "AI"
+   },
+   {
+    "word": "taxonomy",
+    "ipa": "/tækˈsɒnəmi/",
+    "pos": "n.",
+    "def": "分类体系；分类法",
+    "ex": "A taxonomy gives names to things that would otherwise blur together.",
+    "tag": "AI"
+   },
+   {
+    "word": "ontology",
+    "ipa": "/ɒnˈtɒlədʒi/",
+    "pos": "n.",
+    "def": "本体；知识表示体系",
+    "ex": "An ontology states what kinds of things exist and how they relate.",
+    "tag": "AI"
+   },
+   {
+    "word": "provenance",
+    "ipa": "/ˈprɒvənəns/",
+    "pos": "n.",
+    "def": "来源；出处",
+    "ex": "Without provenance, an answer cannot be checked.",
+    "tag": "AI"
+   },
+   {
+    "word": "canonical",
+    "ipa": "/kəˈnɒnɪkl/",
+    "pos": "adj.",
+    "def": "规范的；权威版本的",
+    "ex": "Keep one canonical copy, and link to it everywhere else.",
+    "tag": "AI"
+   },
+   {
+    "word": "redundancy",
+    "ipa": "/rɪˈdʌndənsi/",
+    "pos": "n.",
+    "def": "冗余；多余信息",
+    "ex": "A little redundancy buys safety; too much breeds contradiction.",
+    "tag": "AI"
+   },
+   {
+    "word": "penetrate",
+    "ipa": "/ˈpenɪtreɪt/",
+    "pos": "v.",
+    "def": "穿透；渗透",
+    "ex": "AP rounds penetrate armour that normal rounds merely dent.",
+    "tag": "GAME"
+   },
+   {
+    "word": "disrupt",
+    "ipa": "/dɪsˈrʌpt/",
+    "pos": "v.",
+    "def": "扰乱；打断",
+    "ex": "The disruptor scrambles your HUD and disrupts your aim.",
+    "tag": "GAME"
+   },
+   {
+    "word": "concussion",
+    "ipa": "/kənˈkʌʃn/",
+    "pos": "n.",
+    "def": "震荡；脑震荡",
+    "ex": "Concussive rounds stagger enemies instead of killing them.",
+    "tag": "GAME"
+   },
+   {
+    "word": "emplacement",
+    "ipa": "/ɪmˈpleɪsmənt/",
+    "pos": "n.",
+    "def": "炮位；安置点",
+    "ex": "Clear the mortar emplacement before it zeroes in on you.",
+    "tag": "GAME"
+   },
+   {
+    "word": "incendiary",
+    "ipa": "/ɪnˈsendieri/",
+    "pos": "adj./n.",
+    "def": "燃烧的；煽动性的；燃烧弹",
+    "ex": "Incendiary rounds burn through armour over time.",
+    "tag": "GAME"
+   },
+   {
+    "word": "stagger",
+    "ipa": "/ˈstæɡə(r)/",
+    "pos": "v./n.",
+    "def": "使踉跄；使震惊；摇晃",
+    "ex": "The impact staggers the target and buys you a second.",
+    "tag": "GAME"
+   }
+  ],
+  "oralTitle": "口语 15min · 朗读短文 + 3 句复述（周六低强度模式）",
+  "oral": "\n<div class=\"box\">\n  <h3>朗读短文 · Why an Agent Needs a Map（98 词）</h3>\n  <p style=\"font-size:13.5px;color:#94a3b8;margin-bottom:12px\">周六低强度：不上新话题，只做<b>朗读 + 复述</b>。目标是把今天这 16 个词读顺、用上一遍。</p>\n  <div style=\"background:#0f172a;border-left:3px solid #38bdf8;padding:14px 16px;border-radius:6px;line-height:1.9;font-size:14.5px\">\n    A library is not a pile of files. When an agent needs to answer a question,\n    it does not read everything — it <b>queries</b> an <b>index</b>, pulls the right\n    <b>chunk</b>, and follows the <b>provenance</b> back to the source.<br><br>\n    Good organisation means choosing the right <b>granularity</b>. Too coarse, and the\n    answer is buried; too fine, and the agent loses the thread. A <b>taxonomy</b> gives\n    names to the territory; an <b>ontology</b> states how the pieces relate. Keep one\n    <b>canonical</b> copy so that duplicates cannot breed contradiction.<br><br>\n    Once something is <b>embedded</b> too deeply, it becomes invisible — the agent\n    simply never finds it. A little <b>redundancy</b> buys safety. Too much destroys trust.\n  </div>\n</div>\n<div class=\"box\">\n  <h3>三步朗读任务（约 15 分钟）</h3>\n  <ul class=\"plain\">\n    <li><b>第 1 遍 · 看懂：</b>划出今天 16 个词里出现在短文中的那 10 个。读不出的先标音。</li>\n    <li><b>第 2 遍 · 跟上节奏：</b>慢速跟读一遍，重点在 <b>granularity / provenance / ontology</b> 三个词的重音位置。</li>\n    <li><b>第 3 遍 · 不看稿复述：</b>用 <b>3 句话</b>把人话版的中心意思说出来。允许卡壳换词，不允许念稿。</li>\n  </ul>\n  <p style=\"font-size:13px;color:#fbbf24;margin-top:10px\">🎙 建议录音回听一遍 —— 只听两件事：句子有没有断在词中间；重音有没有落在该落的地方。</p>\n</div>\n<div class=\"box\">\n  <h3>今日发音重点（3 个词）</h3>\n  <ul class=\"plain\">\n    <li><b>granularity</b> /ˌɡrænjuˈlærəti/ — 重音在 <b>LAR</b>，前四拍轻快带过：gra·nu·<b>LAR</b>·i·ty。</li>\n    <li><b>provenance</b> /ˈprɒvənəns/ — 重音在开头 <b>PRO</b>；结尾 <b>-ance</b> 弱读成 /əns/，别读成\"普赛文斯\"。</li>\n    <li><b>ontology</b> /ɒnˈtɒlədʒi/ — 重音在 <b>TOL</b>；开头是 <b>on-</b>，不是\"昂\"。</li>\n  </ul>\n</div>\n<div class=\"box\">\n  <h3>可复用的三个表达（今天至少用上一次）</h3>\n  <ul class=\"plain\">\n    <li><b>The right granularity matters: too coarse, and …; too fine, and …</b> — 讨论任何\"尺度\"问题都能用，句式对称好记。</li>\n    <li><b>Without …, it cannot be checked.</b> — 讲\"可验证性\"的万能句，比 need 更硬。</li>\n    <li><b>A little … buys safety; too much destroys trust.</b> — 讲\"权衡\"时的收尾句，雅思口语 Part 3 很好用。</li>\n  </ul>\n</div>\n",
+  "writing": {
+   "words": [
+    "granularity",
+    "provenance",
+    "canonical",
+    "redundancy"
+   ],
+   "task": "写一段 3–5 句的小段落，说明「为什么同一个知识，存一份和存十份，效果完全不同」——用上「粒度 granularity」「出处 provenance」「规范版本 canonical」「冗余 redundancy」这四个词。写完自己读一遍，删掉所有能删的修饰词。"
+  },
+  "note": "今天走周六低强度：不上新话题，只做朗读 + 复述，把 16 个词读顺用上一遍。📌 词表仍按混搭版：10 个 AI 词（联动 §3.3 知识组织）+ 6 个游戏词（penetrate / disrupt / concussion / emplacement / incendiary / stagger，都带雅思迁移价值）。🎯 停学几天了，这节刻意做轻——先把手感找回来。",
+  "tasks": [
+   "词汇 16 词过完两遍（含 5 个词拼写自测）",
+   "朗读短文跑完 3 遍",
+   "3 句复述已录音",
    "词串小作文写完"
   ]
  }
