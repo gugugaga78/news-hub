@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-09-27 07:00",
-  "total": 193,
+  "last_updated": "2026-10-17 07:00",
+  "total": 194,
   "resources": [
     {
       "title": "fighting41love/funNLP",
@@ -293,6 +293,14 @@
         "团队协作",
         "工程"
       ]
+    },
+    {
+      "title": "archlizheng/AIPM-Wiki",
+      "link": "https://github.com/archlizheng/AIPM-Wiki",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 405,
+      "summary": "🧱 AI 产品经理入门知识库:面试题库 · AI 基础 · 案例拆解 · 学习路线 | 无论是零基础转行还是持续进步,一个仓库就够了"
     },
     {
       "title": "itshen/learn-ai",
