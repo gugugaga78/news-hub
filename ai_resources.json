@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-17 07:00",
-  "total": 194,
+  "last_updated": "2026-10-20 07:00",
+  "total": 195,
   "resources": [
     {
       "title": "fighting41love/funNLP",
@@ -553,6 +553,14 @@
       "type": "仓库",
       "stars": 10,
       "summary": "Hepapi Knowledge Hub: practical notes and patterns for building reliable systems on AWS. DevOps/Platform Engineering, QA, modernization, and Enterpris"
+    },
+    {
+      "title": "a0yark/js-reverse-pro-mcp",
+      "link": "https://github.com/a0yark/js-reverse-pro-mcp",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 10,
+      "summary": "JS reverse engineering MCP server (Pro fork) — hook framework, deobfuscation, AI analysis, sessions, artifacts, portable bundle. Built on Patchright. "
     },
     {
       "title": "KMnO4-zx/gpt-learning",
