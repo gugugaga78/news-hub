@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-20 07:00",
-  "total": 195,
+  "last_updated": "2026-10-23 07:00",
+  "total": 196,
   "resources": [
     {
       "title": "fighting41love/funNLP",
@@ -576,6 +576,14 @@
         "chatglm",
         "课程"
       ]
+    },
+    {
+      "title": "vicfei/awesome-jev-prompts",
+      "link": "https://github.com/vicfei/awesome-jev-prompts",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 9,
+      "summary": "Question patterns, anti-patterns & calibration notes for Jev (TypeSafe AI) — the prompt engineering of typed decisions. 51 entries, 9 categories (incl"
     },
     {
       "title": "Sheltercosmop/Prompt-Engineering-Guide-zh",
