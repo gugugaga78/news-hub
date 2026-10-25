@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>00 · 学习基础设施（跨四门课通用）</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#fafafa;color:#1a1a2e;font-family:"Microsoft YaHei","PingFang SC",-apple-system,sans-serif;
+     line-height:1.75;padding:20px 15px 60px}
+.wrap{max-width:900px;margin:0 auto}
+h1{color:#0f3460;font-size:23px;line-height:1.4;padding-bottom:12px;margin-bottom:14px;border-bottom:3px solid #e94560}
+h2{color:#0f3460;font-size:19px;margin:28px 0 12px;padding-left:11px;border-left:4px solid #e94560}
+h3{color:#16213e;font-size:16px;margin:20px 0 8px}
+p{margin:9px 0}
+ul,ol{margin:9px 0 9px 24px}
+li{margin:5px 0}
+a{color:#0a5dc2;text-decoration:none;border-bottom:1px solid rgba(10,93,194,.3);word-break:break-all}
+a:hover{border-bottom-color:#0a5dc2}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13.5px;background:#fff;
+      display:block;overflow-x:auto;white-space:nowrap}
+th{background:#0f3460;color:#fff;padding:9px 11px;text-align:left;font-weight:600}
+td{padding:8px 11px;border-bottom:1px solid #e8e8f0;vertical-align:top}
+tr:last-child td{border-bottom:none}
+blockquote{background:#e3f2fd;border-left:4px solid #1976d2;padding:11px 16px;margin:13px 0;
+           border-radius:0 6px 6px 0;font-size:14.5px}
+code{background:#f0f2f8;padding:1px 5px;border-radius:4px;font-size:13px}
+pre{background:#16213e;color:#e8eaf6;padding:13px 16px;border-radius:8px;overflow-x:auto;margin:13px 0}
+pre code{background:none;color:inherit;padding:0}
+hr{border:none;border-top:1px solid #e0e0e8;margin:24px 0}
+.navbar{background:#16213e;color:#fff;padding:10px 16px;border-radius:8px;margin-bottom:18px;font-size:13.5px}
+.navbar a{color:#ffd54f;border:none}
+.idx a{display:block;padding:13px 18px;border-bottom:1px solid #eef0f5;text-decoration:none;
+       color:#1a1a2e;background:#fff;border-radius:0}
+.idx a:first-child{border-radius:10px 10px 0 0}
+.idx a:last-child{border-radius:0 0 10px 10px;border-bottom:none}
+.idx a:hover{background:#f0f4ff}
+.idx .d{font-size:12px;color:#6b7280;margin-top:3px}
+.idx{border-radius:10px;overflow:hidden;box-shadow:0 1px 6px rgba(0,0,0,.06)}
+@media(max-width:600px){body{padding:12px 10px 50px}h1{font-size:20px}table{font-size:12.5px}}
+</style></head><body><div class="wrap">
+<div class="navbar"><a href="./index.html">← 资料库首页</a>　|　<a href="../index.html">课程列表</a></div>
+<h1>00 · 学习基础设施（跨四门课通用）</h1>
+<blockquote>采集日期：2026-10-25<br>验证方式：逐个 <code>Invoke-WebRequest</code> 实测 HTTP 状态（下表「状态」列为实测结果）<br>适用：概率论 / 统计学 / 财务管理 / AI 基础，四门课都能用</blockquote>
+<hr>
+<h2>一、公开课平台（系统课的正规来源）</h2>
+<table><thead><tr><th>平台</th><th>链接</th><th>状态</th><th>适合干什么</th></tr></thead><tbody><tr><td>中国大学 MOOC</td><td><a href="https://www.icourse163.org/" target="_blank" rel="noopener">icourse163.org</a></td><td>✅ 200</td><td>国内高校正规慕课，搜「概率论」「统计学」能找到标着校名的完整课程，跟教材体系最贴</td></tr><tr><td>学堂在线</td><td><a href="https://www.xuetangx.com/" target="_blank" rel="noopener">xuetangx.com</a></td><td>✅ 200</td><td>清华系慕课，经管类课程质量高</td></tr><tr><td>MIT OCW</td><td><a href="https://ocw.mit.edu/" target="_blank" rel="noopener">ocw.mit.edu</a></td><td>✅ 200</td><td>免费公开课+全套讲义+作业，英文。找 18.05（概率统计）、15.401（金融）</td></tr><tr><td>可汗学院</td><td><a href="https://www.khanacademy.org/" target="_blank" rel="noopener">khanacademy.org</a></td><td>✅ 200</td><td>补基础最快，英文但语速慢，有中文字幕选项</td></tr><tr><td>HuggingFace Learn</td><td><a href="https://huggingface.co/learn" target="_blank" rel="noopener">huggingface.co/learn</a></td><td>✅ 200</td><td>AI 方向动手课，免费</td></tr></tbody></table>
+<p><b>用法建议</b>：MOOC 用来「听不懂某章时换个人讲」，MIT OCW 用来「想搞懂底层原理」，可汗用来「补高中数学窟窿」。</p>
+<hr>
+<h2>二、可视化工具（理解概念的最短路径）</h2>
+<table><thead><tr><th>工具</th><th>链接</th><th>状态</th><th>用它干什么</th></tr></thead><tbody><tr><td><b>Seeing Theory</b></td><td><a href="https://seeing-theory.brown.edu/" target="_blank" rel="noopener">seeing-theory.brown.edu</a></td><td>✅ 200</td><td>布朗大学做的概率统计交互可视化。<b>概率论第 1-5 章几乎每个概念都有对应动画</b>，点着玩就懂了</td></tr><tr><td><b>Explained Visually</b></td><td><a href="https://setosa.io/ev/" target="_blank" rel="noopener">setosa.io/ev</a></td><td>✅ 200</td><td>把抽象数学做成可拖动的图，含马尔可夫链、主成分分析等</td></tr><tr><td><b>PhET 仿真（中文）</b></td><td><a href="https://phet.colorado.edu/zh_CN/" target="_blank" rel="noopener">phet.colorado.edu/zh_CN</a></td><td>✅ 200</td><td>科罗拉多大学的物理/数学仿真，中文界面</td></tr><tr><td><b>GeoGebra</b></td><td><a href="https://www.geogebra.org/" target="_blank" rel="noopener">geogebra.org</a></td><td>✅ 200</td><td>画函数、画分布曲线、做几何演示，免费</td></tr><tr><td><b>Desmos 图形计算器</b></td><td><a href="https://www.desmos.com/calculator" target="_blank" rel="noopener">desmos.com/calculator</a></td><td>✅ 200</td><td>30 秒画一条正态分布曲线，比装软件快</td></tr><tr><td><b>Wolfram Alpha</b></td><td><a href="https://www.wolframalpha.com/" target="_blank" rel="noopener">wolframalpha.com</a></td><td>✅ 200</td><td>直接输入积分/概率/矩阵，给步骤和结果。<b>验算神器</b></td></tr></tbody></table>
+<p><b>这三个组合起来用</b>：Seeing Theory 建直觉 → Desmos 画图验证 → Wolfram Alpha 对答案。</p>
+<hr>
+<h2>三、数据源（统计学、财务管理的实操素材）</h2>
+<table><thead><tr><th>数据源</th><th>链接</th><th>状态</th><th>用途</th></tr></thead><tbody><tr><td>国家统计局</td><td><a href="https://data.stats.gov.cn/" target="_blank" rel="noopener">data.stats.gov.cn</a></td><td>✅ 200</td><td>做统计学「动态数列」「统计指数」作业的真实数据来源</td></tr><tr><td>巨潮资讯</td><td><a href="http://www.cninfo.com.cn/" target="_blank" rel="noopener">cninfo.com.cn</a></td><td>✅ 200</td><td>上市公司年报，做财务管理「财务分析」「杜邦分析」必须用真报表</td></tr><tr><td>Kaggle</td><td><a href="https://www.kaggle.com/" target="_blank" rel="noopener">kaggle.com</a></td><td>✅ 200</td><td>现成数据集，练回归/分类</td></tr><tr><td>arXiv</td><td><a href="https://arxiv.org/" target="_blank" rel="noopener">arxiv.org</a></td><td>✅ 200</td><td>AI 论文原文，搜 Attention Is All You Need</td></tr></tbody></table>
+<blockquote>⚠️ 用真实数据做作业时，<b>必须标注数据来源和抓取日期</b>——这是学术规范，也是老师最常挑的刺。</blockquote>
+<hr>
+<h2>四、AI 辅助（国内可直接用）</h2>
+<table><thead><tr><th>工具</th><th>链接</th><th>状态</th><th>怎么用在学习上</th></tr></thead><tbody><tr><td>DeepSeek</td><td><a href="https://www.deepseek.com/" target="_blank" rel="noopener">deepseek.com</a></td><td>✅ 200</td><td>数学推导强，可传 PDF 让它讲教材</td></tr><tr><td>Kimi</td><td><a href="https://kimi.moonshot.cn/" target="_blank" rel="noopener">kimi.moonshot.cn</a></td><td>✅ 200</td><td>长文档处理强，可传整章讲义做摘要</td></tr><tr><td>知乎</td><td><a href="https://www.zhihu.com/" target="_blank" rel="noopener">zhihu.com</a></td><td>✅ 200</td><td>搜「概率论 全概率公式 怎么理解」这类问题，常有高赞直觉解释</td></tr><tr><td>B 站</td><td><a href="https://www.bilibili.com/" target="_blank" rel="noopener">bilibili.com</a></td><td>✅ 200</td><td>搜课程名+「期末」，能刷到速成课</td></tr></tbody></table>
+<p><b>AI 辅助的正确用法</b>（不然会害你）：</p>
+<ul><li>✅ 让它<b>解释</b>你看不懂的那句话</li><li>✅ 让它<b>出题</b>给你做，然后自己先做再看答案</li><li>✅ 让它<b>检查你的解题步骤</b>哪一步错了</li><li>❌ 直接把作业题丢给它抄答案——考试时你脑子里什么都没有</li></ul>
+<hr>
+<h2>五、这份清单的边界</h2>
+<ul><li>状态是 2026-10-25 的实测值，网络环境变了可能失效</li><li>只收录<b>已验证可访问</b>的；需要登录/付费/科学上网的没往里放</li><li>B 站具体视频、GitHub 具体仓库在各科分册里，不在这份</li></ul>
+<hr>
+<h2>六、四门课分册索引</h2>
+<table><thead><tr><th>分册</th><th>内容</th></tr></thead><tbody><tr><td><code>01-概率论与数理统计.md</code></td><td>教材讲义、视频、题库、可视化、速查表</td></tr><tr><td><code>02-统计学.md</code></td><td>同上 + 数据集、SPSS/Excel/JASP 工具</td></tr><tr><td><code>03-财务管理.md</code></td><td>同上 + 在线财务计算器、年报案例</td></tr><tr><td><code>04-AI基础与理论.md</code></td><td>开源教材、概念可视化、论文、动手平台、经管友好资源</td></tr></tbody></table>
+</div></body></html>
