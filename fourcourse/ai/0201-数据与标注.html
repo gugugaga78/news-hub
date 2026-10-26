@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI自学课 · 第1课：数据与标注</title>
+<style>
+  :root{--bg:#f6f7fb;--card:#fff;--ink:#1f2430;--sub:#6b7280;--brand:#4f6ef7;--accent:#10b981;--warn:#f59e0b;--danger:#ef4444;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.75;padding:16px;padding-bottom:60px;}
+  .wrap{max-width:680px;margin:0 auto;}
+  .hero{background:linear-gradient(135deg,#4f6ef7,#7c3aed);color:#fff;border-radius:18px;padding:22px 20px;margin-bottom:16px;}
+  .hero .tag{font-size:12px;opacity:.85;letter-spacing:2px;}
+  .hero h1{font-size:22px;margin:6px 0 4px;}
+  .hero p{font-size:13px;opacity:.9;}
+  .card{background:var(--card);border-radius:16px;padding:18px 18px;margin-bottom:14px;box-shadow:0 2px 10px rgba(30,40,80,.05);}
+  h2{font-size:17px;margin-bottom:10px;display:flex;align-items:center;gap:8px;}
+  h2 .n{background:var(--brand);color:#fff;width:26px;height:26px;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;font-size:14px;flex:none;}
+  h3{font-size:15px;margin:14px 0 6px;color:#374151;}
+  p{font-size:14.5px;margin-bottom:8px;}
+  .q{background:#eef2ff;border-left:4px solid var(--brand);border-radius:8px;padding:12px 14px;font-size:14.5px;margin:10px 0;}
+  .q b{color:var(--brand);}
+  ul,ol{padding-left:22px;font-size:14.5px;}
+  li{margin-bottom:6px;}
+  code{background:#f1f3f9;border-radius:5px;padding:2px 6px;font-size:13px;color:#7c3aed;font-family:"SF Mono",Consolas,monospace;}
+  pre{background:#1e2433;color:#e6e9f2;border-radius:12px;padding:14px;font-size:13px;overflow-x:auto;line-height:1.65;margin:10px 0;}
+  pre .c{color:#7d8aa3;}
+  pre .k{color:#7dd3fc;}
+  pre .s{color:#86efac;}
+  .key{background:#ecfdf5;border:1px solid #a7f3d0;border-radius:10px;padding:12px 14px;font-size:14px;margin:10px 0;}
+  .key b{color:#047857;}
+  .warn{background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:12px 14px;font-size:14px;margin:10px 0;}
+  table{width:100%;border-collapse:collapse;font-size:13.5px;margin:10px 0;}
+  th,td{border:1px solid #e5e7eb;padding:8px 10px;text-align:left;}
+  th{background:#f9fafb;}
+  .quiz label{display:block;padding:10px 12px;border:1.5px solid #e5e7eb;border-radius:10px;margin:8px 0;font-size:14px;cursor:pointer;}
+  .quiz input{margin-right:8px;}
+  .answer{display:none;margin-top:10px;background:#ecfdf5;border-radius:10px;padding:12px;font-size:14px;color:#065f46;}
+  .answer.show{display:block;}
+  button{background:var(--brand);color:#fff;border:none;border-radius:10px;padding:10px 18px;font-size:14px;cursor:pointer;margin-top:8px;}
+  .footer{text-align:center;color:var(--sub);font-size:12px;margin-top:18px;}
+  .timer{display:inline-block;background:rgba(255,255,255,.2);border-radius:99px;padding:3px 12px;font-size:12px;margin-top:8px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <div class="tag">AI 自学课 · 项目驱动版</div>
+    <h1>第 1 课：数据从哪来？</h1>
+    <p>今晚你就要做数据标注——先搞懂它为什么重要，晚上干活会特别清醒</p>
+    <span class="timer">⏱ 水课 30 分钟 · 只看不动手</span>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">?</span>先想一个问题</h2>
+    <div class="q">一个从没打过网球的人，只靠看 <b>1000 段</b>「错误挥拍 → 教练纠正」的对照视频，能不能学会网球？<br><br>能。<b>AI 模型就是这么学东西的。</b></div>
+    <p>你标注的每一条数据，本质上就是在给模型看「这样做 ✅ / 那样做 ❌」的对照视频。</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">1</span>模型到底从数据里学到了什么</h2>
+    <p>一条训练数据长这样：</p>
+    <table>
+      <tr><th>输入（X）</th><th>标签（y）</th></tr>
+      <tr><td>一段挥拍视频 / 一句学生提问</td><td>动作名称、是否标准、教练回答</td></tr>
+    </table>
+    <p>模型训练时做的事，用一句话说：</p>
+    <div class="key"><b>看大量「输入 → 标签」的配对，自己总结出中间的规律。</b><br>比如它会慢慢发现：「击球点在身体侧前方 + 拍面垂直」大概率是标准正手。</div>
+    <p>这个流程叫<b>监督学习</b>——你用标准答案"监督"它。你现在做的标注，就是在生产这些标准答案。</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">2</span>为什么标注质量 = 模型的天花板</h2>
+    <div class="warn">⚠ AI 圈有句铁律：<b>Garbage In, Garbage Out（垃圾进，垃圾出）</b><br><br>如果 100 条数据里有 20 条标错了（比如把"错误动作"标成"标准"），模型学到的规律就是歪的——<b>它不会质疑你，它只会认真地学错。</b></div>
+    <h3>所以标注前先定好三件事（今晚开干前花 10 分钟）：</h3>
+    <ol>
+      <li><b>标签清单</b>：一共有哪几类？（如：正手/反手/发球/其他）边界要写清楚</li>
+      <li><b>判断标准</b>：什么算"标准"、什么算"需纠正"？最好配 1-2 个示例</li>
+      <li><b>拿不准怎么办</b>：统一标成"待定"，<b>千万别凭感觉硬标</b></li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">3</span>数据处理：pandas 五个救命操作</h2>
+    <p>晚上标注完，你一定会想：一共多少条？每类各多少？有没有漏标的？用 <code>pandas</code> 几行代码就能查。<b>回寝室对着敲一遍，不用背。</b></p>
+<pre><span class="k">import</span> pandas <span class="k">as</span> pd
+
+df = pd.read_csv(<span class="s">"标注数据.csv"</span>)   <span class="c"># 1. 读入数据</span>
+
+df.head()                  <span class="c"># 2. 看前5行长啥样</span>
+df.shape                   <span class="c"># 3. 一共多少行、多少列</span>
+df.columns                 <span class="c"># 看看字段名</span>
+
+df[<span class="s">"动作类型"</span>].value_counts()  <span class="c"># 4. 每类各有多少条 ←最常用</span>
+df.isnull().sum()          <span class="c"># 5. 每列有多少空值（查漏标）</span>
+
+df.to_csv(<span class="s">"标注数据_已检查.csv"</span>, index=<span class="k">False</span>)  <span class="c"># 保存</span></pre>
+    <div class="key">💡 <b>把这页收藏，晚上处理数据时照着抄。</b>能跑通这 5 行，你就已经会用 pandas 解决 80% 的实际问题了。</div>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">4</span>30 秒自测</h2>
+    <div class="quiz">
+      <p><b>Q：标注时遇到一条动作"看起来有点标准又有点不标准"，最合理的做法是？</b></p>
+      <label onclick="document.getElementById('a').classList.remove('show')"><input type="radio" name="q">凭直觉选一个，先标完再说</label>
+      <label onclick="document.getElementById('a').classList.remove('show')"><input type="radio" name="q">随便标，模型那么聪明会自己分辨</label>
+      <label onclick="document.getElementById('a').classList.add('show')"><input type="radio" name="q">标成"待定"，找教练或同学一起确认</label>
+      <div class="answer" id="a">✅ 答案：标"待定"。模糊数据硬标 = 主动往模型里灌噪音。100 条干净数据 > 200 条带错数据。</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>🎯 今天的行动闭环</h2>
+    <ul>
+      <li>水课：看完这页（30 min）</li>
+      <li>回寝室：先花 10 分钟写标签清单和判断标准</li>
+      <li>标注中：拿不准 → 一律"待定"</li>
+      <li>标注后：用上面的 pandas 代码查一遍数量和空值</li>
+    </ul>
+    <p style="margin-top:10px;">学完立刻用上——这就是昨天那套"一听就懂"的方法 ✨</p>
+  </div>
+
+  <div class="footer">毛毛的 AI 自学课 · 第 1 课 · 由 Hermes 定制</div>
+</div>
+</body>
+</html>
