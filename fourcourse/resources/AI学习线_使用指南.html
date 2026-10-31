@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 学习线 · 四份清单怎么配合用</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#fafafa;color:#1a1a2e;font-family:"Microsoft YaHei","PingFang SC",-apple-system,sans-serif;
+     line-height:1.75;padding:20px 15px 60px}
+.wrap{max-width:900px;margin:0 auto}
+h1{color:#0f3460;font-size:23px;line-height:1.4;padding-bottom:12px;margin-bottom:14px;border-bottom:3px solid #e94560}
+h2{color:#0f3460;font-size:19px;margin:28px 0 12px;padding-left:11px;border-left:4px solid #e94560}
+h3{color:#16213e;font-size:16px;margin:20px 0 8px}
+p{margin:9px 0}
+ul,ol{margin:9px 0 9px 24px}
+li{margin:5px 0}
+a{color:#0a5dc2;text-decoration:none;border-bottom:1px solid rgba(10,93,194,.3);word-break:break-all}
+a:hover{border-bottom-color:#0a5dc2}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13.5px;background:#fff;
+      display:block;overflow-x:auto;white-space:nowrap}
+th{background:#0f3460;color:#fff;padding:9px 11px;text-align:left;font-weight:600}
+td{padding:8px 11px;border-bottom:1px solid #e8e8f0;vertical-align:top}
+tr:last-child td{border-bottom:none}
+blockquote{background:#e3f2fd;border-left:4px solid #1976d2;padding:11px 16px;margin:13px 0;
+           border-radius:0 6px 6px 0;font-size:14.5px}
+code{background:#f0f2f8;padding:1px 5px;border-radius:4px;font-size:13px}
+pre{background:#16213e;color:#e8eaf6;padding:13px 16px;border-radius:8px;overflow-x:auto;margin:13px 0}
+pre code{background:none;color:inherit;padding:0}
+hr{border:none;border-top:1px solid #e0e0e8;margin:24px 0}
+.navbar{background:#16213e;color:#fff;padding:10px 16px;border-radius:8px;margin-bottom:18px;font-size:13.5px}
+.navbar a{color:#ffd54f;border:none}
+.idx a{display:block;padding:13px 18px;border-bottom:1px solid #eef0f5;text-decoration:none;
+       color:#1a1a2e;background:#fff;border-radius:0}
+.idx a:first-child{border-radius:10px 10px 0 0}
+.idx a:last-child{border-radius:0 0 10px 10px;border-bottom:none}
+.idx a:hover{background:#f0f4ff}
+.idx .d{font-size:12px;color:#6b7280;margin-top:3px}
+.idx{border-radius:10px;overflow:hidden;box-shadow:0 1px 6px rgba(0,0,0,.06)}
+@media(max-width:600px){body{padding:12px 10px 50px}h1{font-size:20px}table{font-size:12.5px}}
+</style></head><body><div class="wrap">
+<div class="navbar"><a href="./index.html">← 资料库首页</a>　|　<a href="../index.html">课程列表</a></div>
+<h1>AI 学习线 · 四份清单怎么配合用</h1>
+<blockquote>建线日期：2026-10-25<br>你的时间预算：<b>周四 20:00-21:00（60min）+ 周六 10:40-11:30（50min）= 每周 110 分钟</b></blockquote>
+<hr>
+<h2>一、为什么 AI 要分四份清单</h2>
+<p>因为「学 AI」对不同目的完全是不同的事。混在一起就会变成收藏夹吃灰。</p>
+<table><thead><tr><th>清单</th><th>回答什么问题</th><th>什么时候用</th><th>时间占比</th></tr></thead><tbody><tr><td><code>04-AI基础与理论.md</code></td><td><b>它是什么、为什么这样设计</b></td><td>周四主课</td><td>50%</td></tr><tr><td><code>06-AI产品实战.md</code></td><td><b>怎么做成产品、怎么卖给用户</b></td><td>配合竞赛项目</td><td>25%</td></tr><tr><td><code>07-AI前沿与模型能力.md</code></td><td><b>现在到哪一步了</b></td><td>每周 10 分钟扫</td><td>10%</td></tr><tr><td><code>08-Agent工程实践.md</code></td><td><b>怎么让它跑起来</b></td><td>周末动手 / 假期</td><td>15%</td></tr></tbody></table>
+<p><b>核心判断</b>：你的定位是 AI 产品经理，不是算法工程师。所以 04 和 06 是主线，08 够用就行（能跑 demo、能跟技术同学对话），07 是保持不掉队。</p>
+<hr>
+<h2>二、主线：李博杰《AI Agents 设计原理》（周四 60 分钟）</h2>
+<p>你现在的进度：第 9 课已完成（第 3 章 §3.3 知识组织），课件在 <code>AI-Agents学习\lessons\</code>。</p>
+<table><thead><tr><th>周次</th><th>书里章节</th><th>配合看什么</th></tr></thead><tbody><tr><td>第 8 周</td><td>第 4 章 §4.1-4.2 工具设计</td><td><code>04</code> 里的 Agents 课程；<code>08</code> 里的工具调用最小实现</td></tr><tr><td>第 9 周</td><td>第 4 章 §4.3-4.4 事件驱动/工具发现</td><td><code>08</code> 里任一 Agent 框架的 tool 定义</td></tr><tr><td>第 10 周</td><td>第 5 章 Coding Agent</td><td><code>06</code> 里的 Cursor / Claude Code 产品拆解</td></tr><tr><td>第 11 周</td><td>第 6 章 Agent 评估</td><td><code>07</code> 里的模型榜单（这就是&quot;评估&quot;的工业实践）</td></tr><tr><td>第 12 周</td><td>第 7 章 模型后训练</td><td><code>04</code> 里 CS224N 的 L8（RLHF/SFT/DPO）</td></tr><tr><td>第 13 周</td><td>停课周 → <b>补漏 + 第 8 章自我进化</b></td><td><code>08</code> 挑一个项目动手</td></tr><tr><td>第 14-15 周</td><td>第 9 章 多模态 / 第 10 章 多 Agent</td><td><code>06</code> 里 Coze/Dify 搭一个多 Agent 流程</td></tr><tr><td>第 16 周</td><td>全书串讲 + 做一份「我的 Agent 认知地图」</td><td>全部</td></tr></tbody></table>
+<hr>
+<h2>三、副线：AI 产品能力（周六 50 分钟中的 25 分钟）</h2>
+<p>这条线的产出物不是笔记，是<b>能拿出去的东西</b>。每两周产出一个：</p>
+<table><thead><tr><th>周次</th><th>产出物</th><th>素材来源</th></tr></thead><tbody><tr><td>第 8-9 周</td><td>一份「3 个 AI 产品的功能拆解」表格（选 Cursor / Kimi / Notion AI）</td><td><code>06</code> 案例库</td></tr><tr><td>第 10-11 周</td><td>你自己项目的 <b>AI 版 PRD</b>（把「融危与机」重写一遍）</td><td><code>06</code> 方法论</td></tr><tr><td>第 12-13 周</td><td>一份「模型选型对比表」（3 个候选模型 × 5 个维度）</td><td><code>07</code> 榜单 + 定价页</td></tr><tr><td>第 14-15 周</td><td>作品集第一版（放这四份产出 + 两个项目）</td><td>全部</td></tr><tr><td>第 16 周</td><td>模拟面试：自己回答 10 个 AI PM 常见问题</td><td><code>06</code> 面试题</td></tr></tbody></table>
+<hr>
+<h2>四、每周 10 分钟前沿扫描（周六，别超时）</h2>
+<p>固定动作，不深入：</p>
+<ol><li>打开 <code>07</code> 里的中文资讯源（机器之心 / 量子位），只看标题（3 分钟）</li><li>打开模型榜单，看前 5 名有没有变（2 分钟）</li><li>有值得记的，往 <code>04_学习记录</code> 写一行（2 分钟）</li><li><b>不点开长文、不追热点</b>（省下的 3 分钟就是胜利）</li></ol>
+<blockquote>这一条最容易失控。看到新模型发布就想研究，结果两小时没了。<b>10 分钟就是 10 分钟。</b></blockquote>
+<hr>
+<h2>五、旧资料库怎么处理</h2>
+<p>你桌面 <code>AI-Agents学习\资料库\</code> 里有 8 月采集的 276 个链接（bili 151 / github 81 / xhs 44）。</p>
+<p><b>处理原则</b>：</p>
+<ul><li>它是<b>广度池</b>，不是学习清单。想找某类视频时去搜，不要顺着刷</li><li>新采的四份清单是<b>验证过的精读清单</b>，优先用这个</li><li>两份都提到同一个资源时，以新清单为准（新清单是逐条访问验证过的）</li></ul>
+<hr>
+<h2>六、不要做的事（这条最重要）</h2>
+<ol><li><b>不要同时开两个理论课</b>。李博杰的书 + 李宏毅的课 + CS224N 一起上，三个都会停在第 3 讲</li><li><b>不要在没有项目的情况下学框架</b>。LangGraph 学完没有场景，一周就忘</li><li><b>不要追每一个新模型</b>。你需要的模型能力认知是「哪些任务能做到什么水平」，不是「每个版本号」</li><li><b>不要在周四的 60 分钟里看视频</b>。视频留到周末，周四用来读和写</li></ol>
+<hr>
+<h2>七、判断自己有没有进步的三个信号</h2>
+<p>不是「看了多少」，是这三条：</p>
+<ol><li>能不能用<b>非技术语言</b>向一个完全不懂的人解释清楚「Agent 为什么会调错工具」</li><li>拿到一个新 AI 产品，能不能在 10 分钟内说出它的<b>能力边界在哪、为什么</b></li><li>你的项目里，有没有一处是「因为理解了原理才这么设计」的——而不是看到别人这么做就跟着做</li></ol>
+<p>三条都能做到，AI PM 的门就进去了。</p>
+</div></body></html>

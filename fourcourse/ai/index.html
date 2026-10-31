@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 学习课程 · 毛毛的课程中心</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#fafafa;color:#1a1a2e;font-family:"Microsoft YaHei","PingFang SC",-apple-system,sans-serif;line-height:1.75;padding:20px 15px 60px}
+.wrap{max-width:820px;margin:0 auto}
+h1{color:#0f3460;font-size:24px;padding-bottom:12px;margin-bottom:8px;border-bottom:3px solid #e94560}
+.meta{font-size:13px;color:#6b7280;margin-bottom:20px}
+.navbar{background:#16213e;color:#fff;padding:10px 16px;border-radius:8px;margin-bottom:18px;font-size:13.5px}
+.navbar a{color:#ffd54f;text-decoration:none}
+.tip{background:#e8f5e9;border-left:4px solid #43a047;padding:12px 16px;margin:14px 0;border-radius:0 6px 6px 0;font-size:14.5px}
+.items{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 1px 6px rgba(0,0,0,.06);margin:16px 0}
+.items a{display:block;padding:15px 18px;border-bottom:1px solid #eef0f5;text-decoration:none;color:#1a1a2e}
+.items a:last-child{border-bottom:none}
+.items a:hover{background:#f0f4ff}
+.items b{color:#0f3460;font-size:15.5px}
+.items .d{font-size:12.5px;color:#6b7280;margin-top:4px;line-height:1.6}
+.badge{display:inline-block;background:#e94560;color:#fff;font-size:11px;padding:1px 8px;border-radius:99px;margin-left:8px;vertical-align:2px}
+.sec{font-size:16px;font-weight:700;color:#0f3460;margin:24px 0 8px;padding-left:10px;border-left:4px solid #e94560}
+.ref{margin-top:30px;padding-top:16px;border-top:1px solid #ddd;font-size:13px;color:#6b7280}
+.ref a{color:#0a5dc2}
+@media(max-width:600px){body{padding:12px 10px 50px}h1{font-size:21px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="navbar"><a href="../index.html">← 每日课程</a>　|　<a href="../resources/index.html">📚 学习资料库</a></div>
+
+<h1>AI 学习课程</h1>
+<div class="meta">主线：李博杰《AI Agents 设计原理》（307 页 / 10 章）· 每课一个 HTML，含交互自测</div>
+
+<div class="tip">💡 每课点进去都能直接做自测题——点选项立刻判对错并给解析。手机看也行，表格可以左右滑。</div>
+
+<div class="sec">概念与原理（第 1-3 章打底）</div>
+<div class="items">
+<a href="./0010-AI概念扫盲与原理.html">
+  <b>0010 · AI 概念扫盲 + 原理讲解 <span class="badge">先看这个</span></b>
+  <div class="d">把 AI/ML/DL/LLM/Agent 的边界划清；讲透 LLM 在算什么、为什么幻觉是必然、上下文为什么有限、Agent 为什么能工作和为什么会失败。含一张因果图串起全书十章。</div>
+</a>
+</div>
+
+<div class="sec">工具设计（第 4 章）</div>
+<div class="items">
+<a href="./0011-工具设计.html">
+  <b>0011 · 工具设计：给 Agent 装上手和眼</b>
+  <div class="d">五类工具分类（感知/执行/协作/事件触发/用户沟通）；工具描述的艺术（加示例准确率 72%→90%）；MCP 生态与三个挑战（5 个服务器占 5.5 万 token）；四类安全风险与「致命三要素」。</div>
+</a>
+<a href="./0012-事件驱动与工具发现.html">
+  <b>0012 · 事件驱动与工具发现：让 Agent 自己醒来</b>
+  <div class="d">轮询 vs 事件驱动；五种事件源（消息/定时器/Webhook/数据变更/其他 Agent）；事件处理循环五步与最难的上下文恢复（wake+restore）；事件队列的削峰解耦；工具按需检索为什么给得更少反而更准（49%→74%）；异步动作的自动/人工两级红线；5 道自测。</div>
+</a>
+</div>
+
+<div class="sec">项目实战支线（做项目时配套看）</div>
+<div class="items">
+<a href="./0201-%E6%95%B0%E6%8D%AE%E4%B8%8E%E6%A0%87%E6%B3%A8.html">
+  <b>0201 · 数据与标注：模型的第一课其实是你教的 <span class="badge">标注日配套</span></b>
+  <div class="d">用「网球对照视频」的直觉讲透监督学习：模型从「输入→标签」配对里自己总结规律；Garbage In Garbage Out——拿不准硬标就是主动教坏模型；标注前先定标签清单/判断标准/待定规则；附 pandas 五个救命操作（查数量、查漏标）和 30 秒交互自测。</div>
+</a>
+<a href="./0202-%E6%95%B0%E6%8D%AE%E8%B4%A8%E9%87%8F%E4%B8%8E%E8%AE%AD%E7%BB%83%E6%9C%BA%E5%88%B6.html">
+  <b>0202 · 数据质量与训练机制（加长版） <span class="badge">核心机制</span></b>
+  <div class="d">录像+表格为什么是黄金配置；监督/无监督/强化三种学习；loss 打分 + 梯度下降改错的完整机制（学习率/batch size）；两层标注规范（含"问题部位"金矿字段）；训练/验证/测试三分与按学生切分防泄漏；双人抽检与四大坑（不平衡/泄漏/漂移/硬标）；pandas 表×录像 merge 实操；5 道自测。</div>
+</a>
+</div>
+
+<div class="sec">接下来会出的</div>
+<div class="items">
+<a href="#" onclick="return false" style="cursor:default;opacity:.6">
+  <b>0013 · 多 Agent 协作与记忆管理</b>
+  <div class="d">多个 Agent 怎么分工、怎么共享状态、怎么不打架；记忆的存储、检索与遗忘。（待生成）</div>
+</a>
+</div>
+
+<div class="ref">
+<b>完整课程库</b>：本地 <code>Desktop\AI-Agents学习\lessons\</code>（0001-0011 全在）<br>
+<b>理论资源</b>：<a href="../resources/04-AI基础与理论.html">04-AI基础与理论</a>　·　<b>产品实战</b>：<a href="../resources/06-AI产品实战.html">06-AI产品实战</a><br>
+<b>学习节奏</b>：<a href="../resources/AI学习线_使用指南.html">AI学习线_使用指南</a>
+</div>
+
+</div>
+</body>
+</html>
