@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>财务管理 · 货币时间价值：四种年金 · 2026-11-04</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#fafafa;color:#1a1a2e;font-family:"Microsoft YaHei","PingFang SC",-apple-system,sans-serif;
+     line-height:1.8;padding:22px 16px 60px}
+.wrap{max-width:820px;margin:0 auto}
+h1{color:#0f3460;font-size:25px;line-height:1.4;padding-bottom:12px;margin-bottom:6px;border-bottom:3px solid #e94560}
+.meta{font-size:13px;color:#6b7280;margin:10px 0 22px}
+.meta b{color:#0f3460}
+h2{color:#0f3460;font-size:19px;margin:30px 0 12px;padding-left:11px;border-left:4px solid #e94560}
+h3{color:#16213e;font-size:16px;margin:20px 0 8px}
+p{margin:9px 0}
+ul,ol{margin:9px 0 9px 24px}
+li{margin:5px 0}
+.formula{background:#fff;border-left:4px solid #e94560;padding:14px 18px;margin:14px 0;
+         font-size:17px;font-weight:600;color:#16213e;border-radius:0 6px 6px 0;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.warn{background:#fff8e1;border-left:4px solid #f9a825;padding:12px 16px;margin:13px 0;border-radius:0 6px 6px 0;font-size:14.5px}
+.tip{background:#e8f5e9;border-left:4px solid #43a047;padding:12px 16px;margin:13px 0;border-radius:0 6px 6px 0;font-size:14.5px}
+.example{background:#e3f2fd;border-left:4px solid #1976d2;padding:12px 16px;margin:13px 0;border-radius:0 6px 6px 0;font-size:14.5px}
+.story{background:#16213e;color:#e8eaf6;padding:16px 20px;margin:16px 0;border-radius:10px}
+.story b{color:#ffd54f}
+.quiz{border:2px solid #0f3460;border-radius:10px;padding:15px 17px;margin:16px 0;background:#fff}
+.quiz h3{margin-top:0;color:#0f3460;font-size:15.5px}
+.options{display:grid;gap:8px;margin-top:10px}
+.options button{text-align:left;padding:10px 14px;border:1.5px solid #d5d8e0;background:#fbfcfe;border-radius:8px;
+  cursor:pointer;font-size:14.5px;font-family:inherit;color:#1a1a2e;transition:.15s;line-height:1.6}
+.options button:hover{border-color:#0f3460;background:#f0f4ff}
+.options button.right{background:#d4edda;border-color:#43a047;font-weight:600}
+.options button.wrong{background:#fce4ec;border-color:#e94560}
+.fb{margin-top:10px;font-size:14px;line-height:1.7;min-height:1em}
+.checkin{background:#fff;border:1.5px dashed #0f3460;border-radius:10px;padding:15px 18px;margin:22px 0}
+.checkin label{display:block;margin:7px 0;font-size:14.5px;cursor:pointer}
+.checkin input{margin-right:8px;transform:scale(1.15)}
+.ref{margin-top:34px;padding-top:16px;border-top:1px solid #ddd;font-size:13px;color:#6b7280}
+.ref b{color:#0f3460}
+.tag{display:inline-block;background:#0f3460;color:#fff;font-size:12px;padding:2px 10px;border-radius:99px;margin-right:8px;vertical-align:2px}
+.navbar{background:#16213e;color:#fff;padding:10px 16px;border-radius:8px;margin-bottom:18px;font-size:13.5px}
+.navbar a{color:#ffd54f;text-decoration:none}
+.items{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 1px 6px rgba(0,0,0,.06)}
+.items a{display:block;padding:13px 18px;border-bottom:1px solid #eef0f5;text-decoration:none;color:#1a1a2e}
+.items a:last-child{border-bottom:none}
+.items a:hover{background:#f0f4ff}
+.items .d{font-size:12px;color:#6b7280}
+@media(max-width:600px){body{padding:14px 11px 50px}h1{font-size:21px}.wrap{max-width:100%}}
+</style></head><body><div class="wrap">
+<div class="navbar"><a href="./index.html">← 课程列表</a>　|　毛毛的四课学习中心</div>
+<h1><span class="tag">财务管理</span>货币时间价值：四种年金</h1>
+<div class="meta">第 <b>9</b> 周 · 周三 · 2026-11-04 · 建议 <b>60</b> 分钟</div>
+<div class="story">🧭 一句话定位：年金就是「等额、等间隔」的一串现金流——房贷月供、租金、养老金全是年金。四种年金的分歧只有一个：第一笔钱什么时候付。</div><h2>本节要掌握什么</h2><ul><li>普通年金（后付）：每期末收付，最常见</li><li>预付年金（先付）：每期初收付，比普通年金早一期</li><li>递延年金：前 m 期没有，从第 m+1 期开始</li><li>永续年金：无限期支付，只有现值没有终值</li><li>系数关系：预付 = 普通 ×(1+i)；递延要先折到开始支付的前一期再折回现在</li></ul><div class="formula">普通年金现值：P = A × [1−(1+i)⁻ⁿ]/i = A×(P/A,i,n)</div><div class="formula">普通年金终值：F = A × [(1+i)ⁿ−1]/i = A×(F/A,i,n)</div><div class="formula">预付年金现值 = A×(P/A,i,n)×(1+i)</div><div class="formula">永续年金现值：P = A / i</div><h2>推导 / 解题路径</h2><ol><li>① 画时间轴，标出每笔 A 落在期末还是期初</li><li>② 判断类型：期末=普通、期初=预付、前面有空档=递延、无限=永续</li><li>③ 普通年金直接查表；预付乘 (1+i)；递延先当普通年金折到首个 A 的前一期，再折回 0 点</li><li>④ 永续直接用 A/i，注意首笔是否已发生（若首笔在期初，要再乘 (1+i)）</li></ol><div class="example">📝 <b>例题</b><br>房贷 100 万，年利率 6%，20 年等额本息，每月还款多少？月利率 0.5%，期数 240。A = 1000000 / (P/A, 0.5%, 240) = 1000000 / 139.58 ≈ 7164 元/月。20 年总还款约 171.9 万，利息 71.9 万——这就是时间价值的真实代价。</div><div class="warn">⚠️ 预付年金千万别用「期数减 1、系数加 1」的口诀硬套而不理解。稳妥做法：先按普通年金算，再整体乘 (1+i)。</div><div class="tip">💡 永续年金 P=A/i 是很多估值模型的终点（比如股利贴现模型的永续增长版）。记住它，股票估值那一章会直接用。</div><h2>即时自测</h2><div class="quiz" id="q1"><h3>自测 1 · 每年末存 1000 元，年利率 5%，连存 3 年，第 3 年末的终值约为？</h3><div class="options"><button onclick="check(this)" data-ok="0" data-fb="❌ 忽略了利息。">3000 元</button><button onclick="check(this)" data-ok="1" data-fb="✅ 对。F = 1000×[(1.05)³−1]/0.05 = 1000×3.1525 = 3152.5。注意第 3 年末那笔 1000 没有利息。">3152.5 元</button><button onclick="check(this)" data-ok="0" data-fb="❌ 无依据。">3300 元</button><button onclick="check(this)" data-ok="0" data-fb="❌ 那是现值不是终值。">2861 元</button></div><div class="fb" id="fb-q1"></div></div><div class="quiz" id="q2"><h3>自测 2 · 永续年金每年末支付 500 元，折现率 8%，其现值为？</h3><div class="options"><button onclick="check(this)" data-ok="1" data-fb="✅ 对。P = A/i = 500/0.08 = 6250 元。">6250 元</button><button onclick="check(this)" data-ok="0" data-fb="❌ 那是 500/0.125，折现率用错。">4000 元</button><button onclick="check(this)" data-ok="0" data-fb="❌ 折现后收敛，不是无穷。">无穷大</button><button onclick="check(this)" data-ok="0" data-fb="❌ 那是单期金额。">500 元</button></div><div class="fb" id="fb-q2"></div></div>
+
+<div class="checkin"><b>今日打卡</b>
+<label><input type="checkbox"> ① 合上书回想 8 分钟（默写核心公式）</label>
+<label><input type="checkbox"> ② 读完本节 30 分钟（边看边画，不抄书）</label>
+<label><input type="checkbox"> ③ 自测题做完，错题回看</label>
+<label><input type="checkbox"> ④ 写一行：学到哪 / 卡在哪</label>
+</div>
+<div class="ref">
+<b>教材对应</b>：第2章 §3-4 p23-33<br>
+<b>下一节预告</b>：F04 风险与收益（第3章）<br>
+<b>云端生成</b>：阿里云 47.109.133.90 · 每天 08:00
+</div>
+</div><script>
+function check(btn){
+  var q=btn.closest('.quiz'), ok=btn.getAttribute('data-ok')==='1', fb=q.querySelector('.fb');
+  q.querySelectorAll('.options button').forEach(function(b){b.className='';});
+  btn.className = ok?'right':'wrong';
+  fb.textContent = btn.getAttribute('data-fb');
+  fb.style.color = ok?'#2e7d32':'#e94560';
+}
+</script></body></html>

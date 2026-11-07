@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI自学课 · 第2课：数据质量与训练机制</title>
+<style>
+  :root{--bg:#f6f7fb;--card:#fff;--ink:#1f2430;--sub:#6b7280;--brand:#4f6ef7;--accent:#10b981;--gold:#d97706;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--ink);line-height:1.75;padding:16px;padding-bottom:60px;}
+  .wrap{max-width:680px;margin:0 auto;}
+  .hero{background:linear-gradient(135deg,#d97706,#b45309);color:#fff;border-radius:18px;padding:22px 20px;margin-bottom:16px;}
+  .hero .tag{font-size:12px;opacity:.85;letter-spacing:2px;}
+  .hero h1{font-size:21px;margin:6px 0 4px;}
+  .hero p{font-size:13px;opacity:.9;}
+  .timer{display:inline-block;background:rgba(255,255,255,.2);border-radius:99px;padding:3px 12px;font-size:12px;margin-top:8px;}
+  .card{background:var(--card);border-radius:16px;padding:18px;margin-bottom:14px;box-shadow:0 2px 10px rgba(30,40,80,.05);}
+  h2{font-size:17px;margin-bottom:10px;display:flex;align-items:center;gap:8px;}
+  h2 .n{background:var(--brand);color:#fff;width:26px;height:26px;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;font-size:14px;flex:none;}
+  h3{font-size:15px;margin:14px 0 6px;color:#374151;}
+  p{font-size:14.5px;margin-bottom:8px;}
+  ul,ol{padding-left:22px;font-size:14.5px;}
+  li{margin-bottom:6px;}
+  code{background:#f1f3f9;border-radius:5px;padding:2px 6px;font-size:13px;color:#7c3aed;font-family:"SF Mono",Consolas,monospace;}
+  pre{background:#1e2433;color:#e6e9f2;border-radius:12px;padding:14px;font-size:12.5px;overflow-x:auto;line-height:1.65;margin:10px 0;}
+  pre .c{color:#7d8aa3;}
+  pre .k{color:#7dd3fc;}
+  pre .s{color:#86efac;}
+  pre .y{color:#fbbf24;}
+  .key{background:#fffbeb;border:1px solid #fcd34d;border-radius:10px;padding:12px 14px;font-size:14px;margin:10px 0;}
+  .key b{color:#b45309;}
+  .good{background:#ecfdf5;border:1px solid #a7f3d0;border-radius:10px;padding:12px 14px;font-size:14px;margin:10px 0;}
+  .good b{color:#047857;}
+  table{width:100%;border-collapse:collapse;font-size:13px;margin:10px 0;display:block;overflow-x:auto;}
+  th,td{border:1px solid #e5e7eb;padding:7px 9px;text-align:left;white-space:nowrap;}
+  th{background:#f9fafb;}
+  .qbox{border:1.5px solid #e5e7eb;border-radius:10px;padding:12px;margin:10px 0;}
+  .qbox .opt{display:block;padding:8px 10px;border-radius:8px;margin:6px 0;font-size:14px;cursor:pointer;}
+  .qbox .opt:hover{background:#f3f4f6;}
+  .qbox .ans{display:none;margin-top:8px;background:#ecfdf5;border-radius:8px;padding:10px;font-size:13.5px;color:#065f46;}
+  .qbox .ans.show{display:block;}
+  .footer{text-align:center;color:var(--sub);font-size:12px;margin-top:18px;}
+  .toc{background:#fff;border-radius:14px;padding:14px 18px;margin-bottom:14px;font-size:13.5px;box-shadow:0 2px 10px rgba(30,40,80,.05);}
+  .toc a{color:var(--brand);text-decoration:none;}
+  .toc b{color:#374151;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <div class="tag">AI 自学课 · 项目驱动 · 加长版</div>
+    <h1>第 2 课：数据质量与训练机制</h1>
+    <p>你有「录像 + 表格」双记录——先搞懂这套数据为什么强，再搞懂模型怎么吃它</p>
+    <span class="timer">⏱ 40-50 分钟 · 7 个模块 · 5 道自测</span>
+  </div>
+
+  <div class="toc">
+    <b>目录：</b><br>
+    ① 你的数据强在哪　② 三种学习方式　③ 模型怎么"改错"（loss 与梯度下降）<br>
+    ④ 标注规范怎么定　⑤ 数据三分：训练/验证/测试　⑥ 质量控制与四大坑　⑦ pandas 进阶
+  </div>
+
+  <div class="card">
+    <h2><span class="n">1</span>你的数据为什么是"黄金配置"</h2>
+    <p>你说采集时有<b>完整录像</b>和<b>表格记录</b>。拆开看：</p>
+    <table>
+      <tr><th>记录</th><th>对应训练概念</th><th>作用</th></tr>
+      <tr><td>录像（动作画面）</td><td>输入 X</td><td>模型"看到"的原始动作</td></tr>
+      <tr><td>表格（教练评价/参数）</td><td>标签 y</td><td>标准答案：动作名称、是否标准、问题点</td></tr>
+    </table>
+    <div class="good">🌟 <b>这就是天然配对好的监督学习数据集。</b>很多团队要先拍视频、再花钱请人一条条看视频补标签，对齐错漏百出；而你的录像和表格是<b>现场同步产生</b>的——谁在什么时间做了什么动作、教练当场怎么评，一一对应，错配概率极低。再加上教练本人就是标注者，<b>"出题人"和"标准答案"是同一个专业的人</b>，这是数据质量里最贵的一条。</div>
+    <h3>标注前唯一要核对的事：</h3>
+    <ul>
+      <li>录像文件名 ↔ 表格行，用统一编号对应（如 <code>20261025_S03_正手_第2组</code>）</li>
+      <li>表格里的时间戳/序号和视频能对上，避免张冠李戴</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">2</span>三种学习方式：你的数据属于哪种</h2>
+    <table>
+      <tr><th>方式</th><th>数据长啥样</th><th>类比</th></tr>
+      <tr><td><b>监督学习</b></td><td>X + 标签 y 配对</td><td>做带答案的习题集</td></tr>
+      <tr><td>无监督学习</td><td>只有 X，没有答案</td><td>给你一堆球自己归类</td></tr>
+      <tr><td>强化学习</td><td>动作 → 奖励/惩罚</td><td>训狗：做对给零食</td></tr>
+    </table>
+    <p><b>你的体育项目是监督学习</b>（视频/问题 → 教练标签）。
+    以后做"模型对齐"（RLHF）时才会碰到强化学习——那是给模型的回答打分，不是现在的事。</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">3</span>模型怎么"改错"：loss 与梯度下降</h2>
+    <p>这是最核心的机制，听懂它你就超过一半"只会调包"的人。</p>
+    <h3>第一步：打分（loss，损失函数）</h3>
+    <p>模型先瞎猜一个答案，和你的标签对比，<b>差得越远，扣分越多</b>，这个扣分就是 loss。</p>
+    <div class="key">🎯 举例：标签是「标准正手」，模型第一次预测「标准正手 30%、错误挥拍 70%」——明显猜错，loss 很大；训练就是要让这个分数一路变小。</div>
+    <h3>第二步：改错（梯度下降）</h3>
+    <p>模型接着问自己一个问题：<b>"我内部这几十亿个小旋钮，各自往哪个方向拧、拧多少，能让扣分变少一点？"</b>——数学上用<b>梯度</b>算出每个旋钮的调整方向，然后全部微调一点点。</p>
+    <ul>
+      <li>把 loss 想成<b>山谷的高度</b>，模型蒙眼站在山坡上</li>
+      <li>梯度 = 用脚感受"哪边是下坡"</li>
+      <li>每走一小步（一个 batch），高度降一点</li>
+      <li>走成千上万步，最终落到谷底 → loss 很低 → 预测很准</li>
+    </ul>
+    <p>两个你以后一定会碰到的参数，现在先混个眼熟：</p>
+    <table>
+      <tr><th>参数</th><th>意思</th><th>设太大/太小</th></tr>
+      <tr><td>学习率 lr</td><td>每步迈多大</td><td>太大→跨过谷底乱蹦；太小→爬到天亮</td></tr>
+      <tr><td>batch size</td><td>每步看多少条数据</td><td>影响稳不稳、显存够不够</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">4</span>标注规范怎么定（今晚直接照做）</h2>
+    <p>建议标签分两层，别用一个"好不好"糊弄：</p>
+    <table>
+      <tr><th>层级</th><th>字段示例</th><th>取值</th></tr>
+      <tr><td>动作分类</td><td>动作类型</td><td>正手/反手/发球/截击/其他</td></tr>
+      <tr><td rowspan="3">质量评价</td><td>是否标准</td><td>标准/需纠正/待定</td></tr>
+      <tr><td>问题部位</td><td>握拍/引拍/击球点/随挥/步法</td></tr>
+      <tr><td>纠正建议</td><td>一句话（可引用教练原话）</td></tr>
+    </table>
+    <div class="key">💡 <b>"问题部位"这个字段是金矿。</b>以后模型不只会说"你错了"，还能说"你的击球点偏后了"——这才是教练级回答。能在表格里多记一个具体问题点，就多记一个。</div>
+    <p>规范文档里每个标签配 <b>1 个正例 + 1 个容易混的反例</b>（比如"截击 vs 网前高压"怎么分），贴在标注文档最上面。</p>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">5</span>数据三分：千万别全喂给模型</h2>
+    <p>标注好的数据要切成三份：</p>
+    <table>
+      <tr><th>数据集</th><th>比例</th><th>用途</th></tr>
+      <tr><td>训练集</td><td>~60-70%</td><td>模型上课用的习题</td></tr>
+      <tr><td>验证集</td><td>~15-20%</td><td>调参用的模拟考</td></tr>
+      <tr><td>测试集</td><td>~15-20%</td><td>最终"高考"，只能用一次</td></tr>
+    </table>
+    <p>为什么？如果模型<b>考试题目全是它做过的题</b>，背都能背满分，但换个新学生就露馅——这叫<b>过拟合</b>。留出没见过的数据，才知道它是真学会了还是死记硬背。</p>
+    <div class="good">✅ 实操：按「学生」分组切分，而不是按条随机切——同一个学生的动作别同时出现在训练集和测试集，不然模型可能只是"记住了这个人的姿势"。</div>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">6</span>质量控制与四大常见坑</h2>
+    <h3>质量控制（数据量大时）：</h3>
+    <ul>
+      <li><b>双人抽检</b>：抽 10% 让第二个人盲标，看两人标得一不一致；不一致的条目拿出来讨论，统一口径</li>
+      <li><b>先标 30 条试标</b>：全员对齐标准后再批量开搞，别标了 300 条才发现标签理解不一样</li>
+    </ul>
+    <h3>四个坑：</h3>
+    <table>
+      <tr><th>坑</th><th>表现</th><th>对策</th></tr>
+      <tr><td>类别不平衡</td><td>正手 500 条、截击 20 条</td><td>少的类补采，或训练时加权</td></tr>
+      <tr><td>数据泄漏</td><td>测试信息混进训练</td><td>按学生切分（见上）</td></tr>
+      <tr><td>标注漂移</td><td>标到后面标准松了</td><td>每标 50 条回看前 10 条</td></tr>
+      <tr><td>模糊硬标</td><td>拿不准也强行选</td><td>一律"待定"，找教练确认</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">7</span>pandas 进阶：表格 × 录像联动</h2>
+    <p>你的场景一定用得上：把录像清单和评价表格按编号合并、检查谁没有对应文件。</p>
+<pre><span class="k">import</span> pandas <span class="k">as</span> pd
+
+tab = pd.read_csv(<span class="s">"教练评价表.csv"</span>)
+vid = pd.read_csv(<span class="s">"录像清单.csv"</span>)
+
+<span class="c"># 1. 两表按编号合并（录像 ↔ 评价）</span>
+df = tab.merge(vid, on=<span class="s">"编号"</span>, how=<span class="s">"outer"</span>, indicator=<span class="k">True</span>)
+
+<span class="c"># 2. 查问题：有评价没录像？有录像没评价？</span>
+df[df[<span class="s">"_merge"</span>] != <span class="s">"both"</span>]
+
+<span class="c"># 3. 各类动作数量（顺便看类别平衡）</span>
+df[<span class="s">"动作类型"</span>].value_counts()
+
+<span class="c"># 4. 只保留"标准/需纠正"，排除待定</span>
+clean = df[df[<span class="s">"是否标准"</span>].isin([<span class="s">"标准"</span>, <span class="s">"需纠正"</span>])]
+
+<span class="c"># 5. 按学生分组切训练/测试（简单示意：列出学生名单再分）</span>
+students = clean[<span class="s">"学生ID"</span>].unique()
+<span class="y">print</span>(<span class="s">f"共 {len(students)} 名学生"</span>)
+
+clean.to_csv(<span class="s">"数据集_已对齐.csv"</span>, index=<span class="k">False</span>)</pre>
+  </div>
+
+  <div class="card">
+    <h2>📝 自测 5 连（点选项看解析）</h2>
+
+    <div class="qbox">
+      <b>Q1：训练中 loss 一直下降，说明模型在干嘛？</b>
+      <span class="opt" onclick="this.parentNode.querySelector('.ans').classList.remove('show')">A. 越猜越离谱</span>
+      <span class="opt" onclick="this.parentNode.querySelector('.ans').classList.add('show')">B. 预测和标签差距越来越小</span>
+      <div class="ans">✅ B。loss = 预测与标准答案的差距，下降就是"改错"见效了。</div>
+    </div>
+
+    <div class="qbox">
+      <b>Q2：学习率设得太大，最可能发生什么？</b>
+      <span class="opt" onclick="this.parentNode.querySelector('.ans').classList.add('show')">A. 在谷底两侧反复横跳，落不下去</span>
+      <span class="opt" onclick="this.parentNode.querySelector('.ans').classList.remove('show')">B. 走得太慢，训练时间变长</span>
+      <div class="ans">✅ A。步子太大直接跨过谷底，loss 反而降不下来甚至震荡。</div>
+    </div>
+
+    <div class="qbox">
+      <b>Q3：为什么要留测试集不给模型训练？</b>
+      <span class="opt" onclick="this.parentNode.querySelector('.ans').classList.remove('show')">A. 节省数据</span>
+      <span class="opt" onclick="this.parentNode.querySelector('.ans').classList.add('show')">B. 检验它是真学会还是背答案（防过拟合）</span>
+      <div class="ans">✅ B。做过的题考满分说明不了啥，没见过的题才能检验真本事。</div>
+    </div>
+
+    <div class="qbox">
+      <b>Q4：正手 500 条、截击只有 20 条，这叫什么问题？</b>
+      <span class="opt" onclick="this.parentNode.querySelector('.ans').classList.add('show')">A. 类别不平衡</span>
+      <span class="opt" onclick="this.parentNode.querySelector('.ans').classList.remove('show')">B. 数据泄漏</span>
+      <div class="ans">✅ A。模型见太少截击，学到的截击判断会很弱，需补采或加权。</div>
+    </div>
+
+    <div class="qbox">
+      <b>Q5：同一个学生的动作既在训练集又在测试集，风险是？</b>
+      <span class="opt" onclick="this.parentNode.querySelector('.ans').classList.add('show')">A. 模型可能记住这个人的姿势，分数虚高（数据泄漏）</span>
+      <span class="opt" onclick="this.parentNode.querySelector('.ans').classList.remove('show')">B. 没有任何风险</span>
+      <div class="ans">✅ A。所以要按「学生」分组切分，而不是按条随机切。</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>🎯 今晚行动清单</h2>
+    <ol>
+      <li>统一录像 ↔ 表格的编号，跑第 7 节的 merge 代码查漏配</li>
+      <li>定两层标签：动作分类 + 质量评价（含"问题部位"）</li>
+      <li>先试标 30 条，对齐口径再批量</li>
+      <li>拿不准一律"待定"</li>
+      <li>标完按学生分组，规划训练/验证/测试</li>
+    </ol>
+  </div>
+
+  <div class="footer">毛毛的 AI 自学课 · 第 2 课 · Hermes 定制 · 项目实战支线 0202</div>
+</div>
+</body>
+</html>

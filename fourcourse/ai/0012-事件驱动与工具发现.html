@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>事件驱动与工具发现 · 第 12 课</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#fafafa;color:#1a1a2e;font-family:"Microsoft YaHei","SimHei",-apple-system,sans-serif;line-height:1.8;padding:22px 16px 60px}
+.wrap{max-width:820px;margin:0 auto}
+h1{color:#0f3460;font-size:25px;line-height:1.4;padding-bottom:12px;margin-bottom:6px;border-bottom:3px solid #e94560}
+.meta{font-size:13px;color:#6b7280;margin:10px 0 22px}
+h2{color:#0f3460;font-size:20px;margin:34px 0 14px;padding-left:11px;border-left:4px solid #e94560}
+h3{color:#16213e;font-size:16.5px;margin:22px 0 9px}
+p{margin:9px 0}
+ul,ol{margin:9px 0 9px 24px}
+li{margin:6px 0}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13.5px;background:#fff}
+th{background:#0f3460;color:#fff;padding:9px 11px;text-align:left;font-weight:600}
+td{padding:8px 11px;border-bottom:1px solid #e8e8f0;vertical-align:top}
+tr:last-child td{border-bottom:none}
+.formula{background:#fff;border-left:4px solid #e94560;padding:14px 18px;margin:14px 0;font-size:16px;font-weight:600;color:#16213e;border-radius:0 6px 6px 0;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.warn{background:#fff8e1;border-left:4px solid #f9a825;padding:12px 16px;margin:13px 0;border-radius:0 6px 6px 0;font-size:14.5px}
+.tip{background:#e8f5e9;border-left:4px solid #43a047;padding:12px 16px;margin:13px 0;border-radius:0 6px 6px 0;font-size:14.5px}
+.example{background:#e3f2fd;border-left:4px solid #1976d2;padding:12px 16px;margin:13px 0;border-radius:0 6px 6px 0;font-size:14.5px}
+.story{background:#16213e;color:#e8eaf6;padding:16px 20px;margin:16px 0;border-radius:10px}
+.story b{color:#ffd54f}
+code{background:#f0f2f8;padding:1px 5px;border-radius:4px;font-size:13px}
+pre{background:#16213e;color:#e8eaf6;padding:13px 16px;border-radius:8px;overflow-x:auto;margin:13px 0;font-size:13px;line-height:1.6}
+.quiz{border:2px solid #0f3460;border-radius:10px;padding:15px 17px;margin:16px 0;background:#fff}
+.quiz h3{margin-top:0;color:#0f3460;font-size:15.5px}
+.options{display:grid;gap:8px;margin-top:10px}
+.options button{text-align:left;padding:10px 14px;border:1.5px solid #d5d8e0;background:#fbfcfe;border-radius:8px;cursor:pointer;font-size:14.5px;font-family:inherit;color:#1a1a2e;transition:.15s;line-height:1.6}
+.options button:hover{border-color:#0f3460;background:#f0f4ff}
+.options button.right{background:#d4edda;border-color:#43a047;font-weight:600}
+.options button.wrong{background:#fce4ec;border-color:#e94560}
+.fb{margin-top:10px;font-size:14px;line-height:1.7;min-height:1em}
+.checkin{background:#fff;border:1.5px dashed #0f3460;border-radius:10px;padding:15px 18px;margin:22px 0}
+.checkin label{display:block;margin:7px 0;font-size:14.5px;cursor:pointer}
+.checkin input{margin-right:8px;transform:scale(1.15)}
+.ref{margin-top:34px;padding-top:16px;border-top:1px solid #ddd;font-size:13px;color:#6b7280}
+.tag{display:inline-block;background:#0f3460;color:#fff;font-size:12px;padding:2px 10px;border-radius:99px;margin-right:8px;vertical-align2px}
+.chain{background:#f5f7fb;border:1px solid #e0e4ee;border-radius:8px;padding:12px 16px;margin:12px 0;font-size:14px;line-height:2}
+.chain b{color:#0f3460}
+@media(max-width:600px){body{padding:14px 11px 50px}h1{font-size:21px}table{font-size:12.5px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1><span class="tag">AI 第 12 课</span>事件驱动与工具发现：让 Agent 自己醒来</h1>
+<div class="meta">2026-10-31 · 对应原书 <b>第 4 章 §4.7-4.8（p128-140）</b> · 用时 60-75 分钟 · 前置：0011 工具设计</div>
+
+<div class="story">
+🧭 <b>你其实已经天天在用这一课的东西了</b>：
+<br><br>
+· 每天 7:30，课程卡片自动出现在你手机上——<b>没有人发消息，是 Agent 被「时间」叫醒的</b>。
+<br>
+· 你发一句话，我回一句话——这是被「消息」叫醒。
+<br><br>
+<b>事件驱动回答的问题是：Agent 怎么在你不说话的时候，自己动起来。</b>
+</div>
+
+<h2>一、两种世界模型：拉 vs 推</h2>
+
+<table>
+<tr><th></th><th>请求-响应（同步）</th><th>事件驱动（异步）</th></tr>
+<tr><td><b>谁先动</b></td><td>用户先开口</td><td>外部事件先发生</td></tr>
+<tr><td><b>人的体感</b></td><td>问一句答一句</td><td>它自己找你</td></tr>
+<tr><td><b>生活类比</b></td><td>打电话（必须在线等）</td><td>收短信（可以稍后处理）</td></tr>
+<tr><td><b>技术类比</b></td><td>你每隔 5 分钟打开外卖 App 看骑手到哪了</td><td>骑手到楼下，App 推一条通知给你</td></tr>
+</table>
+
+<div class="warn">⚠️ 注意上面技术类比里那个蠢办法——它叫 <b>轮询（polling）</b>：每隔一会儿主动去问一次。<br>
+轮询的问题：问早了白问（费资源），问晚了迟到（信息慢）。绝大多数轮询的请求里，答案都是"还没变化"。</div>
+
+<div class="formula">推模式的本质：没事的时候双方都安静；事情发生的那一刻，消息自动找上门</div>
+
+<h3>一个真实的对照</h3>
+<p>早期的网页聊天想知道"对方有没有回复"，只能让浏览器每隔几秒偷偷刷新一次（轮询），几千人在线时服务器大半的精力都在回答"没新消息"。改成 WebSocket/SSE 长连接（推模式）后，只有真有消息时才传数据，<b>服务器负担下降一个量级</b>。这不是新思想，是从"邮差每天挨家挨户敲门问你有没有信要寄"进化到"你有信时邮差才来"。</p>
+
+<h2>二、五种事件源：什么能叫醒 Agent</h2>
+
+<table>
+<tr><th>事件源</th><th>什么时候触发</th><th>你身边的例子</th></tr>
+<tr><td><b>用户消息</b></td><td>人发来文字/语音/图片</td><td>你现在跟我聊天</td></tr>
+<tr><td><b>定时器</b></td><td>到了预设时间 / Cron 表达式命中</td><td>每天 7:30 的课件推送</td></tr>
+<tr><td><b>Webhook</b></td><td>另一个系统通过 HTTP 主动回调</td><td>支付成功了，支付平台回调你的服务器</td></tr>
+<tr><td><b>文件/数据变更</b></td><td>某个文件被创建、修改、删除</td><td>数据表新增一行，自动触发分析</td></tr>
+<tr><td><b>其他 Agent 的消息</b></td><td>子任务完成、某个 Agent 发来结果</td><td>你委派出去的子 agent 干完活回来汇报</td></tr>
+</table>
+
+<div class="formula">事件的标准形状：事件类型 + 发生时间 + 相关数据（载荷）+ 唯一 ID</div>
+
+<div class="example">📝 看你每天 7:30 那条推送拆开长什么样：<br>
+· 事件类型：timer_fired（定时器命中）<br>
+· 时间：2026-10-31 07:30:00<br>
+· 载荷：今天星期几、该学哪科、章节和公式是什么<br>
+· 唯一 ID：保证这条事件不会被执行两遍（重启时尤其重要）</div>
+
+<h2>三、事件处理循环（这课的核心公式）</h2>
+
+<div class="chain">
+① 事件到达，进入<b>队列</b>排队<br>
+② 取出事件，<b>加载相关上下文</b>（历史记忆/用户画像/任务状态）<br>
+③ <b>决策</b>（要不要动？怎么动？调什么工具？）<br>
+④ <b>执行</b>（调工具 / 发消息 / 再产生新事件）<br>
+⑤ <b>记录状态</b>（标记完成，写回记忆）
+</div>
+
+<h3>3.1 最难的一步：上下文恢复</h3>
+<p>同步对话里，上下文就在眼前；但被定时器叫醒的 Agent，面对的是一个"没有对话进行中"的世界。它必须自己回答：</p>
+<ul>
+<li><b>我是谁</b>（当前是哪个 Agent/什么职责）</li>
+<li><b>我为什么被叫醒</b>（事件载荷说明了什么）</li>
+<li><b>我上次干到哪了</b>（从持久状态里恢复进度）</li>
+<li><b>该用谁的口吻、把结果送到哪里</b>（推送到哪个聊天/平台）</li>
+</ul>
+
+<div class="warn">⚠️ 这叫 <b>wake + restore（唤醒与恢复）</b>。判断一个异步 Agent 系统靠不靠谱，就看它重启或被重复叫醒时：会不会把同一件事干两遍、能不能从上次中断的地方接着走。</div>
+
+<h3>3.2 事件为什么要排队，不能直接处理</h3>
+<ul>
+<li><b>削峰</b>：100 个事件同时涌来，直接处理会把系统打趴；进了队列可以一个一个来</li>
+<li><b>解耦</b>：发事件的人不需要等处理结果，更不需要知道是谁处理</li>
+<li><b>可重试</b>：处理失败的事件可以重新排队，不会凭空丢失</li>
+<li><b>可审计</b>：队列里每条事件的进出都有记录，事后能复盘"那天早上到底发生了什么"</li>
+</ul>
+
+<h2>四、工具发现：工具太多时的"按需检索"</h2>
+
+<p>接上 0011 的"挑战二"：当工具从几十个变成几百个，把全部定义塞进上下文有三重灾难——<b>token 爆炸、模型选择困难、更新不同步</b>。</p>
+
+<div class="formula">解法：默认只给工具「名字索引」，需要时按任务检索相关工具的完整定义</div>
+
+<h3>4.1 工具发现的机制</h3>
+<div class="chain">
+① 每个工具有一段<b>嵌入向量</b>（它的名字+描述编码）<br>
+② 收到任务，把任务也编码成向量<br>
+③ 向量相似度排序，取 <b>top-k</b> 个最相关工具<br>
+④ 只把这几个工具的完整定义加载进上下文<br>
+⑤ 模型在这几个工具里做选择
+</div>
+
+<div class="formula">tool = top_k( embed(task), tool_embeddings )</div>
+
+<div class="tip">💡 这跟 0201/0202 里 RAG 检索知识是<b>同一套数学</b>——把"检索哪篇文档"换成"检索哪个工具"。检索层统一了：知识、记忆、工具，都可以按需召回。</div>
+
+<h3>4.2 原书数据</h3>
+<table>
+<tr><th>方式</th><th>工具使用准确率</th></tr>
+<tr><td>全部工具定义平铺（工具变多后）</td><td>约 49%（干扰项太多，选择反而崩）</td></tr>
+<tr><td>按需检索 + 只加载相关工具</td><td>约 74%</td></tr>
+</table>
+
+<div class="warn">⚠️ 反直觉点：<b>给模型的信息更少，结果反而更准。</b>因为决策质量不取决于选项总数，取决于"相关选项有多突出"。这跟人一样——菜单 200 道菜你反而不知道吃啥，给你 5 道合口味的，秒选。</div>
+
+<h3>4.3 事件驱动 × 工具发现怎么合体</h3>
+<p>这正是你想做的"本地 27B 接进 Hermes"的完整形状：</p>
+<div class="example">📝 一个真实链路：<br>
+1. 定时器叫醒（事件源=timer）<br>
+2. Agent 恢复上下文（今天该学哪科、你的进度）<br>
+3. 按任务检索工具——"生成课程"需要哪些？检索出 检索/写文件/发消息 三个，只加载这三个<br>
+4. 执行，把课程发到你微信<br>
+5. 如果本地模型没把握，再产生一个新事件："调用云端旗舰复核"<br>
+<b>每一步都是事件驱动，每一件工具都是按需出现，没有一样东西全程占着资源。</b></div>
+
+<h2>五、异步 Agent 真正能干的事</h2>
+
+<table>
+<tr><th>场景</th><th>事件链</th></tr>
+<tr><td><b>监控哨兵</b></td><td>定时跑检查 → 没变化就沉默（不打扰）→ 一变就产生事件 → 推送给你</td></tr>
+<tr><td><b>长任务跟进</b></td><td>子 agent 在后台跑 → 完成时发事件回来 → 主控汇总，而不是你盯着进度条等</td></tr>
+<tr><td><b>多 Agent 流水线</b></td><td>A 干完发事件给 B，B 干完给 C——像工厂传送带，每段只管自己那格</td></tr>
+<tr><td><b>条件触发</b></td><td>"如果明早下雪，提前 30 分钟叫我"——Agent 挂着监听天气，条件命中才醒</td></tr>
+</table>
+
+<div class="formula">同步 Agent 的价值是"响应快"；异步 Agent 的价值是"一直在，但只在该出现时出现"</div>
+
+<h2>六、三条安全红线（做产品必须知道）</h2>
+
+<ol>
+<li><b>权限最小化</b>：能自己醒来的 Agent 等于 7×24 持有能力——它的权限必须刚好够用，多一分都危险。尤其是"执行工具"，别让定时器触发的 Agent 直接有删除/付款权</li>
+<li><b>事件可去重、可追溯</b>：每条事件唯一 ID + 处理记录。防止"重启后重复执行"（比如重复推送、重复扣款）</li>
+<li><b>自动动作要分两级</b>：无害的（读、查、生成草稿）可以自动；不可逆的（发送给外部、删除、花钱、改动生产系统）必须留<b>人工确认点</b></li>
+</ol>
+
+<div class="warn">⚠️ 回忆你之前定的模型自进化三红线：<b>人工确认键、测试集把关、一键回滚</b>。这一课是同一套纪律在"异步"场景的翻版——Agent 越自主，确认和回滚的价值越高。</div>
+
+<div class="quiz">
+<h3>自测 1 · 「每隔几秒去问一次有没有新消息」这种模式叫什么？</h3>
+<div class="options">
+<button onclick="check(this)" data-ok="0" data-fb="❌ Webhook 是对方主动回调，不是你反复去问。">Webhook</button>
+<button onclick="check(this)" data-ok="1" data-fb="✅ 对。这叫轮询（polling）：周期性主动查询。代价是绝大多数查询都白跑一趟，问早了费资源、问晚了信息慢。推模式才是有事才找上门。">轮询 polling</button>
+<button onclick="check(this)" data-ok="0" data-fb="❌ 长连接是推模式的技术载体，不是这种反复查询模式。">长连接</button>
+<button onclick="check(this)" data-ok="0" data-fb="❌ 事件队列是缓冲事件用的。">事件队列</button>
+</div>
+<div class="fb"></div>
+</div>
+
+<div class="quiz">
+<h3>自测 2 · 定时器叫醒 Agent 后，最关键、也是最难的一步是什么？</h3>
+<div class="options">
+<button onclick="check(this)" data-ok="0" data-fb="❌ 执行动作是后面的事；眼前没有对话，它连自己是谁、上次干到哪都不知道。">立刻执行任务</button>
+<button onclick="check(this)" data-ok="0" data-fb="❌ 工具是按需加载的，不是第一步。">先把所有工具加载进来</button>
+<button onclick="check(this)" data-ok="1" data-fb="✅ 对。这叫 wake + restore：恢复「我是谁、为什么被叫醒、上次干到哪、结果送到哪」。判断系统靠不靠谱，就看重启或重复叫醒时会不会把事干两遍、能不能接着走。">上下文恢复（wake + restore）</button>
+<button onclick="check(this)" data-ok="0" data-fb="❌ 发消息是恢复并决策之后的动作。">先给用户发消息</button>
+</div>
+<div class="fb"></div>
+</div>
+
+<div class="quiz">
+<h3>自测 3 · 工具很多时，「按需检索只加载 top-k 相关工具」为什么反而更准？</h3>
+<div class="options">
+<button onclick="check(this)" data-ok="0" data-fb="❌ 检索本身不增加模型智力。">因为检索让模型变聪明了</button>
+<button onclick="check(this)" data-ok="1" data-fb="✅ 对。决策质量不取决于选项总数，取决于相关选项有多突出。全部平铺时干扰项太多（准确率约 49%）；只给几个相关的（约 74%）。给的信息更少，选择反而更准。">因为无关选项少了，相关工具更突出</button>
+<button onclick="check(this)" data-ok="0" data-fb="❌ token 确实省了，但准确率提升的原因是降低了干扰，不只是省 token。">只是因为省了 token</button>
+<button onclick="check(this)" data-ok="0" data-fb="❌ 加载速度与决策准确率不是一回事。">因为加载更快</button>
+</div>
+<div class="fb"></div>
+</div>
+
+<div class="quiz">
+<h3>自测 4 · 事件为什么要先进入「队列」再处理？</h3>
+<div class="options">
+<button onclick="check(this)" data-ok="0" data-fb="❌ 队列不是为了存数据，是为了系统稳定。">为了把事件存下来当数据库</button>
+<button onclick="check(this)" data-ok="1" data-fb="✅ 对。队列带来四样东西：削峰（事件洪峰时一个个处理不被打趴）、解耦（发事件的人不等结果）、可重试（失败重新排队不丢失）、可审计（进出都有记录）。">削峰、解耦、可重试、可审计</button>
+<button onclick="check(this)" data-ok="0" data-fb="❌ 队列处理通常更慢（要排队），不是为了提速。">为了让处理更快</button>
+<button onclick="check(this)" data-ok="0" data-fb="❌ 队列不需要用户参与。">为了让用户能挑选事件</button>
+</div>
+<div class="fb"></div>
+</div>
+
+<div class="quiz">
+<h3>自测 5 · 定时器触发的 Agent，下面哪个设计是对的？</h3>
+<div class="options">
+<button onclick="check(this)" data-ok="0" data-fb="❌ 无人在场时给它删除/付款权极其危险——异步 Agent 7×24 持有能力，权限必须最小。">给它完整权限，反正没人盯</button>
+<button onclick="check(this)" data-ok="1" data-fb="✅ 对。自动动作分两级：无害的（读、查、生成草稿）可自动；不可逆的（发送、删除、花钱、改生产系统）必须人工确认。配合事件去重和可追溯，才是安全的异步 Agent。">无害动作可自动，不可逆动作留人工确认点</button>
+<button onclick="check(this)" data-ok="0" data-fb="❌ 这会废掉事件驱动的意义，而且同步等待会让事件堆积。">所有动作都等用户在线再做</button>
+<button onclick="check(this)" data-ok="0" data-fb="❌ 重复执行是大忌（重复推送/扣款），必须靠唯一 ID 去重。">每重启一次就重新执行一遍以防万一</button>
+</div>
+<div class="fb"></div>
+</div>
+
+<h2>七、作业（这周做）</h2>
+
+<p>观察并记录你身边的一个异步系统，回答四个问题：</p>
+<ol>
+<li><b>事件源是什么</b>（定时器/Webhook/消息/数据变更）？</li>
+<li><b>它被叫醒后怎么恢复上下文</b>——它"记得"自己上次干到哪吗？</li>
+<li><b>它的动作分了自动/人工两级吗</b>——有没有不可逆动作被它自动执行了？</li>
+<li><b>它会不会重复执行</b>——如果系统重启，同一件事会不会发生两遍？</li>
+</ol>
+
+<div class="tip">💡 最方便的观察对象就是每天 7:30 的课程推送本身。再进一步：等你把本地 27B 接进系统，试着让它"挂着监听、条件命中才醒"——比如只在某个数据变化时才汇报，而不是定时刷一遍。</div>
+
+<h2>今日打卡</h2>
+<div class="checkin">
+<label><input type="checkbox"> 能分清轮询（拉）和事件驱动（推），说得出轮询的代价</label>
+<label><input type="checkbox"> 能说出五种事件源，以及事件的标准形状</label>
+<label><input type="checkbox"> 能背出事件处理循环五步，知道上下文恢复最难</label>
+<label><input type="checkbox"> 能解释工具发现为什么「给得更少反而更准」（49%→74%）</label>
+<label><input type="checkbox"> 能判断异步动作哪些可自动、哪些必须人工确认</label>
+</div>
+
+<div class="ref">
+<b>教材对应</b>：李博杰《AI Agents 设计原理》第 4 章 §4.7-4.8（p128-140）<br>
+<b>上一课</b>：0011 工具设计（五类工具 + MCP）<br>
+<b>下一课预告</b>：0013 多 Agent 协作与记忆管理——多个 Agent 怎么分工、怎么共享状态、怎么不打架
+</div>
+
+</div>
+<script>
+function check(btn){
+  var q=btn.closest('.quiz'), ok=btn.getAttribute('data-ok')==='1', fb=q.querySelector('.fb');
+  q.querySelectorAll('.options button').forEach(function(b){b.className='';});
+  btn.className = ok?'right':'wrong';
+  fb.textContent = btn.getAttribute('data-fb');
+  fb.style.color = ok?'#2e7d32':'#e94560';
+}
+</script>
+</body>
+</html>
