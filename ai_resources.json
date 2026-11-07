@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-23 07:00",
-  "total": 196,
+  "last_updated": "2026-11-08 07:00",
+  "total": 197,
   "resources": [
     {
       "title": "fighting41love/funNLP",
@@ -425,6 +425,14 @@
         "Agent",
         "工程哲学"
       ]
+    },
+    {
+      "title": "ngophatneknha/ai-engineering-hub",
+      "link": "https://github.com/ngophatneknha/ai-engineering-hub",
+      "source": "GitHub",
+      "type": "仓库",
+      "stars": 67,
+      "summary": "In-depth tutorials on LLMs, RAGs and real-world AI agent applications (Personal learning hub)"
     },
     {
       "title": "pen9un/art-prompt-system",
