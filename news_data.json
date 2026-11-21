@@ -1,0 +1,2182 @@
+{
+  "last_updated": "2026-11-21 14:28:05",
+  "total": 272,
+  "articles": [
+    {
+      "title": "智能体 AI 架构：当前挑战与未来机遇",
+      "link": "https://www.infoq.cn/article/TrWuo2vEZRl2xB2XXZNX?utm_source=rss&utm_medium=article",
+      "summary": "点击查看原文>",
+      "published": "2026-11-21T11:00:00+00:00",
+      "source": "InfoQ中文",
+      "category": "AI"
+    },
+    {
+      "title": "TaoDesign 的知识工程实践：从设计资产到 Agent 持续进化｜AICon北京",
+      "link": "https://www.infoq.cn/article/vhoobUFbLs2hUlTBA4HZ?utm_source=rss&utm_medium=article",
+      "summary": "点击查看原文>",
+      "published": "2026-11-21T10:00:00+00:00",
+      "source": "InfoQ中文",
+      "category": "AI"
+    },
+    {
+      "title": "Entire Git Forge：面向编码智能体重构 Git 协作方式",
+      "link": "https://www.infoq.cn/article/6swrOq5xUXwVqrREwJwc?utm_source=rss&utm_medium=article",
+      "summary": "点击查看原文>",
+      "published": "2026-11-21T10:00:00+00:00",
+      "source": "InfoQ中文",
+      "category": "AI"
+    },
+    {
+      "title": "不再“照顾”老软件：微软 Windows Server 2028 默认移除 32 位兼容层 WoW64",
+      "link": "https://www.ithome.com/1/030/357.htm",
+      "summary": "IT之家 11 月 21 日消息，科技媒体 Windows Central 昨日（11 月 20 日）发布博文，报道称在 Windows Server 2028 公开预览版中，微软默认移除了 32 位应用兼容层 WoW64，让服务器系统不再开箱即支持 32 位 Windows 应用。IT之家注：WoW64 全称为 Windows-on-Windows 64-bit，是微软 Windows 系统内置的兼容性，充当“兼容桥梁”的功能，目的是在 64 位 Windows 系统上运行传统 32 位程序。微软项目经理 Elden Christensen 表示，移除该 WoW64 兼容层，一方面可以降低服",
+      "published": "2026-11-21T06:13:23+00:00",
+      "source": "IT之家",
+      "category": "AI"
+    },
+    {
+      "title": "入门手机恐无缘：谷歌 3D Emoji“吃配置”，需安卓 17、内存 6GB、总存储 128GB",
+      "link": "https://www.ithome.com/1/030/356.htm",
+      "summary": "IT之家 11 月 21 日消息，根据谷歌最新更新的支持文档，谷歌为安卓 Noto 3D Emoji 表情符号设置了硬件门槛要求：安卓 17 及更高版本、至少 6GB 内存，并拥有 128GB 总存储及 10GB 可用空间。IT之家曾于今年 5 月报道，在 2026 年 Android Show I/O Edition 活动中，谷歌宣布重绘安卓系统全部约 4000 个 Emoji 标签，升级现有的扁平风格为 3D 设计，官方名称为 Noto 3D。谷歌强调，新版 3D 表情采用高分辨率位图字体（并非常见的矢量图形），表情能呈现更明显的立体层次、材质细节和更丰富的角色姿态会显得“更鲜活”，进一步",
+      "published": "2026-11-21T06:03:18+00:00",
+      "source": "IT之家",
+      "category": "AI"
+    },
+    {
+      "title": "4299 元华擎 X870E TaiChi 太极 OCF 主板发售：22+2+1 相供电，支持 10400MHz 内存超频",
+      "link": "https://www.ithome.com/1/030/355.htm",
+      "summary": "IT之家 11 月 21 日消息，华擎 X870E Taichi 太极 OCF 主板现已在京东上架开售，定价显示为 4299 元。京东华擎（ASRock）X870E TaiChi 太极 OCF 主板 DDR5 支持 AMD CPU 9800X3D/9850X3D（AMD X870E/Socket AM5)4299 元直达链接该主板采用 22+2+1 相供电设计，核心与 SOC 均采用 110A SPS 智能功率级，可独立监控每一相电源；搭配新一代 Dr. MOS，在增强超频能力的同时有效控制温度表现，可支持 R9 级处理器。在内存方面，该主板支持 10400 MHz 以上频率的 DDR5 内存",
+      "published": "2026-11-21T06:02:21+00:00",
+      "source": "IT之家",
+      "category": "AI"
+    },
+    {
+      "title": "Staff gagging clauses lifted ahead of probe into culture at data watchdog",
+      "link": "https://www.bbc.co.uk/news/articles/cwdr1xyzr5lmo?at_medium=RSS&at_campaign=rss",
+      "summary": "Ministers are expected to publish the details of how an independent review of the working environment at the Information Commission will be carried out next week.",
+      "published": "2026-11-21T06:01:04+00:00",
+      "source": "BBC News",
+      "category": "时政"
+    },
+    {
+      "title": "Deal with EU not dependent on tuition fees agreement, Miliband says",
+      "link": "https://www.bbc.co.uk/news/articles/cm9w9p4geke8o?at_medium=RSS&at_campaign=rss",
+      "summary": "Brussels sources had previously suggested the bloc might not apply the wider deal until fees were lowered for EU students in Britain.",
+      "published": "2026-11-21T06:00:09+00:00",
+      "source": "BBC News",
+      "category": "时政"
+    },
+    {
+      "title": "两届香港马王“浪漫勇士”退役",
+      "link": "https://www.chinanews.com.cn/dwq/2026/11-21/10735719.shtml",
+      "summary": "中新社香港11月21日电 (记者 赵静怡)全球赛马史上累计奖金最多赛驹、两届当选香港马王的“浪漫勇士”，日前宣布告别赛场，将离港前往澳大利亚“享受”退休生活。“浪漫勇士”近日亮相香港沙田，马主刘栢辉、练马师沈集成也同日现身马房，接受中新社等媒体采访。",
+      "published": "2026-11-21T05:58:54+00:00",
+      "source": "中国新闻网",
+      "category": "时政"
+    },
+    {
+      "title": "韦布望远镜拍到却没看见：科学家从旧数据中发现遗漏巨行星，新算法将探测灵敏度提升 15 倍",
+      "link": "https://www.ithome.com/1/030/354.htm",
+      "summary": "IT之家 11 月 21 日消息，美国西北大学（Northwestern University）研究团队开发了一种新的系外行星成像处理技术，从詹姆斯 · 韦布空间望远镜（JWST）此前拍摄的数据中，成功识别出一颗此前未能通过常规图像处理方法观测到的巨行星。研究人员表示，这项技术可将望远镜对暗弱行星的探测灵敏度提升 2 至 15 倍。研究成果于 11 月 4 日发表于《自然》。这颗行星名为 51 Eridani b，此前已经由地面望远镜发现，但由于宿主恒星的强烈光芒干扰，天文学家一直无法从韦布望远镜的一组红外观测数据中辨认出它。系外行星直接成像面临的一大难题，是恒星与行星之间巨大的亮度差异。即使",
+      "published": "2026-11-21T05:52:48+00:00",
+      "source": "IT之家",
+      "category": "AI"
+    },
+    {
+      "title": "消息称华为星芒品牌已在内部酝酿约三年，将承担更多前沿技术的率先应用任务",
+      "link": "https://www.ithome.com/1/030/353.htm",
+      "summary": "IT之家 11 月 21 日消息，据《每日经济新闻》报道，近日，华为星芒相关负责人在接受媒体采访时透露，星芒品牌已在内部酝酿约三年，未来一两年，公司不会对其提出过高的销量及经营目标要求。现阶段，星芒更重要的任务是建立品牌认知、培育目标用户，并验证新的 AI 技术与产品体验。一个酝酿了约三年的新品牌，为何直到现在才正式推出？华为相关负责人解释称，荣耀独立之后，华为曾经历一段较长时间的供应链和技术体系重建，随后又投入大量资源建设鸿蒙操作系统及应用生态。直到相关基础能力逐步成熟，才具备推出新品牌的条件。谈及新品牌的销量预期时，华为相关负责人表示：“这一两年新品牌首先是要建立心智，把品牌真正树立起来。",
+      "published": "2026-11-21T05:48:08+00:00",
+      "source": "IT之家",
+      "category": "AI"
+    },
+    {
+      "title": "冬奥场馆开启新赛季 四项国际雪联顶级赛事落地云顶滑雪公园",
+      "link": "https://www.chinanews.com.cn/ty/2026/11-21/10735707.shtml",
+      "summary": "中新网张家口11月21日电 河北省张家口市云顶滑雪公园日前发布2026-2027赛季“云顶巅峰赛季”赛程，四项国际雪联顶级赛事落户冬奥场馆，时间从2026年12月持续至2027年2月，覆盖自由式滑雪、单板滑雪多个项目，将为冰雪运动爱好者献上一场横跨整个雪季的赛事盛宴。",
+      "published": "2026-11-21T05:47:33+00:00",
+      "source": "中国新闻网",
+      "category": "时政"
+    },
+    {
+      "title": "纪录片《胶林家书》全国首映 家书串起湘滇支边记忆",
+      "link": "https://www.chinanews.com.cn/gn/2026/11-21/10735706.shtml",
+      "summary": "中新网衡阳11月21日电 (李勇 李嘉仪)大型纪录片《胶林家书》全国首映仪式20日在湖南衡阳祁东县举行。影片以支边亲历者口述和家书为线索，讲述二十世纪五六十年代湖南儿女远赴云南边疆垦荒植胶的故事。",
+      "published": "2026-11-21T05:46:05+00:00",
+      "source": "中国新闻网",
+      "category": "时政"
+    },
+    {
+      "title": "（走进中国乡村）广西浦北陈皮飘香四海 AI巡园助力精准种植",
+      "link": "https://www.chinanews.com.cn/sh/2026/11-21/10735705.shtml",
+      "summary": "中新社广西钦州11月21日电 题：广西浦北陈皮飘香四海 AI巡园助力精准种植",
+      "published": "2026-11-21T05:45:09+00:00",
+      "source": "中国新闻网",
+      "category": "时政"
+    },
+    {
+      "title": "客家青年相聚海南 共谋自贸港发展机遇",
+      "link": "https://www.chinanews.com.cn/sh/2026/11-21/10735704.shtml",
+      "summary": "中新网海口11月21日电 (张月和)世界客属第34届恳亲大会客家青年自贸港创新峰会20日在海南海口举行，海内外客家青年企业家、创业者代表等立足海南自贸港封关运作新起点，围绕产业创新、发展赛道、项目合作等话题展开交流。",
+      "published": "2026-11-21T05:43:53+00:00",
+      "source": "中国新闻网",
+      "category": "时政"
+    },
+    {
+      "title": "约 320 亿美元债券落地：马斯克 SpaceX 为英伟达芯片“加杠杆”，收益率超 8%",
+      "link": "https://www.ithome.com/1/030/351.htm",
+      "summary": "IT之家 11 月 21 日消息，科技媒体 The Information 最新博文报道称，全球首富埃隆 · 马斯克（Elon Musk）旗下 SpaceX 昨日（11 月 20 日）完成约 320 亿美元（IT之家注：现汇率约合 2,141.43 亿元人民币）的债券融资，用于采购英伟达等 AI 芯片。报道称本次 AI 芯片债券融资由高盛、以及 Apollo 管理的 Saturn Funding Trust 发行，主要用于购置英伟达芯片。这笔债券本身是总额超过 400 亿美元（现汇率约合 2,676.79 亿元人民币）融资方案的一部分，剩余方案还包括银行贷款等。IT之家援引博文介绍，本次发行的",
+      "published": "2026-11-21T05:42:19+00:00",
+      "source": "IT之家",
+      "category": "AI"
+    },
+    {
+      "title": "黄河进入2026—2027年度凌汛期",
+      "link": "https://www.chinanews.com.cn/sh/2026/11-21/10735702.shtml",
+      "summary": "中新社郑州11月21日电 中国水利部黄河水利委员会(以下简称黄委)21日消息，当日8时，黄河内蒙古包头至头道拐河段出现流凌，流凌长度累计34千米。首凌日期与常年(1971年至2025年均值)持平。黄河即日起进入2026—2027年度凌汛期。",
+      "published": "2026-11-21T05:41:45+00:00",
+      "source": "中国新闻网",
+      "category": "时政"
+    },
+    {
+      "title": "28个品牌挤进电解质水行列，好自在逆势双位数增长：元气森林打的两场“硬仗”",
+      "link": "https://www.chinanews.com.cn/cj/2026/11-21/10735701.shtml",
+      "summary": "2026年的饮料行业，分化态势逐渐明显。据马上赢对全国典型门店的监测，2026年第二季度，汽水、即饮果汁、有糖即饮茶、包装水、能量饮料、运动饮料等品类几乎全线下滑，跌幅在8%至15%之间；大盘之中，仅无糖即饮茶保持16.1%的增长。",
+      "published": "2026-11-21T05:40:09+00:00",
+      "source": "中国新闻网·财经",
+      "category": "金融"
+    },
+    {
+      "title": "民盟黑龙江省委会：盟地共建助振兴 接力奔跑开新局",
+      "link": "https://www.chinanews.com.cn/gn/2026/11-21/10735700.shtml",
+      "summary": "中新网绥化11月21日电 题：民盟黑龙江省委会：盟地共建助振兴接力奔跑开新局",
+      "published": "2026-11-21T05:38:57+00:00",
+      "source": "中国新闻网",
+      "category": "时政"
+    },
+    {
+      "title": "程乐松阐释智能时代留白智慧：入世有为 松弛自处",
+      "link": "https://www.chinanews.com.cn/sh/2026/11-21/10735699.shtml",
+      "summary": "中新网南京11月21日电 (张传明 唐娟)11月20日，北京大学哲学系教授程乐松做客南京“牛首十二讲堂”，带来以《留白》为核心的精彩人文分享。讲座以通透的哲学视角解读当代生活，用从容的留白智慧滋养大众身心，帮助现代人找寻松弛自洽、安然丰盈的生活方式，让往来游客在山水文脉间沉淀自我、涵养心境。",
+      "published": "2026-11-21T05:38:07+00:00",
+      "source": "中国新闻网",
+      "category": "时政"
+    },
+    {
+      "title": "再创国内新纪录！中国石油新疆油田裸眼深部取换套试验取得重大突破",
+      "link": "https://www.chinanews.com.cn/cj/2026/11-21/10735698.shtml",
+      "summary": "中新网乌鲁木齐11月21日电 (孙亭文 刘尚红 高迎春)记者21日从中国石油新疆油田获悉，在新疆油田陆梁油田戈壁井场进行攻关的裸眼深部取换套扩大试验近日顺利收官，圆满完成1819米套管回接与环空固井作业，一举刷新国内深部裸眼取换套最长施工纪录，成为新疆油田套损套变治理技术体系迭代升级的又一标志性成果。",
+      "published": "2026-11-21T05:36:49+00:00",
+      "source": "中国新闻网·财经",
+      "category": "金融"
+    },
+    {
+      "title": "西夏文献流散百年 中外学者共寻“解读”之道",
+      "link": "https://www.chinanews.com.cn/cul/2026/11-21/10735697.shtml",
+      "summary": "中新网银川11月21日电 题：西夏文献流散百年 中外学者共寻“解读”之道",
+      "published": "2026-11-21T05:36:07+00:00",
+      "source": "中国新闻网",
+      "category": "时政"
+    },
+    {
+      "title": "第四十届中国植保双交会在蓉开幕 发布10项团体标准",
+      "link": "https://www.chinanews.com.cn/sh/2026/11-21/10735694.shtml",
+      "summary": "中新网成都11月21日电(陈选斌)21日，第四十届中国植保信息交流暨农药械交易会(以下简称中国植保双交会)在成都中国西部国际博览城开幕。这场国家级植保行业5A级专业盛会，汇聚千余家行业企业与科研单位参展，现场发布10项团体标准，还集中亮出RNA农药、数字植保等一批植保领域前沿创新成果。",
+      "published": "2026-11-21T05:34:25+00:00",
+      "source": "中国新闻网",
+      "category": "时政"
+    },
+    {
+      "title": "第六届“齐白石”全国大学生中国画作品展开幕",
+      "link": "https://www.chinanews.com.cn/sh/2026/11-21/10735693.shtml",
+      "summary": "中新网湘潭11月21日电 (唐亚慧)11月21日，“美兴·术道”第六届“齐白石”全国大学生中国画作品展在湖南科技大学齐白石艺术馆开幕。",
+      "published": "2026-11-21T05:33:41+00:00",
+      "source": "中国新闻网",
+      "category": "时政"
+    },
+    {
+      "title": "达里奥 2010 年曾拒绝马斯克招揽，2016 年加入 OpenAI 后又出走创立 Anthropic",
+      "link": "https://www.ithome.com/1/030/350.htm",
+      "summary": "IT之家 11 月 21 日消息，据《华尔街日报》今日报道，Anthropic CEO 达里奥 · 阿莫代伊（Dario Amodei）早在 2010 年就曾通过熟人结识埃隆 · 马斯克并受邀参观 SpaceX 办公室。据称，马斯克当时还向他发出了工作邀请，但达里奥最终选择拒绝。他认为自己的专业能力更适合计算生物学，而不是火箭工程。达里奥当时正处于职业方向选择阶段。他曾就读于加州理工学院，随后转入斯坦福大学，并在普林斯顿大学攻读物理学博士学位，之后将研究方向转向生物学。与直接进入科技行业相比，他最初更倾向于利用科学研究推动医疗和生物技术进步。这次与马斯克的接触，是他从学术研究转向科技行业过程中",
+      "published": "2026-11-21T05:33:19+00:00",
+      "source": "IT之家",
+      "category": "AI"
+    },
+    {
+      "title": "江苏扬州“绿扬金凤”人才周开幕：以满满诚意，邀天下英才“追梦”",
+      "link": "https://www.chinanews.com.cn/gn/2026/11-21/10735692.shtml",
+      "summary": "中新网扬州11月21日电 (崔佳明 徐珊珊)“人才，因城市而聚；城市，因人才而兴。”11月21日上午，2026年第四届“绿扬金凤”人才周总活动在扬州会议中心正式启幕。中共扬州市委书记郑海涛在致辞中诚邀各方英才了解扬州、选择扬州、扎根扬州。24个产才项目集中签约、3亿元创投基金重磅发布……这场人才盛会以满满诚意，向天下英才发出“追梦来扬”的城市邀约。",
+      "published": "2026-11-21T05:32:23+00:00",
+      "source": "中国新闻网",
+      "category": "时政"
+    },
+    {
+      "title": "第20届曼谷中国电影节开幕 多部优秀中国影片亮相泰国",
+      "link": "https://www.chinanews.com.cn/cul/2026/11-21/10735691.shtml",
+      "summary": "中新网曼谷11月21日电(王茜 梁峻祥 李映民)由中国驻泰国大使馆、中国国家电影局、泰国文化部共同主办，曼谷中国文化中心承办的第20届曼谷中国电影节20日拉开帷幕，中国驻泰国大使馆临时代办吴志武，泰国文化部副次长拉妮出席开幕式并致辞。泰各界人士约500人共同观看开幕电影《八仙》。",
+      "published": "2026-11-21T05:31:41+00:00",
+      "source": "中国新闻网",
+      "category": "时政"
+    },
+    {
+      "title": "冲刺 2027 年出海，消息称前小鹏汽车西欧及南欧董事总经理强顺强加入小米汽车",
+      "link": "https://www.ithome.com/1/030/349.htm",
+      "summary": "IT之家 11 月 21 日消息，据界面新闻今日报道，知情人士透露，前小鹏汽车西欧及南欧董事总经理强顺强已于今年 9 月加入小米汽车，出任国际业务部欧洲区董事总经理（Managing Director of Europe），常驻德国。截至目前，小米方面尚未对外官宣这一任命。小米公司暂未回应置评请求。公开履历显示，强顺强是小鹏海外营销服务体系的早期负责人之一。他毕业于清华大学汽车工程专业，职业生涯起步于丰田、奔驰中国等传统企业的品牌营销体系；加入小鹏汽车之前，他担任兰博基尼大中华区销售与网络负责人。2019 年，强顺强加入小鹏汽车，先参与国内网络渠道建设，2020 年起转向海外业务。小鹏当年从挪",
+      "published": "2026-11-21T05:30:50+00:00",
+      "source": "IT之家",
+      "category": "AI"
+    },
+    {
+      "title": "唱空中国经济者终会落空",
+      "link": "https://www.chinanews.com.cn/cj/2026/11-21/10735703.shtml",
+      "summary": "嘴上唱空中国经济的美西方人士，心里究竟打的什么算盘？",
+      "published": "2026-11-21T05:30:06+00:00",
+      "source": "中国新闻网·财经",
+      "category": "金融"
+    },
+    {
+      "title": "苏锡常欧美同学会聚智联动 共探未来产业新赛道",
+      "link": "https://www.chinanews.com.cn/gn/2026/11-21/10735695.shtml",
+      "summary": "中新网无锡11月21日电 (孙权 唐娟)11月20日，“海创未来·智聚梁溪”苏锡常欧美同学会产业联动(第6期)未来产业主题无锡站活动在江苏无锡举行。",
+      "published": "2026-11-21T05:25:20+00:00",
+      "source": "中国新闻网",
+      "category": "时政"
+    },
+    {
+      "title": "专家：AI检测只是辅助依据 不能替代学术评价",
+      "link": "https://www.chinanews.com.cn/sh/2026/11-21/10735696.shtml",
+      "summary": "当下，AIGC已经越来越多地进入科研与教学场景，不少师生把它当作辅助文献梳理、思路启发的工具。与之配套的AI内容检测工具，也开始被高校、期刊广泛使用。近期，知网升级AIGC检测算法后，不少使用者发现，稿件内容没有任何改动，多次复测，AI疑似检出率却出现大幅波动，甚至基金项目名称、作者姓名这类基础信息，都被标记为疑似AI生成。",
+      "published": "2026-11-21T05:24:02+00:00",
+      "source": "中国新闻网",
+      "category": "时政"
+    },
+    {
+      "title": "Zelensky says Putin is a 'killer' after Trump calls Russian leader a friend",
+      "link": "https://www.bbc.co.uk/news/articles/cxnv4zvmdy0jo?at_medium=RSS&at_campaign=rss",
+      "summary": "Trump's comments came after Russia launched \"biggest attacks this year\" against Ukraine.",
+      "published": "2026-11-21T05:15:41+00:00",
+      "source": "BBC News",
+      "category": "时政"
+    },
+    {
+      "title": "黄仁勋没有的“护身符”：Anthropic 创始人手握 50.1% 投票权建立“反夺权”机制",
+      "link": "https://www.ithome.com/1/030/348.htm",
+      "summary": "IT之家 11 月 21 日消息，科技媒体 Business Insider 昨日（11 月 20 日）报道，AI 公司 Anthropic 在上市后通过特殊股权设计，让包括 CEO 达里奥 · 阿莫代伊（Dario Amodei）在内的 7 位联合创始人共同掌握 50.1% 的股东投票权。报道指出该安排的核心是特殊的 F 类股，即使 Anthropic 公司未来继续发行普通股，创始团队的投票权比例也不会被稀释。普通投资者持有的是常规股份，而创始团队则通过 F 类股保留对公司重大决策的最终控制权。该媒体解读认为，即便外部资本大量进入，创始人仍能决定董事会构成、战略方向和关键人事安排。Anthr",
+      "published": "2026-11-21T05:14:19+00:00",
+      "source": "IT之家",
+      "category": "AI"
+    },
+    {
+      "title": "越南—中国西南地区发展战略对接论坛在昆明举行",
+      "link": "https://www.chinanews.com.cn/gn/2026/11-21/10735690.shtml",
+      "summary": "中新网昆明11月21日电 (记者 陈静)越南—中国西南地区发展战略对接论坛20日在昆明举行，越共中央总书记、国家主席苏林出席论坛并作主旨讲话，全国政协副主席王勇出席并讲话。中越570余家企业参会，开展对接活动。",
+      "published": "2026-11-21T05:13:52+00:00",
+      "source": "中国新闻网",
+      "category": "时政"
+    },
+    {
+      "title": "GrapheneOS 公开指责谷歌施压，阻挠与摩托罗拉建立第三方系统合作",
+      "link": "https://www.ithome.com/1/030/347.htm",
+      "summary": "IT之家 11 月 21 日消息，GrapheneOS 官方账号在 Mastodon 平台发文，公开指责谷歌试图阻止 OEM 手机厂商与其合作，甚至施压手机制造商不要支持解锁 Bootloader（引导加载程序）。GrapheneOS 称谷歌曾多次主动联系 Android 设备制造商，询问对方是否正在与 GrapheneOS 合作，并声称谷歌随后会利用 Google Mobile Services（GMS）授权条款向手机厂商施压。GrapheneOS 指出，相关 GMS 授权条款此前已受到多个司法机构的反垄断审查，并认为谷歌正试图阻止其获得 Pixel 手机以外的硬件支持。GrapheneOS",
+      "published": "2026-11-21T05:05:02+00:00",
+      "source": "IT之家",
+      "category": "AI"
+    },
+    {
+      "title": "12 张二手英伟达 V100：律师自建 AI 集群跑 DeepSeek，最高每秒 184 个词元",
+      "link": "https://www.ithome.com/1/030/346.htm",
+      "summary": "IT之家 11 月 21 日消息，律师 u/TumbleweedNew6515 昨日（11 月 20 日）在 Reddit 社区发帖，斥资 9,450 美元（IT之家注：现汇率约合 63,239 元人民币）使用 12 张二手英伟达 V100 显卡搭建私人 AI 服务器，本地运行 DeepSeek-V4.1-Flash，集群最高吞吐量达到每秒 184 个词元。在硬件部分，该律师使用 12 张英伟达 NVIDIA Tesla V100 SXM2 32GB 搭建，通过 NVLink 与 PCIe 组成可协同推理的本地 AI 集群，整套硬件采购价约 9,450 美元（现汇率约合 63,239 元人民币",
+      "published": "2026-11-21T05:00:14+00:00",
+      "source": "IT之家",
+      "category": "AI"
+    },
+    {
+      "title": "中国织密电池回收网络 千亿级“城市矿山”崛起",
+      "link": "https://www.chinanews.com.cn/cj/2026/11-21/10735679.shtml",
+      "summary": "一块退役的新能源汽车动力电池，扔了是污染，回收了是富矿。",
+      "published": "2026-11-21T04:50:32+00:00",
+      "source": "中国新闻网·财经",
+      "category": "金融"
+    },
+    {
+      "title": "Steam 黑五多款游戏新史低：《战地 6》65.34 元、《对马岛之魂：导剪版》199 元、《最终幻想 7：重制版》35.64 元",
+      "link": "https://www.ithome.com/1/030/344.htm",
+      "summary": "IT之家 11 月 21 日消息，Steam 黑五促销期间，多款游戏价格创下新低。例如，Electronic Arts 与 Battlefield Studios 已为《战地风云 6》开启限时优惠，标准版由 198 元降至 65.34 元，优惠 67%，创该作发售以来最低价。《战地风云 6：年度游戏版》优惠 45%，购买者除剧情战役和传统多人模式外，还可游玩第五赛季内容，其中包括以“赌场劫案”为主题的阶段。所有玩家均可免费体验《战地风云 REDSEC》模式。《战地风云 REDSEC》整合了大逃杀、“挑战”及 Portal 编辑器，玩家可借助编辑器创建自定义场景。《对马岛之魂：导演剪辑版》在 S",
+      "published": "2026-11-21T04:35:25+00:00",
+      "source": "IT之家",
+      "category": "AI"
+    },
+    {
+      "title": "Man convicted of starting Palisades fire in Los Angeles",
+      "link": "https://www.bbc.co.uk/news/articles/c64gn0gy8rj3o?at_medium=RSS&at_campaign=rss",
+      "summary": "The 30-year-old LA resident was convicted of arson leading to wildfires that killed 12 people and destroyed more than 6,800 buildings.",
+      "published": "2026-11-21T04:34:00+00:00",
+      "source": "BBC News",
+      "category": "时政"
+    },
+    {
+      "title": "湖湾正澎π 无锡滨湖以科产融合拓宽开放新赛道",
+      "link": "https://www.chinanews.com.cn/cj/2026/11-21/10735682.shtml",
+      "summary": "11月20日下午，“湖湾正澎π·聚力启新潮”2026无锡滨湖金秋经贸洽谈会在太湖之滨启幕。来自海内外科研院所、高校、金融机构及知名企业的200余名嘉宾齐聚，共商产业合作、共谋发展。",
+      "published": "2026-11-21T04:28:21+00:00",
+      "source": "中国新闻网·财经",
+      "category": "金融"
+    },
+    {
+      "title": "1650吨重车组“压阵” 湾区工程清花大桥完成荷载试验",
+      "link": "https://www.chinanews.com.cn/cj/2026/11-21/10735688.shtml",
+      "summary": "中新网广州11月21日电 (记者 蔡敏婕)经过54辆载重共1650吨的大货车组的重压测试，清花高速清花大桥20日晚完成荷载试验。这座横跨北江的大桥，日前已由“北江特大桥”正式命名为“清花大桥”，此次试验，也是它以新名字迎来的首次“体检”。",
+      "published": "2026-11-21T04:12:14+00:00",
+      "source": "中国新闻网·财经",
+      "category": "金融"
+    },
+    {
+      "title": "男子专盯老年住户安装虚拟拨号设备，涉帮信罪被刑拘",
+      "link": "https://www.ithome.com/1/030/343.htm",
+      "summary": "IT之家 11 月 21 日消息，据央视新闻今日报道，北京通州警方 11 月 13 日抓获一名帮信罪嫌疑人，其 5 天内为老年住户安装 4 台 VOIP 虚拟语音转接设备。11 月 13 日，北京市公安局通州公安分局刑侦支队接到线索，在张家湾辖区太玉园东区一居民家中发现有人疑似为境外诈骗分子提供语音转接设备。民警在该居民张女士家中座机附近发现两个可疑小盒子，经核实为境外犯罪团伙常用的 VOIP 虚拟语音转接设备。张女士夫妇年事已高，为方便与家人联系，家中仍保留着传统座机。张女士称，11 月 12 日上午，家中座机接到一通电话，对方自称通信公司工作人员，表示近期通信设备升级，将安排人员上门更新设",
+      "published": "2026-11-21T04:02:14+00:00",
+      "source": "IT之家",
+      "category": "AI"
+    },
+    {
+      "title": "2026年青年企业家创新发展大会在北京召开 伊利集团董事长兼总裁潘刚出席会议并作主旨演讲",
+      "link": "https://www.chinanews.com.cn/cj/2026/11-21/10735678.shtml",
+      "summary": "11月15日，由中国青年企业家协会主办的2026年青年企业家创新发展大会在北京顺义召开。会议以“聚势新质生产力，赋能青年企业家”为主题，深入学习宣传贯彻党的二十届五中全会精神，引导青年企业家以创新发展服务经济社会高质量发展。",
+      "published": "2026-11-21T03:51:11+00:00",
+      "source": "中国新闻网·财经",
+      "category": "金融"
+    },
+    {
+      "title": "享界V8上市即开启全国大规模交付，以为家而生的100个设计锁定爆款",
+      "link": "https://www.leiphone.com/category/industrynews/cjpukqhxIgaEYhyQ.html",
+      "summary": "一款车，从上市到全国范围交付，需要多长时间？享界V8给出了答案！&nbsp;11月20日下午，享界V8在鸿蒙智行享界V8及星芒品牌发布会正式上市，售价31.98～42.98万元，即刻下定享至高93000元权益。当晚，首批新车交付仪式于北京鸿蒙智行用户中心启动。巴黎奥运会女子20公里竞走冠军杨家玉与一众家庭用户成为首批车主。次日，全国18城同步开启规模交付。下午上市，晚上交付。这不仅是享界V8的交付速度，更是品牌制造产能的良好体现。是其产品力、供应链与服务体系，接受市场第一波检验的开始。伴随着世界冠军与多孩家庭、三代同堂家庭的认可，享界V8“为家而生”的定位，也从产品理念走向真实现实。&nbsp",
+      "published": "2026-11-21T03:47:00+00:00",
+      "source": "雷锋网",
+      "category": "AI"
+    },
+    {
+      "title": "商务部：重点监测平台 1-10 月即时零售交易额增速超过两位数",
+      "link": "https://www.ithome.com/1/030/341.htm",
+      "summary": "IT之家 11 月 21 日消息，11 月 20 日，商务部电子商务司负责人介绍 2026 年 1-10 月我国电子商务发展情况。2026 年 1-10 月，我国电子商务平稳发展，线上线下融合持续增强消费市场韧性，数字技术赋能产业转型升级，“丝路电商”拓展国际经贸合作，商务领域新质生产力不断培育壮大，助力我国经济向新向优。据国家统计局数据，1-10 月全国网上商品和服务零售额增长 3.7%，其中网上商品零售额增长 2.9%、网上服务零售额增长 5%。数字产品增长加速，据商务大数据监测，10 月份智能穿戴和笔记本电脑网上零售额分别增长 42.5% 和 32.4%。即时零售激发线下商品消费潜力，重",
+      "published": "2026-11-21T03:46:13+00:00",
+      "source": "IT之家",
+      "category": "AI"
+    },
+    {
+      "title": "产业规模破万亿元！高铁直达、夜场升级，冰雪消费提前升温",
+      "link": "https://www.chinanews.com.cn/cj/2026/11-21/10735677.shtml",
+      "summary": "新一轮冰雪季开启，我国冰雪消费呈现出不少新变化：秋假带动亲子冰雪游提前升温，南方游客持续涌入北方雪场，冰雪产业规模突破万亿元。冰雪游正从季节性运动体验，向亲子研学、休闲度假和综合消费延伸，为冬季文旅市场注入新活力。",
+      "published": "2026-11-21T03:35:12+00:00",
+      "source": "中国新闻网·财经",
+      "category": "金融"
+    },
+    {
+      "title": "15 亿美元要价太高，曝苹果 / 迪士尼放弃竞购 2030 及 2034 年男足世界杯美国转播权",
+      "link": "https://www.ithome.com/1/030/340.htm",
+      "summary": "IT之家 11 月 21 日消息，CNBC 记者亚历克斯 · 谢尔曼（Alex Sherman）于 11 月 19 日爆料称，苹果和迪士尼将不参与 2030 年及 2034 年男足世界杯美国市场转播权竞标。报道指出价格是迪士尼止步的重要原因，这批版权预期价格超过 15 亿美元（IT之家注：现汇率约合 100.38 亿元人民币），而迪士尼还需为现有体育内容续约预留资金。迪士尼持有的美国职业橄榄球大联盟（NFL）、国家冰球联盟（NHL）和美国职业棒球大联盟（MLB）版权，都将在 2030 年前面临续约。IT之家援引博文介绍，苹果经常被视为热门体育版权的潜在买家，但实际出手一直较为谨慎。苹果与美国职",
+      "published": "2026-11-21T03:34:28+00:00",
+      "source": "IT之家",
+      "category": "AI"
+    },
+    {
+      "title": "沙特称拦截3枚胡塞武装导弹 也门媒体称沙特袭击致41死",
+      "link": "https://www.chinanews.com.cn/gj/2026/11-21/10735663.shtml",
+      "summary": "中新社北京11月21日电 据沙特《利雅得报》当地时间21日凌晨报道，沙特阿拉伯主导的多国联军称摧毁了也门胡塞武装向沙特首都利雅得发射的三枚弹道导弹。",
+      "published": "2026-11-21T03:33:02+00:00",
+      "source": "中国新闻网·国际",
+      "category": "时政"
+    },
+    {
+      "title": "探访秘鲁钱凯港：跨越太平洋的发展新机遇",
+      "link": "https://www.chinanews.com.cn/gj/2026/11-21/10735662.shtml",
+      "summary": "中新社秘鲁钱凯11月20日电 题：探访秘鲁钱凯港：跨越太平洋的发展新机遇",
+      "published": "2026-11-21T03:32:08+00:00",
+      "source": "中国新闻网·国际",
+      "category": "时政"
+    },
+    {
+      "title": "孙正义曾考虑万亿美元收购 SK 海力士？软银回应：已不再积极考虑",
+      "link": "https://www.ithome.com/1/030/339.htm",
+      "summary": "IT之家 11 月 21 日消息，据《The Information》今日报道，软银集团董事长兼 CEO 孙正义近期曾接洽华尔街金融机构，探讨为收购韩国 SK 海力士筹集资金，潜在交易规模高达 1 万亿美元（IT之家注：现汇率约合 6.69 万亿元人民币）。不过，软银发言人随后表示，该交易目前已不再处于积极考虑阶段。“软银会探索许多机会，而这笔交易目前已不再纳入积极考虑范围。”知情人士称，孙正义此前曾考虑通过收购 SK 海力士，进一步扩大软银在人工智能产业链中的布局。SK 海力士是全球主要存储芯片制造商之一，其生产的 HBM 是英伟达等厂商先进 AI 芯片的重要配套产品。报道指出，SK 海力士",
+      "published": "2026-11-21T03:31:43+00:00",
+      "source": "IT之家",
+      "category": "AI"
+    },
+    {
+      "title": "丹麦驱逐俄罗斯武官，俄表示将“适当回应”",
+      "link": "https://www.chinanews.com.cn/gj/2026/11-21/10735674.shtml",
+      "summary": "中新网11月21日电 综合外媒报道，当地时间20日，丹麦外交大臣拉斯穆森宣布，丹麦决定驱逐俄罗斯驻丹麦国防武官，要求其在7日内离境。俄外交部表示，将对丹麦驱逐其武官一事“作出适当回应”。",
+      "published": "2026-11-21T03:27:26+00:00",
+      "source": "中国新闻网·国际",
+      "category": "时政"
+    },
+    {
+      "title": "腾讯混元姚顺雨团队：Hy4 仍有很大改进空间，计划训练更大规模模型",
+      "link": "https://www.ithome.com/1/030/338.htm",
+      "summary": "IT之家 11 月 21 日消息，11 月 21 日凌晨，腾讯首席 AI 科学家、混元大模型负责人姚顺雨和团队成员，在 Reddit 进行了一场持续 120 分钟的 AMA，回答全球开发者关于混元的“任何问题”。问答环节，有人询问：字节跳动、Kimi 等似乎都在往 3 万亿、甚至 5 万亿参数的超大模型推进，而你们还在 7000 亿。为什么？你们怎么看参数量对模型能力的实际影响？这方面有什么计划？混元团队回应：“Hy3 和 Hy4 已经表明，做得扎实的小模型也能超过更大的模型。它们的成本也更低，而且在这个过程中，你能学到更多、收获更多。”不过，混元团队也表示，Hy4 仍有很大的改进空间，尤其是",
+      "published": "2026-11-21T03:24:35+00:00",
+      "source": "IT之家",
+      "category": "AI"
+    },
+    {
+      "title": "Win11 学院：如何在 Windows 11 26x00.10075 开启 WinUI 原生重构版搜索体验",
+      "link": "https://www.ithome.com/1/030/337.htm",
+      "summary": "IT之家 11 月 21 日消息，科技媒体 Windows Latest 今天（11 月 21 日）发布博文，报道称在 11 月可选更新 KB5132057 中，微软邀请部分 Windows 11 用户体验原生重构的 Windows Search 搜索体验。Windows 11 26H2 中基于 WinUI 的全新搜索功能。底层架构方面，新版 Windows Search 搜索摆脱旧版对 WebView2 网页组件的依赖，采用 WinUI 3 原生 UI 框架打造。WinUI 3 属于 Windows App SDK，使用基于 XAML 的界面模型，支持 C++ 和 C# 开发。该框架提供原生",
+      "published": "2026-11-21T03:23:49+00:00",
+      "source": "IT之家",
+      "category": "AI"
+    },
+    {
+      "title": "Tech outages are rattling Americans so much that they’re stockpiling cash and supplies",
+      "link": "https://www.marketwatch.com/story/why-are-these-tech-outages-rattling-americans-so-much-that-theyre-stockpiling-cash-and-supplies-07516bdd?mod=mw_rss_topstories",
+      "summary": "A lack of clarity from world leaders is prompting some people to prepare for the worst.",
+      "published": "2026-11-21T03:20:00+00:00",
+      "source": "MarketWatch",
+      "category": "金融"
+    },
+    {
+      "title": "“三医”协同持续发力 天津北辰探索公立医院改革新路径",
+      "link": "https://www.chinanews.com.cn/cj/2026/11-21/10735666.shtml",
+      "summary": "中新网天津11月21日电 (记者 江莹)20日，天津市北辰区举办“卫健护航见行见效”专题新闻发布会，介绍该区深化医疗、医保、医药“三医”协同发展治理、优化高水平诊疗供给、提升医院精细化管理相关进展。作为国家第二批公立医院综合改革示范区，北辰区持续系统推进医改探索，多措并举夯实群众健康保障。",
+      "published": "2026-11-21T03:19:45+00:00",
+      "source": "中国新闻网·财经",
+      "category": "金融"
+    },
+    {
+      "title": "（经济观察）重庆构建NCD综合服务体系 激活西部陆海新通道贸易动能",
+      "link": "https://www.chinanews.com.cn/cj/2026/11-21/10735667.shtml",
+      "summary": "中新网重庆11月21日电 题：重庆构建NCD综合服务体系 激活西部陆海新通道贸易动能",
+      "published": "2026-11-21T03:19:25+00:00",
+      "source": "中国新闻网·财经",
+      "category": "金融"
+    },
+    {
+      "title": "美国 SpaceX 龙飞船脱离空间站启程返回地球，携大量科研样本和设备",
+      "link": "https://www.ithome.com/1/030/335.htm",
+      "summary": "IT之家 11 月 21 日消息，美国太空探索技术公司（SpaceX）货运“龙”飞船 20 日脱离国际空间站，携大量科研样本和设备等启程返回地球。据美国航空航天局介绍，“龙”飞船于美国东部时间 20 日 12 时 05 分许（北京时间 21 日 1 时 05 分许）脱离国际空间站，预计于美国西部时间 21 日 13 时 55 分许（北京时间 22 日 5 时 55 分许）在加利福尼亚州附近海域溅落。其重返大气层和溅落时将不会有直播。IT之家查询获悉，该飞船于 10 月 13 日发射，10 月 15 日抵达国际空间站，为航天员送去超过 6300 磅（2860 公斤）的食品、科研设备与补给。返回时",
+      "published": "2026-11-21T03:02:01+00:00",
+      "source": "IT之家",
+      "category": "AI"
+    },
+    {
+      "title": "全球仅此一件：马斯克到访上海工厂收到员工特制“边角料手办”，陶琳晒图",
+      "link": "https://www.ithome.com/1/030/334.htm",
+      "summary": "IT之家 11 月 21 日消息，特斯拉公司副总裁陶琳昨晚在微博发文称，CEO 埃隆 · 马斯克当天到访特斯拉上海超级工厂期间，收到一份由工厂员工自行设计、手工制作的“限量手办”，全球仅此一件。据介绍，这款作品使用特斯拉生产过程中的边角材料制成，将特斯拉车型与上海城市特色元素组合在一起。陶琳介绍称，这件手办最初只是工厂员工利用业余时间推进的创意项目，随后被作为纪念品赠送给马斯克，马斯克对其设计表示喜欢。IT之家注：所谓“边角料”，指车身冲压、内饰裁切等工序中产生的余料，并非可独立流通的原材料。此次上海之行是马斯克 24 小时中国行的一部分。他此前在深圳参加 2026 年 APEC 相关活动，随",
+      "published": "2026-11-21T03:01:36+00:00",
+      "source": "IT之家",
+      "category": "AI"
+    },
+    {
+      "title": "特朗普称无法接受伊朗想达成的协议 重申伊朗“永远不会拥有核武器”",
+      "link": "https://www.chinanews.com.cn/gj/2026/11-21/10735660.shtml",
+      "summary": "中新网11月21日电 据美联社报道，美国总统特朗普当地时间20日表示，伊朗希望达成一项结束伊美敌对行动的协议，但伊朗方面想要的并非他所能接受的协议。",
+      "published": "2026-11-21T02:31:47+00:00",
+      "source": "中国新闻网·国际",
+      "category": "时政"
+    },
+    {
+      "title": "日媒：日本研究引进核潜艇及为“无核三原则”设例外",
+      "link": "https://www.chinanews.com.cn/gj/2026/11-21/10735659.shtml",
+      "summary": "新华社东京11月20日电(记者梁晨 李子越)据日本共同社20日报道，日本政府为年底修订“安保三文件”拟定的草案内容曝光。草案提出“启动研究”引进核动力潜艇问题，并允许在紧急情况下将核武器运进日本。",
+      "published": "2026-11-21T02:25:04+00:00",
+      "source": "中国新闻网·国际",
+      "category": "时政"
+    },
+    {
+      "title": "稳中有进有底气！10月我国经济向新向优发展",
+      "link": "https://www.chinanews.com.cn/cj/2026/11-21/10735656.shtml",
+      "summary": "“经”彩新图景丨稳中有进有底气！10月我国经济向新向优发展",
+      "published": "2026-11-21T02:18:02+00:00",
+      "source": "中国新闻网·财经",
+      "category": "金融"
+    },
+    {
+      "title": "Russian missile hits Poland as Kyiv's allies hold military exercise, says Tusk",
+      "link": "https://www.bbc.co.uk/news/articles/cqx2x9dklxnro?at_medium=RSS&at_campaign=rss",
+      "summary": "Nobody was hurt and no damage has been reported, but Warsaw described the incident as a \"provocation\" from Moscow.",
+      "published": "2026-11-21T02:09:46+00:00",
+      "source": "BBC News",
+      "category": "时政"
+    },
+    {
+      "title": "“讲中国故事”暨印尼摄影家赴福建采风成果展在雅加达举行",
+      "link": "https://www.chinanews.com.cn/gj/2026/11-21/10735636.shtml",
+      "summary": "中新网雅加达11月21日电 (记者 李志全)心联通·文互鉴——“讲中国故事”暨印尼摄影家赴福建采风成果展20日在雅加达举行。",
+      "published": "2026-11-21T02:05:33+00:00",
+      "source": "中国新闻网·国际",
+      "category": "时政"
+    },
+    {
+      "title": "英国推进移民制度改革 持续关停庇护安置酒店",
+      "link": "https://www.chinanews.com.cn/gj/2026/11-21/10735614.shtml",
+      "summary": "中新社伦敦11月20日电 (记者 欧阳开宇)英国内政部20日宣布，英国政府持续推进移民庇护制度改革，再度关停多处用于安置寻求庇护者的临时酒店，进一步缓解地方社区公共服务压力，压降庇护安置财政成本。",
+      "published": "2026-11-21T02:05:07+00:00",
+      "source": "中国新闻网·国际",
+      "category": "时政"
+    },
+    {
+      "title": "特朗普：中俄美元首会晤具有重大历史意义",
+      "link": "https://www.chinanews.com.cn/gj/2026/11-21/10735613.shtml",
+      "summary": "中新社华盛顿11月20日电 (记者 陈孟统)美国总统特朗普20日在白宫表示，美国、中国和俄罗斯三国领导人日前在中国深圳举行首次三方会晤，这是“一场具有重大历史意义的国际峰会”。",
+      "published": "2026-11-21T02:04:27+00:00",
+      "source": "中国新闻网·国际",
+      "category": "时政"
+    },
+    {
+      "title": "南非7月至9月发生5590起谋杀案 超半数案发公共场所",
+      "link": "https://www.chinanews.com.cn/gj/2026/11-21/10735612.shtml",
+      "summary": "中新社约翰内斯堡11月20日电 (记者 孙翔)南非警察局20日公布的犯罪统计数据显示，今年7月至9月，南非共发生5590起谋杀案件，平均每天约有60人遭谋杀；其中，近3000起发生在公共场所。",
+      "published": "2026-11-21T02:02:33+00:00",
+      "source": "中国新闻网·国际",
+      "category": "时政"
+    },
+    {
+      "title": "前10个月邮政行业寄递量稳步增长 “小包裹”激活消费“新引擎”",
+      "link": "https://www.chinanews.com.cn/cj/2026/11-21/10735644.shtml",
+      "summary": "央视网消息：记者从国家邮政局了解到，今年以来，我国邮政行业寄递量稳步增长，数据显示，前10个月，邮政行业寄递业务量累计完成1830.3亿件，同比增长3.3%。快递服务加快拓展文旅消费服务场景，智能设备等新品类寄递需求明显上升，为消费潜力释放提供流通保障。",
+      "published": "2026-11-21T01:59:47+00:00",
+      "source": "中国新闻网·财经",
+      "category": "金融"
+    },
+    {
+      "title": "不要小看中国经济“稳”的分量",
+      "link": "https://www.chinanews.com.cn/cj/2026/11-21/10735641.shtml",
+      "summary": "【数说经济】不要小看中国经济“稳”的分量",
+      "published": "2026-11-21T01:49:18+00:00",
+      "source": "中国新闻网·财经",
+      "category": "金融"
+    },
+    {
+      "title": "Villagers to vote on 'leaving UK' over plans to house migrants at RAF base",
+      "link": "https://www.bbc.co.uk/news/articles/cqn70v1p6ymlo?at_medium=RSS&at_campaign=rss",
+      "summary": "Barnham is proposing breaking away from the UK in protest of plans to house migrants at RAF Barnham.",
+      "published": "2026-11-21T01:34:51+00:00",
+      "source": "BBC News",
+      "category": "时政"
+    },
+    {
+      "title": "福建漳州核电4号机组三台蒸汽发生器全部吊装就位",
+      "link": "https://www.chinanews.com.cn/cj/2026/11-21/10735638.shtml",
+      "summary": "中新网漳州11月21日电 (记者 张金川)11月20日，华龙一号再传捷报，中核集团旗下中国核电投资控股的漳州核电4号机组三台蒸汽发生器全部精准吊装就位。",
+      "published": "2026-11-21T01:29:13+00:00",
+      "source": "中国新闻网·财经",
+      "category": "金融"
+    },
+    {
+      "title": "The military lacks an ‘overarching plan’ to improve munition stockpiles—partly because it’s no one’s job",
+      "link": "https://www.defenseone.com/threats/2026/11/military-lacks-munitions-plan/417390/",
+      "summary": "Pentagon officials largely concurred with GAO’s recommendations.",
+      "published": "2026-11-21T01:18:33+00:00",
+      "source": "Defense One",
+      "category": "军事"
+    },
+    {
+      "title": "金价走低带火线下购金：豫园某柜台一上午卖出60余只金手镯",
+      "link": "https://www.chinanews.com.cn/cj/2026/11-21/10735622.shtml",
+      "summary": "金价正在持续走低。11月20日亚洲交易时段，伦敦现货黄金价格跌破3600美元/盎司，创2025年9月以来新低。截至北京时间11月20日19时45分，伦敦现货黄金报价3583.88美元/盎司，跌幅1.20%。",
+      "published": "2026-11-21T01:12:27+00:00",
+      "source": "中国新闻网·财经",
+      "category": "金融"
+    },
+    {
+      "title": "The Papers: 'Closest ties since Brexit' and 'Grand Theft EU'",
+      "link": "https://www.bbc.co.uk/news/articles/cw7829pl3xklo?at_medium=RSS&at_campaign=rss",
+      "summary": "Saturday's front pages focus on a new deal agreed between the UK and EU in Brussels.",
+      "published": "2026-11-21T01:07:01+00:00",
+      "source": "BBC News",
+      "category": "时政"
+    },
+    {
+      "title": "They were fined $811m for conning detained migrants, but the scams didn't stop",
+      "link": "https://www.bbc.co.uk/news/articles/cqgm0zlkgrm2o?at_medium=RSS&at_campaign=rss",
+      "summary": "How convicted fraudsters made millions from detained immigrants, evaded efforts to shut down their bail business and left migrants behind bars.",
+      "published": "2026-11-21T01:02:39+00:00",
+      "source": "BBC News",
+      "category": "时政"
+    },
+    {
+      "title": "Europeans, with Ukraine’s help, brace for more Russian attacks",
+      "link": "https://www.defenseone.com/threats/2026/11/europeans-ukraines-help-brace-more-russian-attacks/417389/",
+      "summary": "Meanwhile, Trump greets Putin as “my friend” and downplays Russian missiles in Poland.",
+      "published": "2026-11-21T00:58:14+00:00",
+      "source": "Defense One",
+      "category": "军事"
+    },
+    {
+      "title": "WorkBuddy教育公益版覆盖66万用户，混元系列成主力模型",
+      "link": "https://www.chinanews.com.cn/cj/2026/11-21/10735619.shtml",
+      "summary": "腾讯SSV(可持续社会价值事业部)近日发布数据，WorkBuddy教育公益版自2026年10月19日上线以来，累计覆盖用户约66万名。数据显示，混元系列模型占该版本Token总消耗的76.3%，成为用户日常使用最集中的模型家族。",
+      "published": "2026-11-21T00:56:30+00:00",
+      "source": "中国新闻网·财经",
+      "category": "金融"
+    },
+    {
+      "title": "突发：秘鲁发生6.7级地震，首都有震感",
+      "link": "https://www.chinanews.com.cn/gj/2026/11-21/10735617.shtml",
+      "summary": "中新网11月21日电 据外媒援引秘鲁地球物理研究所测定报道，当地时间20日，秘鲁发生6.7级地震，首都利马有震感。",
+      "published": "2026-11-21T00:40:51+00:00",
+      "source": "中国新闻网·国际",
+      "category": "时政"
+    },
+    {
+      "title": "美股大跌 纳指年内涨幅悉数回吐",
+      "link": "https://www.chinanews.com.cn/cj/2026/11-21/10735615.shtml",
+      "summary": "中新社纽约11月20日电 (记者 王帆)美国股市三大指数20日大幅下跌。其中，纳斯达克综合指数单日跌幅超过5%，年内涨幅悉数回吐。",
+      "published": "2026-11-21T00:23:08+00:00",
+      "source": "中国新闻网·财经",
+      "category": "金融"
+    },
+    {
+      "title": "特朗普：此次亚洲行未能见金正恩 总有一天会见面",
+      "link": "https://www.chinanews.com.cn/gj/2026/11-21/10735616.shtml",
+      "summary": "中新网11月21日电 据法新社20日报道，美国总统特朗普乘专机返回华盛顿途中，接受美国全国广播公司(NBC)记者采访时指出，由于行程繁忙，他此次未能与朝鲜最高领导人金正恩会面，并展现出继续推动双方会晤的意愿。",
+      "published": "2026-11-21T00:21:32+00:00",
+      "source": "中国新闻网·国际",
+      "category": "时政"
+    },
+    {
+      "title": "Phoebe Bridgers banned phones at her gigs, so fans are using art to remember them",
+      "link": "https://www.bbc.co.uk/news/articles/cq7821d0pv49o?at_medium=RSS&at_campaign=rss",
+      "summary": "The American singer has brought in a no-phone policy for the shows, inspiring fans to explore their artistic talent.",
+      "published": "2026-11-21T00:08:19+00:00",
+      "source": "BBC News",
+      "category": "时政"
+    },
+    {
+      "title": "Can AI really help spot Black Friday deals? We put it to the test",
+      "link": "https://www.bbc.co.uk/news/articles/cw8dv4jmnle2o?at_medium=RSS&at_campaign=rss",
+      "summary": "We put four AI models to the test to see if they could save us money on a new TV.",
+      "published": "2026-11-21T00:06:11+00:00",
+      "source": "BBC News",
+      "category": "时政"
+    },
+    {
+      "title": "Who will be Robert Pattinson's 'Bond girl' - and does the role need to change?",
+      "link": "https://www.bbc.co.uk/news/articles/cr4g1l7x52jno?at_medium=RSS&at_campaign=rss",
+      "summary": "Speculation is rife as to who will play the new 007's leading lady, with commentators saying she will need a \"very strong identity\".",
+      "published": "2026-11-21T00:03:16+00:00",
+      "source": "BBC News",
+      "category": "时政"
+    },
+    {
+      "title": "Air Force issues massive $16B contract for engine work to dozens of companies",
+      "link": "https://breakingdefense.com/2026/11/air-force-issues-massive-16b-contract-for-engine-work-to-dozens-of-companies/",
+      "summary": "A Pentagon notice said 58 companies were selected to participate in a broad contract for “advanced propulsion enterprise work” through 2041.",
+      "published": "2026-11-20T23:52:57+00:00",
+      "source": "Breaking Defense",
+      "category": "军事"
+    },
+    {
+      "title": "These dead pets were meant to be cremated - then their bodies appeared on a livestream",
+      "link": "https://www.bbc.co.uk/news/articles/cmn502ek17yvo?at_medium=RSS&at_campaign=rss",
+      "summary": "Grieving Filipinos confront a distressing reality: their dogs and cats may not have received the send-off they paid for.",
+      "published": "2026-11-20T23:20:33+00:00",
+      "source": "BBC News",
+      "category": "时政"
+    },
+    {
+      "title": "Dow, S&P 500 enter correction as Nasdaq suffers worst week since 2020",
+      "link": "https://www.marketwatch.com/story/dow-s-p-500-enter-correction-as-nasdaq-suffers-worst-week-since-2020-bd74dadf?mod=mw_rss_topstories",
+      "summary": "All 11 S&amp;P 500 sectors finished more than 1% lower this week for the first time since April 2025.",
+      "published": "2026-11-20T22:46:00+00:00",
+      "source": "MarketWatch",
+      "category": "金融"
+    },
+    {
+      "title": "Chip stocks see $2.3 trillion weekly wipeout as panic grips the AI trade",
+      "link": "https://www.marketwatch.com/story/chip-stocks-see-2-3-trillion-weekly-wipeout-as-panic-grips-the-ai-trade-371f2f03?mod=mw_rss_topstories",
+      "summary": "A major semiconductor index just posted its worst weekly performance in 25 years.",
+      "published": "2026-11-20T22:44:00+00:00",
+      "source": "MarketWatch",
+      "category": "金融"
+    },
+    {
+      "title": "These stocks were crushed the most this week as the tech wreck accelerated",
+      "link": "https://www.marketwatch.com/story/these-stocks-were-crushed-the-most-this-week-as-the-tech-wreck-accelerated-8d6f7323?mod=mw_rss_topstories",
+      "summary": "94% of stocks in the S&amp;P 500 declined for the week, 11 of them by at least 20%. But for now, analysts still think you can make a lot of money if you buy them.",
+      "published": "2026-11-20T22:44:00+00:00",
+      "source": "MarketWatch",
+      "category": "金融"
+    },
+    {
+      "title": "Tech stock sell-off drags markets down as Anthropic shares slide",
+      "link": "https://www.bbc.co.uk/news/articles/c6808ym10vzgo?at_medium=RSS&at_campaign=rss",
+      "summary": "Pressures weighed on US markets, with the S&amp;P 500 and the Dow Jones Industrial Average pushed into correction territory.",
+      "published": "2026-11-20T22:42:47+00:00",
+      "source": "BBC News",
+      "category": "时政"
+    },
+    {
+      "title": "French police officers sentenced for beating of music producer Michel Zecler",
+      "link": "https://www.bbc.co.uk/news/articles/ck9d7e9wvvweo?at_medium=RSS&at_campaign=rss",
+      "summary": "The court has upheld the 2020 beating of the black music producer as an aggravated circumstance of racism.",
+      "published": "2026-11-20T22:37:09+00:00",
+      "source": "BBC News",
+      "category": "时政"
+    },
+    {
+      "title": "S&P 500 sinks 3.7% and the Nasdaq composite goes negative for the year",
+      "link": "https://www.npr.org/2026/11/20/g-s1-154797/nasdaq-sp500-stock-market-ai-sink-negative",
+      "summary": "AI stocks have hefty market values and have a much bigger impact on the market's direction. They were responsible for Wall Street's big gains this year and are now behind the big slide for the market.",
+      "published": "2026-11-20T22:11:29+00:00",
+      "source": "NPR News",
+      "category": "时政"
+    },
+    {
+      "title": "安理会举行联合国秘书长遴选第九轮意向性投票",
+      "link": "https://www.chinanews.com.cn/gj/2026/11-21/10735607.shtml",
+      "summary": "新华社联合国11月20日电(记者尚绪谦)联合国安理会20日就下一任联合国秘书长遴选举行第九轮意向性投票。",
+      "published": "2026-11-20T22:07:58+00:00",
+      "source": "中国新闻网·国际",
+      "category": "时政"
+    },
+    {
+      "title": "特朗普：中俄美元首会晤“史无前例”“意义重大”",
+      "link": "https://www.chinanews.com.cn/gj/2026/11-21/10735606.shtml",
+      "summary": "新华社华盛顿11月20日电(记者黄强 徐剑梅)美国总统特朗普20日在白宫举行的新闻发布会上表示，日前在中国深圳举行的亚太经合组织领导人非正式会议是一场非常成功的经济会议，美国、中国和俄罗斯三国领导人还举行了首次三方会晤，这是“多年来最具重大意义的国际峰会之一”。",
+      "published": "2026-11-20T22:06:28+00:00",
+      "source": "中国新闻网·国际",
+      "category": "时政"
+    },
+    {
+      "title": "国际金价创一年多新低 黄金消费热潮背后这几点要知道",
+      "link": "https://www.chinanews.com.cn/cj/2026/11-21/10735605.shtml",
+      "summary": "本周，国际贵金属出现连续下跌。八个交易日内，伦敦现货黄金接连失守每盎司4000美元到每盎司3600美元五道整数关口，本周跌幅逼近9%，较年初历史高点，回撤约36%。",
+      "published": "2026-11-20T22:06:22+00:00",
+      "source": "中国新闻网·财经",
+      "category": "金融"
+    },
+    {
+      "title": "Nvidia’s stock clinches a stretch of weekly losses not seen since 2008",
+      "link": "https://www.marketwatch.com/story/nvidias-stock-heads-for-a-stretch-of-weekly-losses-unseen-since-2008-91aba9a6?mod=mw_rss_topstories",
+      "summary": "One fund manager says the continued uncertainty makes Nvidia vulnerable to more selling, even as the stock has erased $1.16 trillion in market value in the past seven trading sessions.",
+      "published": "2026-11-20T21:58:00+00:00",
+      "source": "MarketWatch",
+      "category": "金融"
+    },
+    {
+      "title": "Denmark accuses Russia of plotting to assassinate US-Ukrainian rapper",
+      "link": "https://www.bbc.co.uk/news/articles/cmde1lj4yjxno?at_medium=RSS&at_campaign=rss",
+      "summary": "The Russian embassy in Denmark has denied the allegation, which has led to Russia's defence attaché being expelled.",
+      "published": "2026-11-20T21:57:07+00:00",
+      "source": "BBC News",
+      "category": "时政"
+    },
+    {
+      "title": "What new UK-EU deal could mean for future post-Brexit relations",
+      "link": "https://www.bbc.co.uk/news/videos/c90k6gl3lyxeo?at_medium=RSS&at_campaign=rss",
+      "summary": "The BBC's political and Europe editors analyse the new agreements between the UK and EU.",
+      "published": "2026-11-20T21:43:22+00:00",
+      "source": "BBC News",
+      "category": "时政"
+    },
+    {
+      "title": "Everyone’s making money off ‘GTA 6’ this week — except investors in Take-Two’s stock",
+      "link": "https://www.marketwatch.com/story/everyones-making-money-off-gta-6-this-week-except-investors-in-take-twos-stock-489ee01b?mod=mw_rss_topstories",
+      "summary": "‘Grand Theft Auto VI’ might be a blockbuster game, but investors are shrugging it off.",
+      "published": "2026-11-20T21:39:00+00:00",
+      "source": "MarketWatch",
+      "category": "金融"
+    },
+    {
+      "title": "The hidden catch in Anthropic’s IPO: Billions of locked-up shares are waiting in the wings",
+      "link": "https://www.marketwatch.com/story/the-hidden-catch-in-anthropics-ipo-billions-of-locked-up-shares-are-waiting-in-the-wings-279d33ce?mod=mw_rss_topstories",
+      "summary": "A looming oversupply problem could weigh on the stock over the next year",
+      "published": "2026-11-20T21:39:00+00:00",
+      "source": "MarketWatch",
+      "category": "金融"
+    },
+    {
+      "title": "The latest from Trump's press conference",
+      "link": "https://www.npr.org/2026/11/20/nx-s1-6047636/trump-presser",
+      "summary": "President Trump gave a wide-ranging press conference following his historic trip to Asia where he met with Chinese President Xi and Russian President Putin.",
+      "published": "2026-11-20T21:38:21+00:00",
+      "source": "NPR News",
+      "category": "时政"
+    },
+    {
+      "title": "Rising seas have forced this Quinault village to relocate",
+      "link": "https://www.npr.org/2026/11/20/nx-s1-6046485/rising-seas-have-forced-this-quinault-village-to-relocate",
+      "summary": "The Quinault Indian Nation has moved its largest village away from rising seas and tsunamis",
+      "published": "2026-11-20T21:38:13+00:00",
+      "source": "NPR News",
+      "category": "时政"
+    },
+    {
+      "title": "Trump's impact on an Ohio steel plant",
+      "link": "https://www.npr.org/2026/11/20/nx-s1-5860971/trumps-impact-on-ohio-steel-plant",
+      "summary": "The giant steel plant in Middletown, Ohio planned to switch away from using coke, a refined form of coal. The switch would have cut hazardous air pollution -- and greenhouse gas emissions. But that plan has changed under President Trump",
+      "published": "2026-11-20T21:38:11+00:00",
+      "source": "NPR News",
+      "category": "时政"
+    },
+    {
+      "title": "MLK's handwritten draft of iconic speech on display for the first time",
+      "link": "https://www.npr.org/2026/11/20/nx-s1-6039337/mlk-i-have-a-dream-speech-draft-public-display",
+      "summary": "The only known handwritten draft of The Reverend Martin Luther King Jr.'s 'I Have a Dream' speech is on display in his hometown. The iconic phrase, however, never made it on the page.",
+      "published": "2026-11-20T21:38:05+00:00",
+      "source": "NPR News",
+      "category": "时政"
+    },
+    {
+      "title": "Micron and Sandisk stocks might look like bargains, but analysts say that’s actually a red flag",
+      "link": "https://www.marketwatch.com/story/micron-and-sandisk-stocks-might-look-like-bargains-but-analysts-say-thats-actually-a-red-flag-da1f1f5d?mod=mw_rss_topstories",
+      "summary": "Cheap valuation multiples for memory stocks have historically been associated with peak pricing levels, according to analysts.",
+      "published": "2026-11-20T21:36:00+00:00",
+      "source": "MarketWatch",
+      "category": "金融"
+    },
+    {
+      "title": "One thing Thanksgiving travelers can be thankful for: Gas prices are down 75 cents from this year’s peak",
+      "link": "https://www.marketwatch.com/story/one-thing-thanksgiving-travelers-can-be-thankful-for-gas-prices-are-down-75-cents-from-this-years-peak-efac1809?mod=mw_rss_topstories",
+      "summary": "Travelers preparing for Thanksgiving trips will find cheaper gasoline prices at the pump after months of elevated fuel prices.",
+      "published": "2026-11-20T21:34:00+00:00",
+      "source": "MarketWatch",
+      "category": "金融"
+    },
+    {
+      "title": "Anthropic’s stock sees dramatic slide but manages to stay above its IPO price",
+      "link": "https://www.marketwatch.com/story/anthropics-stock-slides-closer-to-ipo-price-and-drags-down-the-ai-trade-cc43a0c4?mod=mw_rss_topstories",
+      "summary": "Anthropic’s inability to hold its opening stock price has been seen as “bad for the rest of tech.”",
+      "published": "2026-11-20T21:25:00+00:00",
+      "source": "MarketWatch",
+      "category": "金融"
+    },
+    {
+      "title": "Gap names new Athleta CEO, says Old Navy turnaround is seeing signs of progress",
+      "link": "https://www.cnbc.com/2026/11/19/gap-gap-q3-2026-earnings.html",
+      "summary": "Gap on Thursday announced Ashley Kechter as the new CEO of Athleta. The retailer also reported mixed fiscal third-quarter earnings.",
+      "published": "2026-11-20T21:04:48+00:00",
+      "source": "CNBC Markets",
+      "category": "金融"
+    },
+    {
+      "title": "Trump threatens ban on US firms building AI data centres overseas",
+      "link": "https://www.bbc.co.uk/news/articles/cmde1lw9y54ko?at_medium=RSS&at_campaign=rss",
+      "summary": "The US president provided little detail on the potential policy, saying others in his team were hearing about it for the first time.",
+      "published": "2026-11-20T20:54:12+00:00",
+      "source": "BBC News",
+      "category": "时政"
+    },
+    {
+      "title": "Daniel Ek backs AI researcher’s fusion power startup. Here’s what they’re building.",
+      "link": "https://techcrunch.com/2026/11/20/daniel-ek-backs-ai-researchers-fusion-power-startup-heres-what-theyre-building/",
+      "summary": "Spotify founder Daniel Ek is backing Europa Fusion, a fusion power startup founded by an AI researcher. Here's what the startup is building.",
+      "published": "2026-11-20T19:53:41+00:00",
+      "source": "TechCrunch AI",
+      "category": "AI"
+    },
+    {
+      "title": "New guide lays out how Army installations can coordinate with local agencies before disaster strikes",
+      "link": "https://www.defenseone.com/threats/2026/11/new-guide-lays-out-how-army-installations-can-coordinate-local-agencies-disaster-strikes/417377/",
+      "summary": "The handbook was released after the Army’s second Defense Critical Infrastructure summit.",
+      "published": "2026-11-20T19:42:56+00:00",
+      "source": "Defense One",
+      "category": "军事"
+    },
+    {
+      "title": "Navy’s shipbuilding plan would require massive hike in annual appropriations: CBO",
+      "link": "https://breakingdefense.com/2026/11/navys-shipbuilding-plan-would-require-massive-hike-in-annual-appropriations-cbo/",
+      "summary": "The Navy’s shipbuilding plan released in May would average out to an annual cost of roughly $53.8 billion in shipbuilding appropriations — a 41 percent increase from the last five years, the Congressional Budget Office found. ",
+      "published": "2026-11-20T19:33:00+00:00",
+      "source": "Breaking Defense",
+      "category": "军事"
+    },
+    {
+      "title": "AI claimed a solution to the 167-year-old Riemann hypothesis — and a human did, too",
+      "link": "https://techcrunch.com/2026/11/20/ai-claimed-a-solution-to-the-167-year-old-riemann-hypothesis-and-a-human-did-too/",
+      "summary": "Mathematicians are having their minds blown by the latest AI-driven result — and there's a competing human solution, too.",
+      "published": "2026-11-20T19:32:08+00:00",
+      "source": "TechCrunch AI",
+      "category": "AI"
+    },
+    {
+      "title": "财报再亮眼也没用！黄仁勋想回去，英伟达董事会偏不让",
+      "link": "https://www.infoq.cn/article/3xzCDJBbDREm4EJFJWrH?utm_source=rss&utm_medium=article",
+      "summary": "点击查看原文>",
+      "published": "2026-11-20T18:48:14+00:00",
+      "source": "InfoQ中文",
+      "category": "AI"
+    },
+    {
+      "title": "AI 来了，团队究竟怎么变？",
+      "link": "https://www.infoq.cn/video/ODJ7iuw7swP8TlU4SiAB?utm_source=rss&utm_medium=article",
+      "summary": "点击查看原文>",
+      "published": "2026-11-20T18:43:54+00:00",
+      "source": "InfoQ中文",
+      "category": "AI"
+    },
+    {
+      "title": "“美国大豆包”又发新模型，Neon 接入 Antigravity 后编程解题率升至三倍多",
+      "link": "https://www.infoq.cn/article/tDxNggErsJNeb53ZkYeF?utm_source=rss&utm_medium=article",
+      "summary": "点击查看原文>",
+      "published": "2026-11-20T18:41:34+00:00",
+      "source": "InfoQ中文",
+      "category": "AI"
+    },
+    {
+      "title": "Agent 上岗，你敢放手吗？",
+      "link": "https://www.infoq.cn/video/qafOtORWUX0eD0WfSlYi?utm_source=rss&utm_medium=article",
+      "summary": "点击查看原文>",
+      "published": "2026-11-20T18:25:42+00:00",
+      "source": "InfoQ中文",
+      "category": "AI"
+    },
+    {
+      "title": "A second judge blocks Trump's arch, saying it's unlikely to succeed in court",
+      "link": "https://www.npr.org/2026/11/20/nx-s1-6048675/trump-arch-blocked-arlington",
+      "summary": "A federal judge in Virginia said she will issue a preliminary injunction against Trump's arch, going a step further than the D.C. federal judge who temporarily blocked construction earlier this week.",
+      "published": "2026-11-20T18:25:09+00:00",
+      "source": "NPR News",
+      "category": "时政"
+    },
+    {
+      "title": "Autonomy firm Auterion to launch joint venture with Ukrainian drone maker Skyfall",
+      "link": "https://breakingdefense.com/2026/11/autonomy-firm-auterion-to-launch-joint-venture-with-ukrainian-drone-maker-skyfall/",
+      "summary": "The new venture, called Skyfall X Auterion, will produce Skyfall drones with Auterion software in Germany, &#8220;outside the range of air strikes,&#8221; Auterion said.",
+      "published": "2026-11-20T18:24:00+00:00",
+      "source": "Breaking Defense",
+      "category": "军事"
+    },
+    {
+      "title": "华为云开源昇腾原生具身世界模型CloudRobo-WM1.2，两项评测均列第一",
+      "link": "https://www.infoq.cn/article/LCqRiGDSeMBfXo4iktdA?utm_source=rss&utm_medium=article",
+      "summary": "点击查看原文>",
+      "published": "2026-11-20T18:19:11+00:00",
+      "source": "InfoQ中文",
+      "category": "AI"
+    },
+    {
+      "title": "Man guilty of murdering woman he groomed on fetish site",
+      "link": "https://www.bbc.co.uk/news/articles/cmy49lekdkkzo?at_medium=RSS&at_campaign=rss",
+      "summary": "Dwain Hall has been found guilty of the kidnap and first-degree murder of Sonia Exelby.",
+      "published": "2026-11-20T18:17:56+00:00",
+      "source": "BBC News",
+      "category": "时政"
+    },
+    {
+      "title": "The most misunderstood graph in AI just got a major update",
+      "link": "https://www.technologyreview.com/2026/11/20/1149399/the-most-misunderstood-graph-in-ai-just-got-a-major-update/",
+      "summary": "A new report from the AI evaluation nonprofit METR finds that some AI capabilities are continuing to improve along an exponential trajectory—but it also indicates that models aren’t quite as good at tasks that require judgment as they are at coding.  The report is an update to the organization’s tim",
+      "published": "2026-11-20T18:15:15+00:00",
+      "source": "MIT Technology Review",
+      "category": "AI"
+    },
+    {
+      "title": "Chips can survive the space environment — can their financing?",
+      "link": "https://techcrunch.com/2026/11/20/chips-can-survive-the-space-environment-can-their-financing/",
+      "summary": "Lenders don't want SpaceX shooting their collateral into orbit. What does that mean for space data centers writ large?",
+      "published": "2026-11-20T17:40:01+00:00",
+      "source": "TechCrunch AI",
+      "category": "AI"
+    },
+    {
+      "title": "AI 漫剧不缺作品，缺什么？｜QLab直播",
+      "link": "https://www.infoq.cn/article/27xI2tBkStO5qz52VBPw?utm_source=rss&utm_medium=article",
+      "summary": "点击查看原文>",
+      "published": "2026-11-20T17:14:29+00:00",
+      "source": "InfoQ中文",
+      "category": "AI"
+    },
+    {
+      "title": "Sweden’s Nordic Air Defence launches K200 drone interceptor, pushes toward Ukraine tests",
+      "link": "https://breakingdefense.com/2026/11/swedens-nordic-air-defence-launches-k200-drone-interceptor-pushes-toward-ukraine-tests/",
+      "summary": "The Swedish firm said that the counter-drone solution, a successor to the Kreuger 100XR, is designed to intercept jet-powered types, including the Russian Geran-3a.",
+      "published": "2026-11-20T17:12:00+00:00",
+      "source": "Breaking Defense",
+      "category": "军事"
+    },
+    {
+      "title": "Trump initially accepted the midterm results, but most GOP voters doubt they were fair",
+      "link": "https://www.npr.org/2026/11/20/nx-s1-6047605/midterm-election-distrust-republicans",
+      "summary": "Less than half of Republicans nationwide considered the midterm elections \"free and fair,\" according to new polling.",
+      "published": "2026-11-20T17:00:00+00:00",
+      "source": "NPR News",
+      "category": "时政"
+    },
+    {
+      "title": "Trump to keynote Reagan National Defense Forum",
+      "link": "https://breakingdefense.com/2026/11/trump-to-keynote-reagan-national-defense-forum/",
+      "summary": "Trump will be the first president to attend the RNDF, which has steadily grown in size over the years.",
+      "published": "2026-11-20T16:53:33+00:00",
+      "source": "Breaking Defense",
+      "category": "军事"
+    },
+    {
+      "title": "One data foundation and many application layers drive the Army’s NGC2 transformation",
+      "link": "https://breakingdefense.com/2026/11/one-data-foundation-and-many-application-layers-drive-the-armys-ngc2-transformation/",
+      "summary": "Across the Indo-Pacific, the Army is testing how shared data and open systems can speed battlefield decisions.",
+      "published": "2026-11-20T16:53:14+00:00",
+      "source": "Breaking Defense",
+      "category": "军事"
+    },
+    {
+      "title": "Pentagon CIO Davies tapped as acting National Cyber Director",
+      "link": "https://breakingdefense.com/2026/11/pentagon-cio-davies-tapped-as-acting-national-cyber-director/",
+      "summary": "Kirsten Davies is taking over the role for Sean Cairncross at the White House. ",
+      "published": "2026-11-20T16:31:00+00:00",
+      "source": "Breaking Defense",
+      "category": "军事"
+    },
+    {
+      "title": "How Orchestra Noir turned classical music into a cultural movement",
+      "link": "https://www.npr.org/2026/11/20/g-s1-154644/orchestra-noir-black-musical-tour-classical-music",
+      "summary": "Orchestra Noir is back on tour, selling out stages across the country and proving classical music can be anything you want it to be.",
+      "published": "2026-11-20T16:12:18+00:00",
+      "source": "NPR News",
+      "category": "时政"
+    },
+    {
+      "title": "What is the EU-UK youth experience scheme and when will it start?",
+      "link": "https://www.bbc.co.uk/news/articles/c6jeqv9nv5eqo?at_medium=RSS&at_campaign=rss",
+      "summary": "The agreement will allow young people between 18 and 31 year-olds to travel, work or study in the EU for up to three years.",
+      "published": "2026-11-20T16:07:55+00:00",
+      "source": "BBC News",
+      "category": "时政"
+    },
+    {
+      "title": "Ex-GM CEO on Mary Barra succession planning: 'It's going to be tough'",
+      "link": "https://www.cnbc.com/2026/11/20/gm-ceo-succession-mary-barra-dan-akerson.html",
+      "summary": "Former GM CEO Dan Akerson says whoever replaces Mary Barra will have a difficult task because they'll inherit rapid change in technology and the auto industry.",
+      "published": "2026-11-20T15:50:27+00:00",
+      "source": "CNBC Markets",
+      "category": "金融"
+    },
+    {
+      "title": "联合国助理秘书长：儿基会同中国合作正惠及世界更多儿童",
+      "link": "https://www.chinanews.com.cn/gj/2026/11-20/10735596.shtml",
+      "summary": "中新社北京11月20日电 (记者 官逸伦)“我在今年早些时候访问加沙地带时，亲眼见证了这一伙伴关系带来的影响：中国支持联合国儿童基金会，提供挽救生命的医疗和过冬物资。”联合国助理秘书长、联合国儿基会副执行主任泰德·柴班20日在北京出席活动时如是说。",
+      "published": "2026-11-20T15:07:47+00:00",
+      "source": "中国新闻网·国际",
+      "category": "时政"
+    },
+    {
+      "title": "Trump touts meeting with Xi and Putin but offers little results",
+      "link": "https://www.npr.org/2026/11/20/nx-s1-6047594/trump-asia-trip-xi-putin-press-conference",
+      "summary": "At a White House press conference Friday, Trump offered little in actual results of the meetings, beyond a joint statement on unity over some issues.",
+      "published": "2026-11-20T15:00:00+00:00",
+      "source": "NPR News",
+      "category": "时政"
+    },
+    {
+      "title": "The fallout from Nvidia’s Jensen Huang scandal continues",
+      "link": "https://techcrunch.com/podcast/the-fallout-from-nvidias-jensen-huang-scandal-continues/",
+      "summary": "In the midst of dealing with the fallout from its ouster of CEO Jensen Huang, Nvidia delivered its latest earnings report this week, with healthy growth and promises that the good times will continue. At the same time, the chipmaker said it will stop selling its H200 chips in China, and it dismissed",
+      "published": "2026-11-20T14:55:44+00:00",
+      "source": "TechCrunch AI",
+      "category": "AI"
+    },
+    {
+      "title": "宁夏出台干线公路勘察设计指导书 贴合本地地质筑牢公路建设源头关口",
+      "link": "https://www.chinanews.com.cn/cj/2026/11-20/10735583.shtml",
+      "summary": "中新网银川11月20日电(记者 于晶)20日，记者从宁夏公路管理中心获悉，《宁夏普通国省干线公路工可及勘察设计通用指导书(试行)》正式印发实施，为当地普通国省干线公路前期工作划定统一标尺，破解前期设计标准不一、深度不均、要点漏项等问题。",
+      "published": "2026-11-20T14:26:07+00:00",
+      "source": "中国新闻网·财经",
+      "category": "金融"
+    },
+    {
+      "title": "种下“懒庄稼” 富了“勤快人”——记“中国黄精之乡”十八年产业路",
+      "link": "https://www.chinanews.com.cn/cj/2026/11-20/10735582.shtml",
+      "summary": "中新网重庆11月20日电 题：种下“懒庄稼” 富了“勤快人”——记“中国黄精之乡”十八年产业路",
+      "published": "2026-11-20T14:25:03+00:00",
+      "source": "中国新闻网·财经",
+      "category": "金融"
+    },
+    {
+      "title": "越共中央总书记、国家主席苏林就任后首访云南",
+      "link": "https://www.chinanews.com.cn/gj/2026/11-20/10735579.shtml",
+      "summary": "中新社昆明11月20日电 (记者 陈静)越共中央总书记、国家主席苏林和夫人结束亚太经合组织(APEC)第三十三次领导人非正式会议行程后，于11月19日至20日到访云南。在滇期间，苏林参访昆明胡志明旧居、会见中越青年代表、出席越南—中国西南地区发展战略对接论坛、在昆明种下友谊树。",
+      "published": "2026-11-20T14:18:21+00:00",
+      "source": "中国新闻网·国际",
+      "category": "时政"
+    },
+    {
+      "title": "上汽通用发布真龙插混MAX，首搭别克至境世家",
+      "link": "https://www.leiphone.com/category/industrynews/SiETkjl6gqYBSCz4.html",
+      "summary": "2026年11月20日，上汽通用汽车发布全新一代插混技术——真龙插混MAX，将首搭别克MPV全新至境世家，并于11月27日广州车展对公众亮相。这套系统由2.0T混动专用发动机、800V高压平台与支持6C充电的插混专用电池组成。据介绍，真龙插混MAX，基于插电混动独有的物理架构优势，相对于真龙插混与真龙插混Pro，在性能、静谧、安全到智能等方面进一步升级。&nbsp;动力：满电与亏电加速相差0.1秒真龙插混MAX搭载通用汽车首款2.0T混动专用发动机、WLTC工况效率93.07%的插混电驱，以及800V高压架构，系统综合最大功率550kW，峰值扭矩815N·m。上汽通用称，电池在20% SOC时",
+      "published": "2026-11-20T14:07:00+00:00",
+      "source": "雷锋网",
+      "category": "AI"
+    },
+    {
+      "title": "Grab 通过安全策略应对 AI 生成代码变更激增，提升移动端 App 稳定性",
+      "link": "https://www.infoq.cn/article/AH8deOIGb5hMHRPIKfrf?utm_source=rss&utm_medium=article",
+      "summary": "点击查看原文>",
+      "published": "2026-11-20T14:00:00+00:00",
+      "source": "InfoQ中文",
+      "category": "AI"
+    },
+    {
+      "title": "Six AI-powered gadgets that could make your home office smarter",
+      "link": "https://techcrunch.com/2026/11/20/6-ai-powered-gadgets-that-could-make-your-home-office-smarter/",
+      "summary": "From notetakers to webcams, here are six AI-powered gadgets to upgrade your workspace.",
+      "published": "2026-11-20T14:00:00+00:00",
+      "source": "TechCrunch AI",
+      "category": "AI"
+    },
+    {
+      "title": "数万名日本民众签名反对日本拥有核潜艇",
+      "link": "https://www.chinanews.com.cn/gj/2026/11-20/10735557.shtml",
+      "summary": "中新社东京11月20日电(记者 朱晨曦)日本多个民间团体20日向防卫省递交由约4.7万名日本民众联合签名的材料，反对日本拥有核动力潜艇，要求政府撤回相关计划。",
+      "published": "2026-11-20T13:57:21+00:00",
+      "source": "中国新闻网·国际",
+      "category": "时政"
+    },
+    {
+      "title": "联合国教科文组织新报告呼吁加大儿童学前教育投资",
+      "link": "https://www.chinanews.com.cn/gj/2026/11-20/10735540.shtml",
+      "summary": "中新网巴黎11月20日电 联合国教科文组织在20日世界儿童日之际发布新报告，呼吁加大儿童学前教育投资。",
+      "published": "2026-11-20T13:56:27+00:00",
+      "source": "中国新闻网·国际",
+      "category": "时政"
+    },
+    {
+      "title": "马斯克试图与MAGA切割？特朗普回应：他是我的朋友",
+      "link": "https://www.chinanews.com.cn/gj/2026/11-20/10735542.shtml",
+      "summary": "中新网11月20日电 综合美媒近日报道，在民主党于美国中期选举中大胜共和党后，特斯拉公司和太空探索技术公司首席执行官马斯克正与“让美国再次伟大”(MAGA)阵营保持距离，并称对此前为共和党候选人投入大量资金表示后悔。对此，美国总统特朗普则回应称，马斯克仍是自己的朋友。",
+      "published": "2026-11-20T13:24:58+00:00",
+      "source": "中国新闻网·国际",
+      "category": "时政"
+    },
+    {
+      "title": "The Download: inside the quest to make our minds immortal",
+      "link": "https://www.technologyreview.com/2026/11/20/1149371/the-download-quest-to-make-minds-immortal/",
+      "summary": "This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. What we learned when our Roundtables explored the quest to make minds immortal To preserve our sense of self, some scientists are working on ways to k",
+      "published": "2026-11-20T13:10:00+00:00",
+      "source": "MIT Technology Review",
+      "category": "AI"
+    },
+    {
+      "title": "OpenBSD 8.0 带来了更广泛的硬件支持、安全性增强以及虚拟化改进",
+      "link": "https://www.infoq.cn/article/ENG8g3E0RX3IiuvgD7BG?utm_source=rss&utm_medium=article",
+      "summary": "点击查看原文>",
+      "published": "2026-11-20T13:00:00+00:00",
+      "source": "InfoQ中文",
+      "category": "AI"
+    },
+    {
+      "title": "Texas execution took over an hour as staff struggled to find vein; Reinaldo Dennes moaned about pain",
+      "link": "https://www.npr.org/2026/11/20/nx-s1-6048461/texas-execution-dennes-moaned-pain",
+      "summary": "The same day Dennes was given lethal injection, Florida carried out a record-breaking 20th execution of the year.",
+      "published": "2026-11-20T12:24:40+00:00",
+      "source": "NPR News",
+      "category": "时政"
+    },
+    {
+      "title": "Rejecting cheap fabrics, higher prices: Why shoppers are asking for better clothes",
+      "link": "https://www.cnbc.com/2026/11/20/clothing-prices-polyester-cotton-quality.html",
+      "summary": "Retailers are charging higher prices for clothing made with cheaper materials. Shoppers are taking notice and experts say it could shift how they spend.",
+      "published": "2026-11-20T12:00:02+00:00",
+      "source": "CNBC Markets",
+      "category": "金融"
+    },
+    {
+      "title": "A24 is having a great year at the box office. That could give HBO Max a streaming edge",
+      "link": "https://www.cnbc.com/2026/11/20/a24-box-office-hbo-max.html",
+      "summary": "A24 films \"Backrooms,\" \"The Drama\" and the Elizabeth Holmes documentary, \"You Can See Everything,\" are fueling a banner year at the box office.",
+      "published": "2026-11-20T12:00:02+00:00",
+      "source": "CNBC Markets",
+      "category": "金融"
+    },
+    {
+      "title": "Cloudflare 推出面向后量子时代 Web 安全的公共证书颁发机构",
+      "link": "https://www.infoq.cn/article/WGpi7vxi1pCiJeJBKbm7?utm_source=rss&utm_medium=article",
+      "summary": "点击查看原文>",
+      "published": "2026-11-20T12:00:00+00:00",
+      "source": "InfoQ中文",
+      "category": "AI"
+    },
+    {
+      "title": "日本核心CPI连续62个月上涨",
+      "link": "https://www.chinanews.com.cn/gj/2026/11-20/10735435.shtml",
+      "summary": "中新社东京11月20日电(记者 朱晨曦)日本总务省20日公布的数据显示，10月日本去除生鲜食品后的核心消费价格指数(CPI)同比上升2.2%至102.9，连续62个月同比上涨。",
+      "published": "2026-11-20T11:17:53+00:00",
+      "source": "中国新闻网·国际",
+      "category": "时政"
+    },
+    {
+      "title": "拓竹 MakerWorld，为什么难复制？",
+      "link": "https://www.leiphone.com/category/weiwu/zv5a8TgwqnZmROX5.html",
+      "summary": "模型社区成了&nbsp;3D&nbsp;打印厂商争夺的下一块阵地。作者丨姚单编辑丨董子博2026 年 9 月底，一个 3D 打印模型社区收益榜上排第一的创作者，纯靠赚积分，已经攒下价值约 55 万元人民币的收益。年末是购机和打印高峰，照这个势头，全年冲到 80~90 万元也不成问题。这不是个例。头部创作者一年收入高达 40 万美金，足以支撑一份全职；中腰部把创作当副业、一年赚 5 万~10 万美金，被形容&quot;不算很难&quot;。这些收益，真实发生在拓竹旗下的模型社区 MakerWorld。拓竹成立于 2020 年，寥寥数年就冲进行业的第一梯队。早在创业初期，拓竹就判断，硬件壁垒最多只",
+      "published": "2026-11-20T11:10:00+00:00",
+      "source": "雷锋网",
+      "category": "AI"
+    },
+    {
+      "title": "日本核心CPI连续62个月上涨 民调显示高市应对通胀措施遭质疑",
+      "link": "https://www.chinanews.com.cn/gj/2026/11-20/10735447.shtml",
+      "summary": "中新网11月20日电 日本总务省20日公布的数据显示，剔除生鲜食品后，日本10月核心消费价格指数(CPI)同比上涨2.2%，涨幅连续两个月超过日本央行设定的2%目标水平。日媒指出，截至10月，日本核心CPI已连续62个月同比上涨。",
+      "published": "2026-11-20T11:03:54+00:00",
+      "source": "中国新闻网·国际",
+      "category": "时政"
+    },
+    {
+      "title": "谷歌发布用于机器人控制、仿真和策略优化的 Gemini 4 Argon",
+      "link": "https://www.infoq.cn/article/S4LH5Z9zcbLokm5uNSKR?utm_source=rss&utm_medium=article",
+      "summary": "点击查看原文>",
+      "published": "2026-11-20T11:00:00+00:00",
+      "source": "InfoQ中文",
+      "category": "AI"
+    },
+    {
+      "title": "灵掌机器人太空灵巧手亮相世界智能制造博览会",
+      "link": "https://www.leiphone.com/category/industrynews/leaIWtsEkg58zaCy.html",
+      "summary": "11月19日至21日，第十一届世界智能制造博览会（以下简称“智博会”）在南京国际博览中心举办。无锡灵掌机器人科技有限公司（以下简称“灵掌机器人”）携全系列共9款灵巧手产品参展，重点展示了灵巧手在工业制造、太空任务、特种作业、科研与人形机器人等行业领域的落地场景及解决方案。灵掌机器人创始人兼首席执行官张超介绍，灵巧手是具身智能走向真实操作的重要一环，也是连接智能决策与物理执行的关键末端。当前灵巧手行业正进入快速发展期，逐步进入真实应用场景中，市场需求也在持续释放。从工业产线上的重物抓取搬运，到危险环境中的远程防爆作业，再到太空航天器维修，灵巧手的市场应用空间广阔。在张超看来，机器人发展的重要价值",
+      "published": "2026-11-20T10:27:00+00:00",
+      "source": "雷锋网",
+      "category": "AI"
+    },
+    {
+      "title": "解读丨智能戒指红海之外，Elah Ring 正在深入美国腹地",
+      "link": "https://www.leiphone.com/category/weiwu/ptAnAiMGqEOX65EI.html",
+      "summary": "斯坦福毕业生做的 Elah Ring，要当美国百姓的“Personal Faith Agent”。作者丨陈玘凡编辑丨吴优斯坦福周边没有密集的商圈与高楼，和车程半小时的旧金山城区氛围差别明显。校园占地 8180 英亩，大片山丘林地，建筑低矮，很容易让人产生孤独感。2014 年，Everblessed 创始人温立来到这里，攻读流体力学与水文硕士。初来乍到，每周最轻松愉快的时候，就是周六晚的信仰家庭聚会。每个人做几个菜，大家一起读经，唱诗，祷告，聊最近生活中的喜怒哀乐，和背后神的指引。这是当时温立每周能吃到最丰盛的晚餐。那时候，他没有想到，求学之外的这样一段独特经历，会在十年后深刻地影响他的人生选择",
+      "published": "2026-11-20T10:09:00+00:00",
+      "source": "雷锋网",
+      "category": "AI"
+    },
+    {
+      "title": "Snowflake Expedition 大会亮出哪些新能力？一文梳理重磅更新 ｜ 技术趋势",
+      "link": "https://www.infoq.cn/article/KBcjdx4ZlUj4hyI7zvdd?utm_source=rss&utm_medium=article",
+      "summary": "点击查看原文>",
+      "published": "2026-11-20T10:00:00+00:00",
+      "source": "InfoQ中文",
+      "category": "AI"
+    },
+    {
+      "title": "Cloudflare 重构 D1 控制平面，支持数百万数据库规模",
+      "link": "https://www.infoq.cn/article/tfy0PQW5LMZCXlCugMo6?utm_source=rss&utm_medium=article",
+      "summary": "点击查看原文>",
+      "published": "2026-11-20T10:00:00+00:00",
+      "source": "InfoQ中文",
+      "category": "AI"
+    },
+    {
+      "title": "火山引擎 Agent-Native 团队的上下文管理实践｜AICon北京",
+      "link": "https://www.infoq.cn/article/YTGHxcabs0RI3btLIUxm?utm_source=rss&utm_medium=article",
+      "summary": "点击查看原文>",
+      "published": "2026-11-20T10:00:00+00:00",
+      "source": "InfoQ中文",
+      "category": "AI"
+    },
+    {
+      "title": "Combatting adversarial distillation",
+      "link": "https://openai.com/index/combatting-adversarial-distillation",
+      "summary": "OpenAI’s layered approach to adversarial distillation combines model training, safeguards, detection, and enforcement to protect against capability extraction.",
+      "published": "2026-11-20T10:00:00+00:00",
+      "source": "OpenAI Blog",
+      "category": "AI"
+    },
+    {
+      "title": "享界V8正式上市售价31.98万元起，鸿蒙智行首款纯电MPV瞄准高端家用",
+      "link": "https://www.leiphone.com/category/industrynews/Tjsd07j74heQpJKc.html",
+      "summary": "11月20日，在“鸿蒙智行享界V8及星芒品牌发布会”现场，鸿蒙智行首款“家庭智慧旗舰MPV”享界V8正式上市，售价31.98-42.98万元，下定享界V8，享至高93000元购车权益，首批交付已于上市当日开启。作为鸿蒙智行切入家用MPV市场的首款产品，享界V8围绕家庭出行真实场景带来为家而生的100个设计，并以“8系价格、9系配置”重新定义家用标准，成为今年下半年家用车市场的强势黑马。目前，享界V8新车已在全国147城399店同步到店，消费者可就近体验实车或预约试驾。对一台家用MPV而言，内部空间是需求的第一入口。享界V8车身尺寸为5335mm×2005mm×1805mm，轴距长达3250mm",
+      "published": "2026-11-20T08:41:00+00:00",
+      "source": "雷锋网",
+      "category": "AI"
+    },
+    {
+      "title": "速卖通双11中国商家狂揽全球订单：品牌成交大涨近50%，美巴创历史新高",
+      "link": "https://www.leiphone.com/category/industrynews/PyCDSvzY37FZLkZA.html",
+      "summary": "为了一场从中国走向世界的购物节，美国达人专门请了一天假。&nbsp;“双11已经成为我们最重要的日子之一。”美国YouTube达人PETER ARVIDSON表示，速卖通是其主要合作平台，“几乎所有同行都在报道双11，我专门请了一天假来盯着。”&nbsp;达人忙着盯大促，中国商家忙着补库存，能源商家在美国站挂出“SOLD OUT”的大字报、跑步机品牌Ramypoket、手工模具品牌GBhouse纷纷后悔没有多备点货……11月19日，速卖通海外双11收官，从欧盟到美洲，再到正处极夜的北极圈，都有中国商家的好消息：美国单日成交创去年关税风波以来新高，巴西单日访客数、买家数创建站以来新高；品牌生意持",
+      "published": "2026-11-20T08:39:00+00:00",
+      "source": "雷锋网",
+      "category": "AI"
+    },
+    {
+      "title": "速卖通双11收官：品牌成交大涨近50%，美国、巴西、小众潜力市场均创新高",
+      "link": "https://www.leiphone.com/category/industrynews/RBVQITzBAqkoQGzE.html",
+      "summary": "11月19日，海外双11收官。速卖通美国市场单日成交刷新去年关税风波以来纪录，巴西市场单日访客数创建站以来新高；品牌生意持续爆发，双11全周期大涨近50%，欧盟市场逆势大涨超三成。在关税与跨境履约成本变化之下，速卖通以品牌化建立消费者认知、以本地化提升交付确定性，率先跑出低价小包裹之外的新增长路径。平台还借助AI运营托管拓展增长边界，帮商家在北极圈、佛得角、挪威等冷门市场自动出单，刷新历年增速。品牌化、本地化叠加AI能力，速卖通正加速从“卖货渠道”向“品牌出海全新主场”跃迁。",
+      "published": "2026-11-20T08:37:00+00:00",
+      "source": "雷锋网",
+      "category": "AI"
+    },
+    {
+      "title": "Lazada双11：品牌商城贡献近八成成交，天猫一键轻出海增长超200%",
+      "link": "https://www.leiphone.com/category/industrynews/eimD3gxofdJcSrVY.html",
+      "summary": "东南亚年终购物旺季由双十一率先点燃。今年双十一，LazMall品牌商城贡献了区域总成交额的近八成，其成交额达到日常水平的7倍。Lazada“一键轻出海”业务成交额同比增长超200%，订单量达到平日近4倍。品牌消费持续升温，跨境生意节节攀升，中国商家正借势Lazada，抢先收获年终消费旺季的首波红利。&nbsp;大促期间，东南亚六大市场平均每单消费金额均实现同比增长，区域整体增幅超过30%。市场研究机构Cube Asia发布的《2026年东南亚电商精明消费者报告》显示，超过半数的精明消费者更倾向于在品牌商城购物。价格之外，商品品质、正品保障和购物体验，正成为影响消费者购买决策的重要因素。&nbs",
+      "published": "2026-11-20T08:36:00+00:00",
+      "source": "雷锋网",
+      "category": "AI"
+    },
+    {
+      "title": "CoCreate伦敦峰会揭开跨境B2B电商新机遇：阿里国际站欧洲订单三年增长70%",
+      "link": "https://www.leiphone.com/category/industrynews/eqi19Azefys58IT4.html",
+      "summary": "11月19日，阿里国际站CoCreate峰会在英国伦敦举行，超过5000名欧洲中小企业主风雨无阻地奔赴这场AI跨境采购盛会。如此热情的背后，是跨境B2B电商正在迎来新的增长机遇。&nbsp;阿里国际站欧美买家业务副总裁郭威廷在现场透露了几个关键数字：三年来，阿里国际站欧洲订单、买家双双累计增长70%。&nbsp;（图：阿里国际站欧美买家业务副总裁郭威廷）&nbsp;细分到品类，欧洲市场的增长更是“欧气满满”：创意玩具与礼品年同比GMV增长高达231%、摩托车与踏板车增长高达141%，此外汽车零配件、电子零配件等品类都呈现高速的双位数增长。&nbsp;为了进一步激发欧洲买家的采购热情，阿里国际站",
+      "published": "2026-11-20T08:35:00+00:00",
+      "source": "雷锋网",
+      "category": "AI"
+    },
+    {
+      "title": "昇腾算力训出了双榜SOTA的具身世界模型，华为云这次想把整套底座开放出来",
+      "link": "https://www.qbitai.com/2026/11/511610.html",
+      "summary": "国产算力的成熟，把具身竞争维度从「芯片有多强」，拉入了一个比拼训练效率、数据规模、部署成本和场景落地速度的多维战场。",
+      "published": "2026-11-20T08:04:58+00:00",
+      "source": "量子位",
+      "category": "AI"
+    },
+    {
+      "title": "Navy will likely fly CCAs sooner than F/A-XX, White House nom says",
+      "link": "https://www.defenseone.com/defense-systems/2026/11/navy-will-likely-fly-ccas-sooner-f-xx-white-house-nom-says/417365/",
+      "summary": "William Toti, who’s been doing the job since May, is up for permanent appointment as Navy undersecretary.",
+      "published": "2026-11-20T08:03:41+00:00",
+      "source": "Defense One",
+      "category": "军事"
+    },
+    {
+      "title": "方程豹钛9上市：27.99万元起，折叠方向盘首次上车",
+      "link": "https://www.leiphone.com/category/transportation/Okzc1pyWcptuTh5J.html",
+      "summary": "11月19日，方程豹钛9正式上市，售价27.99万元起，置换价27.39万元起。作为比亚迪2026年收官车型，钛9首搭折叠智舱及DMS超级混动全能平台，进一步进入大型六座SUV市场。雷峰网了解到，折叠智舱搭载于钛9顶配版本，将折叠方向盘、躺平座椅、线控数字底盘与智慧生态结合。与常见的座椅放倒休息不同，这套方案将方向盘一并收纳，为驾驶位释放更多空间。方程豹将钛9的产品主张概括为“定义全维硬派新境”。从此次发布的配置来看，它既保留了方盒子造型和全地形能力，也将空间、座舱和六座舒适性作为重点，希望覆盖家庭出行、长途自驾与户外活动等需求。折叠方向盘上车，驾驶位可以怎样变？钛9此次最受关注的配置，是顶配",
+      "published": "2026-11-20T07:49:00+00:00",
+      "source": "雷锋网",
+      "category": "AI"
+    },
+    {
+      "title": "第六代 AMD EPYC 处理器技术峰会在京举行",
+      "link": "https://www.leiphone.com/category/industrynews/TVtcS88CGW5q5JDk.html",
+      "summary": "重塑计算，领航 AI 时代：AMD 携手生态伙伴推动 Agentic AI 基础设施创新2026年11月19日，中国北京——今日，以“重塑计算，领航 AI 时代”为主题的第六代 AMD EPYC 处理器技术峰会在北京中国大饭店举行，吸引1237位嘉宾参会。AMD 携手服务器系统厂商、软件与硬件生态合作伙伴及行业用户，围绕第六代 AMD EPYC 处理器（代号“Venice”）的产品布局、应用性能及平台技术展开深入交流，并共同举行基于第六代 AMD EPYC 处理器的服务器新品上市仪式，展示面向 Agentic AI 时代的计算创新与生态成果。随着 AI 应用从内容生成走向自主执行任务，企业对计",
+      "published": "2026-11-20T07:47:00+00:00",
+      "source": "雷锋网",
+      "category": "AI"
+    },
+    {
+      "title": "灵光开放生态再扩容：新增企业微信、腾讯文档等7项连接能力，累计支持54项外部服务",
+      "link": "https://www.leiphone.com/category/industrynews/walzAUin5QxPaCOQ.html",
+      "summary": "近日，蚂蚁集团旗下AI助手灵光宣布开放生态再度扩容，新增企业微信、腾讯文档、腾讯会议、飞常准等7项外部连接能力。至此，灵光支持的外部服务及连接能力已从47项增加至54项，进一步拓展AI助手在个人生活、办公协作、差旅出行等场景中的服务边界。此次新增能力进一步覆盖用户日常高频需求。在个人生活场景中，灵光新增相册连接能力，并通过快捷指令支持修改壁纸、备忘录等系统操作，推动AI与手机原生功能深度融合；在办公场景中，企业微信、腾讯文档和腾讯会议的加入，进一步丰富了灵光在企业沟通、文档协作、会议管理等方面的服务能力；在出行场景中，飞常准的接入则为用户获取航班动态等出行信息提供了更多便利。AI助手的竞争正从",
+      "published": "2026-11-20T07:43:00+00:00",
+      "source": "雷锋网",
+      "category": "AI"
+    },
+    {
+      "title": "Australia receives first 2 of 13 additional Seahawk helicopters",
+      "link": "https://breakingdefense.com/2026/11/australia-receives-first-2-of-13-additional-seahawk-helicopters/",
+      "summary": "The deliveries will expand the Royal Australian Navy&#8217;s MH-60R fleet to 36 aircraft by early 2028 as part of a broader effort to modernize Australia&#8217;s naval aviation capabilities.",
+      "published": "2026-11-20T07:00:00+00:00",
+      "source": "Breaking Defense",
+      "category": "军事"
+    },
+    {
+      "title": "当AI影视遇上文化出海：优秀作品亮相第47届美国电影市场",
+      "link": "https://www.leiphone.com/category/industrynews/sFbtCLZ06plyUxPF.html",
+      "summary": "当地时间11月10日至15日，第47届美国电影市场（AFM）在洛杉矶举行。AI影视平台携中国传统文化题材作品亮相展会并达成多项海外合作，为中华文化国际传播探索技术赋能的新实践。本届展会以“全球影视经济新图景”为主题，聚焦全球影视产业融资、制作、发行领域的新机遇，吸引来自全球超85个国家的数千名制片人、发行商、投资者及业界代表参会。中国电影联合展台、法国电影联盟、美国银行等机构平台，美国狮门影业、法国高蒙电影公司等全球领军影视企业亮相展会。11月12日，美国电影市场（AFM）创新交流空间（Innovation Hub）现场。人工智能与影视产业融合是本届展会的核心议题之一，主办方通过创新交流空间（",
+      "published": "2026-11-20T06:40:00+00:00",
+      "source": "雷锋网",
+      "category": "AI"
+    },
+    {
+      "title": "新浪新闻·2026探索大会在京举行 虚实交融共探智能时代共生新图景",
+      "link": "https://www.qbitai.com/2026/11/511603.html",
+      "summary": "11月19日，由微博与新浪新闻联合主办的“新浪新闻·2026探索大会”在北京举办。",
+      "published": "2026-11-20T06:16:06+00:00",
+      "source": "量子位",
+      "category": "AI"
+    },
+    {
+      "title": "大二「天才少女」刚拿下 ACM 最佳论文，立陷造假疑云，通讯作者独家回应",
+      "link": "https://www.leiphone.com/category/private/fTZ8RbFMcD34HieP.html",
+      "summary": "事件全貌梳理 + 当事人独家回应&nbsp; &nbsp; 作者丨邓哲敏&nbsp; &nbsp; 编辑丨齐铖湧&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;",
+      "published": "2026-11-20T06:03:00+00:00",
+      "source": "雷锋网",
+      "category": "AI"
+    },
+    {
+      "title": "支付宝小荷包联合蚂蚁庄园上线爱心插件，近50万用户共同守护流浪动物",
+      "link": "https://www.leiphone.com/category/industrynews/Xe1FWkNUk4IQr4kx.html",
+      "summary": "冬天的寒风一点点钻进街巷，街边的毛孩子该如何度过一年里最难捱的季节？近日，支付宝小荷包宣布联合蚂蚁庄园发起“守护流浪动物”计划。该计划以小荷包的共同管账能力为基础，联动蚂蚁庄园的公益互动玩法，让普通用户也能顺手做公益，陪小流浪们温暖过冬，目前已吸引近50万用户参与。用小荷包管理救助花销账目公开透明记者从支付宝小荷包的荷包圈发现，大量救助群体在用小荷包管理流浪动物的公益救助花销。作为支持多人共同管账的工具，小荷包具备账单公开透明、收支实时共享的特性：多个人可以同时参与一本账，每一笔收入与支出都实时同步、有据可查。更进一步，用户还能将账单公开到小荷包荷包圈，支持公众访问、查看，相当于零成本搭建起一",
+      "published": "2026-11-20T05:40:00+00:00",
+      "source": "雷锋网",
+      "category": "AI"
+    },
+    {
+      "title": "双系统决策+双层自进化，Agnes让Agent效率最高提速14倍，成本骤降至1/27！",
+      "link": "https://www.qbitai.com/2026/11/511582.html",
+      "summary": "已开源Agnes Harness",
+      "published": "2026-11-20T05:24:11+00:00",
+      "source": "量子位",
+      "category": "AI"
+    },
+    {
+      "title": "独家丨荣耀、腾讯背景团队创业做 AI 交互吊坠，已获李泽湘早期投资",
+      "link": "https://www.leiphone.com/category/weiwu/cmj50XKwCB4drkus.html",
+      "summary": "创始人肖裕炜曾在荣耀工作五年，经历横跨 GPU 底层技术与 AI 终端设备。作者丨黄艳冰编辑丨姚单雷峰网·鲸犀独家获悉，荣耀前高级算法工程师肖裕炜已离职创业，于今年年中创立 AI 交互硬件公司 KnowVoice。其目前正在李泽湘教授的下深圳科创学院孵化，已获得早期投资支持。创始人兼 CEO 肖裕炜生于 1998 年，本科毕业于广东工业大学，为广工大 Robomaster 战队 DynamicX 联创。毕业后就职于荣耀，职业经历横跨底层技术与战略业务。肖裕炜早期担任 GPU-Turbo-X SE 系统工程师，负责渲染技术与端侧高性能优化，他主导的 AI 渲显分离项目“荣耀幻影引擎”，主要解决游",
+      "published": "2026-11-20T03:22:00+00:00",
+      "source": "雷锋网",
+      "category": "AI"
+    },
+    {
+      "title": "独家丨影石研究院首度公开：字节旧将亓鲁任负责人",
+      "link": "https://www.leiphone.com/category/weiwu/o4pLV3X7mPE6sfxq.html",
+      "summary": "雷峰网·鲸犀独家获悉，影石创新董事亓鲁已出任影石研究院中心负责人，并兼任公司首席 AI 官。知情人士称，他将主要负责相关算法及人工智能领域的研发工作。亓鲁是一位 90 后，本硕博先后毕业于山东大学、中国科学院、香港中文大学，并在加州大学默塞德分校做过博士后，当前为武汉大学计算机学院教授，研究方向涉及计算机视觉与无人机。同时，亓鲁有丰富的学术履历，除高校任职外，还担任 IEEE TPAMI 编委以及多家国际学术会议领域主席。在加入影石前，他曾在字节跳动担任高级研究科学家，并任职于 Seed 大模型部门。2024 年，亓鲁加入影石，任研发总监，自今年 1 月起担任影石创新董事。早在 2022 年 ",
+      "published": "2026-11-20T02:01:00+00:00",
+      "source": "雷锋网",
+      "category": "AI"
+    },
+    {
+      "title": "具身机器人进入真机时代，华为云CloudRobo开始组队发力了",
+      "link": "https://www.qbitai.com/2026/11/511426.html",
+      "summary": "一批卡可以轮流服务多家公司，一次适配也能让更多团队受益。算力不必家家从头买，工程上的坑也不用家家重新踩。",
+      "published": "2026-11-20T01:07:38+00:00",
+      "source": "量子位",
+      "category": "AI"
+    },
+    {
+      "title": "White House fires cyber director in wake of outages, sources say",
+      "link": "https://www.defenseone.com/policy/2026/11/pentagon-cio-replaces-white-house-cyber-director-sean-cairncross-major-shakeup/417359/",
+      "summary": "Sean Cairncross is to be replaced by Pentagon's CIO; doubts grow about CISA nominee.",
+      "published": "2026-11-20T01:00:00+00:00",
+      "source": "Defense One",
+      "category": "军事"
+    },
+    {
+      "title": "Apple may be developing its own AI agent that runs your Mac",
+      "link": "https://techcrunch.com/2026/11/19/apple-may-be-developing-its-own-ai-agent-that-runs-your-mac/",
+      "summary": "The iPhone maker appears to be building agents that can compete with the likes of Meta Muse, Instinct, Claude, and OpenAI Dots.",
+      "published": "2026-11-20T00:56:01+00:00",
+      "source": "TechCrunch AI",
+      "category": "AI"
+    },
+    {
+      "title": "Anthropic’s 7 founders cashed out nearly $2B in record-breaking IPO",
+      "link": "https://techcrunch.com/2026/11/19/anthropics-7-founders-cashed-out-nearly-2b-in-record-breaking-ipo/",
+      "summary": "At the upgraded $83/share IPO price, Anthropic's seven founders each pocketed $280 million, while the company nabbed nearly $105 billion.",
+      "published": "2026-11-20T00:43:50+00:00",
+      "source": "TechCrunch AI",
+      "category": "AI"
+    },
+    {
+      "title": "Hebbia sees improvements in financial research with GPT-6 Astra",
+      "link": "https://openai.com/business/customer-stories/hebbia",
+      "summary": "Hebbia tested GPT-6 Astra for financial research. Its prerelease evaluations found gains in source coverage, citation relevance, and presentation quality.",
+      "published": "2026-11-20T00:00:00+00:00",
+      "source": "OpenAI Blog",
+      "category": "AI"
+    },
+    {
+      "title": "Can AI help scientists identify promising drug candidates?",
+      "link": "https://openai.com/index/introducing-medchembench",
+      "summary": "MedChemBench evaluates how well AI models interpret molecular structures, reason from experimental evidence, and select compounds in early drug discovery.",
+      "published": "2026-11-20T00:00:00+00:00",
+      "source": "OpenAI Blog",
+      "category": "AI"
+    },
+    {
+      "title": "Sam Altman罕见发声：我不担心Anthropic先上市，市场上不缺投资者",
+      "link": "https://www.infoq.cn/article/Mf3Zbm9JF3RWbkvjMKYZ?utm_source=rss&utm_medium=article",
+      "summary": "点击查看原文>",
+      "published": "2026-11-19T22:57:55+00:00",
+      "source": "InfoQ中文",
+      "category": "AI"
+    },
+    {
+      "title": "The Army wants its units to use more data, but many aren’t built to do so",
+      "link": "https://www.defenseone.com/technology/2026/11/army-wants-its-units-use-more-data-many-arent-built-do-so/417355/",
+      "summary": "AI might help move intelligence more quickly up and down the echelons, Army and industry speakers said.",
+      "published": "2026-11-19T22:03:09+00:00",
+      "source": "Defense One",
+      "category": "军事"
+    },
+    {
+      "title": "Meta’s new Muse Charm device may cost $300",
+      "link": "https://techcrunch.com/2026/11/19/metas-new-muse-charm-device-may-cost-300/",
+      "summary": "Meta hasn't denied the reporting from The Information, saying only that it will \"have more to share soon\" about its upcoming AI wearable.",
+      "published": "2026-11-19T21:58:06+00:00",
+      "source": "TechCrunch AI",
+      "category": "AI"
+    },
+    {
+      "title": "These tech outages are giving Y2K, AI agent style",
+      "link": "https://techcrunch.com/2026/11/19/these-tech-outages-are-giving-y2k-ai-agent-style/",
+      "summary": "Are the recent outages in the airline booking systems, banking platforms, and productivity platforms really a coincidence? There's actually likely something deeper going on, cybersecurity experts say.",
+      "published": "2026-11-19T21:42:31+00:00",
+      "source": "TechCrunch AI",
+      "category": "AI"
+    },
+    {
+      "title": "US missile shortages create a range problem, report shows",
+      "link": "https://www.defensenews.com/air/2026/11/19/us-missile-shortages-create-a-range-problem-report-shows/",
+      "summary": "A new CSIS report warns that the Iran war has strained US missile stockpiles, raising concerns about America's readiness for a potential conflict with China.",
+      "published": "2026-11-19T21:23:13+00:00",
+      "source": "Defense News",
+      "category": "军事"
+    },
+    {
+      "title": "‘I was seriously wrong’: Experts say superintelligent AI may arrive as soon as next year",
+      "link": "https://www.defenseone.com/threats/2026/11/i-was-seriously-wrong-ai-experts-say-superintelligent-ai-may-arrive-soon-next-year/417348/",
+      "summary": "AI is speeding up research, potentially creating a runaway loop.",
+      "published": "2026-11-19T21:22:08+00:00",
+      "source": "Defense One",
+      "category": "军事"
+    },
+    {
+      "title": "Toti pushes new foreign-built shipyard in the US to focus on frigates, large surface combatants",
+      "link": "https://breakingdefense.com/2026/11/toti-pushes-new-foreign-built-shipyard-in-the-us-to-focus-on-frigates-large-surface-combatants/",
+      "summary": "Foreign shipbuilding has emerged as a sticking point between Congress and the Trump administration, with the administration pushing for an expansion of the so-called &#8220;Finland model.&#8221;",
+      "published": "2026-11-19T21:08:27+00:00",
+      "source": "Breaking Defense",
+      "category": "军事"
+    },
+    {
+      "title": "The unfolding Jensen Huang scandal: a timeline",
+      "link": "https://techcrunch.com/2026/11/19/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/",
+      "summary": "Jensen Huang has resigned from Nvidia following an affair, which could have ramifications for national security as the U.S. and China race to develop the most advanced AI infrastructure.",
+      "published": "2026-11-19T20:18:49+00:00",
+      "source": "TechCrunch AI",
+      "category": "AI"
+    },
+    {
+      "title": "Trump’s CISA nominee denies Capitol was attacked on Jan. 6",
+      "link": "https://www.defenseone.com/threats/2026/11/trumps-cisa-nominee-denies-capitol-was-attacked-jan-6/417337/",
+      "summary": "Two senators subsequently said they would place holds on the nominee, who also refused to acknowledge Biden's 2020 electoral victory.",
+      "published": "2026-11-19T20:00:00+00:00",
+      "source": "Defense One",
+      "category": "军事"
+    },
+    {
+      "title": "Walmart hikes outlook as CEO tells CNBC retailer aims to keep prices low despite soaring fuel costs",
+      "link": "https://www.cnbc.com/2026/11/19/walmart-wmt-q3-2026-earnings.html",
+      "summary": "Walmart said it saw strength with store-fulfilled pickup and delivery in its fiscal third quarter.",
+      "published": "2026-11-19T19:58:30+00:00",
+      "source": "CNBC Markets",
+      "category": "金融"
+    },
+    {
+      "title": "Candidates are lining up to be the next top HASC Republican.",
+      "link": "https://breakingdefense.com/2026/11/new-leadership-new-tensions-for-top-house-defense-panel/",
+      "summary": "With Democrats preparing to take control of the House Armed Services Committee, a Republican leadership race could shape the next round of Pentagon oversight.",
+      "published": "2026-11-19T19:54:46+00:00",
+      "source": "Breaking Defense",
+      "category": "军事"
+    },
+    {
+      "title": "Anthropic’s IPO could deliver $156B to charity",
+      "link": "https://techcrunch.com/2026/11/19/anthropics-ipo-could-deliver-156-billion-to-charity/",
+      "summary": "At a stock price of $95, the frontier lab's Public Benefit Foundation, its employee donations, and the company's match tot up to $156 billion.",
+      "published": "2026-11-19T19:10:45+00:00",
+      "source": "TechCrunch AI",
+      "category": "AI"
+    },
+    {
+      "title": "Army extends Data Operations Center pilot to Oct. 2027",
+      "link": "https://breakingdefense.com/2026/11/army-extends-data-operations-center-pilot-to-oct-2027/",
+      "summary": "The service is using the additional time to evaluate the center&#8217;s workload, refine its processes and determine the staffing and organizational structure needed to make it permanent.",
+      "published": "2026-11-19T19:01:34+00:00",
+      "source": "Breaking Defense",
+      "category": "军事"
+    },
+    {
+      "title": "Google gives Gemini the ability to use your Mac for you",
+      "link": "https://techcrunch.com/2026/11/19/google-gives-gemini-the-ability-to-use-your-mac-for-you/",
+      "summary": "Google's latest update to Gemini brings an AI agent to the Mac that can organize files, fill out forms, and tackle multistep workflows.",
+      "published": "2026-11-19T18:09:11+00:00",
+      "source": "TechCrunch AI",
+      "category": "AI"
+    },
+    {
+      "title": "模型刚接进业务，CEO又要换新：红帽如何接住企业AI落地难题？",
+      "link": "https://www.infoq.cn/article/6xqcZfMgJ99ZQiGFbjym?utm_source=rss&utm_medium=article",
+      "summary": "点击查看原文>",
+      "published": "2026-11-19T18:05:40+00:00",
+      "source": "InfoQ中文",
+      "category": "AI"
+    },
+    {
+      "title": "Meta’s AI agent Muse is mixing up conversations and could be exposing private data, report says",
+      "link": "https://techcrunch.com/2026/11/19/metas-ai-agent-muse-is-mixing-up-conversations-and-exposing-private-data-report-says/",
+      "summary": "In some of these instances, employees said Muse surfaced messages about childcare requests they never made, career advice they never asked for, product orders they never placed, and bank account balances that didn't belong to them.",
+      "published": "2026-11-19T17:38:40+00:00",
+      "source": "TechCrunch AI",
+      "category": "AI"
+    },
+    {
+      "title": "F-35C completes first launch and recovery trials on a Ford-class carrier",
+      "link": "https://www.defensenews.com/air/2026/11/19/f-35c-completes-first-launch-and-recovery-trials-on-a-ford-class-carrier/",
+      "summary": "Two Navy F-35C Lightning II fighters have completed the jet’s first round of launch and recovery testing aboard the future USS John F. Kennedy.",
+      "published": "2026-11-19T17:38:00+00:00",
+      "source": "Defense News",
+      "category": "军事"
+    },
+    {
+      "title": "Raytheon taps Ursa Major, Avio USA as second source for Tomahawk solid rocket motors",
+      "link": "https://breakingdefense.com/2026/11/raytheon-taps-ursa-major-avio-usa-as-second-source-for-tomahawk-solid-rocket-motors/",
+      "summary": "The two firms will jointly develop and produce the motors for Raytheon under a “multi-year program,” according to a joint press release. ",
+      "published": "2026-11-19T17:24:48+00:00",
+      "source": "Breaking Defense",
+      "category": "军事"
+    },
+    {
+      "title": "Former Alibaba exec’s Everful raises $48.5M to connect retailers with Chinese factories",
+      "link": "https://techcrunch.com/2026/11/19/former-alibaba-execs-everful-raises-48-5m-to-connect-retailers-with-chinese-factories/",
+      "summary": "Everful has raised $48.5 million to expand its factory-direct sourcing platform, helping retailers source products from overseas manufacturers.",
+      "published": "2026-11-19T17:00:00+00:00",
+      "source": "TechCrunch AI",
+      "category": "AI"
+    },
+    {
+      "title": "Anthropic hits Nasdaq exchanges at $111, 33% above IPO price",
+      "link": "https://techcrunch.com/2026/11/19/anthropic-hits-nasdaq-exchanges-at-110-27-above-ipo-price/",
+      "summary": "Anthropic's IPO price was set at $83, representing more than $80 billion in new capital raised.",
+      "published": "2026-11-19T16:59:23+00:00",
+      "source": "TechCrunch AI",
+      "category": "AI"
+    },
+    {
+      "title": "The real-world missile defense lessons from Ukraine and Iran — and how they matter for China",
+      "link": "https://breakingdefense.com/2026/11/the-real-world-missile-defense-lessons-from-ukraine-and-iran-and-how-they-matter-for-china/",
+      "summary": "What works in Ukraine may not be the same systems needed for a Pacific conflict, according to Breaking Defense&#8217;s video roundtable. ",
+      "published": "2026-11-19T16:33:00+00:00",
+      "source": "Breaking Defense",
+      "category": "军事"
+    },
+    {
+      "title": "杀入Agent主场之后：两年内部分替代自回归，扩散智能的底气从何而来？| 专访",
+      "link": "https://www.infoq.cn/article/rtBT5s1opGGazFgQi0YS?utm_source=rss&utm_medium=article",
+      "summary": "点击查看原文>",
+      "published": "2026-11-19T16:32:33+00:00",
+      "source": "InfoQ中文",
+      "category": "AI"
+    },
+    {
+      "title": "At Nasdaq opening bell, Anthropic CEO recommits to pacing AI development",
+      "link": "https://techcrunch.com/2026/11/19/at-nasdaq-opening-bell-anthropic-ceo-recommits-to-pacing-ai-development/",
+      "summary": "In his Nasdaq opening bell speech, Dario Amodei reiterated Anthropic's commitment to pacing AI development, regardless of business or political pressure.",
+      "published": "2026-11-19T16:19:41+00:00",
+      "source": "TechCrunch AI",
+      "category": "AI"
+    },
+    {
+      "title": "Agent 实干派：从人人可用到全栈工程进化 | InfoQ 小编探班",
+      "link": "https://www.infoq.cn/video/Cfrl4QYhD3dHMuhGt6hw?utm_source=rss&utm_medium=article",
+      "summary": "点击查看原文>",
+      "published": "2026-11-19T16:16:29+00:00",
+      "source": "InfoQ中文",
+      "category": "AI"
+    },
+    {
+      "title": "Anthropic’s IPO puts AI’s circular financing boom to the test",
+      "link": "https://techcrunch.com/2026/11/19/anthropics-ipo-puts-ais-circular-financing-boom-to-the-test/",
+      "summary": "Anthropic faces enormous compute commitments as it goes public, but its biggest infrastructure partners, including Amazon and Google, could continue profiting from AI even if Anthropic loses its lead.",
+      "published": "2026-11-19T14:54:39+00:00",
+      "source": "TechCrunch AI",
+      "category": "AI"
+    },
+    {
+      "title": "Superhuman pushes its Go assistant everywhere",
+      "link": "https://techcrunch.com/2026/11/19/superhuman-pushes-its-go-assistant-everywhere/",
+      "summary": "Superhuman is making Go its central agent and making it available in Docs and Mail.",
+      "published": "2026-11-19T14:00:00+00:00",
+      "source": "TechCrunch AI",
+      "category": "AI"
+    },
+    {
+      "title": "Defense Business Brief: Vantor’s Raptor; Hadrian’s foundry, and more",
+      "link": "https://www.defenseone.com/business/2026/11/defense-business-brief-vantors-raptor-hadrians-foundry-and-more/417327/",
+      "summary": "",
+      "published": "2026-11-19T14:00:00+00:00",
+      "source": "Defense One",
+      "category": "军事"
+    },
+    {
+      "title": "The Download: a living liver, a billion-dollar battery deal, and AI hype",
+      "link": "https://www.technologyreview.com/2026/11/19/1148979/the-download-liver-kept-alive-sila-battery-deal-ai-hype/",
+      "summary": "This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. A human liver has been kept alive outside the body for a record seven weeks Researchers in Australia claim they’ve kept a human liver alive on life su",
+      "published": "2026-11-19T13:10:00+00:00",
+      "source": "MIT Technology Review",
+      "category": "AI"
+    },
+    {
+      "title": "A human liver has been kept alive outside the body for a record seven weeks",
+      "link": "https://www.technologyreview.com/2026/11/19/1148934/a-human-liver-has-been-kept-alive-outside-the-body-for-seven-weeks-setting-a-record/",
+      "summary": "Researchers in Australia claim they’ve kept a human liver alive, on life support, outside the body for seven weeks, opening up speculative new possibilities in biomedical engineering. The feat, whose details are pending publication, was carried out in Sydney after a team led by surgeon and inventor ",
+      "published": "2026-11-19T12:00:00+00:00",
+      "source": "MIT Technology Review",
+      "category": "AI"
+    },
+    {
+      "title": "What a billion-dollar deal says about the US battery market",
+      "link": "https://www.technologyreview.com/2026/11/19/1148922/sila-panasonic-battery-deal/",
+      "summary": "After a tough few years littered with some high-profile failures, there’s some positive news for next-generation batteries in the US. Sila just signed an agreement with Panasonic Energy, a global battery manufacturer, to supply silicon-carbon anode material, a possible key to smaller, lighter batter",
+      "published": "2026-11-19T11:00:00+00:00",
+      "source": "MIT Technology Review",
+      "category": "AI"
+    },
+    {
+      "title": "影视飓风、Manus、影石、OPPO……极客公园创新大会 2027 嘉宾阵容更新！",
+      "link": "https://www.qbitai.com/2026/11/511258.html",
+      "summary": "「Revaluation 价值，另有答案」",
+      "published": "2026-11-19T08:43:10+00:00",
+      "source": "量子位",
+      "category": "AI"
+    },
+    {
+      "title": "GTA6刷屏！零AI纯手搓的3A大作玩一个少一个了",
+      "link": "https://www.qbitai.com/2026/11/511180.html",
+      "summary": "媒体均分登顶历史第一，细节多到爆炸",
+      "published": "2026-11-19T08:18:30+00:00",
+      "source": "量子位",
+      "category": "AI"
+    },
+    {
+      "title": "SenseNova U1 Pro获Design Arena双榜中国第一、全球第六",
+      "link": "https://www.qbitai.com/2026/11/511179.html",
+      "summary": "商汤科技日日新 SenseNova U1 Pro 在图片生成与图片编辑两大榜单中均登顶中国第一",
+      "published": "2026-11-19T08:10:19+00:00",
+      "source": "量子位",
+      "category": "AI"
+    },
+    {
+      "title": "How OpenAI’s Performance Factory keeps ChatGPT fast",
+      "link": "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast",
+      "summary": "Learn how OpenAI built the Performance Factory, a system of Codex-powered workflows that finds and fixes performance issues to help keep ChatGPT fast.",
+      "published": "2026-11-19T08:00:00+00:00",
+      "source": "OpenAI Blog",
+      "category": "AI"
+    },
+    {
+      "title": "Appropriators slash Trump’s $17B Golden Dome request in draft bill",
+      "link": "https://www.defenseone.com/policy/2026/11/appropriators-slash-trumps-17b-golden-dome-request-draft-bill/417326/",
+      "summary": "GOP-led committee says reliance on reconciliation “threatens” the missile defense program’s success.",
+      "published": "2026-11-19T07:36:22+00:00",
+      "source": "Defense One",
+      "category": "军事"
+    },
+    {
+      "title": "好清晰！最新国产AI画的8K图，放这么大大大大也不糊！",
+      "link": "https://www.qbitai.com/2026/11/511092.html",
+      "summary": "Kling Image 4.0",
+      "published": "2026-11-19T07:01:05+00:00",
+      "source": "量子位",
+      "category": "AI"
+    },
+    {
+      "title": "AI基建大潮方兴未艾，联想集团最佳财季诞生！",
+      "link": "https://www.qbitai.com/2026/11/511088.html",
+      "summary": "全球AI生态链领先企业联想集团今日公布截至2026/27财年第二季度业绩",
+      "published": "2026-11-19T04:51:31+00:00",
+      "source": "量子位",
+      "category": "AI"
+    },
+    {
+      "title": "安谋科技深度解析Arm Cortex-M42，发布“星辰100e”AIoT原型平台，助力打造AI性能更强的嵌入式设计",
+      "link": "https://www.qbitai.com/2026/11/511079.html",
+      "summary": "11月18日，安谋科技（中国）有限公司举办Arm® Cortex®-M CPU新品说明会",
+      "published": "2026-11-19T04:02:39+00:00",
+      "source": "量子位",
+      "category": "AI"
+    },
+    {
+      "title": "Microsoft CEO Satya Nadella explains why he asked 60K employees to quit",
+      "link": "https://techcrunch.com/2026/11/18/microsoft-ceo-satya-nadella-explains-why-he-asked-60k-employees-to-quit/",
+      "summary": "Microsoft CEO Satya Nadella explained why he offered buyouts to 60,000 of his employees in October, essentially urging them to voluntarily quit, rather than reducing the workforce via another massive layoff. The short answer is AI, but not in the way you might expect.",
+      "published": "2026-11-19T00:42:56+00:00",
+      "source": "TechCrunch AI",
+      "category": "AI"
+    },
+    {
+      "title": "Explore the Codex Security Plugin",
+      "link": "https://openai.com/business/learn/codex-security-plugin-demo",
+      "summary": "Watch a demo of the Codex Security Plugin and see the workflow in action, from getting started to reviewing the results shown in the recording.",
+      "published": "2026-11-19T00:00:00+00:00",
+      "source": "OpenAI Blog",
+      "category": "AI"
+    },
+    {
+      "title": "See PR scans in action",
+      "link": "https://openai.com/business/learn/pr-scans-demo",
+      "summary": "Watch a walkthrough of PR scans and see how the presenter reviews scan results in a pull request workflow.",
+      "published": "2026-11-19T00:00:00+00:00",
+      "source": "OpenAI Blog",
+      "category": "AI"
+    },
+    {
+      "title": "Get started with Daybreak Blue",
+      "link": "https://openai.com/business/learn/daybreak-blue-onboarding-demo",
+      "summary": "Watch a walkthrough of onboarding to Daybreak Blue, with a closer look at the setup experience and how to get started.",
+      "published": "2026-11-19T00:00:00+00:00",
+      "source": "OpenAI Blog",
+      "category": "AI"
+    },
+    {
+      "title": "Deploying Daybreak Red",
+      "link": "https://openai.com/business/learn/deploying-daybreak-red",
+      "summary": "Explore a reference architecture for supervised security investigations with Daybreak Red, including safety controls, setup, and monitoring.",
+      "published": "2026-11-19T00:00:00+00:00",
+      "source": "OpenAI Blog",
+      "category": "AI"
+    },
+    {
+      "title": "Amidst fears of AI cyberattacks, Satya Nadella says lots of critical infrastructure is ‘unpatchable’",
+      "link": "https://techcrunch.com/2026/11/18/amidst-fears-of-ai-cyberattacks-satya-nadella-says-lots-of-critical-infrastructure-is-unpatchable/",
+      "summary": "The Microsoft CEO downplayed the recent Outlook outage while noting that AI was causing both opportunities and new challenges for securing much of the connected world.",
+      "published": "2026-11-18T23:45:00+00:00",
+      "source": "TechCrunch AI",
+      "category": "AI"
+    },
+    {
+      "title": "Investigators make progress in hunt for cause of FAA ground stop",
+      "link": "https://www.cnbc.com/2026/11/18/faa-ground-stop-router-investigation.html",
+      "summary": "Engineers and analysts are still searching for the root cause of the issue, which led to a four-hour ground stop on Friday.",
+      "published": "2026-11-18T18:13:25+00:00",
+      "source": "CNBC Markets",
+      "category": "金融"
+    },
+    {
+      "title": "Need range time? The Army now has an online reservation system",
+      "link": "https://www.defenseone.com/defense-systems/2026/11/need-range-time-army-now-has-online-reservation-system/417309/",
+      "summary": "Officials say industry’s wait times for weapons testing has already plunged.",
+      "published": "2026-11-18T18:03:56+00:00",
+      "source": "Defense One",
+      "category": "军事"
+    },
+    {
+      "title": "Major AI platforms generated viable plans for terrorist attacks, GAO finds",
+      "link": "https://www.defenseone.com/threats/2026/11/major-ai-platforms-generated-viable-plans-terrorist-attacks-gao-finds/417308/",
+      "summary": "Safety guardrails on ChatGPT, Claude, Gemini, and Grok failed to prevent federal investigators from developing detailed plans.",
+      "published": "2026-11-18T17:51:00+00:00",
+      "source": "Defense One",
+      "category": "军事"
+    },
+    {
+      "title": "Senate grills acting Navy secretary on Iran war costs, extended deployments",
+      "link": "https://www.defenseone.com/defense-systems/2026/11/senate-grills-acting-navy-secretary-iran-war-costs-extended-deployments/417307/",
+      "summary": "Democrats in particular bristled at Hung Cao’s characterization of unsuccessful suicide attempts as “mitigations.”",
+      "published": "2026-11-18T17:43:11+00:00",
+      "source": "Defense One",
+      "category": "军事"
+    },
+    {
+      "title": "Ford starts U.S. battery cell production using Chinese tech amid geopolitical tensions",
+      "link": "https://www.cnbc.com/2026/11/18/ford-us-battery-cells-catl-tech.html",
+      "summary": "Ford has started U.S. production and shipments of battery cells for its next-generation EVs using technologies licensed by Chinese battery giant CATL.",
+      "published": "2026-11-18T17:02:53+00:00",
+      "source": "CNBC Markets",
+      "category": "金融"
+    },
+    {
+      "title": "The AI Hype Index: AI is everywhere",
+      "link": "https://www.technologyreview.com/2026/11/18/1148650/ai-hype-index-ai-is-everywhere/",
+      "summary": "Like a nasty rash, AI seems to spread everywhere. Google crams AI Overviews down your throat even though it costs the company billions of dollars in lost ad revenue. Leave your apartment, and you might pass two people heaving an AI-powered humanoid robot up the stairs to clean someone’s rooms. Go to",
+      "published": "2026-11-18T14:42:44+00:00",
+      "source": "MIT Technology Review",
+      "category": "AI"
+    },
+    {
+      "title": "Hims & Hers launches new peptide treatments — while admitting there's more to learn about efficacy",
+      "link": "https://www.cnbc.com/2026/11/18/hims-hers-peptides-plus-treatments.html",
+      "summary": "The telehealth company will now offer compounded forms of sermorelin, glutathione, NAD+,  vitamin B-12 and L-carnitine, none of which are approved by the FDA.",
+      "published": "2026-11-18T14:02:52+00:00",
+      "source": "CNBC Markets",
+      "category": "金融"
+    },
+    {
+      "title": "The Download: AI learns to smell and hydropower struggles",
+      "link": "https://www.technologyreview.com/2026/11/18/1148845/the-download-ai-learns-to-smell-hydropower-struggles/",
+      "summary": "This is today&#8217;s edition of The Download, our weekday newsletter that provides a daily dose of what&#8217;s going on in the world of technology. This smell startup says its AI nose is as good as a human’s In a New Jersey lab, researchers are trying to sniff every odor on Earth. Their careful no",
+      "published": "2026-11-18T13:10:00+00:00",
+      "source": "MIT Technology Review",
+      "category": "AI"
+    },
+    {
+      "title": "Booking Holdings creates new enterprise division as AI reshapes travel planning",
+      "link": "https://www.cnbc.com/2026/11/18/booking-holdings-enterprise.html",
+      "summary": "The future for online travel agencies increasingly relies on scaling business-to-business travel platforms.",
+      "published": "2026-11-18T12:55:01+00:00",
+      "source": "CNBC Markets",
+      "category": "金融"
+    },
+    {
+      "title": "This smell startup says its AI nose is as good as a human’s",
+      "link": "https://www.technologyreview.com/2026/11/18/1148816/smell-startup-osmo-ai-nose-good-as-humans/",
+      "summary": "In a lab near Newark Airport in New Jersey, a team of around 30 experienced human sniffers are slowly working their way through every odor on Earth. Their careful notes—“nutty,” “peachy,” “marine”—are cross-referenced with a chemical analysis to create a rich set of training data for what AI startup",
+      "published": "2026-11-18T10:20:30+00:00",
+      "source": "MIT Technology Review",
+      "category": "AI"
+    },
+    {
+      "title": "The Silent Consensus",
+      "link": "https://openai.com/index/the-silent-consensus",
+      "summary": "Dean Ball, Head of Strategic Futures at OpenAI, examines how more capable AI could reshape society and how people can retain control of their institutions.",
+      "published": "2026-11-18T10:00:00+00:00",
+      "source": "OpenAI Blog",
+      "category": "AI"
+    },
+    {
+      "title": "How Sumitomo Life’s leaders helped teams adopt ChatGPT Enterprise",
+      "link": "https://openai.com/business/customer-stories/sumitomo-life",
+      "summary": "Sumitomo Life uses ChatGPT Enterprise to research insurers, prepare proposals, and draft code for investment analysis. Early use by executives helped drive adoption.",
+      "published": "2026-11-18T08:00:00+00:00",
+      "source": "OpenAI Blog",
+      "category": "AI"
+    },
+    {
+      "title": "Research acceleration: The jagged frontier",
+      "link": "https://openai.com/index/research-acceleration-jagged-frontier",
+      "summary": "OpenAI measures how coding agents are accelerating AI research, where their performance remains uneven, and what this signals about recursive self-improvement.",
+      "published": "2026-11-18T08:00:00+00:00",
+      "source": "OpenAI Blog",
+      "category": "AI"
+    },
+    {
+      "title": "Inside the Codex sandbox",
+      "link": "https://openai.com/index/inside-the-codex-sandbox",
+      "summary": "See how Codex runs commands on your machine while enforcing the filesystem and network limits you control across macOS, Linux, and Windows.",
+      "published": "2026-11-18T08:00:00+00:00",
+      "source": "OpenAI Blog",
+      "category": "AI"
+    },
+    {
+      "title": "Managing frontier AI risk: From training to deployment",
+      "link": "https://openai.com/index/managing-frontier-ai-risk",
+      "summary": "OpenAI explains how it manages frontier AI risk from training through deployment with model alignment, sandboxing, blocking safeguards, and monitoring.",
+      "published": "2026-11-18T06:00:00+00:00",
+      "source": "OpenAI Blog",
+      "category": "AI"
+    },
+    {
+      "title": "OpenAI gives NATO access to most advanced cybersecurity AI",
+      "link": "https://www.defenseone.com/technology/2026/11/openai-gives-nato-access-most-advanced-cybersecurity-ai/417296/",
+      "summary": "NATO operators this month built and deployed AI agents in an exercise, with help from OpenAI.",
+      "published": "2026-11-18T00:39:24+00:00",
+      "source": "Defense One",
+      "category": "军事"
+    },
+    {
+      "title": "Advancing chip design with OpenAI models",
+      "link": "https://openai.com/index/advancing-chip-design-with-our-models",
+      "summary": "OpenAI models optimized circuits used in Jalapeño silicon and improved RISC‑V core designs, showing progress in AI-assisted chip design with GPT‑6 Astra.",
+      "published": "2026-11-18T00:00:00+00:00",
+      "source": "OpenAI Blog",
+      "category": "AI"
+    },
+    {
+      "title": "Le Groupe Figaro and OpenAI partner to bring Le Figaro journalism to ChatGPT",
+      "link": "https://openai.com/index/le-groupe-figaro-and-openai-announce-partnership",
+      "summary": "Le Groupe Figaro and OpenAI partner to bring Le Figaro’s journalism to ChatGPT through summaries and excerpts, with links to original stories.",
+      "published": "2026-11-18T00:00:00+00:00",
+      "source": "OpenAI Blog",
+      "category": "AI"
+    },
+    {
+      "title": "Nike lays out financial goals ahead of first investor day in 9 years",
+      "link": "https://www.cnbc.com/2026/11/17/nike-investor-day-elliott-hill.html",
+      "summary": "Nike is hosting an investor day at its Oregon headquarters as the company tries to prove to investors that its turnaround is working.",
+      "published": "2026-11-17T22:17:44+00:00",
+      "source": "CNBC Markets",
+      "category": "金融"
+    },
+    {
+      "title": "U.S. officially loses measles elimination status amid ongoing outbreaks",
+      "link": "https://www.cnbc.com/2026/11/17/us-measles-elimination-status.html",
+      "summary": "The director of PAHO made the final call that measles is endemic — or always present — in the U.S. following 12 months of continuous transmission.",
+      "published": "2026-11-17T22:02:05+00:00",
+      "source": "CNBC Markets",
+      "category": "金融"
+    },
+    {
+      "title": "FAA pauses installation of new routers after ground stop",
+      "link": "https://www.cnbc.com/2026/11/17/faa-ground-stop-routers.html",
+      "summary": "Problems with the overwhelmed technology led the agency to issue a rare nationwide ground stop on Friday.",
+      "published": "2026-11-17T20:53:24+00:00",
+      "source": "CNBC Markets",
+      "category": "金融"
+    },
+    {
+      "title": "Home Depot names Richard McPhail as new CEO, beats earnings expectations",
+      "link": "https://www.cnbc.com/2026/11/17/home-depot-hd-q3-earnings-2026.html",
+      "summary": "Home Depot named Richard McPhail as its new CEO effective next week.",
+      "published": "2026-11-17T20:01:12+00:00",
+      "source": "CNBC Markets",
+      "category": "金融"
+    },
+    {
+      "title": "Roundtables: Inside the Quest for Cognitive Immortality",
+      "link": "https://www.technologyreview.com/2026/11/17/1148049/roundtables-inside-the-quest-for-cognitive-immortality/",
+      "summary": "Listen to the session or watch below In an effort to reach an elusive continuity of the self, some far-thinking technologists are working on ways to keep your brain going—even beyond death. Science editor Mary Beth Griggs and senior editor for biomedicine Antonio Regalado explore possible paths to k",
+      "published": "2026-11-17T18:46:47+00:00",
+      "source": "MIT Technology Review",
+      "category": "AI"
+    },
+    {
+      "title": "Hydropower hit record lows in the US Southwest this summer",
+      "link": "https://www.technologyreview.com/2026/11/17/1148742/hydropower-drought-colorado-river/",
+      "summary": "The US Southwest generated 28% less electricity via hydropower between April and August than the 10-year average, according to new data from the US Energy Information Administration. Most hydropower plants in the US rely on dams to hold back water, creating reservoirs. The water can be released thro",
+      "published": "2026-11-17T17:52:10+00:00",
+      "source": "MIT Technology Review",
+      "category": "AI"
+    },
+    {
+      "title": "Introducing GPT-6.2 Astra and Sol",
+      "link": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
+      "summary": "Introducing GPT‑6.2 Astra and Sol, with better professional outputs, coding, computer use, and efficiency at lower cost across ChatGPT Work, Codex, and the API.",
+      "published": "2026-11-17T17:45:00+00:00",
+      "source": "OpenAI Blog",
+      "category": "AI"
+    },
+    {
+      "title": "Classified NSA communications network down, people familiar say",
+      "link": "https://www.defenseone.com/threats/2026/11/classified-nsa-communications-network-down-people-familiar-say/417278/",
+      "summary": "There aren’t any immediate signs that the outage on NSANet is related to a cyberattack, and it may be linked to a series of software upgrades on the network.",
+      "published": "2026-11-17T17:17:00+00:00",
+      "source": "Defense One",
+      "category": "军事"
+    },
+    {
+      "title": "Disney beats fourth-quarter estimates, targets $3 billion in savings through cost-cutting efforts",
+      "link": "https://www.cnbc.com/2026/11/17/disney-dis-earnings-q-2026.html",
+      "summary": "Investors will be looking for more insight into CEO Josh D'Amaro's strategy following several rounds of layoffs.",
+      "published": "2026-11-17T16:40:25+00:00",
+      "source": "CNBC Markets",
+      "category": "金融"
+    },
+    {
+      "title": "Republicans outspent Democrats for first time in over a decade in record 2026 midterm election political ad blitz",
+      "link": "https://www.cnbc.com/2026/11/17/2026-election-political-ad-spending.html",
+      "summary": "Republicans slightly outspent Democrats for the first time as Democrats swept national and state elections.",
+      "published": "2026-11-17T14:00:02+00:00",
+      "source": "CNBC Markets",
+      "category": "金融"
+    },
+    {
+      "title": "United Airlines resolves system outage that affected departing flights",
+      "link": "https://www.cnbc.com/2026/11/16/united-airlines-outage-faa.html",
+      "summary": "The airline said there was no impact on flights in progress and there was no indication the outage was a cyberattack.",
+      "published": "2026-11-17T13:57:47+00:00",
+      "source": "CNBC Markets",
+      "category": "金融"
+    },
+    {
+      "title": "Strengthening NATO and allied cyber defenses with AI",
+      "link": "https://openai.com/index/strengthening-nato-allied-cyber-defences-ai",
+      "summary": "How OpenAI is working with NATO and allied cyber agencies to help trusted defenders find vulnerabilities, test fixes and protect essential systems.",
+      "published": "2026-11-17T00:00:00+00:00",
+      "source": "OpenAI Blog",
+      "category": "AI"
+    },
+    {
+      "title": "Astra for Law leads in legal intelligence",
+      "link": "https://openai.com/index/astra-law-6-2",
+      "summary": "Astra for Law ranked first in a launch evaluation spanning 24 areas of law. Every ChatGPT Enterprise customer can now request access.",
+      "published": "2026-11-17T00:00:00+00:00",
+      "source": "OpenAI Blog",
+      "category": "AI"
+    },
+    {
+      "title": "Introducing OpenAI for Chile",
+      "link": "https://openai.com/index/introducing-openai-for-chile",
+      "summary": "OpenAI and the Government of Chile are partnering to support responsible AI adoption, build public-sector skills and help local startups develop AI applications.",
+      "published": "2026-11-17T00:00:00+00:00",
+      "source": "OpenAI Blog",
+      "category": "AI"
+    },
+    {
+      "title": "Air Force bets on hybrid-electric aircraft for transport",
+      "link": "https://www.defenseone.com/business/2026/11/air-force-bets-hybrid-electric-aircraft-transport/417268/",
+      "summary": "Electra Defense’s nine-seat aircraft builds on existing development and aims to take on special operations missions.",
+      "published": "2026-11-16T23:33:40+00:00",
+      "source": "Defense One",
+      "category": "军事"
+    },
+    {
+      "title": "First permanently assigned F-15EXs touch down at Kadena Air Base",
+      "link": "https://www.defensenews.com/air/2026/11/16/first-permanently-assigned-f-15exs-touch-down-at-kadena-air-base/",
+      "summary": "Kadena Air Base received their first permanently assigned F-15EX Eagle IIs, becoming the first installation abroad and second Air Force location to field the jet.",
+      "published": "2026-11-16T23:23:56+00:00",
+      "source": "Defense News",
+      "category": "军事"
+    },
+    {
+      "title": "JPMorgan Chase says temporary software bug is affecting consumer banking",
+      "link": "https://www.cnbc.com/2026/11/16/jpmorgan-chase-technical-issue.html",
+      "summary": "CNBC's Eamon Javers reported there was no indication of bad actors involved and likewise no indication that a bug was impacting multiple banks at the same time.",
+      "published": "2026-11-16T22:14:47+00:00",
+      "source": "CNBC Markets",
+      "category": "金融"
+    },
+    {
+      "title": "Robert Pattinson cast as next James Bond",
+      "link": "https://www.cnbc.com/2026/11/16/robert-pattinson-james-bond.html",
+      "summary": "Pattinson has been in major films this year, including Christopher Nolan's \"The Odyssey,\" and will soon appear in \"Dune: Part Three.\"",
+      "published": "2026-11-16T21:03:36+00:00",
+      "source": "CNBC Markets",
+      "category": "金融"
+    },
+    {
+      "title": "The secret terms of Trump’s Venezuelan oil deal",
+      "link": "https://www.defenseone.com/policy/2026/11/secret-terms-trumps-venezuelan-oil-deal/417246/",
+      "summary": "Signed in August by Marco Rubio and Pete Hegseth, the agreement sets up a small group of people to govern and profit from it.",
+      "published": "2026-11-16T16:12:46+00:00",
+      "source": "Defense One",
+      "category": "军事"
+    },
+    {
+      "title": "Italy backs rapid German membership path into GCAP fighter program",
+      "link": "https://www.defensenews.com/global/europe/2026/11/16/italy-backs-rapid-german-membership-path-into-gcap-fighter-program/",
+      "summary": "Italy has strongly denied a press report suggesting it opposes granting Germany partner status on the GCAP fighter program, claiming instead it fully backs German membership.",
+      "published": "2026-11-16T14:37:54+00:00",
+      "source": "Defense News",
+      "category": "军事"
+    },
+    {
+      "title": "The military needs strategic thinkers, not just operators",
+      "link": "https://www.defenseone.com/ideas/2026/11/military-strategic-thinkers-hegseth-education/417238/",
+      "summary": "Secretary Hegseth's \"reforms\" miss the purpose of military education: learning to deter conflict and translate military power into enduring political advantage.",
+      "published": "2026-11-15T18:41:11+00:00",
+      "source": "Defense One",
+      "category": "军事"
+    },
+    {
+      "title": "The civilian office overseeing special operations forces could get $45 million budget, 100 staffers",
+      "link": "https://www.defenseone.com/policy/2026/11/civilian-office-overseeing-special-operations-forces-could-get-45-million-budget-100-staffers/417234/",
+      "summary": "Hegseth’s proposed changes hinge on getting support from Congress.",
+      "published": "2026-11-15T13:00:00+00:00",
+      "source": "Defense One",
+      "category": "军事"
+    },
+    {
+      "title": "US Air Force adopts new Force Design focusing on sensors and autonomy",
+      "link": "https://www.defensenews.com/air/2026/11/13/us-air-force-adopts-new-force-design-focusing-on-sensors-and-autonomy/",
+      "summary": "The Air Force's new Force Design 2026 outlines a shift toward artificial intelligence, autonomy and integrated sensors to counter emerging threats.",
+      "published": "2026-11-13T18:43:45+00:00",
+      "source": "Defense News",
+      "category": "军事"
+    },
+    {
+      "title": "Britain says its bases are safe after US refueling planes evacuated",
+      "link": "https://www.defensenews.com/global/europe/2026/11/10/britain-says-its-bases-are-safe-after-us-refueling-planes-evacuated/",
+      "summary": "Commercially available flight tracking data showed at least 10 Boeing KC-135R Stratotanker refueling planes left the Royal Air Force base in Mildenhall, eastern England, on Monday.",
+      "published": "2026-11-10T14:11:56+00:00",
+      "source": "Defense News",
+      "category": "军事"
+    },
+    {
+      "title": "Russia is giving its drones bigger antennas to beat Ukrainian jamming",
+      "link": "https://www.defensenews.com/global/europe/2026/11/02/russia-is-giving-its-drones-bigger-antennas-to-beat-ukrainian-jamming/",
+      "summary": "Kyiv now needs roughly twice as many jammers to stop each upgraded Shahed, intel officials and experts said.",
+      "published": "2026-11-02T18:00:00+00:00",
+      "source": "Defense News",
+      "category": "军事"
+    },
+    {
+      "title": "US Air Force awards Lockheed Martin $694M hypersonic missile production contract",
+      "link": "https://www.defensenews.com/industry/techwatch/2026/10/27/us-air-force-awards-lockheed-martin-694m-hypersonic-missile-production-contract/",
+      "summary": "The Air Force granted Lockheed Martin a $694 million contract in late September for the production and fielding of the AGM-183A Air-Launched Rapid Response Weapon, or ARRW.",
+      "published": "2026-10-27T19:53:42+00:00",
+      "source": "Defense News",
+      "category": "军事"
+    },
+    {
+      "title": "Israel secures procurement of 12 Apache gunships in last-minute maneuver",
+      "link": "https://www.defensenews.com/global/mideast-africa/2026/10/16/israel-secures-procurement-of-12-apache-gunships-in-last-minute-maneuver/",
+      "summary": "Israel is set to acquire 12 Apache “Echo” attack helicopters from Boeing, according to an Israeli ministry of defense announcement this week.",
+      "published": "2026-10-16T14:01:24+00:00",
+      "source": "Defense News",
+      "category": "军事"
+    },
+    {
+      "title": "France to go it alone on next-gen combat aircraft after FCAS collapse",
+      "link": "https://www.defensenews.com/global/europe/2026/10/15/france-to-go-it-alone-on-next-gen-combat-aircraft-after-fcas-collapse/",
+      "summary": "France will develop a next-generation combat aircraft domestically, after a joint project with Germany and Spain collapsed earlier this year.",
+      "published": "2026-10-15T15:30:54+00:00",
+      "source": "Defense News",
+      "category": "军事"
+    }
+  ]
+}
