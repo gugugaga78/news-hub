@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>统计学 · 综合指标（二）：平均指标 · 2026-11-10</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#fafafa;color:#1a1a2e;font-family:"Microsoft YaHei","PingFang SC",-apple-system,sans-serif;
+     line-height:1.8;padding:22px 16px 60px}
+.wrap{max-width:820px;margin:0 auto}
+h1{color:#0f3460;font-size:25px;line-height:1.4;padding-bottom:12px;margin-bottom:6px;border-bottom:3px solid #e94560}
+.meta{font-size:13px;color:#6b7280;margin:10px 0 22px}
+.meta b{color:#0f3460}
+h2{color:#0f3460;font-size:19px;margin:30px 0 12px;padding-left:11px;border-left:4px solid #e94560}
+h3{color:#16213e;font-size:16px;margin:20px 0 8px}
+p{margin:9px 0}
+ul,ol{margin:9px 0 9px 24px}
+li{margin:5px 0}
+.formula{background:#fff;border-left:4px solid #e94560;padding:14px 18px;margin:14px 0;
+         font-size:17px;font-weight:600;color:#16213e;border-radius:0 6px 6px 0;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.warn{background:#fff8e1;border-left:4px solid #f9a825;padding:12px 16px;margin:13px 0;border-radius:0 6px 6px 0;font-size:14.5px}
+.tip{background:#e8f5e9;border-left:4px solid #43a047;padding:12px 16px;margin:13px 0;border-radius:0 6px 6px 0;font-size:14.5px}
+.example{background:#e3f2fd;border-left:4px solid #1976d2;padding:12px 16px;margin:13px 0;border-radius:0 6px 6px 0;font-size:14.5px}
+.story{background:#16213e;color:#e8eaf6;padding:16px 20px;margin:16px 0;border-radius:10px}
+.story b{color:#ffd54f}
+.quiz{border:2px solid #0f3460;border-radius:10px;padding:15px 17px;margin:16px 0;background:#fff}
+.quiz h3{margin-top:0;color:#0f3460;font-size:15.5px}
+.options{display:grid;gap:8px;margin-top:10px}
+.options button{text-align:left;padding:10px 14px;border:1.5px solid #d5d8e0;background:#fbfcfe;border-radius:8px;
+  cursor:pointer;font-size:14.5px;font-family:inherit;color:#1a1a2e;transition:.15s;line-height:1.6}
+.options button:hover{border-color:#0f3460;background:#f0f4ff}
+.options button.right{background:#d4edda;border-color:#43a047;font-weight:600}
+.options button.wrong{background:#fce4ec;border-color:#e94560}
+.fb{margin-top:10px;font-size:14px;line-height:1.7;min-height:1em}
+.checkin{background:#fff;border:1.5px dashed #0f3460;border-radius:10px;padding:15px 18px;margin:22px 0}
+.checkin label{display:block;margin:7px 0;font-size:14.5px;cursor:pointer}
+.checkin input{margin-right:8px;transform:scale(1.15)}
+.ref{margin-top:34px;padding-top:16px;border-top:1px solid #ddd;font-size:13px;color:#6b7280}
+.ref b{color:#0f3460}
+.tag{display:inline-block;background:#0f3460;color:#fff;font-size:12px;padding:2px 10px;border-radius:99px;margin-right:8px;vertical-align:2px}
+.navbar{background:#16213e;color:#fff;padding:10px 16px;border-radius:8px;margin-bottom:18px;font-size:13.5px}
+.navbar a{color:#ffd54f;text-decoration:none}
+.items{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 1px 6px rgba(0,0,0,.06)}
+.items a{display:block;padding:13px 18px;border-bottom:1px solid #eef0f5;text-decoration:none;color:#1a1a2e}
+.items a:last-child{border-bottom:none}
+.items a:hover{background:#f0f4ff}
+.items .d{font-size:12px;color:#6b7280}
+@media(max-width:600px){body{padding:14px 11px 50px}h1{font-size:21px}.wrap{max-width:100%}}
+</style></head><body><div class="wrap">
+<div class="navbar"><a href="./index.html">← 课程列表</a>　|　毛毛的四课学习中心</div>
+<h1><span class="tag">统计学</span>综合指标（二）：平均指标</h1>
+<div class="meta">第 <b>10</b> 周 · 周二 · 2026-11-10 · 建议 <b>60</b> 分钟</div>
+<div class="story">🧭 一句话定位：平均指标代表一般水平。三种平均数（算术、调和、几何）各有适用条件，选错就得出错误结论——这是统计学最容易踩的坑。</div><h2>本节要掌握什么</h2><ul><li>算术平均数：Σx/n（简单）或 Σxf/Σf（加权），最常用</li><li>调和平均数：n/Σ(1/x)，用于「已知各组标志值与总量、求平均」的场合</li><li>几何平均数：ⁿ√(x₁x₂…xₙ)，用于平均发展速度、平均增长率</li><li>位置平均数：中位数（不受极端值影响）、众数（出现最多）</li><li>选择原则：比值型平均用几何、速度型平均用几何、有极值扰动时用中位数</li></ul><div class="formula">加权算术平均：x̄ = Σxf / Σf（f 为权数/频数）</div><div class="formula">调和平均：H = Σm / Σ(m/x)，其中 m = xf</div><div class="formula">几何平均：G = ⁿ√(x₁·x₂·…·xₙ)</div><div class="formula">中位数位置 =(n+1)/2</div><h2>推导 / 解题路径</h2><ol><li>① 判断数据性质：普通数值 → 算术平均；速度/比率 → 几何平均</li><li>② 判断给的是「频数」还是「总量」：给频数用加权算术；只给总量用调和</li><li>③ 数据有明显极端值时，考虑中位数代替均值</li><li>④ 分组数据用组中值代替组内各值计算</li></ol><div class="example">📝 <b>例题</b><br>某商品三批采购：单价 10 元买 100 件、12 元买 200 件、15 元买 300 件。平均单价 = (10×100+12×200+15×300)/600 = 7900/600 ≈ 13.17 元。注意不是 (10+12+15)/3=12.33——那是「每批价格的平均」，不是「每件的平均」。</div><div class="warn">⚠️ 「平均价格」有两种含义：按件平均（加权算术）与按批次平均（简单算术）。题目问「每件平均成本」要用加权，问「各批价格的平均」才用简单。混淆是失分重灾区。</div><div class="tip">💡 三个平均数的分工口诀：算数值→算术；算速度→几何；算「总量÷单位数」→调和。认准再算。</div><h2>即时自测</h2><div class="quiz" id="q1"><h3>自测 1 · 某产品连续三年增长率 10%、20%、30%，平均增长率为？</h3><div class="options"><button onclick="check(this)" data-ok="0" data-fb="❌ 那是算术平均。增长率连乘时不能用算术平均。">20%</button><button onclick="check(this)" data-ok="1" data-fb="✅ 对。几何平均：³√(1.1×1.2×1.3)−1 = ³√1.716−1 ≈ 1.1972−1 = 19.72%。">约 19.7%</button><button onclick="check(this)" data-ok="0" data-fb="❌ 那是最大增长率。">30%</button><button onclick="check(this)" data-ok="0" data-fb="❌ 那是增长率之和。">60%</button></div><div class="fb" id="fb-q1"></div></div><div class="quiz" id="q2"><h3>自测 2 · 数据存在极端值时，最能代表一般水平的指标是？</h3><div class="options"><button onclick="check(this)" data-ok="0" data-fb="❌ 均值会被极端值拉动（如 9 个人月薪 5000，1 个人 100 万，均值被拉到 10 万+）。">算术平均数</button><button onclick="check(this)" data-ok="1" data-fb="✅ 对。中位数只看位置不受极端值影响，是稳健的代表值。">中位数</button><button onclick="check(this)" data-ok="0" data-fb="❌ 标准差衡量离散程度，不是平均水平。">标准差</button><button onclick="check(this)" data-ok="0" data-fb="❌ 极差也是离散指标。">极差</button></div><div class="fb" id="fb-q2"></div></div>
+
+<div class="checkin"><b>今日打卡</b>
+<label><input type="checkbox"> ① 合上书回想 8 分钟（默写核心公式）</label>
+<label><input type="checkbox"> ② 读完本节 30 分钟（边看边画，不抄书）</label>
+<label><input type="checkbox"> ③ 自测题做完，错题回看</label>
+<label><input type="checkbox"> ④ 写一行：学到哪 / 卡在哪</label>
+</div>
+<div class="ref">
+<b>教材对应</b>：第3章 §3 p70-88<br>
+<b>下一节预告</b>：S05 综合指标（三）：变异指标<br>
+<b>云端生成</b>：阿里云 47.109.133.90 · 每天 08:00
+</div>
+</div><script>
+function check(btn){
+  var q=btn.closest('.quiz'), ok=btn.getAttribute('data-ok')==='1', fb=q.querySelector('.fb');
+  q.querySelectorAll('.options button').forEach(function(b){b.className='';});
+  btn.className = ok?'right':'wrong';
+  fb.textContent = btn.getAttribute('data-fb');
+  fb.style.color = ok?'#2e7d32':'#e94560';
+}
+</script></body></html>

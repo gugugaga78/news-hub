@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>概率论与数理统计 · 全概率公式与贝叶斯公式 · 2026-11-02</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#fafafa;color:#1a1a2e;font-family:"Microsoft YaHei","PingFang SC",-apple-system,sans-serif;
+     line-height:1.8;padding:22px 16px 60px}
+.wrap{max-width:820px;margin:0 auto}
+h1{color:#0f3460;font-size:25px;line-height:1.4;padding-bottom:12px;margin-bottom:6px;border-bottom:3px solid #e94560}
+.meta{font-size:13px;color:#6b7280;margin:10px 0 22px}
+.meta b{color:#0f3460}
+h2{color:#0f3460;font-size:19px;margin:30px 0 12px;padding-left:11px;border-left:4px solid #e94560}
+h3{color:#16213e;font-size:16px;margin:20px 0 8px}
+p{margin:9px 0}
+ul,ol{margin:9px 0 9px 24px}
+li{margin:5px 0}
+.formula{background:#fff;border-left:4px solid #e94560;padding:14px 18px;margin:14px 0;
+         font-size:17px;font-weight:600;color:#16213e;border-radius:0 6px 6px 0;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.warn{background:#fff8e1;border-left:4px solid #f9a825;padding:12px 16px;margin:13px 0;border-radius:0 6px 6px 0;font-size:14.5px}
+.tip{background:#e8f5e9;border-left:4px solid #43a047;padding:12px 16px;margin:13px 0;border-radius:0 6px 6px 0;font-size:14.5px}
+.example{background:#e3f2fd;border-left:4px solid #1976d2;padding:12px 16px;margin:13px 0;border-radius:0 6px 6px 0;font-size:14.5px}
+.story{background:#16213e;color:#e8eaf6;padding:16px 20px;margin:16px 0;border-radius:10px}
+.story b{color:#ffd54f}
+.quiz{border:2px solid #0f3460;border-radius:10px;padding:15px 17px;margin:16px 0;background:#fff}
+.quiz h3{margin-top:0;color:#0f3460;font-size:15.5px}
+.options{display:grid;gap:8px;margin-top:10px}
+.options button{text-align:left;padding:10px 14px;border:1.5px solid #d5d8e0;background:#fbfcfe;border-radius:8px;
+  cursor:pointer;font-size:14.5px;font-family:inherit;color:#1a1a2e;transition:.15s;line-height:1.6}
+.options button:hover{border-color:#0f3460;background:#f0f4ff}
+.options button.right{background:#d4edda;border-color:#43a047;font-weight:600}
+.options button.wrong{background:#fce4ec;border-color:#e94560}
+.fb{margin-top:10px;font-size:14px;line-height:1.7;min-height:1em}
+.checkin{background:#fff;border:1.5px dashed #0f3460;border-radius:10px;padding:15px 18px;margin:22px 0}
+.checkin label{display:block;margin:7px 0;font-size:14.5px;cursor:pointer}
+.checkin input{margin-right:8px;transform:scale(1.15)}
+.ref{margin-top:34px;padding-top:16px;border-top:1px solid #ddd;font-size:13px;color:#6b7280}
+.ref b{color:#0f3460}
+.tag{display:inline-block;background:#0f3460;color:#fff;font-size:12px;padding:2px 10px;border-radius:99px;margin-right:8px;vertical-align:2px}
+.navbar{background:#16213e;color:#fff;padding:10px 16px;border-radius:8px;margin-bottom:18px;font-size:13.5px}
+.navbar a{color:#ffd54f;text-decoration:none}
+.items{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 1px 6px rgba(0,0,0,.06)}
+.items a{display:block;padding:13px 18px;border-bottom:1px solid #eef0f5;text-decoration:none;color:#1a1a2e}
+.items a:last-child{border-bottom:none}
+.items a:hover{background:#f0f4ff}
+.items .d{font-size:12px;color:#6b7280}
+@media(max-width:600px){body{padding:14px 11px 50px}h1{font-size:21px}.wrap{max-width:100%}}
+</style></head><body><div class="wrap">
+<div class="navbar"><a href="./index.html">← 课程列表</a>　|　毛毛的四课学习中心</div>
+<h1><span class="tag">概率论与数理统计</span>全概率公式与贝叶斯公式</h1>
+<div class="meta">第 <b>9</b> 周 · 周一 · 2026-11-02 · 建议 <b>60</b> 分钟</div>
+<div class="story">🧭 一句话定位：全概率是「分情况加总」，贝叶斯是「由结果倒推原因」。这两个公式撑起了整个统计推断与机器学习分类器。</div><h2>本节要掌握什么</h2><ul><li>完备事件组（划分）：B₁,…,Bₙ 两两互斥且并为 Ω</li><li>全概率公式：把复杂事件 A 按「哪种情况导致它」拆成若干块相加</li><li>贝叶斯公式：已知结果 A 发生，反推是 Bᵢ 导致的概率，分母正是全概率</li><li>P(Bᵢ) 叫先验概率，P(Bᵢ|A) 叫后验概率，P(A|Bᵢ) 叫似然</li><li>贝叶斯本质：新证据（A 发生）把先验更新成后验</li></ul><div class="formula">全概率：P(A) = Σ P(Bᵢ)P(A|Bᵢ)</div><div class="formula">贝叶斯：P(Bᵢ|A) = P(Bᵢ)P(A|Bᵢ) / Σⱼ P(Bⱼ)P(A|Bⱼ)</div><h2>推导 / 解题路径</h2><ol><li>① 先找「划分」：哪几个互斥的原因能覆盖全部情况（如：来自甲厂/乙厂/丙厂）</li><li>② 写出各原因的先验 P(Bᵢ) 与似然 P(A|Bᵢ)</li><li>③ 求 P(A)：先验×似然，逐个算完相加</li><li>④ 求 P(Bᵢ|A)：取其中一项除以总和</li></ol><div class="example">📝 <b>例题</b><br>某厂三条线产量占 50%/30%/20%，次品率 2%/3%/5%。求任取一件是次品的概率：P(A)=0.5×0.02+0.3×0.03+0.2×0.05=0.01+0.009+0.01=0.029。若已知取到次品，它是三线生产的概率：P(B₃|A)=0.01/0.029≈34.5%——虽然三线只占产量 20%，却贡献了 34.5% 的次品。</div><div class="warn">⚠️ 贝叶斯公式的分母必须用全概率展开，不能想当然写 1。分母算错是这一节最常见的失分点。</div><div class="tip">💡 贝叶斯 = 「先验 × 似然 ÷ 归一化」。记住这个结构，写公式时不会漏项。这也是朴素贝叶斯分类器的全部数学内核。</div><h2>即时自测</h2><div class="quiz" id="q1"><h3>自测 1 · A、B 构成完备事件组，P(A)=0.6，P(X|A)=0.1，P(X|B)=0.5。P(X)=？</h3><div class="options"><button onclick="check(this)" data-ok="0" data-fb="❌ 那是 0.6×0.5，把 P(X|B) 配给了 A。">0.3</button><button onclick="check(this)" data-ok="1" data-fb="✅ 对。P(X)=0.6×0.1+0.4×0.5=0.06+0.20=0.26。">0.26</button><button onclick="check(this)" data-ok="0" data-fb="❌ 只算了 0.6×0.1+0.4×0.25 之类，权重配错。">0.16</button><button onclick="check(this)" data-ok="0" data-fb="❌ 无依据，不能直接取似然之一。">0.5</button></div><div class="fb" id="fb-q1"></div></div><div class="quiz" id="q2"><h3>自测 2 · 接上题，已知 X 发生，P(A|X)=？</h3><div class="options"><button onclick="check(this)" data-ok="1" data-fb="✅ 对。贝叶斯：0.6×0.1/0.26 = 0.06/0.26 ≈ 0.231。先验 0.6 被证据拉低到 0.23。">0.231</button><button onclick="check(this)" data-ok="0" data-fb="❌ 那是先验，没做更新。">0.6</button><button onclick="check(this)" data-ok="0" data-fb="❌ 那是似然 P(X|A)，方向反了。">0.1</button><button onclick="check(this)" data-ok="0" data-fb="❌ 那是 P(B|X)=1−0.231，问的是 A。">0.769</button></div><div class="fb" id="fb-q2"></div></div>
+
+<div class="checkin"><b>今日打卡</b>
+<label><input type="checkbox"> ① 合上书回想 8 分钟（默写核心公式）</label>
+<label><input type="checkbox"> ② 读完本节 30 分钟（边看边画，不抄书）</label>
+<label><input type="checkbox"> ③ 自测题做完，错题回看</label>
+<label><input type="checkbox"> ④ 写一行：学到哪 / 卡在哪</label>
+</div>
+<div class="ref">
+<b>教材对应</b>：第1章 §1.3 p18-24<br>
+<b>下一节预告</b>：P05 事件的独立性（§1.4）<br>
+<b>云端生成</b>：阿里云 47.109.133.90 · 每天 08:00
+</div>
+</div><script>
+function check(btn){
+  var q=btn.closest('.quiz'), ok=btn.getAttribute('data-ok')==='1', fb=q.querySelector('.fb');
+  q.querySelectorAll('.options button').forEach(function(b){b.className='';});
+  btn.className = ok?'right':'wrong';
+  fb.textContent = btn.getAttribute('data-fb');
+  fb.style.color = ok?'#2e7d32':'#e94560';
+}
+</script></body></html>

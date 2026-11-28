@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI 概念扫盲 + 原理讲解 · 第 10 课</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#fafafa;color:#1a1a2e;font-family:"Microsoft YaHei","SimHei",-apple-system,sans-serif;line-height:1.8;padding:22px 16px 60px}
+.wrap{max-width:820px;margin:0 auto}
+h1{color:#0f3460;font-size:25px;line-height:1.4;padding-bottom:12px;margin-bottom:6px;border-bottom:3px solid #e94560}
+.meta{font-size:13px;color:#6b7280;margin:10px 0 22px}
+h2{color:#0f3460;font-size:20px;margin:34px 0 14px;padding-left:11px;border-left:4px solid #e94560}
+h3{color:#16213e;font-size:16.5px;margin:22px 0 9px}
+p{margin:9px 0}
+ul,ol{margin:9px 0 9px 24px}
+li{margin:6px 0}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px;background:#fff}
+th{background:#0f3460;color:#fff;padding:9px 11px;text-align:left;font-weight:600}
+td{padding:8px 11px;border-bottom:1px solid #e8e8f0;vertical-align:top}
+tr:last-child td{border-bottom:none}
+.formula{background:#fff;border-left:4px solid #e94560;padding:14px 18px;margin:14px 0;font-size:16px;font-weight:600;color:#16213e;border-radius:0 6px 6px 0;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.warn{background:#fff8e1;border-left:4px solid #f9a825;padding:12px 16px;margin:13px 0;border-radius:0 6px 6px 0;font-size:14.5px}
+.tip{background:#e8f5e9;border-left:4px solid #43a047;padding:12px 16px;margin:13px 0;border-radius:0 6px 6px 0;font-size:14.5px}
+.example{background:#e3f2fd;border-left:4px solid #1976d2;padding:12px 16px;margin:13px 0;border-radius:0 6px 6px 0;font-size:14.5px}
+.story{background:#16213e;color:#e8eaf6;padding:16px 20px;margin:16px 0;border-radius:10px}
+.story b{color:#ffd54f}
+.quiz{border:2px solid #0f3460;border-radius:10px;padding:15px 17px;margin:16px 0;background:#fff}
+.quiz h3{margin-top:0;color:#0f3460;font-size:15.5px}
+.options{display:grid;gap:8px;margin-top:10px}
+.options button{text-align:left;padding:10px 14px;border:1.5px solid #d5d8e0;background:#fbfcfe;border-radius:8px;cursor:pointer;font-size:14.5px;font-family:inherit;color:#1a1a2e;transition:.15s;line-height:1.6}
+.options button:hover{border-color:#0f3460;background:#f0f4ff}
+.options button.right{background:#d4edda;border-color:#43a047;font-weight:600}
+.options button.wrong{background:#fce4ec;border-color:#e94560}
+.fb{margin-top:10px;font-size:14px;line-height:1.7;min-height:1em}
+.checkin{background:#fff;border:1.5px dashed #0f3460;border-radius:10px;padding:15px 18px;margin:22px 0}
+.checkin label{display:block;margin:7px 0;font-size:14.5px;cursor:pointer}
+.checkin input{margin-right:8px;transform:scale(1.15)}
+.ref{margin-top:34px;padding-top:16px;border-top:1px solid #ddd;font-size:13px;color:#6b7280}
+.tag{display:inline-block;background:#0f3460;color:#fff;font-size:12px;padding:2px 10px;border-radius:99px;margin-right:8px;vertical-align:2px}
+.chain{background:#f5f7fb;border:1px solid #e0e4ee;border-radius:8px;padding:12px 16px;margin:12px 0;font-size:14px;line-height:2}
+.chain b{color:#0f3460}
+@media(max-width:600px){body{padding:14px 11px 50px}h1{font-size:21px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1><span class="tag">AI 第 10 课</span>概念扫盲 + 原理讲解</h1>
+<div class="meta">2026-10-25 · 建议 90 分钟分两次看完 · 前置：已读完李博杰第 1-3 章</div>
+
+<div class="story">
+🧭 <b>这一课解决什么问题</b>：你说「概念了解，原理和运用不熟」。这很典型——概念是名词，原理是因果。名词可以背，因果必须推。
+<br><br>
+所以这一课分两轮：<b>第一轮把容易混的名词划清边界，第二轮讲清「为什么是这样」</b>。学完你应该能对任何一个 AI 现象说出「这是哪个机制导致的」。
+</div>
+
+<!-- ============ 第一轮 ============ -->
+<h2>第一轮：概念扫盲（把边界划清）</h2>
+
+<h3>1. 层级关系 —— 最容易在同句话里混用的五个词</h3>
+<div class="chain">
+<b>AI</b>（人工智能）⊃ <b>ML</b>（机器学习）⊃ <b>DL</b>（深度学习）⊃ <b>LLM</b>（大语言模型）
+<br>
+<b>Agent</b>（智能体）= LLM + 工具 + 记忆 + 循环 ← <b>它是系统，不是模型</b>
+</div>
+
+<table>
+<tr><th>词</th><th>准确含义</th><th>边界在哪</th></tr>
+<tr><td><b>AI</b></td><td>所有让机器表现出智能的方法</td><td>包括规则引擎（比如早期的象棋程序），不一定是"学习"出来的</td></tr>
+<tr><td><b>ML</b></td><td>从数据里学规律，而不是人写死规则</td><td>垃圾邮件过滤器用统计方法也算 ML</td></tr>
+<tr><td><b>DL</b></td><td>用多层神经网络做 ML</td><td>层数多 ≠ 一定更好</td></tr>
+<tr><td><b>LLM</b></td><td>用 Transformer 架构 + 海量文本训练的大模型</td><td>LLM 是 DL 的一种，不是所有 DL 都是 LLM（图像分类模型不是）</td></tr>
+<tr><td><b>Agent</b></td><td>让 LLM 自主决策、调用工具、循环直到完成任务的系统</td><td><b>Agent 不是模型</b>。同一个模型可以做成不同 Agent，能力可能差很多</td></tr>
+</table>
+
+<div class="warn">⚠️ 最常见的错误：说「这个 Agent 很聪明」。准确说法是「这个模型能力够，而且工具和循环设计得好」。「Agent 变强」不等于「模型变强」——这两件事的改进成本差几个数量级。</div>
+
+<h3>2. 训练 vs 推理 —— 成本差 100 倍的两件事</h3>
+<table>
+<tr><th></th><th>训练（Training）</th><th>推理（Inference）</th></tr>
+<tr><td>做什么</td><td>调整模型参数，让它学会规律</td><td>用固定参数算出输出</td></tr>
+<tr><td>成本</td><td>一次几百万美元</td><td>一次几厘钱</td></tr>
+<tr><td>谁在做</td><td>OpenAI / DeepSeek / 阿里这些公司</td><td>你和我</td></tr>
+<tr><td>能不能改</td><td>改完参数永久变了</td><td>不改任何参数</td></tr>
+</table>
+<p><b>关键推论</b>：你调用 API 时，模型参数一点没变。所以「怎么让它记住我的偏好」这类问题，答案永远在<b>上下文</b>里，不在参数里。</p>
+
+<h3>3. 让模型变好的五种手段（按成本从低到高排）</h3>
+<table>
+<tr><th>手段</th><th>改什么</th><th>成本</th><th>什么时候用</th></tr>
+<tr><td><b>1. Prompt 工程</b></td><td>你输入的指令</td><td>几乎为零</td><td>永远先试这个</td></tr>
+<tr><td><b>2. RAG</b></td><td>外挂知识库，检索后塞进上下文</td><td>低（建库+检索）</td><td><b>知识缺失时</b>——模型不知道你的文档</td></tr>
+<tr><td><b>3. 工具调用</b></td><td>给它能查、能算、能执行的手</td><td>中（写工具）</td><td><b>能力不足时</b>——它不会算精确数字、不能联网</td></tr>
+<tr><td><b>4. SFT 微调</b></td><td>参数（小规模再训练）</td><td>高</td><td><b>行为不对时</b>——格式、语气、固定流程</td></tr>
+<tr><td><b>5. RLHF / RL</b></td><td>参数（偏好或推理优化）</td><td>很高</td><td><b>推理不行时</b>——数学、代码、复杂决策</td></tr>
+</table>
+
+<div class="formula">判断口诀：知识缺失 → RAG　｜　行为不对 → 微调　｜　能力不足 → 工具</div>
+<div class="tip">💡 这道题面试常问：「模型回答不了我们公司的产品问题，怎么办？」<br>答「微调」= 不及格。正确答案是 RAG——这是知识缺失，不是行为问题。微调贵、慢、还会遗忘。</div>
+
+<h3>4. 模型的"身体"：参数、层、Token、上下文窗口</h3>
+<ul>
+<li><b>参数（权重）</b>：模型学到的数字，从几十亿到几万亿个。它是"知识"的存储形式，但不是人能读的文本</li>
+<li><b>层（Layer）</b>：参数的堆叠结构，越深表示抽象层次越高</li>
+<li><b>Token</b>：文本的最小处理单位。英文约 1 token ≈ 0.75 词；<b>中文约 1 字 = 1-2 token</b></li>
+<li><b>上下文窗口（Context Window）</b>：模型一次能"看到"多少 token。这是硬限制，不是它"记性不好"</li>
+</ul>
+<div class="example">📝 直观换算：一本 20 万字的中文书 ≈ 30-40 万 token。所以"把整本书塞进去"在 128k 窗口下做不到——这就是为什么需要 RAG 切片检索。</div>
+
+<h3>5. 三个最容易混的"给模型信息"的概念</h3>
+<table>
+<tr><th>概念</th><th>是什么</th><th>生命周期</th><th>例子（Hermes 里）</th></tr>
+<tr><td><b>Prompt</b></td><td>你这一次输入的指令</td><td>这一次对话</td><td>你打的字</td></tr>
+<tr><td><b>Context</b></td><td>模型这一次能看到的<b>全部内容</b>：系统提示 + 历史对话 + 检索结果 + 工具返回</td><td>这一次对话</td><td>system prompt + 对话历史 + 工具定义</td></tr>
+<tr><td><b>Memory</b></td><td>跨会话保存的信息，<b>存在模型外面</b>，用时才塞进 Context</td><td>长期</td><td>Hermes 的 memory 文件</td></tr>
+</table>
+<div class="warn">⚠️ 这三者的关系是：<b>Memory 和 RAG 检索结果，最终都要变成 Context 的一部分</b>。所以 Context 窗口不够用时，再好的记忆系统也塞不进去——这就是「记忆管理」要解决的问题（你书上第 3 章）。</div>
+
+<h3>6. 向量与检索：RAG 的地基</h3>
+<div class="chain">
+文本 → <b>Embedding 模型</b> → 一串数字（向量，比如 1024 维）
+<br>
+语义相近的文本 → 向量在空间里距离近
+<br>
+<b>余弦相似度</b> = 算两个向量的夹角，越接近 1 越相似
+</div>
+<p><b>RAG 的完整流程</b>：</p>
+<ol>
+<li>把文档切成块（chunk）</li>
+<li>每块用 Embedding 模型变成向量，存进向量库</li>
+<li>用户提问 → 问题也变成向量</li>
+<li>在向量库里找最相似的 K 个块</li>
+<li>把这 K 个块塞进 Context，让模型"基于它们"回答</li>
+</ol>
+<div class="tip">💡 一句话理解 RAG：<b>不让模型"回忆"，让它"抄"。</b> 模型回忆会编，抄材料不容易编。</div>
+
+<h3>7. 行为层概念</h3>
+<table>
+<tr><th>词</th><th>含义</th><th>为什么重要</th></tr>
+<tr><td><b>幻觉</b></td><td>编造看似合理但不存在的内容</td><td>不是 bug，是概率生成的必然结果（下面原理 2 详讲）</td></tr>
+<tr><td><b>对齐（Alignment）</b></td><td>让模型的行为符合人类意图和价值观</td><td>RLHF 就是干这个的</td></tr>
+<tr><td><b>温度（Temperature）</b></td><td>控制输出随机性。0 = 几乎确定，1 = 发散</td><td>要准确用低温，要创意用高温</td></tr>
+<tr><td><b>越狱（Jailbreak）</b></td><td>用特殊提示绕过模型的安全限制</td><td>说明安全对齐是"学出来的"，不是"写死的"</td></tr>
+</table>
+
+<h3>8. 怎么衡量好坏</h3>
+<ul>
+<li><b>Benchmark</b>：标准测试集（如 MMLU 考知识、GSM8K 考数学、HumanEval 考代码）</li>
+<li><b>Elo 分</b>：两两对比投票算相对强弱（LMArena 用这个）</li>
+<li><b>没有万能榜单</b>：模型 A 在数学上强，不代表它写文案也强。选型要看你的具体任务</li>
+</ul>
+
+<div class="quiz">
+<h3>扫盲自测 1 · 模型答不出你们公司的产品参数，最该做什么？</h3>
+<div class="options">
+<button onclick="check(this)" data-ok="0" data-fb="❌ 微调成本高、周期长，而且这类"事实型知识"用微调很容易遗忘或被覆盖。">做 SFT 微调，把产品手册训进去</button>
+<button onclick="check(this)" data-ok="1" data-fb="✅ 对。这是知识缺失，用 RAG——把产品手册建库，提问时检索相关段落塞进上下文。成本低、更新快、可溯源。">做 RAG，把产品手册建成知识库检索</button>
+<button onclick="check(this)" data-ok="0" data-fb="❌ 换模型解决不了"它不知道你公司产品"这个问题，任何模型都没见过你的内部文档。">换一个更大的模型</button>
+<button onclick="check(this)" data-ok="0" data-fb="❌ 调温度只会改变随机性，不会让它知道不知道的东西。">把 temperature 调到 0</button>
+</div>
+<div class="fb"></div>
+</div>
+
+<div class="quiz">
+<h3>扫盲自测 2 · 关于 Memory，正确的是？</h3>
+<div class="options">
+<button onclick="check(this)" data-ok="0" data-fb="❌ Memory 不改变模型参数。调用 API 时参数永远不变。">Memory 是把信息存进模型参数里</button>
+<button onclick="check(this)" data-ok="1" data-fb="✅ 对。Memory 存在模型外部（文件/数据库），每次对话开始时被读取并塞进 Context。所以它受上下文窗口限制。">Memory 存在模型外部，用时才放进 Context</button>
+<button onclick="check(this)" data-ok="0" data-fb="❌ Memory 和 Prompt 是不同层次：Prompt 是你这次说的话，Memory 是跨会话持久化的信息。">Memory 就是很长的 Prompt</button>
+<button onclick="check(this)" data-ok="0" data-fb="❌ 恰恰相反，Memory 越大，每次要占的 Context 越多。">Memory 越大越好，没有代价</button>
+</div>
+<div class="fb"></div>
+</div>
+
+<!-- ============ 第二轮 ============ -->
+<h2>第二轮：原理（为什么是这样）</h2>
+
+<h3>原理 1：LLM 到底在算什么</h3>
+<div class="formula">给定前面所有的词，预测下一个词的概率分布</div>
+<p>就这么一件事。不是"理解"，不是"思考"，是<b>对海量文本统计规律的高维拟合</b>。</p>
+<p><b>但为什么它看起来像理解？</b></p>
+<p>因为要准确预测下一个词，模型被迫学会了语法、事实关联、甚至推理链条。举例：要预测「张三比李四高，李四比王五高，所以张三比王五___」的下一个词，模型必须隐含地完成传递性推理。这不是被教会的，是<b>为了降低预测误差而涌现的能力</b>。</p>
+<div class="warn">⚠️ 这个原理直接解释了三个现象：<br>① 它会一本正经胡说（概率高 ≠ 事实对）<br>② 换个问法答案会变（概率分布被扰动）<br>③ 它不知道"自己不知道"（训练数据里少见"我不知道"这种回答）</div>
+
+<h3>原理 2：幻觉不是 bug，是必然</h3>
+<p>三个成因，缺一不可：</p>
+<ol>
+<li><b>训练目标错位</b>：模型学的是"像人写的文本"，不是"说真话"。人类写的文本里，流畅 ≠ 真实</li>
+<li><b>没有"未知"这个概念</b>：模型对所有问题都会给出一个概率分布。它没有"这个我没学过"的输出通道</li>
+<li><b>采样有随机性</b>：temperature > 0 时，它会从概率分布里采样，低概率的答案也可能被选中</li>
+</ol>
+<p><b>所以对策也是三条，一一对应：</b></p>
+<table>
+<tr><th>成因</th><th>对策</th></tr>
+<tr><td>训练目标是"像人写的"</td><td>要求它<b>引用来源</b>，有出处的才是可核查的</td></tr>
+<tr><td>没有"未知"通道</td><td>在提示词里<b>明确允许它说"我不知道"</b>，并给出判断标准</td></tr>
+<tr><td>采样随机</td><td>事实型任务把 <b>temperature 调到 0</b></td></tr>
+</table>
+<div class="tip">💡 最有效的一招是给它材料（RAG）：把"回忆"变成"抄"。抄错了你能看出来，回忆错了你看不出来。</div>
+
+<h3>原理 3：上下文窗口为什么有限（这是数学，不是工程偷懒）</h3>
+<p>Transformer 的核心是<b>自注意力</b>：每个 token 要和序列里<b>所有其他 token</b> 算相关性。</p>
+<div class="formula">计算量 ≈ O(n²)　（n = 序列长度）</div>
+<p>上下文翻倍，计算量翻四倍。所以：</p>
+<ul>
+<li><b>长上下文很贵</b>：不是存储贵，是计算贵</li>
+<li><b>长上下文里"中间的信息"容易被忽略</b>：这叫 lost in the middle，是实测现象——模型对开头和结尾更敏感，中间段落容易被跳过</li>
+</ul>
+<div class="example">📝 这解释了你书里第 2 章讲 KV Cache 的意义：把已经算过的注意力结果缓存下来，避免重复计算。也解释了为什么 Agent 必须做"记忆压缩"——不是省钱，是不压缩就装不下。</div>
+
+<h3>原理 4：Agent 为什么能工作（补三个短板）</h3>
+<p>LLM 有三个硬短板，Agent 用三样东西补：</p>
+<table>
+<tr><th>LLM 的短板</th><th>Agent 的补法</th><th>对应 Hermes 里的东西</th></tr>
+<tr><td>不能查、不能算、不能操作外部世界</td><td><b>工具（Tools）</b></td><td>terminal / web_fetch / 各种 MCP</td></tr>
+<tr><td>不能跨会话记住你</td><td><b>记忆（Memory）</b></td><td>memory 文件、学习记录</td></tr>
+<tr><td>一次想不清楚复杂任务</td><td><b>循环（ReAct）</b>：想→做→看结果→再想</td><td>agent 主循环</td></tr>
+</table>
+<div class="formula">Agent 能力上限 ≈ 模型能力 × 工具质量 × 循环设计</div>
+<p>注意这是<b>乘法</b>不是加法。任何一项接近零，整体就接近零。工具写错，模型再强也没用。</p>
+
+<h3>原理 5：Agent 为什么会失败（四种典型死法）</h3>
+<table>
+<tr><th>死法</th><th>机制</th><th>怎么防</th></tr>
+<tr><td><b>错误累积</b></td><td>第 3 步错了，后面全在错的基础上继续</td><td>分步验证、设 checkpoint、关键步骤人工确认</td></tr>
+<tr><td><b>上下文污染</b></td><td>错误信息进了 Context，模型把它当真前提</td><td>工具返回要结构化、明确标记成功/失败</td></tr>
+<tr><td><b>工具误用</b></td><td>选错工具、参数填错</td><td>工具描述写清"何时不用"（第 4 章）</td></tr>
+<tr><td><b>目标漂移</b></td><td>做着做着忘了原始目标</td><td>每次循环把原目标重复一遍</td></tr>
+</table>
+<div class="warn">⚠️ 这四条正是你书上第 6 章「Agent 评估」要解决的问题。评估不是打个分，是<b>定位死在哪一步</b>。所以要做"分步评估"，不只是端到端看结果。</div>
+
+<div class="quiz">
+<h3>原理自测 1 · 为什么长上下文里，中间的信息容易被忽略？</h3>
+<div class="options">
+<button onclick="check(this)" data-ok="0" data-fb="❌ 不是存储空间问题，上下文窗口是够的。">因为显存存不下中间的 token</button>
+<button onclick="check(this)" data-ok="1" data-fb="✅ 对。这是注意力机制 + 训练数据分布共同导致的实测现象（lost in the middle）。开头和结尾的注意力权重更高，中间段落相对被稀释。">因为注意力权重分布不均，中间段落被稀释</button>
+<button onclick="check(this)" data-ok="0" data-fb="❌ 模型没有"删除中间内容"的机制。">因为模型会主动删除中间内容</button>
+<button onclick="check(this)" data-ok="0" data-fb="❌ 与 tokenizer 无关。">因为 tokenizer 处理中间文本有 bug</button>
+</div>
+<div class="fb"></div>
+</div>
+
+<div class="quiz">
+<h3>原理自测 2 · Agent 能力上限是「乘法」而不是「加法」，这意味着？</h3>
+<div class="options">
+<button onclick="check(this)" data-ok="0" data-fb="❌ 乘法意味着短板会严重拉低整体，不是补偿关系。">某一项弱可以靠其他项补回来</button>
+<button onclick="check(this)" data-ok="1" data-fb="✅ 对。工具质量接近零时，模型再强整体也接近零。所以做 Agent 时"先看短板在哪"，而不是一味换更大的模型。">任何一项接近零，整体就接近零</button>
+<button onclick="check(this)" data-ok="0" data-fb="❌ 乘法不意味着只换模型就行。">只要模型够强，工具差一点没关系</button>
+<button onclick="check(this)" data-ok="0" data-fb="❌ 循环设计是三项之一，不能省。">循环设计可以省略，不影响上限</button>
+</div>
+<div class="fb"></div>
+</div>
+
+<h2>串起来：一张因果图</h2>
+<div class="chain">
+<b>训练</b>（预测下一个词）→ 得到<b>参数</b> → <b>推理</b>时只能看<b>上下文窗口</b>
+<br>↓
+<br>窗口有限（O(n²)）→ 装不下所有知识 → 需要 <b>RAG</b>（外挂检索）
+<br>↓
+<br>RAG 效果取决于 <b>Embedding + 切片 + 检索</b>
+<br>↓
+<br>光知道不够，还要能做事 → 加<b>工具</b>
+<br>↓
+<br>一次做不完 → 加<b>循环（ReAct）</b> → 这就是 <b>Agent</b>
+<br>↓
+<br>Agent 会失败 → 需要<b>评估</b>定位死在哪一步 → 需要<b>记忆</b>跨会话积累经验
+</div>
+
+<h2>今日打卡</h2>
+<div class="checkin">
+<label><input type="checkbox"> 能不看课件说出 AI ⊃ ML ⊃ DL ⊃ LLM 的边界，以及 Agent 为什么不是模型</label>
+<label><input type="checkbox"> 能用一句话回答「知识缺失、行为不对、能力不足」分别该用什么手段</label>
+<label><input type="checkbox"> 能解释幻觉的三个成因，以及对应的三个对策</label>
+<label><input type="checkbox"> 能说出 Agent 为什么会失败的四条，以及各自怎么防</label>
+</div>
+
+<div class="ref">
+<b>前置</b>：李博杰《AI Agents 设计原理》第 1-3 章（你已学完）<br>
+<b>下一课</b>：0011 工具设计（第 4 章）—— 把「原理 4」里的"工具"这一项拆开讲<br>
+<b>配套资源</b>：<a href="https://gugugaga78.github.io/news-hub/fourcourse/resources/04-AI基础与理论.html">04-AI基础与理论</a>（理论） · <a href="https://gugugaga78.github.io/news-hub/fourcourse/resources/06-AI产品实战.html">06-AI产品实战</a>（怎么用）
+</div>
+
+</div>
+<script>
+function check(btn){
+  var q=btn.closest('.quiz'), ok=btn.getAttribute('data-ok')==='1', fb=q.querySelector('.fb');
+  q.querySelectorAll('.options button').forEach(function(b){b.className='';});
+  btn.className = ok?'right':'wrong';
+  fb.textContent = btn.getAttribute('data-fb');
+  fb.style.color = ok?'#2e7d32':'#e94560';
+}
+</script>
+</body>
+</html>

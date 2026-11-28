@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>附：国内可达性实测（2026-10-25）</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#fafafa;color:#1a1a2e;font-family:"Microsoft YaHei","PingFang SC",-apple-system,sans-serif;
+     line-height:1.75;padding:20px 15px 60px}
+.wrap{max-width:900px;margin:0 auto}
+h1{color:#0f3460;font-size:23px;line-height:1.4;padding-bottom:12px;margin-bottom:14px;border-bottom:3px solid #e94560}
+h2{color:#0f3460;font-size:19px;margin:28px 0 12px;padding-left:11px;border-left:4px solid #e94560}
+h3{color:#16213e;font-size:16px;margin:20px 0 8px}
+p{margin:9px 0}
+ul,ol{margin:9px 0 9px 24px}
+li{margin:5px 0}
+a{color:#0a5dc2;text-decoration:none;border-bottom:1px solid rgba(10,93,194,.3);word-break:break-all}
+a:hover{border-bottom-color:#0a5dc2}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13.5px;background:#fff;
+      display:block;overflow-x:auto;white-space:nowrap}
+th{background:#0f3460;color:#fff;padding:9px 11px;text-align:left;font-weight:600}
+td{padding:8px 11px;border-bottom:1px solid #e8e8f0;vertical-align:top}
+tr:last-child td{border-bottom:none}
+blockquote{background:#e3f2fd;border-left:4px solid #1976d2;padding:11px 16px;margin:13px 0;
+           border-radius:0 6px 6px 0;font-size:14.5px}
+code{background:#f0f2f8;padding:1px 5px;border-radius:4px;font-size:13px}
+pre{background:#16213e;color:#e8eaf6;padding:13px 16px;border-radius:8px;overflow-x:auto;margin:13px 0}
+pre code{background:none;color:inherit;padding:0}
+hr{border:none;border-top:1px solid #e0e0e8;margin:24px 0}
+.navbar{background:#16213e;color:#fff;padding:10px 16px;border-radius:8px;margin-bottom:18px;font-size:13.5px}
+.navbar a{color:#ffd54f;border:none}
+.idx a{display:block;padding:13px 18px;border-bottom:1px solid #eef0f5;text-decoration:none;
+       color:#1a1a2e;background:#fff;border-radius:0}
+.idx a:first-child{border-radius:10px 10px 0 0}
+.idx a:last-child{border-radius:0 0 10px 10px;border-bottom:none}
+.idx a:hover{background:#f0f4ff}
+.idx .d{font-size:12px;color:#6b7280;margin-top:3px}
+.idx{border-radius:10px;overflow:hidden;box-shadow:0 1px 6px rgba(0,0,0,.06)}
+@media(max-width:600px){body{padding:12px 10px 50px}h1{font-size:20px}table{font-size:12.5px}}
+</style></head><body><div class="wrap">
+<div class="navbar"><a href="./index.html">← 资料库首页</a>　|　<a href="../index.html">课程列表</a></div>
+<h1>附：国内可达性实测（2026-10-25）</h1>
+<blockquote>测试方法：本机 <code>Invoke-WebRequest</code>，走系统网络<br>测试时本机代理状态：<b>已开启</b>（<code>127.0.0.1:7890</code>，Clash/FlClash）<br><b>所以下表「200」的含义是「你的机器现在这个网络环境下能打开」，不是「裸连能开」</b></blockquote>
+<hr>
+<h2>一、结论先说（避免误判）</h2>
+<p><b>同样一个 HuggingFace，两种测法两种结果：</b></p>
+<table><thead><tr><th>测法</th><th>结果</th><th>原因</th></tr></thead><tbody><tr><td>本机浏览器 / curl / Invoke-WebRequest</td><td>✅ <b>200</b></td><td>走系统代理 127.0.0.1:7890</td></tr><tr><td>采集 agent 的 <code>web_fetch</code> 工具</td><td>❌ 失败 7 次</td><td>不走系统代理</td></tr></tbody></table>
+<p><b>所以你看到「HuggingFace 能开」是因为你开着 Clash。关掉代理就开不了。</b></p>
+<p>这不是谁的错，是路不一样。下面把两类结果分开记。</p>
+<hr>
+<h2>二、实测表格（走系统代理）</h2>
+<table><thead><tr><th>站点</th><th>状态</th><th>备注</th></tr></thead><tbody><tr><td>HuggingFace 首页</td><td>✅ 200</td><td>有代理可开</td></tr><tr><td>HF Daily Papers</td><td>✅ 200</td><td>有代理可开</td></tr><tr><td>hf-mirror.com（HF 国内镜像）</td><td>✅ 200</td><td><b>不依赖代理</b></td></tr><tr><td>arXiv cs.CL</td><td>✅ 200</td><td>直接可开</td></tr><tr><td>Papers with Code</td><td>⚠️ 301 → HF</td><td><b>已下线</b>，跳转到 HuggingFace，别收藏了</td></tr><tr><td>Artificial Analysis</td><td>✅ 200</td><td>榜单主力</td></tr><tr><td>OpenRouter</td><td>✅ 200</td><td>模型/定价</td></tr><tr><td>LMArena（lmarena.ai）</td><td>❌ 403</td><td>需要代理，且可能有 Cloudflare 拦截</td></tr><tr><td>The Batch（deeplearning.ai）</td><td>⚠️ 308</td><td>重定向</td></tr><tr><td>Import AI（substack）</td><td>✅ 200</td><td>—</td></tr><tr><td>Simon Willison&#x27;s blog</td><td>✅ 200</td><td>—</td></tr><tr><td>机器之心</td><td>✅ 200</td><td>—</td></tr><tr><td>量子位</td><td>✅ 200</td><td>RSS 可用</td></tr><tr><td>ModelScope 魔搭</td><td>✅ 200</td><td>国内</td></tr><tr><td>Ollama 模型库</td><td>✅ 200</td><td>—</td></tr><tr><td>GitHub（仓库页）</td><td>✅ 200</td><td>慢但能开；API 403 是限流</td></tr><tr><td>cdn.jsdelivr.net（GitHub CDN）</td><td>✅ 200</td><td><b>读 GitHub 文件的最稳方式</b></td></tr></tbody></table>
+<hr>
+<h2>三、不依赖代理的方案（关掉 Clash 也能用）</h2>
+<p>如果你哪天不想开代理，这几条路照样通：</p>
+<ol><li><b>huggingface.co 打不开 → 用 <code>hf-mirror.com</code></b></li></ol>
+<p>下载模型时设环境变量：<code>HF_ENDPOINT=https://hf-mirror.com</code></p>
+<ol><li><b>GitHub 打不开 → 用 <code>cdn.jsdelivr.net</code></b></li></ol>
+<p>例：<code>https://cdn.jsdelivr.net/gh/archlizheng/AIPM-Wiki@main/README.md</code></p>
+<p>这个 CDN 实测 200，比 raw.githubusercontent.com 稳</p>
+<ol><li><b>Paper with Code 已下线</b> → 用 HuggingFace Papers 或 arXiv 直接搜</li><li><b>LMArena 打不开</b> → 用 Artificial Analysis（200）看榜单</li></ol>
+<hr>
+<h2>四、RSS 实测（订阅用，agent 逐个测过）</h2>
+<table><thead><tr><th>源</th><th>RSS 地址</th><th>状态</th></tr></thead><tbody><tr><td>量子位</td><td><code>https://www.qbitai.com/feed</code></td><td>✅ RSS 2.0 可用</td></tr><tr><td>Import AI（Jack Clark）</td><td><code>https://jack-clark.net/feed/</code></td><td>✅ 含全文</td></tr><tr><td>Simon Willison</td><td><code>https://simonwillison.net/atom/everything/</code></td><td>✅ Atom</td></tr><tr><td>The Batch</td><td>—</td><td>❌ <code>/feed</code> 是 404，<b>只有邮件订阅</b></td></tr><tr><td>机器之心</td><td>—</td><td>❌ <code>/rss</code> 302 到数据服务页，无公开 RSS</td></tr><tr><td>新智元 / AI科技评论</td><td>—</td><td>❌ 未见公开 RSS</td></tr></tbody></table>
+<p><b>结论：能真正订阅的只有 3 个</b>（量子位、Jack Clark、Simon Willison）。其他只能手动刷网页。</p>
+<hr>
+<h2>五、这份实测的边界</h2>
+<ul><li>时间是 2026-10-25 晚，网络环境会变</li><li>代理状态：<b>测时开着 Clash</b>，关掉后结果会不同（见第三节的替代方案）</li><li>agent 的 <code>web_fetch</code> 与你的浏览器走不同网络栈，两者结果不一致是正常的，不要以为是哪个测错了</li><li>LMArena 的 403 可能是 Cloudflare 的机器人校验，浏览器手动打开也许能进——如果你要用它，自己开浏览器试一次</li></ul>
+</div></body></html>
